@@ -102,6 +102,18 @@
             <data>Verilog</data>
         </row>
         <row>
+            <data>E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/wr_cell.v</data>
+            <data>Verilog</data>
+        </row>
+        <row>
+            <data>E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/rd_cell.v</data>
+            <data>Verilog</data>
+        </row>
+        <row>
+            <data>E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/pattern_vg.v</data>
+            <data>Verilog</data>
+        </row>
+        <row>
             <data>E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/pll/pll.idf</data>
             <data>IP</data>
         </row>
@@ -125,10 +137,6 @@
             <data>E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/DDR3_50H/DDR3_50H.idf</data>
             <data>IP</data>
         </row>
-        <row>
-            <data>E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/rd_fifo_buf/rd_fifo_buf.idf</data>
-            <data>IP</data>
-        </row>
     </table>
     <table id="compile_runtime" title="Compile Runtime &amp; Memory" column_number="7">
         <column_headers>
@@ -143,7 +151,7 @@
         <row>
             <data>0h:0m:5s</data>
             <data>0h:0m:5s</data>
-            <data>0h:0m:15s</data>
+            <data>0h:0m:17s</data>
             <data>258</data>
             <data>WINDOWS 10 x86_64</data>
             <data>12th Gen Intel(R) Core(TM) i7-12700H</data>
@@ -276,13 +284,13 @@
             <data message="4">Verilog-0002: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/fram_buf.v(line number: 22)] Analyzing module fram_buf (library work)</data>
         </row>
         <row>
-            <data message="5">Verilog-2006: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/fram_buf.v(line number: 76)] Ansi_parameter force parameter in body to localparam</data>
+            <data message="5">Verilog-2006: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/fram_buf.v(line number: 80)] Ansi_parameter force parameter in body to localparam</data>
         </row>
         <row>
-            <data message="5">Verilog-2006: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/fram_buf.v(line number: 77)] Ansi_parameter force parameter in body to localparam</data>
+            <data message="5">Verilog-2006: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/fram_buf.v(line number: 81)] Ansi_parameter force parameter in body to localparam</data>
         </row>
         <row>
-            <data message="5">Verilog-2006: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/fram_buf.v(line number: 78)] Ansi_parameter force parameter in body to localparam</data>
+            <data message="5">Verilog-2006: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/fram_buf.v(line number: 82)] Ansi_parameter force parameter in body to localparam</data>
         </row>
         <row>
             <data message="4">Verilog-0001: Analyzing file E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/helai_color_move/rgb_display.v</data>
@@ -306,19 +314,37 @@
             <data message="4">Verilog-0001: Analyzing file E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/hdmi_ddr_ov5640_top.v</data>
         </row>
         <row>
-            <data message="4">Verilog-0002: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/hdmi_ddr_ov5640_top.v(line number: 26)] Analyzing module hdmi_ddr_ov5640_top (library work)</data>
-        </row>
-        <row>
-            <data message="4">[E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/hdmi_ddr_ov5640_top.v(line number: 134)] Convert attribute name from syn_keep to PAP_KEEP</data>
+            <data message="4">Verilog-0002: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/hdmi_ddr_ov5640_top.v(line number: 27)] Analyzing module hdmi_ddr_ov5640_top (library work)</data>
         </row>
         <row>
             <data message="4">[E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/hdmi_ddr_ov5640_top.v(line number: 135)] Convert attribute name from syn_keep to PAP_KEEP</data>
         </row>
         <row>
-            <data message="5">Verilog-2006: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/hdmi_ddr_ov5640_top.v(line number: 86)] Ansi_parameter force parameter in body to localparam</data>
+            <data message="4">[E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/hdmi_ddr_ov5640_top.v(line number: 136)] Convert attribute name from syn_keep to PAP_KEEP</data>
         </row>
         <row>
             <data message="5">Verilog-2006: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/hdmi_ddr_ov5640_top.v(line number: 87)] Ansi_parameter force parameter in body to localparam</data>
+        </row>
+        <row>
+            <data message="5">Verilog-2006: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/hdmi_ddr_ov5640_top.v(line number: 88)] Ansi_parameter force parameter in body to localparam</data>
+        </row>
+        <row>
+            <data message="4">Verilog-0001: Analyzing file E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/wr_cell.v</data>
+        </row>
+        <row>
+            <data message="4">Verilog-0002: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/wr_cell.v(line number: 1)] Analyzing module wr_cell (library work)</data>
+        </row>
+        <row>
+            <data message="4">Verilog-0001: Analyzing file E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/rd_cell.v</data>
+        </row>
+        <row>
+            <data message="4">Verilog-0002: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/rd_cell.v(line number: 1)] Analyzing module rd_cell (library work)</data>
+        </row>
+        <row>
+            <data message="4">Verilog-0001: Analyzing file E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/pattern_vg.v</data>
+        </row>
+        <row>
+            <data message="4">Verilog-0002: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/pattern_vg.v(line number: 22)] Analyzing module pattern_vg (library work)</data>
         </row>
         <row>
             <data message="4">Verilog-0001: Analyzing file E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/pll/pll.v</data>
@@ -807,10 +833,13 @@
             <data message="4">Verilog-0002: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/wr_fifo/wr_fifo.v(line number: 16)] Analyzing module wr_fifo (library work)</data>
         </row>
         <row>
-            <data message="4">Verilog-0001: Analyzing file E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/rd_fifo_buf/rd_fifo_buf.v</data>
+            <data message="4">Verilog-0001: Analyzing file E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/DDR3_50H/rtl/mcdq_ctrl/distributed_fifo/rtl/ipsxb_distributed_sdpram_v1_0_distributed_fifo_v1_0.v</data>
         </row>
         <row>
-            <data message="4">Verilog-0002: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/rd_fifo_buf/rd_fifo_buf.v(line number: 16)] Analyzing module rd_fifo_buf (library work)</data>
+            <data message="4">Verilog-0002: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/DDR3_50H/rtl/mcdq_ctrl/distributed_fifo/rtl/ipsxb_distributed_sdpram_v1_0_distributed_fifo_v1_0.v(line number: 22)] Analyzing module ipsxb_distributed_sdpram_v1_0_distributed_fifo_v1_0 (library work)</data>
+        </row>
+        <row>
+            <data message="4">[E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/DDR3_50H/rtl/mcdq_ctrl/distributed_fifo/rtl/ipsxb_distributed_sdpram_v1_0_distributed_fifo_v1_0.v(line number: 31)] Convert attribute name from syn_ramstyle to PAP_RAM_STYLE</data>
         </row>
         <row>
             <data message="4">Verilog-0001: Analyzing file E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/rd_fifo/rtl/ipml_sdpram_v1_6_rd_fifo.v</data>
@@ -1365,175 +1394,10 @@
             <data message="4">Verilog-0002: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/DDR3_50H/rtl/mcdq_ctrl/distributed_fifo/rtl/ipsxb_distributed_fifo_v1_0_distributed_fifo_v1_0.v(line number: 21)] Analyzing module ipsxb_distributed_fifo_v1_0_distributed_fifo_v1_0 (library work)</data>
         </row>
         <row>
-            <data message="4">Verilog-0001: Analyzing file E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/DDR3_50H/rtl/mcdq_ctrl/distributed_fifo/rtl/ipsxb_distributed_sdpram_v1_0_distributed_fifo_v1_0.v</data>
-        </row>
-        <row>
-            <data message="4">Verilog-0002: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/DDR3_50H/rtl/mcdq_ctrl/distributed_fifo/rtl/ipsxb_distributed_sdpram_v1_0_distributed_fifo_v1_0.v(line number: 22)] Analyzing module ipsxb_distributed_sdpram_v1_0_distributed_fifo_v1_0 (library work)</data>
-        </row>
-        <row>
-            <data message="4">[E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/DDR3_50H/rtl/mcdq_ctrl/distributed_fifo/rtl/ipsxb_distributed_sdpram_v1_0_distributed_fifo_v1_0.v(line number: 31)] Convert attribute name from syn_ramstyle to PAP_RAM_STYLE</data>
-        </row>
-        <row>
-            <data message="4">Verilog-0001: Analyzing file E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/rd_fifo_buf/rtl/ipml_fifo_v1_6_rd_fifo_buf.v</data>
-        </row>
-        <row>
-            <data message="4">Verilog-0002: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/rd_fifo_buf/rtl/ipml_fifo_v1_6_rd_fifo_buf.v(line number: 23)] Analyzing module ipml_fifo_v1_6_rd_fifo_buf (library work)</data>
-        </row>
-        <row>
-            <data message="4">Verilog-0001: Analyzing file E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/rd_fifo_buf/rtl/ipml_sdpram_v1_6_rd_fifo_buf.v</data>
-        </row>
-        <row>
-            <data message="4">Verilog-0002: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/rd_fifo_buf/rtl/ipml_sdpram_v1_6_rd_fifo_buf.v(line number: 18)] Analyzing module ipml_sdpram_v1_6_rd_fifo_buf (library work)</data>
-        </row>
-        <row>
-            <data message="5">Verilog-2008: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/rd_fifo_buf/rtl/ipml_sdpram_v1_6_rd_fifo_buf.v(line number: 306)] Ignore 'system task' $display</data>
-        </row>
-        <row>
-            <data message="5">Verilog-2008: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/rd_fifo_buf/rtl/ipml_sdpram_v1_6_rd_fifo_buf.v(line number: 307)] Ignore 'system task' $finish</data>
-        </row>
-        <row>
-            <data message="5">Verilog-2008: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/rd_fifo_buf/rtl/ipml_sdpram_v1_6_rd_fifo_buf.v(line number: 310)] Ignore 'system task' $display</data>
-        </row>
-        <row>
-            <data message="5">Verilog-2008: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/rd_fifo_buf/rtl/ipml_sdpram_v1_6_rd_fifo_buf.v(line number: 314)] Ignore 'system task' $display</data>
-        </row>
-        <row>
-            <data message="5">Verilog-2008: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/rd_fifo_buf/rtl/ipml_sdpram_v1_6_rd_fifo_buf.v(line number: 318)] Ignore 'system task' $display</data>
-        </row>
-        <row>
-            <data message="5">Verilog-2008: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/rd_fifo_buf/rtl/ipml_sdpram_v1_6_rd_fifo_buf.v(line number: 322)] Ignore 'system task' $display</data>
-        </row>
-        <row>
-            <data message="5">Verilog-2008: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/rd_fifo_buf/rtl/ipml_sdpram_v1_6_rd_fifo_buf.v(line number: 326)] Ignore 'system task' $display</data>
-        </row>
-        <row>
-            <data message="5">Verilog-2008: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/rd_fifo_buf/rtl/ipml_sdpram_v1_6_rd_fifo_buf.v(line number: 327)] Ignore 'system task' $finish</data>
-        </row>
-        <row>
-            <data message="5">Verilog-2008: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/rd_fifo_buf/rtl/ipml_sdpram_v1_6_rd_fifo_buf.v(line number: 330)] Ignore 'system task' $display</data>
-        </row>
-        <row>
-            <data message="5">Verilog-2008: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/rd_fifo_buf/rtl/ipml_sdpram_v1_6_rd_fifo_buf.v(line number: 331)] Ignore 'system task' $finish</data>
-        </row>
-        <row>
-            <data message="5">Verilog-2008: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/rd_fifo_buf/rtl/ipml_sdpram_v1_6_rd_fifo_buf.v(line number: 334)] Ignore 'system task' $display</data>
-        </row>
-        <row>
-            <data message="5">Verilog-2008: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/rd_fifo_buf/rtl/ipml_sdpram_v1_6_rd_fifo_buf.v(line number: 335)] Ignore 'system task' $finish</data>
-        </row>
-        <row>
-            <data message="5">Verilog-2008: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/rd_fifo_buf/rtl/ipml_sdpram_v1_6_rd_fifo_buf.v(line number: 338)] Ignore 'system task' $display</data>
-        </row>
-        <row>
-            <data message="5">Verilog-2008: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/rd_fifo_buf/rtl/ipml_sdpram_v1_6_rd_fifo_buf.v(line number: 339)] Ignore 'system task' $finish</data>
-        </row>
-        <row>
-            <data message="5">Verilog-2008: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/rd_fifo_buf/rtl/ipml_sdpram_v1_6_rd_fifo_buf.v(line number: 342)] Ignore 'system task' $display</data>
-        </row>
-        <row>
-            <data message="5">Verilog-2008: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/rd_fifo_buf/rtl/ipml_sdpram_v1_6_rd_fifo_buf.v(line number: 343)] Ignore 'system task' $finish</data>
-        </row>
-        <row>
-            <data message="5">Verilog-2008: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/rd_fifo_buf/rtl/ipml_sdpram_v1_6_rd_fifo_buf.v(line number: 346)] Ignore 'system task' $display</data>
-        </row>
-        <row>
-            <data message="5">Verilog-2008: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/rd_fifo_buf/rtl/ipml_sdpram_v1_6_rd_fifo_buf.v(line number: 347)] Ignore 'system task' $finish</data>
-        </row>
-        <row>
-            <data message="5">Verilog-2008: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/rd_fifo_buf/rtl/ipml_sdpram_v1_6_rd_fifo_buf.v(line number: 350)] Ignore 'system task' $display</data>
-        </row>
-        <row>
-            <data message="5">Verilog-2008: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/rd_fifo_buf/rtl/ipml_sdpram_v1_6_rd_fifo_buf.v(line number: 351)] Ignore 'system task' $finish</data>
-        </row>
-        <row>
-            <data message="5">Verilog-2008: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/rd_fifo_buf/rtl/ipml_sdpram_v1_6_rd_fifo_buf.v(line number: 354)] Ignore 'system task' $display</data>
-        </row>
-        <row>
-            <data message="5">Verilog-2008: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/rd_fifo_buf/rtl/ipml_sdpram_v1_6_rd_fifo_buf.v(line number: 355)] Ignore 'system task' $finish</data>
-        </row>
-        <row>
-            <data message="5">Verilog-2008: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/rd_fifo_buf/rtl/ipml_sdpram_v1_6_rd_fifo_buf.v(line number: 358)] Ignore 'system task' $display</data>
-        </row>
-        <row>
-            <data message="5">Verilog-2008: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/rd_fifo_buf/rtl/ipml_sdpram_v1_6_rd_fifo_buf.v(line number: 359)] Ignore 'system task' $finish</data>
-        </row>
-        <row>
-            <data message="5">Verilog-2008: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/rd_fifo_buf/rtl/ipml_sdpram_v1_6_rd_fifo_buf.v(line number: 362)] Ignore 'system task' $display</data>
-        </row>
-        <row>
-            <data message="5">Verilog-2008: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/rd_fifo_buf/rtl/ipml_sdpram_v1_6_rd_fifo_buf.v(line number: 363)] Ignore 'system task' $finish</data>
-        </row>
-        <row>
-            <data message="5">Verilog-2008: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/rd_fifo_buf/rtl/ipml_sdpram_v1_6_rd_fifo_buf.v(line number: 366)] Ignore 'system task' $display</data>
-        </row>
-        <row>
-            <data message="5">Verilog-2008: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/rd_fifo_buf/rtl/ipml_sdpram_v1_6_rd_fifo_buf.v(line number: 367)] Ignore 'system task' $finish</data>
-        </row>
-        <row>
-            <data message="5">Verilog-2008: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/rd_fifo_buf/rtl/ipml_sdpram_v1_6_rd_fifo_buf.v(line number: 371)] Ignore 'system task' $display</data>
-        </row>
-        <row>
-            <data message="5">Verilog-2008: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/rd_fifo_buf/rtl/ipml_sdpram_v1_6_rd_fifo_buf.v(line number: 372)] Ignore 'system task' $finish</data>
-        </row>
-        <row>
-            <data message="5">Verilog-2008: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/rd_fifo_buf/rtl/ipml_sdpram_v1_6_rd_fifo_buf.v(line number: 375)] Ignore 'system task' $display</data>
-        </row>
-        <row>
-            <data message="5">Verilog-2008: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/rd_fifo_buf/rtl/ipml_sdpram_v1_6_rd_fifo_buf.v(line number: 376)] Ignore 'system task' $finish</data>
-        </row>
-        <row>
-            <data message="5">Verilog-2008: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/rd_fifo_buf/rtl/ipml_sdpram_v1_6_rd_fifo_buf.v(line number: 380)] Ignore 'system task' $display</data>
-        </row>
-        <row>
-            <data message="5">Verilog-2008: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/rd_fifo_buf/rtl/ipml_sdpram_v1_6_rd_fifo_buf.v(line number: 381)] Ignore 'system task' $finish</data>
-        </row>
-        <row>
-            <data message="5">Verilog-2008: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/rd_fifo_buf/rtl/ipml_sdpram_v1_6_rd_fifo_buf.v(line number: 384)] Ignore 'system task' $display</data>
-        </row>
-        <row>
-            <data message="5">Verilog-2008: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/rd_fifo_buf/rtl/ipml_sdpram_v1_6_rd_fifo_buf.v(line number: 385)] Ignore 'system task' $finish</data>
-        </row>
-        <row>
-            <data message="5">Verilog-2008: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/rd_fifo_buf/rtl/ipml_sdpram_v1_6_rd_fifo_buf.v(line number: 388)] Ignore 'system task' $display</data>
-        </row>
-        <row>
-            <data message="5">Verilog-2008: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/rd_fifo_buf/rtl/ipml_sdpram_v1_6_rd_fifo_buf.v(line number: 389)] Ignore 'system task' $finish</data>
-        </row>
-        <row>
-            <data message="5">Verilog-2008: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/rd_fifo_buf/rtl/ipml_sdpram_v1_6_rd_fifo_buf.v(line number: 392)] Ignore 'system task' $display</data>
-        </row>
-        <row>
-            <data message="5">Verilog-2008: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/rd_fifo_buf/rtl/ipml_sdpram_v1_6_rd_fifo_buf.v(line number: 393)] Ignore 'system task' $finish</data>
-        </row>
-        <row>
-            <data message="5">Verilog-2008: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/rd_fifo_buf/rtl/ipml_sdpram_v1_6_rd_fifo_buf.v(line number: 396)] Ignore 'system task' $display</data>
-        </row>
-        <row>
-            <data message="5">Verilog-2008: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/rd_fifo_buf/rtl/ipml_sdpram_v1_6_rd_fifo_buf.v(line number: 397)] Ignore 'system task' $finish</data>
-        </row>
-        <row>
-            <data message="5">Verilog-2008: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/rd_fifo_buf/rtl/ipml_sdpram_v1_6_rd_fifo_buf.v(line number: 402)] Ignore 'system task' $display</data>
-        </row>
-        <row>
-            <data message="5">Verilog-2008: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/rd_fifo_buf/rtl/ipml_sdpram_v1_6_rd_fifo_buf.v(line number: 403)] Ignore 'system task' $finish</data>
-        </row>
-        <row>
-            <data message="5">Verilog-2008: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/rd_fifo_buf/rtl/ipml_sdpram_v1_6_rd_fifo_buf.v(line number: 406)] Ignore 'system task' $display</data>
-        </row>
-        <row>
-            <data message="5">Verilog-2008: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/rd_fifo_buf/rtl/ipml_sdpram_v1_6_rd_fifo_buf.v(line number: 407)] Ignore 'system task' $finish</data>
-        </row>
-        <row>
-            <data message="5">Verilog-2008: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/rd_fifo_buf/rtl/ipml_sdpram_v1_6_rd_fifo_buf.v(line number: 412)] Ignore 'system task' $display</data>
-        </row>
-        <row>
-            <data message="5">Verilog-2008: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/rd_fifo_buf/rtl/ipml_sdpram_v1_6_rd_fifo_buf.v(line number: 413)] Ignore 'system task' $finish</data>
-        </row>
-        <row>
             <data message="4">Module &quot;hdmi_ddr_ov5640_top&quot; is set as top module.</data>
         </row>
         <row>
-            <data message="4">Verilog-0003: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/hdmi_ddr_ov5640_top.v(line number: 26)] Elaborating module hdmi_ddr_ov5640_top</data>
+            <data message="4">Verilog-0003: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/hdmi_ddr_ov5640_top.v(line number: 27)] Elaborating module hdmi_ddr_ov5640_top</data>
         </row>
         <row>
             <data message="4">Module instance {hdmi_ddr_ov5640_top} parameter value:
@@ -1546,7 +1410,7 @@
     TH_1S = 27'b001111101111000101001000000</data>
         </row>
         <row>
-            <data message="4">Verilog-0004: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/hdmi_ddr_ov5640_top.v(line number: 142)] Elaborating instance u_pll</data>
+            <data message="4">Verilog-0004: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/hdmi_ddr_ov5640_top.v(line number: 146)] Elaborating instance u_pll</data>
         </row>
         <row>
             <data message="4">Verilog-0003: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/pll/pll.v(line number: 18)] Elaborating module pll</data>
@@ -1618,7 +1482,7 @@
             <data message="5">Verilog-2021: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/pll/pll.v(line number: 141)] Net dyn_duty4 in pll(original module pll) does not have a driver, tie it to 0</data>
         </row>
         <row>
-            <data message="4">Verilog-0004: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/hdmi_ddr_ov5640_top.v(line number: 151)] Elaborating instance ms72xx_ctl</data>
+            <data message="4">Verilog-0004: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/hdmi_ddr_ov5640_top.v(line number: 155)] Elaborating instance ms72xx_ctl</data>
         </row>
         <row>
             <data message="4">Verilog-0003: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/ms72xx_ctl.v(line number: 23)] Elaborating module ms72xx_ctl</data>
@@ -1685,13 +1549,62 @@
     DATA_BYTE = 2'b01</data>
         </row>
         <row>
-            <data message="4">Verilog-0004: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/hdmi_ddr_ov5640_top.v(line number: 180)] Elaborating instance power_on_delay_inst</data>
+            <data message="4">Verilog-0004: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/hdmi_ddr_ov5640_top.v(line number: 193)] Elaborating instance video_block_move</data>
+        </row>
+        <row>
+            <data message="4">Verilog-0003: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/helai_color_move/video_block_move.v(line number: 1)] Elaborating module video_block_move</data>
+        </row>
+        <row>
+            <data message="4">Module instance {hdmi_ddr_ov5640_top/video_block_move} parameter value:
+    H_DISP = 32'b00000000000000000000001010000000
+    V_DISP = 32'b00000000000000000000001011010000
+    VIDEO_CLK = 32'b00000010001101100111101110001000
+    BLOCK_CLK = 32'b00000000000000000000000001100100
+    SIDE_W = 32'b00000000000000000000000000101000
+    BLOCK_W = 32'b00000000000000000000000001010000
+    SCREEN_SIDE_COLOR = 24'b111111110000000011111111
+    SCREEN_BKG_COLOR = 24'b111111111111111111111111
+    MOVE_BLOCK_COLOR = 24'b111111111111111111111111</data>
+        </row>
+        <row>
+            <data message="4">Verilog-0004: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/helai_color_move/video_block_move.v(line number: 34)] Elaborating instance u_video_timing_color</data>
+        </row>
+        <row>
+            <data message="4">Verilog-0003: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/helai_color_move/video_timing_color.v(line number: 10)] Elaborating module video_timing_color</data>
+        </row>
+        <row>
+            <data message="4">Module instance {hdmi_ddr_ov5640_top/video_block_move/u_video_timing_color} parameter value:
+    VIDEO_H = 32'b00000000000000000000001010000000
+    VIDEO_V = 32'b00000000000000000000001011010000
+    VIDEO_START_X = 32'b00000000000000000000000000000000
+    VIDEO_START_Y = 32'b00000000000000000000000000000000</data>
+        </row>
+        <row>
+            <data message="4">Verilog-0004: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/helai_color_move/video_block_move.v(line number: 61)] Elaborating instance u_rgb_display</data>
+        </row>
+        <row>
+            <data message="4">Verilog-0003: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/helai_color_move/rgb_display.v(line number: 1)] Elaborating module rgb_display</data>
+        </row>
+        <row>
+            <data message="4">Module instance {hdmi_ddr_ov5640_top/video_block_move/u_rgb_display} parameter value:
+    H_DISP = 32'b00000000000000000000001010000000
+    V_DISP = 32'b00000000000000000000001011010000
+    VIDEO_CLK = 32'b00000010001101100111101110001000
+    BLOCK_CLK = 32'b00000000000000000000000001100100
+    SIDE_W = 32'b00000000000000000000000000101000
+    BLOCK_W = 32'b00000000000000000000000001010000
+    SCREEN_SIDE_COLOR = 24'b111111110000000011111111
+    SCREEN_BKG_COLOR = 24'b111111111111111111111111
+    MOVE_BLOCK_COLOR = 24'b111111111111111111111111</data>
+        </row>
+        <row>
+            <data message="4">Verilog-0004: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/hdmi_ddr_ov5640_top.v(line number: 204)] Elaborating instance power_on_delay_inst</data>
         </row>
         <row>
             <data message="4">Verilog-0003: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/power_on_delay.v(line number: 22)] Elaborating module power_on_delay</data>
         </row>
         <row>
-            <data message="4">Verilog-0004: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/hdmi_ddr_ov5640_top.v(line number: 192)] Elaborating instance coms1_reg_config</data>
+            <data message="4">Verilog-0004: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/hdmi_ddr_ov5640_top.v(line number: 216)] Elaborating instance coms1_reg_config</data>
         </row>
         <row>
             <data message="4">Verilog-0003: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/reg_config.v(line number: 22)] Elaborating module reg_config</data>
@@ -1711,7 +1624,7 @@
             <data message="5">Verilog-2048: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/i2c_com.v(line number: 51)] Zero-extending on all bits z values may cause simulation mismatch.</data>
         </row>
         <row>
-            <data message="4">Verilog-0004: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/hdmi_ddr_ov5640_top.v(line number: 207)] Elaborating instance coms2_reg_config</data>
+            <data message="4">Verilog-0004: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/hdmi_ddr_ov5640_top.v(line number: 231)] Elaborating instance coms2_reg_config</data>
         </row>
         <row>
             <data message="4">Verilog-0003: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/reg_config.v(line number: 22)] Elaborating module reg_config</data>
@@ -1722,7 +1635,7 @@
     DISPAY_V = 32'b00000000000000000000001011010000</data>
         </row>
         <row>
-            <data message="4">Verilog-0004: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/hdmi_ddr_ov5640_top.v(line number: 226)] Elaborating instance cmos1_8_16bit</data>
+            <data message="4">Verilog-0004: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/hdmi_ddr_ov5640_top.v(line number: 250)] Elaborating instance cmos1_8_16bit</data>
         </row>
         <row>
             <data message="4">Verilog-0003: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/cmos_8_16bit.v(line number: 24)] Elaborating module cmos_8_16bit</data>
@@ -1734,13 +1647,13 @@
             <data message="4">Verilog-0004: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/cmos_8_16bit.v(line number: 71)] Elaborating instance u_GTP_IOCLKDIV</data>
         </row>
         <row>
-            <data message="4">Verilog-0004: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/hdmi_ddr_ov5640_top.v(line number: 245)] Elaborating instance cmos2_8_16bit</data>
+            <data message="4">Verilog-0004: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/hdmi_ddr_ov5640_top.v(line number: 269)] Elaborating instance cmos2_8_16bit</data>
         </row>
         <row>
             <data message="4">Verilog-0003: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/cmos_8_16bit.v(line number: 24)] Elaborating module cmos_8_16bit</data>
         </row>
         <row>
-            <data message="4">Verilog-0004: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/hdmi_ddr_ov5640_top.v(line number: 270)] Elaborating instance fram_buf</data>
+            <data message="4">Verilog-0004: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/hdmi_ddr_ov5640_top.v(line number: 299)] Elaborating instance fram_buf</data>
         </row>
         <row>
             <data message="4">Verilog-0003: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/fram_buf.v(line number: 22)] Elaborating module fram_buf</data>
@@ -1760,7 +1673,7 @@
     FRAME_CNT_WIDTH = 32'b00000000000000000000000000000110</data>
         </row>
         <row>
-            <data message="4">Verilog-0004: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/fram_buf.v(line number: 109)] Elaborating instance wr_buf</data>
+            <data message="4">Verilog-0004: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/fram_buf.v(line number: 118)] Elaborating instance wr_buf</data>
         </row>
         <row>
             <data message="4">Verilog-0003: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/wr_buf.v(line number: 22)] Elaborating module wr_buf</data>
@@ -1778,7 +1691,25 @@
     FRAME_CNT_WIDTH = 32'b00000000000000000000000000000110</data>
         </row>
         <row>
-            <data message="4">Verilog-0004: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/wr_buf.v(line number: 190)] Elaborating instance wr_fram_buf</data>
+            <data message="4">Verilog-0004: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/wr_buf.v(line number: 78)] Elaborating instance wr_cell1</data>
+        </row>
+        <row>
+            <data message="4">Verilog-0003: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/wr_cell.v(line number: 1)] Elaborating module wr_cell</data>
+        </row>
+        <row>
+            <data message="4">Module instance {hdmi_ddr_ov5640_top/fram_buf/wr_buf/wr_cell1} parameter value:
+    ADDR_WIDTH = 32'b00000000000000000000000000011100
+    ADDR_OFFSET = 32'b00000000000000000000000000000000
+    H_NUM = 12'b001010000000
+    V_NUM = 12'b001011010000
+    DQ_WIDTH = 32'b00000000000000000000000000100000
+    LEN_WIDTH = 32'b00000000000000000000000000100000
+    PIX_WIDTH = 32'b00000000000000000000000000010000
+    LINE_ADDR_WIDTH = 32'b00000000000000000000000000010110
+    FRAME_CNT_WIDTH = 16'b0000000000001000</data>
+        </row>
+        <row>
+            <data message="4">Verilog-0004: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/wr_cell.v(line number: 170)] Elaborating instance wr_fram_buf</data>
         </row>
         <row>
             <data message="4">Verilog-0003: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/wr_fram_buf/wr_fram_buf.v(line number: 16)] Elaborating module wr_fram_buf</data>
@@ -1790,7 +1721,7 @@
             <data message="4">Verilog-0003: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/wr_fram_buf/rtl/ipml_sdpram_v1_6_wr_fram_buf.v(line number: 18)] Elaborating module ipml_sdpram_v1_6_wr_fram_buf</data>
         </row>
         <row>
-            <data message="4">Module instance {hdmi_ddr_ov5640_top/fram_buf/wr_buf/wr_fram_buf/U_ipml_sdpram_wr_fram_buf} parameter value:
+            <data message="4">Module instance {hdmi_ddr_ov5640_top/fram_buf/wr_buf/wr_cell1/wr_fram_buf/U_ipml_sdpram_wr_fram_buf} parameter value:
     c_SIM_DEVICE = LOGOS
     c_WR_ADDR_WIDTH = 32'b00000000000000000000000000001100
     c_WR_DATA_WIDTH = 32'b00000000000000000000000000100000
@@ -2300,7 +2231,25 @@
             <data message="5">Verilog-2020: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/wr_fram_buf/rtl/ipml_sdpram_v1_6_wr_fram_buf.v(line number: 771)] Net DB_bus[143] in ipml_sdpram_v1_6_wr_fram_buf(original module ipml_sdpram_v1_6_wr_fram_buf) does not have a driver, tie it to 0</data>
         </row>
         <row>
-            <data message="4">Verilog-0004: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/fram_buf.v(line number: 149)] Elaborating instance rd_buf</data>
+            <data message="4">Verilog-0004: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/wr_buf.v(line number: 108)] Elaborating instance wr_cell2</data>
+        </row>
+        <row>
+            <data message="4">Verilog-0003: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/wr_cell.v(line number: 1)] Elaborating module wr_cell</data>
+        </row>
+        <row>
+            <data message="4">Module instance {hdmi_ddr_ov5640_top/fram_buf/wr_buf/wr_cell2} parameter value:
+    ADDR_WIDTH = 32'b00000000000000000000000000011100
+    ADDR_OFFSET = 32'b00000000000000000000000000000000
+    H_NUM = 12'b001010000000
+    V_NUM = 12'b001011010000
+    DQ_WIDTH = 32'b00000000000000000000000000100000
+    LEN_WIDTH = 32'b00000000000000000000000000100000
+    PIX_WIDTH = 32'b00000000000000000000000000010000
+    LINE_ADDR_WIDTH = 32'b00000000000000000000000000010110
+    FRAME_CNT_WIDTH = 16'b0000000000001000</data>
+        </row>
+        <row>
+            <data message="4">Verilog-0004: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/fram_buf.v(line number: 164)] Elaborating instance rd_buf</data>
         </row>
         <row>
             <data message="4">Verilog-0003: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/rd_buf.v(line number: 22)] Elaborating module rd_buf</data>
@@ -2318,7 +2267,26 @@
     FRAME_CNT_WIDTH = 32'b00000000000000000000000000000110</data>
         </row>
         <row>
-            <data message="4">Verilog-0004: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/rd_buf.v(line number: 155)] Elaborating instance rd_fram_buf</data>
+            <data message="4">Verilog-0004: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/rd_buf.v(line number: 155)] Elaborating instance rd_cell1</data>
+        </row>
+        <row>
+            <data message="4">Verilog-0003: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/rd_cell.v(line number: 1)] Elaborating module rd_cell</data>
+        </row>
+        <row>
+            <data message="4">Module instance {hdmi_ddr_ov5640_top/fram_buf/rd_buf/rd_cell1} parameter value:
+    ADDR_WIDTH = 32'b00000000000000000000000000011100
+    ADDR_OFFSET = 32'b00000000000000000000000000000000
+    H_NUM = 12'b001010000000
+    V_NUM = 12'b001011010000
+    DQ_WIDTH = 32'b00000000000000000000000000100000
+    LEN_WIDTH = 32'b00000000000000000000000000100000
+    PIX_WIDTH = 32'b00000000000000000000000000010000
+    LINE_ADDR_WIDTH = 32'b00000000000000000000000000010110
+    FRAME_CNT_WIDTH = 32'b00000000000000000000000000000110
+    RAM_WIDTH = 16'b0000000000100000</data>
+        </row>
+        <row>
+            <data message="4">Verilog-0004: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/rd_cell.v(line number: 153)] Elaborating instance rd_fram_buf</data>
         </row>
         <row>
             <data message="4">Verilog-0003: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/rd_fram_buf/rd_fram_buf.v(line number: 16)] Elaborating module rd_fram_buf</data>
@@ -2330,7 +2298,7 @@
             <data message="4">Verilog-0003: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/rd_fram_buf/rtl/ipml_sdpram_v1_6_rd_fram_buf.v(line number: 18)] Elaborating module ipml_sdpram_v1_6_rd_fram_buf</data>
         </row>
         <row>
-            <data message="4">Module instance {hdmi_ddr_ov5640_top/fram_buf/rd_buf/rd_fram_buf/U_ipml_sdpram_rd_fram_buf} parameter value:
+            <data message="4">Module instance {hdmi_ddr_ov5640_top/fram_buf/rd_buf/rd_cell1/rd_fram_buf/U_ipml_sdpram_rd_fram_buf} parameter value:
     c_SIM_DEVICE = LOGOS
     c_WR_ADDR_WIDTH = 32'b00000000000000000000000000001001
     c_WR_DATA_WIDTH = 32'b00000000000000000000000100000000
@@ -2657,7 +2625,26 @@
             <data message="5">Verilog-2020: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/rd_fram_buf/rtl/ipml_sdpram_v1_6_rd_fram_buf.v(line number: 771)] Net DB_bus[143] in ipml_sdpram_v1_6_rd_fram_buf(original module ipml_sdpram_v1_6_rd_fram_buf) does not have a driver, tie it to 0</data>
         </row>
         <row>
-            <data message="4">Verilog-0004: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/fram_buf.v(line number: 174)] Elaborating instance wr_rd_ctrl_top</data>
+            <data message="4">Verilog-0004: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/rd_buf.v(line number: 188)] Elaborating instance rd_cell2</data>
+        </row>
+        <row>
+            <data message="4">Verilog-0003: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/rd_cell.v(line number: 1)] Elaborating module rd_cell</data>
+        </row>
+        <row>
+            <data message="4">Module instance {hdmi_ddr_ov5640_top/fram_buf/rd_buf/rd_cell2} parameter value:
+    ADDR_WIDTH = 32'b00000000000000000000000000011100
+    ADDR_OFFSET = 32'b00000000000000000000000000000000
+    H_NUM = 12'b001010000000
+    V_NUM = 12'b001011010000
+    DQ_WIDTH = 32'b00000000000000000000000000100000
+    LEN_WIDTH = 32'b00000000000000000000000000100000
+    PIX_WIDTH = 32'b00000000000000000000000000010000
+    LINE_ADDR_WIDTH = 32'b00000000000000000000000000010110
+    FRAME_CNT_WIDTH = 32'b00000000000000000000000000000110
+    RAM_WIDTH = 16'b0000000000100000</data>
+        </row>
+        <row>
+            <data message="4">Verilog-0004: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/fram_buf.v(line number: 191)] Elaborating instance wr_rd_ctrl_top</data>
         </row>
         <row>
             <data message="4">Verilog-0003: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/wr_rd_ctrl_top.v(line number: 22)] Elaborating module wr_rd_ctrl_top</data>
@@ -2668,7 +2655,7 @@
     MEM_DQ_WIDTH = 32'b00000000000000000000000000100000</data>
         </row>
         <row>
-            <data message="4">Verilog-0004: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/wr_rd_ctrl_top.v(line number: 103)] Elaborating instance wr_cmd_trans</data>
+            <data message="4">Verilog-0004: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/wr_rd_ctrl_top.v(line number: 109)] Elaborating instance wr_cmd_trans</data>
         </row>
         <row>
             <data message="4">Verilog-0003: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/wr_cmd_trans.v(line number: 22)] Elaborating module wr_cmd_trans</data>
@@ -2679,13 +2666,10 @@
     MEM_DQ_WIDTH = 32'b00000000000000000000000000100000</data>
         </row>
         <row>
-            <data message="4">Verilog-0004: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/wr_rd_ctrl_top.v(line number: 142)] Elaborating instance wr_ctrl</data>
+            <data message="4">Verilog-0004: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/wr_rd_ctrl_top.v(line number: 149)] Elaborating instance wr_ctrl</data>
         </row>
         <row>
             <data message="4">Verilog-0003: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/wr_ctrl.v(line number: 23)] Elaborating module wr_ctrl</data>
-        </row>
-        <row>
-            <data message="5">Verilog-2032: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/wr_ctrl.v(line number: 57)] Assigned initial value to variable test_wr_state that is unassigned but has initial value</data>
         </row>
         <row>
             <data message="4">Module instance {hdmi_ddr_ov5640_top/fram_buf/wr_rd_ctrl_top/wr_ctrl} parameter value:
@@ -2693,7 +2677,7 @@
     MEM_DQ_WIDTH = 32'b00000000000000000000000000100000</data>
         </row>
         <row>
-            <data message="4">Verilog-0004: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/wr_rd_ctrl_top.v(line number: 179)] Elaborating instance rd_ctrl</data>
+            <data message="4">Verilog-0004: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/wr_rd_ctrl_top.v(line number: 189)] Elaborating instance rd_ctrl</data>
         </row>
         <row>
             <data message="4">Verilog-0003: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/rd_ctrl.v(line number: 23)] Elaborating module rd_ctrl</data>
@@ -2704,7 +2688,7 @@
     MEM_DQ_WIDTH = 32'b00000000000000000000000000100000</data>
         </row>
         <row>
-            <data message="4">Verilog-0004: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/hdmi_ddr_ov5640_top.v(line number: 323)] Elaborating instance sync_vg</data>
+            <data message="4">Verilog-0004: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/hdmi_ddr_ov5640_top.v(line number: 356)] Elaborating instance sync_vg</data>
         </row>
         <row>
             <data message="4">Verilog-0003: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/sync_vg.v(line number: 35)] Elaborating module sync_vg</data>
@@ -2726,7 +2710,7 @@
     HV_OFFSET = 12'b000000000000</data>
         </row>
         <row>
-            <data message="4">Verilog-0004: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/hdmi_ddr_ov5640_top.v(line number: 333)] Elaborating instance u_DDR3_50H</data>
+            <data message="4">Verilog-0004: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/hdmi_ddr_ov5640_top.v(line number: 366)] Elaborating instance u_DDR3_50H</data>
         </row>
         <row>
             <data message="4">Verilog-0003: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/DDR3_50H/DDR3_50H.v(line number: 7)] Elaborating module DDR3_50H</data>
@@ -7341,7 +7325,10 @@
             <data message="4">FSM state_fsm[2:0] inferred.</data>
         </row>
         <row>
-            <data message="4">FSM test_rd_state_fsm[2:0] inferred.</data>
+            <data message="4">FSM test_wr_state_fsm[2:0] inferred.</data>
+        </row>
+        <row>
+            <data message="4">FSM test_rd_state_fsm[4:0] inferred.</data>
         </row>
         <row>
             <data message="4">FSM state_fsm[3:0] inferred.</data>
@@ -7411,6 +7398,36 @@
         </row>
         <row>
             <data message="5">Loop was found during constant probe.</data>
+        </row>
+        <row>
+            <data message="5">Loop was found during constant probe.</data>
+        </row>
+        <row>
+            <data message="5">Loop was found during constant probe.</data>
+        </row>
+        <row>
+            <data message="5">Loop was found during constant probe.</data>
+        </row>
+        <row>
+            <data message="5">Loop was found during constant probe.</data>
+        </row>
+        <row>
+            <data message="5">Loop was found during constant probe.</data>
+        </row>
+        <row>
+            <data message="5">Loop was found during constant probe.</data>
+        </row>
+        <row>
+            <data message="5">Loop was found during constant probe.</data>
+        </row>
+        <row>
+            <data message="4">Constant propagation done on N248_1 (bmsWIDEMUX).</data>
+        </row>
+        <row>
+            <data message="4">Constant propagation done on N21[0] (bmsWIDEMUX).</data>
+        </row>
+        <row>
+            <data message="4">Constant propagation done on N1111 (bmsWIDEMUX).</data>
         </row>
         <row>
             <data message="5">Loop was found during constant probe.</data>
@@ -7515,16 +7532,7 @@
             <data message="5">Loop was found during constant probe.</data>
         </row>
         <row>
-            <data message="4">Constant propagation done on N34 (bmsWIDEMUX).</data>
-        </row>
-        <row>
             <data message="5">Loop was found during constant probe.</data>
-        </row>
-        <row>
-            <data message="4">Constant propagation done on N17[0] (bmsWIDEMUX).</data>
-        </row>
-        <row>
-            <data message="4">Constant propagation done on N26[1] (bmsWIDEMUX).</data>
         </row>
         <row>
             <data message="5">Loop was found during constant probe.</data>

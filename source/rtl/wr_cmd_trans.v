@@ -33,7 +33,8 @@ module wr_cmd_trans #(
     output reg                       wr_cmd_done,
     input                            wr_bac,  
     input  [MEM_DQ_WIDTH*8-1:0]      wr_ctrl_data,
-    output                           wr_data_re,
+    // output                           wr_data_re1,
+    // output                           wr_data_re2,
                                      
     output reg                       wr_en=0,        
     output reg [CTRL_ADDR_WIDTH-1:0] wr_addr=0,      
@@ -55,7 +56,7 @@ module wr_cmd_trans #(
     output reg [CTRL_ADDR_WIDTH-1:0] rd_addr      =0,           
     output reg [3:0]                 rd_id        =0,           
     output reg [3:0]                 rd_len       =0,           
-    input                            rd_done_p     
+    input                            rd_done_p      
 );
 
     reg          wr_done_1d;
@@ -194,11 +195,12 @@ module wr_cmd_trans #(
         else
             wr_data_re_reg <= 1'b0;
     end
-    assign wr_data_re = wr_ready;// & wr_data_re_reg;
+    // assign wr_data_re1 = wr_ready1;// & wr_data_re_reg;
+    // assign wr_data_re2 = wr_ready2;// & wr_data_re_reg;
     
     always @(posedge clk)
     begin
-        if(wr_data_re)
+        if(wr_ready)
             wr_data_en <= 1'b1;
         else 
             wr_data_en <= 1'b0;
@@ -208,7 +210,7 @@ module wr_cmd_trans #(
     begin
         if(~rstn)
             burst_cnt <= 1'b0;
-        else if(wr_data_re && wr_ready) 
+        else if(wr_ready) 
         begin  
             if(burst_cnt == wr_len)
                 burst_cnt <= 1'b0;

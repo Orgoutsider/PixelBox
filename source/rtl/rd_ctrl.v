@@ -35,7 +35,10 @@ module rd_ctrl #(
     
     input                                read_ready    ,
     output   [MEM_DQ_WIDTH*8-1:0]        read_rdata    ,
-    output                               read_rdata_en ,
+    output                               read_rdata_en1 ,
+    output                               read_rdata_en2 ,
+    input                                read_done   ,
+    output                               read_cmd_en_p,
    
     output reg [CTRL_ADDR_WIDTH-1:0]     axi_araddr    =0,    
     output reg [3:0]                     axi_arid      =0,
@@ -50,49 +53,84 @@ module rd_ctrl #(
     input                                axi_rvalid    ,
     input                                axi_rlast     ,
     input   [3:0]                        axi_rid       ,
-    input   [1:0]                        axi_rresp  
+    input   [1:0]                        axi_rresp     ,
+    output                               flag
 );
 
-    localparam E_IDLE = 3'd0;
-    localparam E_RD   = 3'd1;
-    localparam E_END  = 3'd2;
+    localparam E_IDLE =  5'b00001; 
+    localparam E_RD1   = 5'b00010;
+    localparam E_RD2   = 5'b00100;
+    localparam E_END1  = 5'b01000;
+    localparam E_END2  = 5'b10000;
     localparam DQ_NUM = MEM_DQ_WIDTH/8; 
     
     assign axi_arburst = 2'b01;
     assign axi_arsize = 3'b110;
     
-    reg [2:0] test_rd_state;
+    reg [4:0] test_rd_state;
     reg [3:0] rd_delay_cnt;
+    reg flag;
+
+    always @(posedge clk or negedge rst_n) begin
+        if (!rst_n) begin
+            flag <= 1'b0;
+        end
+        // else if ((test_rd_state == E_IDLE) && read_en)
+        else if (read_done)
+            flag <= ~flag;
+    end
+
+    assign read_cmd_en_p = flag & ~read_done;
 
     always @(posedge clk or negedge rst_n)
     begin
-       if (!rst_n)
-       test_rd_state  <= E_IDLE;
-       else begin      
+        if (!rst_n) begin
+        test_rd_state <= E_IDLE;
+        end
+        else begin      
         case (test_rd_state)
             E_IDLE: begin
-                if (read_en)
-                    test_rd_state <= E_RD;
+                if (read_en) begin
+                    if (flag) begin
+                        test_rd_state <= E_RD2;
+                    end
+                    else begin
+                        test_rd_state <= E_RD1;
+                    end
+                end
             end
-            E_RD: begin                
+            E_RD1: begin                
                 if (axi_arvalid&axi_arready)//(rd_delay_cnt == 4'd7)//
-                    test_rd_state <= E_END;
+                    test_rd_state <= E_END1;
             end
-            E_END:  begin
+            E_RD2: begin
+                if (axi_arvalid&axi_arready)//(rd_delay_cnt == 4'd7)//
+                    test_rd_state <= E_END2;
+            end
+            E_END1:  begin
+                if (rd_delay_cnt == 4'd15)
+                    test_rd_state <= E_IDLE;
+            end 
+            E_END2:  begin
                 if (rd_delay_cnt == 4'd15)
                     test_rd_state <= E_IDLE;
             end 
             default:  test_rd_state <= E_IDLE;
         endcase     
-       end
+        end
     end        
     
-    
+    // wire rd_opera_en_2;
+    //读端口1操作使能 
+    // assign rd_opera_en_1 = (test_rd_state == E_RD1) || (test_rd_state == E_END1);
+    //读端口2操作使能 
+    // assign rd_opera_en_2 = (test_rd_state == E_RD2) || (test_rd_state == E_END2);
+
     always @(posedge clk or negedge rst_n)
     begin
        if (!rst_n)
            rd_delay_cnt       <= 4'b0; 
-       else if((test_rd_state == E_END))
+       else if((test_rd_state == E_END1) || (test_rd_state == E_END2))
            rd_delay_cnt <= rd_delay_cnt + 1'b1;
        else
            rd_delay_cnt       <= 4'b0; 
@@ -125,13 +163,24 @@ module rd_ctrl #(
                     read_done_p <= 1'b0 ;
                     axi_arvalid <= 1'b0;
                 end
-                E_RD: begin
+                E_RD1: begin
                     axi_arvalid <= 1'b1;   
                                    
                     if (axi_arvalid&axi_arready)
                         axi_arvalid <= 1'b0; 
                 end
-                E_END: begin
+                E_RD2: begin
+                    axi_arvalid <= 1'b1;   
+                                   
+                    if (axi_arvalid&axi_arready)
+                        axi_arvalid <= 1'b0; 
+                end
+                E_END1: begin
+                    axi_arvalid <= 1'b0;
+                    if(rd_delay_cnt == 4'd15)
+                        read_done_p <= 1'b1;
+                end
+                E_END2: begin
                     axi_arvalid <= 1'b0;
                     if(rd_delay_cnt == 4'd15)
                         read_done_p <= 1'b1;
@@ -146,7 +195,8 @@ module rd_ctrl #(
 
     assign axi_ready = read_ready;
     assign read_rdata = axi_rdata;
-    assign read_rdata_en = axi_rvalid;
+    assign read_rdata_en2 =  flag ? axi_rvalid : 1'b0;
+    assign read_rdata_en1 = ~flag ? axi_rvalid : 1'b0;
     assign axi_rready = 1'b1;
  
 endmodule  

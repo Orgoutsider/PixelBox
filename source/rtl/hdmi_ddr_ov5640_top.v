@@ -20,8 +20,9 @@
 //////////////////////////////////////////////////////////////////////////////////
 `define UD #1
 //cmos1、cmos2二选一，作为视频源输入
-`define CMOS_1      //cmos1作为视频输入；
-//`define CMOS_2      //cmos2作为视频输入；
+// `define CMOS_1      //cmos1作为视频输入；
+// `define CMOS_2      //cmos2作为视频输入；
+// `define COLOR
 
 module hdmi_ddr_ov5640_top#(
 	parameter MEM_ROW_ADDR_WIDTH   = 15         ,
@@ -108,10 +109,10 @@ module hdmi_ddr_ov5640_top#(
     reg                         cmos2_vsync_d0      /*synthesis PAP_MARK_DEBUG="1"*/;
     wire                        cmos2_pclk_16bit    /*synthesis PAP_MARK_DEBUG="1"*/;
     wire[15:0]                  o_rgb565            ;
-    wire                        pclk_in_test        ;    
-    wire                        vs_in_test          ;
-    wire                        de_in_test          ;
-    wire[15:0]                  i_rgb565            ;
+    // wire                        pclk_in_test        ;    
+    // wire                        vs_in_test          ;
+    // wire                        de_in_test          ;
+    // wire[15:0]                  i_rgb565            ;
     wire                        de_re               ;
 //axi bus   
     wire [CTRL_ADDR_WIDTH-1:0]  axi_awaddr                 ;
@@ -137,11 +138,14 @@ module hdmi_ddr_ov5640_top#(
     wire                        axi_rlast                  ;
     reg  [26:0]                 cnt                        ;
     reg  [15:0]                 cnt_1                      ;
+    wire [23:0]                 video_rgb                  ;
+    wire                        video_vs                   ;
+    wire                        video_de                   ;
 /////////////////////////////////////////////////////////////////////////////////////
 //PLL
     pll u_pll (
         .clkin1   (  sys_clk    ),//50MHz
-        .clkout0  (  pix_clk    ),//75.25M 640*720@30
+        .clkout0  (  pix_clk    ),//74.25M 640*720@30
         .clkout1  (  cfg_clk    ),//10MHz
         .clkout2  (  clk_25M    ),//25M
         .pll_lock (  locked     )
@@ -174,6 +178,26 @@ module hdmi_ddr_ov5640_top#(
     end
     
     assign rstn_out = (rstn_1ms == 16'h2710);
+
+    // 彩条
+    video_block_move #(
+    .H_DISP            (640)        ,  //video h
+    .V_DISP            (720)        ,  //video v
+    .VIDEO_CLK         (37125000)   ,  //video clk
+    .BLOCK_CLK         (100)        ,  //move block clk
+    .SIDE_W            (40)         ,  //screen side size
+    .BLOCK_W           (80)         ,  //move block size
+    .SCREEN_SIDE_COLOR (24'hff00ff) ,   //screen side color
+    .SCREEN_BKG_COLOR  (24'hffffff) ,   //screen background color
+    .MOVE_BLOCK_COLOR  (24'hffffff)  //move block color
+    ) video_block_move (
+        .pixel_clk (pix_clk),
+        .sys_rst_n (rstn_out),
+        .video_hs  (video_hs),
+        .video_vs  (video_vs),
+        .video_de  (video_de),
+        .video_rgb(video_rgb)
+    );
 
 //配置CMOS///////////////////////////////////////////////////////////////////////////////////
 //OV5640 register configure enable    
@@ -254,27 +278,36 @@ module hdmi_ddr_ov5640_top#(
     	.de_o           (cmos2_href_16bit ) //output
     );
 //输入视频源选择//////////////////////////////////////////////////////////////////////////////////////////
-`ifdef CMOS_1
-assign     pclk_in_test    =    cmos1_pclk_16bit    ;
-assign     vs_in_test      =    cmos1_vsync_d0      ;
-assign     de_in_test      =    cmos1_href_16bit    ;
-assign     i_rgb565        =    {cmos1_d_16bit[4:0],cmos1_d_16bit[10:5],cmos1_d_16bit[15:11]};//{r,g,b}
-`elsif CMOS_2
-assign     pclk_in_test    =    cmos2_pclk_16bit    ;
-assign     vs_in_test      =    cmos2_vsync_d0      ;
-assign     de_in_test      =    cmos2_href_16bit    ;
-assign     i_rgb565        =    {cmos2_d_16bit[4:0],cmos2_d_16bit[10:5],cmos2_d_16bit[15:11]};//{r,g,b}
-`endif
+// `ifdef CMOS_1
+// assign     pclk_in_test    =    cmos1_pclk_16bit    ;
+// assign     vs_in_test      =    cmos1_vsync_d0      ;
+// assign     de_in_test      =    cmos1_href_16bit    ;
+// assign     i_rgb565        =    {cmos1_d_16bit[4:0],cmos1_d_16bit[10:5],cmos1_d_16bit[15:11]};//{r,g,b}
+// `elsif CMOS_2
+// assign     pclk_in_test    =    cmos2_pclk_16bit    ;
+// assign     vs_in_test      =    cmos2_vsync_d0      ;
+// assign     de_in_test      =    cmos2_href_16bit    ;
+// assign     i_rgb565        =    {cmos2_d_16bit[4:0],cmos2_d_16bit[10:5],cmos2_d_16bit[15:11]};//{r,g,b}
+// `elsif COLOR
+// assign     pclk_in_test    =    pix_clk;
+// assign     vs_in_test      =    video_vs;
+// assign     de_in_test      =    video_de;
+// assign     i_rgb565        =    {video_rgb[23:19],video_rgb[15:10],video_rgb[7:3]};
+// `endif
 //////////////////////////////////////////////////////////////////////////////////////////////////////////
 //修改ddr读写模块v1
     fram_buf fram_buf(
         .ddr_clk        (  core_clk             ),//input                         ddr_clk,
         .ddr_rstn       (  ddr_init_done        ),//input                         ddr_rstn,
         //data_in                                  
-        .vin_clk        (  pclk_in_test         ),//input                         vin_clk,
-        .wr_fsync       (  vs_in_test           ),//input                         wr_fsync,
-        .wr_en          (  de_in_test           ),//input                         wr_en,
-        .wr_data        (  i_rgb565             ),//input  [15 : 0]  wr_data,
+        .vin_clk1        (  cmos1_pclk_16bit         ),//input                         vin_clk,
+        .wr_fsync1       (  cmos1_vsync_d0           ),//input                         wr_fsync,
+        .wr_en1          (  cmos1_href_16bit           ),//input                         wr_en,
+        .wr_data1        (  {cmos1_d_16bit[4:0],cmos1_d_16bit[10:5],cmos1_d_16bit[15:11]} ),//input  [15 : 0]  wr_data,
+        .vin_clk2        (  cmos2_pclk_16bit         ),//input                         vin_clk,
+        .wr_fsync2       (  cmos2_vsync_d0           ),//input                         wr_fsync,
+        .wr_en2          (  cmos2_href_16bit           ),//input                         wr_en,
+        .wr_data2        (  {cmos2_d_16bit[4:0],cmos2_d_16bit[10:5],cmos2_d_16bit[15:11]} ),//input  [15 : 0]  wr_data,
         //data_out
         .vout_clk       (  pix_clk              ),//input                         vout_clk,
         .rd_fsync       (  vs_o               ),//input                         rd_fsync,
