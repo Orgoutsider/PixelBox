@@ -1,4 +1,4 @@
-##### Written on 2023/11/04 20:50:30 ###############################
+##### Written on 2023/11/07 20:34:32 ###############################
 
 
 ##### INFO ##################################################
@@ -14,7 +14,7 @@ Constraint File(s) :
 
 ##### SUMMARY ######################################################
 
-Found 0 error(s), 19 critical warning(s), 0 warning(s), out of 965 constraint(s)
+Found 0 error(s), 27 critical warning(s), 0 warning(s), out of 1121 constraint(s)
 
 
 Inapplicable constraints(except overwritten constraints):
@@ -76,6 +76,30 @@ define_attribute {p:cmos2_href} {PAP_IO_LOC} {AB5}
 
 define_attribute {p:cmos2_vsync} {PAP_IO_LOC} {Y5}
 	C: ConstraintEditor-2002: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/hdmi_ddr_ov5640_top.fdc(line number: 903)] | Port cmos2_vsync has been placed at location Y5, whose type is share pin.
+
+define_attribute {p:g_in[5]} {PAP_IO_LOC} {AB18}
+	C: ConstraintEditor-2002: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/hdmi_ddr_ov5640_top.fdc(line number: 1027)] | Port g_in[5] has been placed at location AB18, whose type is share pin.
+
+define_attribute {p:g_in[4]} {PAP_IO_LOC} {AA18}
+	C: ConstraintEditor-2002: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/hdmi_ddr_ov5640_top.fdc(line number: 1032)] | Port g_in[4] has been placed at location AA18, whose type is share pin.
+
+define_attribute {p:g_in[3]} {PAP_IO_LOC} {AB19}
+	C: ConstraintEditor-2002: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/hdmi_ddr_ov5640_top.fdc(line number: 1037)] | Port g_in[3] has been placed at location AB19, whose type is share pin.
+
+define_attribute {p:g_in[2]} {PAP_IO_LOC} {W18}
+	C: ConstraintEditor-2002: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/hdmi_ddr_ov5640_top.fdc(line number: 1042)] | Port g_in[2] has been placed at location W18, whose type is share pin.
+
+define_attribute {p:g_in[1]} {PAP_IO_LOC} {V17}
+	C: ConstraintEditor-2002: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/hdmi_ddr_ov5640_top.fdc(line number: 1047)] | Port g_in[1] has been placed at location V17, whose type is share pin.
+
+define_attribute {p:iic_sda} {PAP_IO_LOC} {V20}
+	C: ConstraintEditor-2002: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/hdmi_ddr_ov5640_top.fdc(line number: 1097)] | Port iic_sda has been placed at location V20, whose type is share pin.
+
+define_attribute {p:iic_scl} {PAP_IO_LOC} {V19}
+	C: ConstraintEditor-2002: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/hdmi_ddr_ov5640_top.fdc(line number: 1104)] | Port iic_scl has been placed at location V19, whose type is share pin.
+
+define_attribute {p:pix_clk_in} {PAP_IO_LOC} {AA12}
+	C: ConstraintEditor-2002: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/hdmi_ddr_ov5640_top.fdc(line number: 1121)] | Port pix_clk_in has been placed at location AA12, whose type is share pin.
 
 
 Constraints with issues:

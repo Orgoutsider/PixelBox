@@ -3,23 +3,23 @@ project name,HDMI_DDR3_OV5640_test.pds
 
 Single Seed:
 Seed,State,Convergence,Setup(Slow),Setup(Fast),Hold(Slow),Hold(Fast),Recovery(Slow),Recovery(Fast),Removal(Slow),Removal(Fast),PBM-GP,PBM-PreGP,PBM-PostGP,LP,Total Placement Cpu Time,Detailed routing,Total Routing Cpu Time,Wire Length After Post-GP,Wire Length After LP,Wire Length After DP,Routing Arc Length,Worst Slack After GP Timing,Worst Slack After LP Timing,Worst Slack Before RP,Worst Slack Before DP,Worst Slack After DP,Worst Slack After Placement,Worst Slack After TA By Preroute,TNS After DP,TNS Before Route,Setup(Slow) Total Failing TNS,Setup(Slow) Total Failing Endpoints,Hold(Slow) Total Failing THS,Hold(Slow) Total Failing Endpoints
-single,OK,OK,1.692,1.834,0.203,0.110,4.760,6.135,0.454,0.262,NA,NA,NA,2.17,29.70,31.11,66.70,134929,173813,173813,216368,NA,NA,1691,NA,NA,1691,NA,NA,0,0.000,0,0.000,0
+single,OK,OK,1.494,1.834,0.228,0.119,3.480,4.389,0.434,0.280,NA,NA,NA,0.28,12.92,19.34,74.11,184287,213770,213770,253235,NA,NA,1691,NA,NA,1691,NA,NA,0,0.000,0,0.000,0
 Pass Rate/Convergence Rate,100.00%,100.00%
 
 Synthesize:
-control_set,231
+control_set,245
 Synthesize Performance Summary:
 slack category,Synthesize Setup WNS,Synthesize Setup TNS,Synthesize Recovery WNS,Synthesize Recovery TNS
-slack value,1.088,0.000,6.048,0.000
-Synthesize Process Cpu Time,0h:0m:31s
+slack value,1.088,0.000,4.688,0.000
+Synthesize Process Cpu Time,0h:0m:17s
 
 Device Map:
 Device Map Resource Usage Summary:
 Logic Utilization,LUT,FF,DRM,APM,Distributed RAM,HSSTHP,USCM,HCKB,RCKB
-Used,14420,17855,79.5,0,72,NA,11,NA,0
+Used,16625,20838,106.5,0,72,NA,10,NA,0
 Available,42800,64200,134,84,17000,NA,30,NA,24
-Utilization(%),34%,28%,60%,0%,1%,NA,37%,NA,0%
-Device Map Process Cpu Time,0h:0m:10s
+Utilization(%),39%,33%,80%,0%,1%,NA,34%,NA,0%
+Device Map Process Cpu Time,0h:0m:11s
 
 Project Configurations:
 top module,hdmi_ddr_ov5640_top
