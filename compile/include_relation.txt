@@ -104,3 +104,10 @@
 
 
 
+
+
+
+
+
+E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/osd_rom/rtl/ipml_spram_v1_5_osd_rom.v|E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/osd_rom/rtl/osd_rom_init_param.v|
+

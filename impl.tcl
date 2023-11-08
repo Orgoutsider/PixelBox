@@ -1043,3 +1043,31 @@ dev_map
 pnr 
 report_timing 
 gen_bit_stream -master_configuration_clock_frequency {40M} 
+add_design "E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/btn_deb_fix.v"
+add_design "E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/key_ctl.v"
+add_design "E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/osd_rom/osd_rom.idf"
+add_design "E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/osd_display.v"
+set_arch -family Logos -device PGL50H -speedgrade -6 -package FBG484
+compile -top_module hdmi_ddr_ov5640_top
+synthesize -ads -selected_syn_tool_opt 2 
+dev_map 
+dev_map 
+pnr 
+report_timing 
+gen_bit_stream -master_configuration_clock_frequency {40M} 
+set_arch -family Logos -device PGL50H -speedgrade -6 -package FBG484
+compile -top_module hdmi_ddr_ov5640_top
+synthesize -ads -selected_syn_tool_opt 2 
+dev_map 
+pnr 
+report_timing 
+gen_bit_stream -master_configuration_clock_frequency {40M} 
+set_arch -family Logos -device PGL50H -speedgrade -6 -package FBG484
+compile -top_module PDS_HDMA
+set_arch -family Logos -device PGL50H -speedgrade -6 -package FBG484
+compile -top_module hdmi_ddr_ov5640_top
+synthesize -ads -selected_syn_tool_opt 2 
+dev_map 
+pnr 
+report_timing 
+gen_bit_stream -master_configuration_clock_frequency {40M} 

@@ -2806,14 +2806,14 @@
             <data>u_DDR3_50H/I_GTP_CLKDIV</data>
             <data>clkbufg_3</data>
             <data>ntclkbufg_0</data>
-            <data>17134</data>
+            <data>16819</data>
         </row>
         <row>
             <data>TCK_USER</data>
             <data>u_CORES/u_GTP_SCANCHAIN_PG</data>
             <data>clkbufg_4</data>
             <data>ntclkbufg_1</data>
-            <data>3159</data>
+            <data>3080</data>
         </row>
         <row>
             <data>CLKOUT1</data>
@@ -2827,7 +2827,7 @@
             <data>u_pll/u_pll_e3</data>
             <data>clkbufg_6</data>
             <data>ntclkbufg_3</data>
-            <data>151</data>
+            <data>186</data>
         </row>
         <row>
             <data>CLKDIVOUT</data>
@@ -2864,6 +2864,11 @@
             <data>Rst_Source_Inst</data>
             <data>Fanout</data>
         </column_headers>
+        <row>
+            <data>fram_buf/rd_buf/pos_en_rnmt</data>
+            <data>fram_buf/rd_buf/u_osd_display/pos_en</data>
+            <data>16</data>
+        </row>
         <row>
             <data>N136</data>
             <data>N136_inv</data>
@@ -2945,14 +2950,19 @@
             <data>1</data>
         </row>
         <row>
-            <data>fram_buf/rd_buf/N46</data>
-            <data>fram_buf/rd_buf/N46</data>
+            <data>fram_buf/rd_buf/N59</data>
+            <data>fram_buf/rd_buf/N59</data>
             <data>16</data>
         </row>
         <row>
-            <data>fram_buf/rd_buf/N49</data>
-            <data>fram_buf/rd_buf/N49</data>
+            <data>fram_buf/rd_buf/N34_1</data>
+            <data>fram_buf/rd_buf/N34_1</data>
             <data>13</data>
+        </row>
+        <row>
+            <data>fram_buf/rd_buf/N32</data>
+            <data>fram_buf/rd_buf/N32</data>
+            <data>37</data>
         </row>
         <row>
             <data>ms72xx_ctl/iic_dri_rx/N434</data>
@@ -3032,7 +3042,7 @@
         <row>
             <data>u_CORES/u_debug_core_0/G_M_1.u1_trig_unit/N69</data>
             <data>u_CORES/u_debug_core_0/G_M_1.u1_trig_unit/N69</data>
-            <data>12066</data>
+            <data>11752</data>
         </row>
         <row>
             <data>u_CORES/u_jtag_hub/N3</data>
@@ -3055,14 +3065,14 @@
             <data>52</data>
         </row>
         <row>
-            <data>fram_buf/rd_buf/rd_cell1/rd_rst</data>
-            <data>fram_buf/rd_buf/rd_cell1/N1</data>
-            <data>24</data>
-        </row>
-        <row>
             <data>fram_buf/rd_buf/rd_cell1/N10</data>
             <data>fram_buf/rd_buf/rd_cell1/N10</data>
             <data>12</data>
+        </row>
+        <row>
+            <data>fram_buf/rd_buf/u_osd_display/N91</data>
+            <data>fram_buf/rd_buf/u_osd_display/N91</data>
+            <data>4</data>
         </row>
         <row>
             <data>fram_buf/wr_buf/wr_cell1/rd_rst</data>
@@ -3169,27 +3179,27 @@
         <row>
             <data>ntclkbufg_0</data>
             <data>clkbufg_3</data>
-            <data>17134</data>
+            <data>16819</data>
         </row>
         <row>
             <data>u_CORES/u_debug_core_0/G_M_1.u1_trig_unit/N69</data>
             <data>u_CORES/u_debug_core_0/G_M_1.u1_trig_unit/N69</data>
-            <data>12066</data>
+            <data>11752</data>
         </row>
         <row>
             <data>u_CORES/u_debug_core_0/data_start_d1</data>
             <data>u_CORES/u_debug_core_0/data_start_d1</data>
-            <data>4930</data>
+            <data>4800</data>
         </row>
         <row>
             <data>ntclkbufg_1</data>
             <data>clkbufg_4</data>
-            <data>3159</data>
+            <data>3080</data>
         </row>
         <row>
             <data>u_CORES/u_debug_core_0/conf_rst</data>
             <data>u_CORES/u_debug_core_0/u_hub_data_decode/newrst.conf_rst</data>
-            <data>2998</data>
+            <data>2920</data>
         </row>
         <row>
             <data>u_DDR3_50H/u_ddrphy_top/ddrphy_calib_top/calib_mux/N0</data>
@@ -3212,14 +3222,14 @@
             <data>757</data>
         </row>
         <row>
-            <data>u_CORES/u_debug_core_0/G_M_2.u2_trig_unit/N13741</data>
-            <data>u_CORES/u_debug_core_0/G_M_2.u2_trig_unit/N13741</data>
-            <data>724</data>
+            <data>u_CORES/u_debug_core_0/G_M_2.u2_trig_unit/N13025</data>
+            <data>u_CORES/u_debug_core_0/G_M_2.u2_trig_unit/N13025</data>
+            <data>685</data>
         </row>
         <row>
-            <data>u_CORES/u_debug_core_0/G_M_1.u1_trig_unit/N13520</data>
-            <data>u_CORES/u_debug_core_0/G_M_1.u1_trig_unit/N13520</data>
-            <data>712</data>
+            <data>u_CORES/u_debug_core_0/G_M_1.u1_trig_unit/N12804</data>
+            <data>u_CORES/u_debug_core_0/G_M_1.u1_trig_unit/N12804</data>
+            <data>673</data>
         </row>
         <row>
             <data>u_DDR3_50H/u_ddrphy_top/calib_done</data>
@@ -3237,11 +3247,6 @@
             <data>283</data>
         </row>
         <row>
-            <data>u_CORES/u_debug_core_0/u_rd_addr_gen/counter [1]</data>
-            <data>u_CORES/u_debug_core_0/u_rd_addr_gen/confck_same.counter[1]</data>
-            <data>265</data>
-        </row>
-        <row>
             <data>u_DDR3_50H/u_ipsxb_ddrc_top/mcdq_wdatapath/data_out [0]</data>
             <data>u_DDR3_50H/u_ipsxb_ddrc_top/mcdq_wdatapath/data_out[0]</data>
             <data>261</data>
@@ -3252,13 +3257,13 @@
             <data>260</data>
         </row>
         <row>
-            <data>fram_buf/wr_buf/wr_cell2/N122</data>
-            <data>fram_buf/wr_buf/wr_cell2/N122</data>
+            <data>fram_buf/wr_buf/wr_cell1/N122</data>
+            <data>fram_buf/wr_buf/wr_cell1/N122</data>
             <data>258</data>
         </row>
         <row>
-            <data>fram_buf/wr_buf/wr_cell1/N122</data>
-            <data>fram_buf/wr_buf/wr_cell1/N122</data>
+            <data>fram_buf/wr_buf/wr_cell2/N122</data>
+            <data>fram_buf/wr_buf/wr_cell2/N122</data>
             <data>258</data>
         </row>
         <row>
@@ -3270,6 +3275,11 @@
             <data>fram_buf/wr_buf/wr_cell2/N64</data>
             <data>fram_buf/wr_buf/wr_cell2/N64</data>
             <data>256</data>
+        </row>
+        <row>
+            <data>u_CORES/u_debug_core_0/u_rd_addr_gen/counter [1]</data>
+            <data>u_CORES/u_debug_core_0/u_rd_addr_gen/confck_same.counter[1]</data>
+            <data>252</data>
         </row>
         <row>
             <data>N101_0</data>
@@ -3282,13 +3292,13 @@
             <data>195</data>
         </row>
         <row>
-            <data>u_CORES/u_debug_core_0/u0_trig_unit/u_cfg_reg_file/bit_cnt [0]</data>
-            <data>u_CORES/u_debug_core_0/u0_trig_unit/u_cfg_reg_file/bit_cnt[0]</data>
+            <data>u_CORES/u_debug_core_0/G_M_3.u3_trig_unit/u_cfg_reg_file/bit_cnt [6]</data>
+            <data>u_CORES/u_debug_core_0/G_M_3.u3_trig_unit/u_cfg_reg_file/bit_cnt[6]</data>
             <data>195</data>
         </row>
         <row>
-            <data>u_CORES/u_debug_core_0/G_M_3.u3_trig_unit/u_cfg_reg_file/bit_cnt [6]</data>
-            <data>u_CORES/u_debug_core_0/G_M_3.u3_trig_unit/u_cfg_reg_file/bit_cnt[6]</data>
+            <data>u_CORES/u_debug_core_0/u0_trig_unit/u_cfg_reg_file/bit_cnt [0]</data>
+            <data>u_CORES/u_debug_core_0/u0_trig_unit/u_cfg_reg_file/bit_cnt[0]</data>
             <data>195</data>
         </row>
         <row>
@@ -3297,39 +3307,39 @@
             <data>192</data>
         </row>
         <row>
-            <data>u_CORES/u_debug_core_0/G_M_2.u2_trig_unit/u_cfg_reg_file/bit_cnt [0]</data>
-            <data>u_CORES/u_debug_core_0/G_M_2.u2_trig_unit/u_cfg_reg_file/bit_cnt[0]</data>
+            <data>ntclkbufg_3</data>
+            <data>clkbufg_6</data>
             <data>186</data>
         </row>
         <row>
-            <data>u_CORES/u_debug_core_0/G_M_2.u2_trig_unit/u_cfg_reg_file/bit_cnt [1]</data>
-            <data>u_CORES/u_debug_core_0/G_M_2.u2_trig_unit/u_cfg_reg_file/bit_cnt[1]</data>
-            <data>185</data>
+            <data>u_CORES/u_debug_core_0/G_M_2.u2_trig_unit/u_cfg_reg_file/bit_cnt [0]</data>
+            <data>u_CORES/u_debug_core_0/G_M_2.u2_trig_unit/u_cfg_reg_file/bit_cnt[0]</data>
+            <data>177</data>
         </row>
         <row>
-            <data>u_CORES/u_debug_core_0/G_M_1.u1_trig_unit/u_cfg_reg_file/bit_cnt [1]</data>
-            <data>u_CORES/u_debug_core_0/G_M_1.u1_trig_unit/u_cfg_reg_file/bit_cnt[1]</data>
-            <data>182</data>
+            <data>u_CORES/u_debug_core_0/G_M_2.u2_trig_unit/u_cfg_reg_file/bit_cnt [3]</data>
+            <data>u_CORES/u_debug_core_0/G_M_2.u2_trig_unit/u_cfg_reg_file/bit_cnt[3]</data>
+            <data>174</data>
         </row>
         <row>
             <data>u_CORES/u_debug_core_0/G_M_1.u1_trig_unit/u_cfg_reg_file/bit_cnt [2]</data>
             <data>u_CORES/u_debug_core_0/G_M_1.u1_trig_unit/u_cfg_reg_file/bit_cnt[2]</data>
-            <data>181</data>
-        </row>
-        <row>
-            <data>u_CORES/u_debug_core_0/u_rd_addr_gen/counter [7]</data>
-            <data>u_CORES/u_debug_core_0/u_rd_addr_gen/confck_same.counter[7]</data>
             <data>171</data>
         </row>
         <row>
-            <data>ntclkbufg_3</data>
-            <data>clkbufg_6</data>
-            <data>151</data>
+            <data>u_CORES/u_debug_core_0/G_M_1.u1_trig_unit/u_cfg_reg_file/bit_cnt [3]</data>
+            <data>u_CORES/u_debug_core_0/G_M_1.u1_trig_unit/u_cfg_reg_file/bit_cnt[3]</data>
+            <data>171</data>
         </row>
         <row>
             <data>ntclkbufg_4</data>
             <data>clkbufg_7</data>
             <data>146</data>
+        </row>
+        <row>
+            <data>u_CORES/u_debug_core_0/u_rd_addr_gen/counter [7]</data>
+            <data>u_CORES/u_debug_core_0/u_rd_addr_gen/confck_same.counter[7]</data>
+            <data>143</data>
         </row>
         <row>
             <data>ntclkbufg_5</data>
@@ -3343,17 +3353,12 @@
         </row>
         <row>
             <data>u_DDR3_50H/u_ddrphy_top/ddrphy_slice_top/wrlvl_ck_dly_start</data>
-            <data>u_DDR3_50H/u_ddrphy_top/ddrphy_slice_top/i_dqs_group[0].u_ddrphy_data_slice/data_slice_wrlvl/N466_4</data>
-            <data>123</data>
+            <data>u_DDR3_50H/u_ddrphy_top/ddrphy_slice_top/i_dqs_group[2].u_ddrphy_data_slice/data_slice_wrlvl/N466_4</data>
+            <data>116</data>
         </row>
         <row>
             <data>u_CORES/u_debug_core_0/u_rd_addr_gen/counter [4]</data>
             <data>u_CORES/u_debug_core_0/u_rd_addr_gen/confck_same.counter[4]</data>
-            <data>116</data>
-        </row>
-        <row>
-            <data>u_CORES/u_debug_core_0/u_rd_addr_gen/counter [0]</data>
-            <data>u_CORES/u_debug_core_0/u_rd_addr_gen/confck_same.counter[0]</data>
             <data>115</data>
         </row>
         <row>
@@ -3367,14 +3372,14 @@
             <data>104</data>
         </row>
         <row>
+            <data>u_CORES/u_debug_core_0/u_rd_addr_gen/counter [0]</data>
+            <data>u_CORES/u_debug_core_0/u_rd_addr_gen/confck_same.counter[0]</data>
+            <data>104</data>
+        </row>
+        <row>
             <data>ms72xx_ctl/iic_dri_rx/N0_1</data>
             <data>ms72xx_ctl/iic_dri_rx/N0_1</data>
             <data>101</data>
-        </row>
-        <row>
-            <data>u_CORES/u_debug_core_0/G_M_3.u3_trig_unit/u_cfg_reg_file/bit_cnt [4]</data>
-            <data>u_CORES/u_debug_core_0/G_M_3.u3_trig_unit/u_cfg_reg_file/bit_cnt[4]</data>
-            <data>98</data>
         </row>
         <row>
             <data>u_CORES/u_debug_core_0/u0_trig_unit/u_cfg_reg_file/bit_cnt [1]</data>
@@ -3382,14 +3387,19 @@
             <data>98</data>
         </row>
         <row>
-            <data>u_CORES/u_debug_core_0/G_M_1.u1_trig_unit/u_cfg_reg_file/bit_cnt [0]</data>
-            <data>u_CORES/u_debug_core_0/G_M_1.u1_trig_unit/u_cfg_reg_file/bit_cnt[0]</data>
-            <data>93</data>
+            <data>u_CORES/u_debug_core_0/G_M_3.u3_trig_unit/u_cfg_reg_file/bit_cnt [4]</data>
+            <data>u_CORES/u_debug_core_0/G_M_3.u3_trig_unit/u_cfg_reg_file/bit_cnt[4]</data>
+            <data>98</data>
         </row>
         <row>
             <data>u_CORES/u_debug_core_0/G_M_2.u2_trig_unit/u_cfg_reg_file/bit_cnt [2]</data>
             <data>u_CORES/u_debug_core_0/G_M_2.u2_trig_unit/u_cfg_reg_file/bit_cnt[2]</data>
-            <data>92</data>
+            <data>88</data>
+        </row>
+        <row>
+            <data>u_CORES/u_debug_core_0/G_M_1.u1_trig_unit/u_cfg_reg_file/bit_cnt [1]</data>
+            <data>u_CORES/u_debug_core_0/G_M_1.u1_trig_unit/u_cfg_reg_file/bit_cnt[1]</data>
+            <data>87</data>
         </row>
         <row>
             <data>u_DDR3_50H/u_ddrphy_top/rdel_calibration</data>
@@ -3412,13 +3422,18 @@
             <data>72</data>
         </row>
         <row>
+            <data>u_CORES/u_debug_core_0/u_rd_addr_gen/counter [5]</data>
+            <data>u_CORES/u_debug_core_0/u_rd_addr_gen/confck_same.counter[5]</data>
+            <data>71</data>
+        </row>
+        <row>
             <data>u_DDR3_50H/pll_clkin</data>
             <data>u_DDR3_50H/u_clkbufg</data>
             <data>71</data>
         </row>
         <row>
-            <data>u_DDR3_50H/u_ddrphy_top/ddrphy_slice_top/u_slice_rddata_align/dqs_read_valid_r [0]</data>
-            <data>u_DDR3_50H/u_ddrphy_top/ddrphy_slice_top/u_slice_rddata_align/dqs_read_valid_r[0]</data>
+            <data>u_DDR3_50H/u_ddrphy_top/ddrphy_slice_top/u_slice_rddata_align/dqs_read_valid_r [3]</data>
+            <data>u_DDR3_50H/u_ddrphy_top/ddrphy_slice_top/u_slice_rddata_align/dqs_read_valid_r[3]</data>
             <data>69</data>
         </row>
         <row>
@@ -3427,24 +3442,24 @@
             <data>69</data>
         </row>
         <row>
-            <data>u_DDR3_50H/u_ddrphy_top/ddrphy_slice_top/u_slice_rddata_align/dqs_read_valid_r [3]</data>
-            <data>u_DDR3_50H/u_ddrphy_top/ddrphy_slice_top/u_slice_rddata_align/dqs_read_valid_r[3]</data>
-            <data>69</data>
-        </row>
-        <row>
             <data>u_DDR3_50H/u_ddrphy_top/ddrphy_slice_top/u_slice_rddata_align/dqs_read_valid_r [1]</data>
             <data>u_DDR3_50H/u_ddrphy_top/ddrphy_slice_top/u_slice_rddata_align/dqs_read_valid_r[1]</data>
             <data>69</data>
         </row>
         <row>
+            <data>u_DDR3_50H/u_ddrphy_top/ddrphy_slice_top/u_slice_rddata_align/dqs_read_valid_r [0]</data>
+            <data>u_DDR3_50H/u_ddrphy_top/ddrphy_slice_top/u_slice_rddata_align/dqs_read_valid_r[0]</data>
+            <data>69</data>
+        </row>
+        <row>
+            <data>u_CORES/u_debug_core_0/u_rd_addr_gen/counter [3]</data>
+            <data>u_CORES/u_debug_core_0/u_rd_addr_gen/confck_same.counter[3]</data>
+            <data>66</data>
+        </row>
+        <row>
             <data>u_DDR3_50H/u_ddrphy_top/ddrphy_slice_top/i_dqs_group[0].u_ddrphy_data_slice/dqsi_rdel_cal/rdel_calibration_d</data>
             <data>u_DDR3_50H/u_ddrphy_top/ddrphy_slice_top/i_dqs_group[0].u_ddrphy_data_slice/dqsi_rdel_cal/rdel_calibration_d</data>
             <data>65</data>
-        </row>
-        <row>
-            <data>u_DDR3_50H/u_ddrphy_top/gatecal_start</data>
-            <data>u_DDR3_50H/u_ddrphy_top/ddrphy_calib_top/rdcal/gatecal_start</data>
-            <data>61</data>
         </row>
         <row>
             <data>fram_buf/rd_buf/rd_cell1/wr_rst</data>
@@ -3459,117 +3474,117 @@
         <row>
             <data>u_CORES/u_debug_core_0/ram_radr [0]</data>
             <data>u_CORES/u_debug_core_0/u_rd_addr_gen/confck_same_ram.ram_radr[0]</data>
-            <data>58</data>
-        </row>
-        <row>
-            <data>u_CORES/u_debug_core_0/u_rd_addr_gen/counter [2]</data>
-            <data>u_CORES/u_debug_core_0/u_rd_addr_gen/confck_same.counter[2]</data>
-            <data>58</data>
+            <data>57</data>
         </row>
         <row>
             <data>u_CORES/u_debug_core_0/ram_radr [1]</data>
             <data>u_CORES/u_debug_core_0/u_rd_addr_gen/confck_same_ram.ram_radr[1]</data>
-            <data>57</data>
-        </row>
-        <row>
-            <data>u_CORES/u_debug_core_0/ram_radr [8]</data>
-            <data>u_CORES/u_debug_core_0/u_rd_addr_gen/confck_same_ram.ram_radr[8]</data>
             <data>56</data>
         </row>
         <row>
-            <data>u_CORES/u_debug_core_0/ram_radr [9]</data>
-            <data>u_CORES/u_debug_core_0/u_rd_addr_gen/confck_same_ram.ram_radr[9]</data>
-            <data>56</data>
-        </row>
-        <row>
-            <data>u_DDR3_50H/u_ddrphy_top/ddrphy_slice_top/i_dqs_group[0].u_ddrphy_data_slice/data_slice_dqs_gate_cal/dqs_gate_coarse_cal/_N10299</data>
+            <data>u_DDR3_50H/u_ddrphy_top/ddrphy_slice_top/i_dqs_group[0].u_ddrphy_data_slice/data_slice_dqs_gate_cal/dqs_gate_coarse_cal/_N10452</data>
             <data>u_DDR3_50H/u_ddrphy_top/ddrphy_slice_top/i_dqs_group[0].u_ddrphy_data_slice/data_slice_dqs_gate_cal/dqs_gate_coarse_cal/dqs_gate_ctrl_adj_198_5</data>
-            <data>56</data>
-        </row>
-        <row>
-            <data>u_CORES/u_debug_core_0/ram_radr [2]</data>
-            <data>u_CORES/u_debug_core_0/u_rd_addr_gen/confck_same_ram.ram_radr[2]</data>
-            <data>56</data>
-        </row>
-        <row>
-            <data>u_CORES/u_debug_core_0/ram_radr [3]</data>
-            <data>u_CORES/u_debug_core_0/u_rd_addr_gen/confck_same_ram.ram_radr[3]</data>
-            <data>56</data>
-        </row>
-        <row>
-            <data>u_CORES/u_debug_core_0/ram_radr [4]</data>
-            <data>u_CORES/u_debug_core_0/u_rd_addr_gen/confck_same_ram.ram_radr[4]</data>
-            <data>56</data>
-        </row>
-        <row>
-            <data>u_CORES/u_debug_core_0/ram_radr [6]</data>
-            <data>u_CORES/u_debug_core_0/u_rd_addr_gen/confck_same_ram.ram_radr[6]</data>
             <data>56</data>
         </row>
         <row>
             <data>u_CORES/u_debug_core_0/ram_radr [7]</data>
             <data>u_CORES/u_debug_core_0/u_rd_addr_gen/confck_same_ram.ram_radr[7]</data>
-            <data>56</data>
+            <data>55</data>
+        </row>
+        <row>
+            <data>u_CORES/u_debug_core_0/ram_radr [9]</data>
+            <data>u_CORES/u_debug_core_0/u_rd_addr_gen/confck_same_ram.ram_radr[9]</data>
+            <data>55</data>
         </row>
         <row>
             <data>u_CORES/u_debug_core_0/ram_radr [5]</data>
             <data>u_CORES/u_debug_core_0/u_rd_addr_gen/confck_same_ram.ram_radr[5]</data>
-            <data>56</data>
-        </row>
-        <row>
-            <data>u_CORES/u_debug_core_0/ram_wadr [7]</data>
-            <data>u_CORES/u_debug_core_0/ram_wadr[7]</data>
             <data>55</data>
         </row>
         <row>
-            <data>u_CORES/u_debug_core_0/ram_wadr [9]</data>
-            <data>u_CORES/u_debug_core_0/ram_wadr[9]</data>
+            <data>u_CORES/u_debug_core_0/ram_radr [2]</data>
+            <data>u_CORES/u_debug_core_0/u_rd_addr_gen/confck_same_ram.ram_radr[2]</data>
             <data>55</data>
         </row>
         <row>
-            <data>u_CORES/u_debug_core_0/ram_wren</data>
-            <data>u_CORES/u_debug_core_0/ram_wren</data>
+            <data>u_CORES/u_debug_core_0/ram_radr [4]</data>
+            <data>u_CORES/u_debug_core_0/u_rd_addr_gen/confck_same_ram.ram_radr[4]</data>
+            <data>55</data>
+        </row>
+        <row>
+            <data>u_CORES/u_debug_core_0/ram_radr [8]</data>
+            <data>u_CORES/u_debug_core_0/u_rd_addr_gen/confck_same_ram.ram_radr[8]</data>
+            <data>55</data>
+        </row>
+        <row>
+            <data>u_CORES/u_debug_core_0/ram_radr [3]</data>
+            <data>u_CORES/u_debug_core_0/u_rd_addr_gen/confck_same_ram.ram_radr[3]</data>
+            <data>55</data>
+        </row>
+        <row>
+            <data>u_CORES/u_debug_core_0/ram_radr [6]</data>
+            <data>u_CORES/u_debug_core_0/u_rd_addr_gen/confck_same_ram.ram_radr[6]</data>
             <data>55</data>
         </row>
         <row>
             <data>u_CORES/u_debug_core_0/ram_wadr [6]</data>
             <data>u_CORES/u_debug_core_0/ram_wadr[6]</data>
-            <data>55</data>
+            <data>54</data>
         </row>
         <row>
-            <data>u_CORES/u_debug_core_0/ram_wadr [5]</data>
-            <data>u_CORES/u_debug_core_0/ram_wadr[5]</data>
-            <data>55</data>
-        </row>
-        <row>
-            <data>u_CORES/u_debug_core_0/ram_wadr [4]</data>
-            <data>u_CORES/u_debug_core_0/ram_wadr[4]</data>
-            <data>55</data>
-        </row>
-        <row>
-            <data>u_CORES/u_debug_core_0/ram_wadr [3]</data>
-            <data>u_CORES/u_debug_core_0/ram_wadr[3]</data>
-            <data>55</data>
-        </row>
-        <row>
-            <data>u_CORES/u_debug_core_0/ram_wadr [2]</data>
-            <data>u_CORES/u_debug_core_0/ram_wadr[2]</data>
-            <data>55</data>
-        </row>
-        <row>
-            <data>u_CORES/u_debug_core_0/ram_wadr [1]</data>
-            <data>u_CORES/u_debug_core_0/ram_wadr[1]</data>
-            <data>55</data>
-        </row>
-        <row>
-            <data>u_CORES/u_debug_core_0/ram_wadr [0]</data>
-            <data>u_CORES/u_debug_core_0/ram_wadr[0]</data>
-            <data>55</data>
+            <data>u_CORES/u_debug_core_0/ram_wadr [7]</data>
+            <data>u_CORES/u_debug_core_0/ram_wadr[7]</data>
+            <data>54</data>
         </row>
         <row>
             <data>u_CORES/u_debug_core_0/ram_wadr [8]</data>
             <data>u_CORES/u_debug_core_0/ram_wadr[8]</data>
-            <data>55</data>
+            <data>54</data>
+        </row>
+        <row>
+            <data>u_CORES/u_debug_core_0/ram_wadr [9]</data>
+            <data>u_CORES/u_debug_core_0/ram_wadr[9]</data>
+            <data>54</data>
+        </row>
+        <row>
+            <data>u_CORES/u_debug_core_0/ram_wren</data>
+            <data>u_CORES/u_debug_core_0/ram_wren</data>
+            <data>54</data>
+        </row>
+        <row>
+            <data>u_CORES/u_debug_core_0/ram_wadr [2]</data>
+            <data>u_CORES/u_debug_core_0/ram_wadr[2]</data>
+            <data>54</data>
+        </row>
+        <row>
+            <data>u_CORES/u_debug_core_0/ram_wadr [5]</data>
+            <data>u_CORES/u_debug_core_0/ram_wadr[5]</data>
+            <data>54</data>
+        </row>
+        <row>
+            <data>u_CORES/u_debug_core_0/ram_wadr [0]</data>
+            <data>u_CORES/u_debug_core_0/ram_wadr[0]</data>
+            <data>54</data>
+        </row>
+        <row>
+            <data>u_CORES/u_debug_core_0/ram_wadr [4]</data>
+            <data>u_CORES/u_debug_core_0/ram_wadr[4]</data>
+            <data>54</data>
+        </row>
+        <row>
+            <data>u_DDR3_50H/u_ddrphy_top/gatecal_start</data>
+            <data>u_DDR3_50H/u_ddrphy_top/ddrphy_calib_top/rdcal/gatecal_start</data>
+            <data>54</data>
+        </row>
+        <row>
+            <data>u_CORES/u_debug_core_0/ram_wadr [1]</data>
+            <data>u_CORES/u_debug_core_0/ram_wadr[1]</data>
+            <data>54</data>
+        </row>
+        <row>
+            <data>u_CORES/u_debug_core_0/ram_wadr [3]</data>
+            <data>u_CORES/u_debug_core_0/ram_wadr[3]</data>
+            <data>54</data>
         </row>
         <row>
             <data>u_DDR3_50H/u_ipsxb_ddrc_top/mcdq_dcp_top/mcdq_dcp_back_ctrl/norm_cmd_m_wr</data>
@@ -3582,19 +3597,9 @@
             <data>53</data>
         </row>
         <row>
-            <data>u_DDR3_50H/u_ipsxb_ddrc_top/mcdq_dcp_top/mcdq_dcp_back_ctrl/req_rdata [17]</data>
-            <data>u_DDR3_50H/u_ipsxb_ddrc_top/mcdq_dcp_top/mcdq_dcp_back_ctrl/req_rdata[17]</data>
-            <data>52</data>
-        </row>
-        <row>
             <data>u_DDR3_50H/u_ipsxb_ddrc_top/mcdq_dcp_top/mcdq_dcp_back_ctrl/norm_cmd_l_wr</data>
             <data>u_DDR3_50H/u_ipsxb_ddrc_top/mcdq_dcp_top/mcdq_dcp_back_ctrl/N216</data>
             <data>52</data>
-        </row>
-        <row>
-            <data>u_DDR3_50H/u_ddrphy_top/init_adj_rdel</data>
-            <data>u_DDR3_50H/u_ddrphy_top/ddrphy_calib_top/rdcal/init_adj_rdel</data>
-            <data>50</data>
         </row>
         <row>
             <data>u_CORES/u_debug_core_0/G_M_3.u3_trig_unit/u_cfg_reg_file/bit_cnt [3]</data>
@@ -3602,8 +3607,8 @@
             <data>50</data>
         </row>
         <row>
-            <data>u_DDR3_50H/u_ipsxb_ddrc_top/mcdq_dcp_top/mcdq_dcp_back_ctrl/req_rdata [16]</data>
-            <data>u_DDR3_50H/u_ipsxb_ddrc_top/mcdq_dcp_top/mcdq_dcp_back_ctrl/req_rdata[16]</data>
+            <data>u_DDR3_50H/u_ddrphy_top/init_adj_rdel</data>
+            <data>u_DDR3_50H/u_ddrphy_top/ddrphy_calib_top/rdcal/init_adj_rdel</data>
             <data>50</data>
         </row>
         <row>
@@ -3612,13 +3617,13 @@
             <data>49</data>
         </row>
         <row>
-            <data>u_DDR3_50H/u_ipsxb_ddrc_top/mcdq_ui_axi/u_user_cmd_fifo/N10</data>
-            <data>u_DDR3_50H/u_ipsxb_ddrc_top/mcdq_ui_axi/u_user_cmd_fifo/N10</data>
+            <data>u_DDR3_50H/u_ipsxb_ddrc_top/mcdq_ui_axi/u_user_cmd_fifo/N14</data>
+            <data>u_DDR3_50H/u_ipsxb_ddrc_top/mcdq_ui_axi/u_user_cmd_fifo/N14</data>
             <data>48</data>
         </row>
         <row>
-            <data>u_DDR3_50H/u_ipsxb_ddrc_top/mcdq_ui_axi/u_user_cmd_fifo/N14</data>
-            <data>u_DDR3_50H/u_ipsxb_ddrc_top/mcdq_ui_axi/u_user_cmd_fifo/N14</data>
+            <data>u_DDR3_50H/u_ipsxb_ddrc_top/mcdq_ui_axi/u_user_cmd_fifo/N10</data>
+            <data>u_DDR3_50H/u_ipsxb_ddrc_top/mcdq_ui_axi/u_user_cmd_fifo/N10</data>
             <data>48</data>
         </row>
         <row>
@@ -3627,23 +3632,18 @@
             <data>47</data>
         </row>
         <row>
-            <data>u_CORES/u_debug_core_0/G_M_2.u2_trig_unit/u_cfg_reg_file/bit_cnt [4]</data>
-            <data>u_CORES/u_debug_core_0/G_M_2.u2_trig_unit/u_cfg_reg_file/bit_cnt[4]</data>
-            <data>47</data>
+            <data>u_CORES/u_debug_core_0/G_M_2.u2_trig_unit/u_cfg_reg_file/bit_cnt [1]</data>
+            <data>u_CORES/u_debug_core_0/G_M_2.u2_trig_unit/u_cfg_reg_file/bit_cnt[1]</data>
+            <data>46</data>
+        </row>
+        <row>
+            <data>u_CORES/u_debug_core_0/G_M_1.u1_trig_unit/u_cfg_reg_file/bit_cnt [0]</data>
+            <data>u_CORES/u_debug_core_0/G_M_1.u1_trig_unit/u_cfg_reg_file/bit_cnt[0]</data>
+            <data>46</data>
         </row>
         <row>
             <data>u_DDR3_50H/u_ddrphy_top/phy_addr [15]</data>
             <data>u_DDR3_50H/u_ddrphy_top/ddrphy_dfi/phy_addr[15]</data>
-            <data>46</data>
-        </row>
-        <row>
-            <data>u_DDR3_50H/u_ipsxb_ddrc_top/mcdq_dcp_top/mcdq_dcp_back_ctrl/req_rdata [15]</data>
-            <data>u_DDR3_50H/u_ipsxb_ddrc_top/mcdq_dcp_top/mcdq_dcp_back_ctrl/req_rdata[15]</data>
-            <data>46</data>
-        </row>
-        <row>
-            <data>u_CORES/u_debug_core_0/G_M_1.u1_trig_unit/u_cfg_reg_file/bit_cnt [4]</data>
-            <data>u_CORES/u_debug_core_0/G_M_1.u1_trig_unit/u_cfg_reg_file/bit_cnt[4]</data>
             <data>46</data>
         </row>
         <row>
@@ -3652,18 +3652,28 @@
             <data>44</data>
         </row>
         <row>
+            <data>u_DDR3_50H/u_ipsxb_ddrc_top/mcdq_dcp_top/mcdq_dcp_back_ctrl/req_rdata [17]</data>
+            <data>u_DDR3_50H/u_ipsxb_ddrc_top/mcdq_dcp_top/mcdq_dcp_back_ctrl/req_rdata[17]</data>
+            <data>44</data>
+        </row>
+        <row>
             <data>u_DDR3_50H/u_ddrphy_top/phy_addr [30]</data>
             <data>u_DDR3_50H/u_ddrphy_top/ddrphy_dfi/phy_addr[30]</data>
             <data>42</data>
         </row>
         <row>
+            <data>u_DDR3_50H/u_ipsxb_ddrc_top/mcdq_dcp_top/mcdq_dcp_back_ctrl/req_rdata [16]</data>
+            <data>u_DDR3_50H/u_ipsxb_ddrc_top/mcdq_dcp_top/mcdq_dcp_back_ctrl/req_rdata[16]</data>
+            <data>42</data>
+        </row>
+        <row>
             <data>u_DDR3_50H/u_ddrphy_top/ddrphy_slice_top/i_dqs_group[0].u_ddrphy_data_slice/dqsi_rdel_cal/N456</data>
             <data>u_DDR3_50H/u_ddrphy_top/ddrphy_slice_top/i_dqs_group[0].u_ddrphy_data_slice/dqsi_rdel_cal/N456</data>
             <data>42</data>
         </row>
         <row>
-            <data>u_DDR3_50H/u_ipsxb_ddrc_top/mcdq_ui_axi/pre_addr [26]</data>
-            <data>u_DDR3_50H/u_ipsxb_ddrc_top/mcdq_ui_axi/pre_addr[26]</data>
+            <data>u_DDR3_50H/u_ipsxb_ddrc_top/mcdq_ui_axi/pre_addr [25]</data>
+            <data>u_DDR3_50H/u_ipsxb_ddrc_top/mcdq_ui_axi/pre_addr[25]</data>
             <data>41</data>
         </row>
     </table>
@@ -3688,13 +3698,13 @@
         </row>
         <row>
             <data>FF</data>
-            <data>20838</data>
+            <data>20479</data>
             <data>64200</data>
-            <data>33</data>
+            <data>32</data>
         </row>
         <row>
             <data>LUT</data>
-            <data>16625</data>
+            <data>16402</data>
             <data>42800</data>
             <data>39</data>
         </row>
@@ -3831,8 +3841,8 @@
         </column_headers>
         <row>
             <data>0h:0m:13s</data>
-            <data>0h:0m:13s</data>
-            <data>0h:1m:28s</data>
+            <data>0h:0m:14s</data>
+            <data>0h:1m:37s</data>
             <data>579</data>
             <data>WINDOWS 10 x86_64</data>
             <data>12th Gen Intel(R) Core(TM) i7-12700H</data>
@@ -4457,6 +4467,9 @@
             <data message="4">Infer CARRY group, base inst: fram_buf/rd_buf/N28_1_1/gateop, insts:12.</data>
         </row>
         <row>
+            <data message="4">Infer CARRY group, base inst: fram_buf/rd_buf/N37_1_1/gateop, insts:12.</data>
+        </row>
+        <row>
             <data message="4">Infer CARRY group, base inst: fram_buf/wr_buf/N0.lt_0/gateop, insts:3.</data>
         </row>
         <row>
@@ -4500,6 +4513,12 @@
         </row>
         <row>
             <data message="4">Infer CARRY group, base inst: fram_buf/rd_buf/rd_cell2/N53_1_1/gateop, insts:11.</data>
+        </row>
+        <row>
+            <data message="4">Infer CARRY group, base inst: fram_buf/rd_buf/u_osd_display/N18_1_1/gateop, insts:2.</data>
+        </row>
+        <row>
+            <data message="4">Infer CARRY group, base inst: fram_buf/rd_buf/u_osd_display/N27_1_0/gateop, insts:14.</data>
         </row>
         <row>
             <data message="4">Infer CARRY group, base inst: fram_buf/wr_buf/wr_cell1/N20_1_1/gateop, insts:12.</data>
@@ -4610,13 +4629,13 @@
             <data message="4">Infer CARRY group, base inst: u_CORES/u_debug_core_0/G_M_2.u2_trig_unit/u_cfg_reg_file/N262_1_1/gateop, insts:9.</data>
         </row>
         <row>
+            <data message="4">Infer CARRY group, base inst: u_DDR3_50H/u_ipsxb_ddrc_top/mcdq_dcp_top/mcdq_dcp_back_ctrl/timing_act_pass/N31.lt_0/gateop, insts:4.</data>
+        </row>
+        <row>
             <data message="4">Infer CARRY group, base inst: u_DDR3_50H/u_ddrphy_top/ddrphy_slice_top/i_dqs_group[3].u_ddrphy_data_slice/data_slice_dqs_gate_cal/gatecal/N81_1_0/gateop, insts:6.</data>
         </row>
         <row>
             <data message="4">Infer CARRY group, base inst: u_DDR3_50H/u_ddrphy_top/ddrphy_slice_top/i_dqs_group[3].u_ddrphy_data_slice/data_slice_dqs_gate_cal/gatecal/N389_8.fsub_1/gateop, insts:5.</data>
-        </row>
-        <row>
-            <data message="4">Infer CARRY group, base inst: u_DDR3_50H/u_ipsxb_ddrc_top/mcdq_dcp_top/mcdq_dcp_back_ctrl/timing_act_pass/N31.lt_0/gateop, insts:4.</data>
         </row>
         <row>
             <data message="4">Infer CARRY group, base inst: u_DDR3_50H/u_ipsxb_ddrc_top/mcdq_wdatapath/ipsxb_distributed_fifo/u_ipsxb_distributed_fifo_distributed_fifo_v1_0/u_ipsxb_distributed_fifo_ctr/N2_1/gateop, insts:5.</data>
@@ -4670,7 +4689,7 @@
             <data message="4">Infer CARRY group, base inst: u_CORES/u_debug_core_0/u0_trig_unit/u_cfg_reg_file/N262_1_1/gateop, insts:9.</data>
         </row>
         <row>
-            <data message="4">Infer CARRY group, base inst: u_DDR3_50H/u_ddrphy_top/ddrphy_slice_top/i_dqs_group[0].u_ddrphy_data_slice/data_slice_dqs_gate_cal/gatecal/N81_1_0/gateop, insts:6.</data>
+            <data message="4">Infer CARRY group, base inst: u_DDR3_50H/u_ddrphy_top/ddrphy_slice_top/i_dqs_group[0].u_ddrphy_data_slice/data_slice_dqs_gate_cal/gatecal/N81_1_1/gateop, insts:5.</data>
         </row>
         <row>
             <data message="4">Infer CARRY group, base inst: u_DDR3_50H/u_ddrphy_top/ddrphy_slice_top/i_dqs_group[0].u_ddrphy_data_slice/data_slice_dqs_gate_cal/gatecal/N389_8.fsub_1/gateop, insts:5.</data>
