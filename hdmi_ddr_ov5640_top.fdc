@@ -1129,3 +1129,8 @@ define_attribute {p:vs_in} {PAP_IO_STANDARD} {LVCMOS12}
 define_attribute {p:vs_in} {PAP_IO_NONE} {TRUE}
 create_clock -name {pix_clk_in} [get_ports pix_clk_in] -period {6.734} -waveform {0.000 3.367}
 set_clock_uncertainty {0.200} [get_clocks {pix_clk_in}]  -setup -hold
+define_attribute {p:key} {PAP_IO_DIRECTION} {INPUT}
+define_attribute {p:key} {PAP_IO_LOC} {K18}
+define_attribute {p:key} {PAP_IO_VCCIO} {3.3}
+define_attribute {p:key} {PAP_IO_STANDARD} {LVCMOS33}
+define_attribute {p:key} {PAP_IO_NONE} {TRUE}

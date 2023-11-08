@@ -1,4 +1,4 @@
-##### Written on 2023/11/07 20:34:32 ###############################
+##### Written on 2023/11/08 09:57:46 ###############################
 
 
 ##### INFO ##################################################
@@ -14,7 +14,7 @@ Constraint File(s) :
 
 ##### SUMMARY ######################################################
 
-Found 0 error(s), 27 critical warning(s), 0 warning(s), out of 1121 constraint(s)
+Found 0 error(s), 28 critical warning(s), 0 warning(s), out of 1126 constraint(s)
 
 
 Inapplicable constraints(except overwritten constraints):
@@ -100,6 +100,9 @@ define_attribute {p:iic_scl} {PAP_IO_LOC} {V19}
 
 define_attribute {p:pix_clk_in} {PAP_IO_LOC} {AA12}
 	C: ConstraintEditor-2002: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/hdmi_ddr_ov5640_top.fdc(line number: 1121)] | Port pix_clk_in has been placed at location AA12, whose type is share pin.
+
+define_attribute {p:key} {PAP_IO_LOC} {K18}
+	C: ConstraintEditor-2002: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/hdmi_ddr_ov5640_top.fdc(line number: 1133)] | Port key has been placed at location K18, whose type is share pin.
 
 
 Constraints with issues:
