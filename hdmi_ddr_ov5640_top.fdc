@@ -748,7 +748,7 @@ set_clock_uncertainty {0.200} [get_clocks {cmos1_pclk_16bit}]  -setup -hold
 set_clock_uncertainty {0.200} [get_clocks {cmos2_pclk_16bit}]  -setup -hold
 set_clock_uncertainty {0.200} [get_clocks {cmos1_pclk}]  -setup -hold
 set_clock_uncertainty {0.200} [get_clocks {cmos2_pclk}]  -setup -hold
-create_generated_clock -name {pix_clk} -source [get_ports sys_clk] [get_nets u_pll.clkout0] -master_clock [get_clocks sys_clk] -multiply_by {4} -divide_by {3}
+create_generated_clock -name {pix_clk} -source [get_ports sys_clk] [get_nets u_pll.clkout0] -master_clock [get_clocks sys_clk] -multiply_by {153} -divide_by {100}
 create_generated_clock -name {cfg_clk} -source [get_ports {sys_clk}] [get_nets {u_pll.clkout1}] -master_clock [get_clocks {sys_clk}] -multiply_by {1} -divide_by {5}
 create_generated_clock -name {clk_25M} -source [get_ports sys_clk] [get_nets u_pll.clkout2] -master_clock [get_clocks sys_clk] -multiply_by {1} -divide_by {2} 
 
