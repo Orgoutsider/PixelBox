@@ -26,7 +26,7 @@
             <data>DIFFIO_B0_17P</data>
             <data></data>
             <data></data>
-            <data></data>
+            <data>YES</data>
         </row>
         <row>
             <data>C5</data>
@@ -53,7 +53,7 @@
             <data>DIFFIO_B0_30P</data>
             <data></data>
             <data></data>
-            <data></data>
+            <data>YES</data>
         </row>
         <row>
             <data>B20</data>
@@ -62,7 +62,7 @@
             <data>DIFFIO_B0_29P</data>
             <data></data>
             <data></data>
-            <data></data>
+            <data>YES</data>
         </row>
         <row>
             <data>C19</data>
@@ -80,7 +80,7 @@
             <data>DIFFIO_B0_27P</data>
             <data></data>
             <data></data>
-            <data></data>
+            <data>YES</data>
         </row>
         <row>
             <data>G16</data>
@@ -89,7 +89,7 @@
             <data>DIFFIO_B0_25P</data>
             <data></data>
             <data></data>
-            <data></data>
+            <data>YES</data>
         </row>
         <row>
             <data>C17</data>
@@ -125,7 +125,7 @@
             <data>DIFFIO_B0_15P/GCLK15/PLL1_CLK4</data>
             <data></data>
             <data></data>
-            <data></data>
+            <data>YES</data>
         </row>
         <row>
             <data>H12</data>
@@ -152,7 +152,7 @@
             <data>DIFFIO_B0_11P</data>
             <data></data>
             <data></data>
-            <data></data>
+            <data>YES</data>
         </row>
         <row>
             <data>G8</data>
@@ -224,7 +224,7 @@
             <data>DIFFIO_B0_30N</data>
             <data></data>
             <data></data>
-            <data></data>
+            <data>YES</data>
         </row>
         <row>
             <data>A20</data>
@@ -251,7 +251,7 @@
             <data>DIFFIO_B0_27N</data>
             <data></data>
             <data></data>
-            <data></data>
+            <data>YES</data>
         </row>
         <row>
             <data>F17</data>
@@ -260,7 +260,7 @@
             <data>DIFFIO_B0_25N</data>
             <data></data>
             <data></data>
-            <data></data>
+            <data>YES</data>
         </row>
         <row>
             <data>A17</data>
@@ -323,7 +323,7 @@
             <data>DIFFIO_B0_11N</data>
             <data></data>
             <data></data>
-            <data></data>
+            <data>YES</data>
         </row>
         <row>
             <data>F9</data>
@@ -332,7 +332,7 @@
             <data>DIFFIO_B0_10N</data>
             <data></data>
             <data></data>
-            <data></data>
+            <data>YES</data>
         </row>
         <row>
             <data>F8</data>
@@ -404,7 +404,7 @@
             <data>DIFFIO_B0_17N/VREF_B0</data>
             <data></data>
             <data></data>
-            <data></data>
+            <data>YES</data>
         </row>
         <row>
             <data>A5</data>
@@ -413,7 +413,7 @@
             <data>DIFFIO_B0_9N/VREF_B0</data>
             <data></data>
             <data></data>
-            <data></data>
+            <data>YES</data>
         </row>
         <row>
             <data>D3</data>
@@ -2884,8 +2884,8 @@
             <data>16</data>
         </row>
         <row>
-            <data>N146</data>
-            <data>N146_inv</data>
+            <data>N156</data>
+            <data>N156_inv</data>
             <data>25</data>
         </row>
         <row>
@@ -3406,23 +3406,23 @@
             <data>179</data>
         </row>
         <row>
-            <data>u_CORES/u_debug_core_0/G_M_2.u2_trig_unit/u_cfg_reg_file/bit_cnt [2]</data>
-            <data>u_CORES/u_debug_core_0/G_M_2.u2_trig_unit/u_cfg_reg_file/bit_cnt[2]</data>
-            <data>175</data>
-        </row>
-        <row>
             <data>u_CORES/u_debug_core_0/G_M_2.u2_trig_unit/u_cfg_reg_file/bit_cnt [3]</data>
             <data>u_CORES/u_debug_core_0/G_M_2.u2_trig_unit/u_cfg_reg_file/bit_cnt[3]</data>
             <data>175</data>
         </row>
         <row>
-            <data>ntclkbufg_4</data>
-            <data>clkbufg_7</data>
-            <data>161</data>
+            <data>u_CORES/u_debug_core_0/G_M_2.u2_trig_unit/u_cfg_reg_file/bit_cnt [2]</data>
+            <data>u_CORES/u_debug_core_0/G_M_2.u2_trig_unit/u_cfg_reg_file/bit_cnt[2]</data>
+            <data>175</data>
         </row>
         <row>
             <data>ntclkbufg_5</data>
             <data>clkbufg_8</data>
+            <data>161</data>
+        </row>
+        <row>
+            <data>ntclkbufg_4</data>
+            <data>clkbufg_7</data>
             <data>161</data>
         </row>
         <row>
@@ -3446,13 +3446,13 @@
             <data>129</data>
         </row>
         <row>
-            <data>u_CORES/u_debug_core_0/u_rd_addr_gen/counter [0]</data>
-            <data>u_CORES/u_debug_core_0/u_rd_addr_gen/confck_same.counter[0]</data>
-            <data>120</data>
+            <data>u_DDR3_50H/u_ddrphy_top/ddrphy_slice_top/wrlvl_ck_dly_start</data>
+            <data>u_DDR3_50H/u_ddrphy_top/ddrphy_slice_top/i_dqs_group[3].u_ddrphy_data_slice/data_slice_wrlvl/wrlvl_dq_seq[3:0]_2</data>
+            <data>121</data>
         </row>
         <row>
-            <data>u_DDR3_50H/u_ddrphy_top/ddrphy_slice_top/wrlvl_ck_dly_start</data>
-            <data>u_DDR3_50H/u_ddrphy_top/ddrphy_slice_top/i_dqs_group[1].u_ddrphy_data_slice/data_slice_wrlvl/wrlvl_dq_seq[3:0]_9</data>
+            <data>u_CORES/u_debug_core_0/u_rd_addr_gen/counter [0]</data>
+            <data>u_CORES/u_debug_core_0/u_rd_addr_gen/confck_same.counter[0]</data>
             <data>120</data>
         </row>
         <row>
@@ -3526,8 +3526,8 @@
             <data>69</data>
         </row>
         <row>
-            <data>u_DDR3_50H/u_ddrphy_top/ddrphy_slice_top/u_slice_rddata_align/dqs_read_valid_r [1]</data>
-            <data>u_DDR3_50H/u_ddrphy_top/ddrphy_slice_top/u_slice_rddata_align/dqs_read_valid_r[1]</data>
+            <data>u_DDR3_50H/u_ddrphy_top/ddrphy_slice_top/u_slice_rddata_align/dqs_read_valid_r [2]</data>
+            <data>u_DDR3_50H/u_ddrphy_top/ddrphy_slice_top/u_slice_rddata_align/dqs_read_valid_r[2]</data>
             <data>69</data>
         </row>
         <row>
@@ -3536,8 +3536,8 @@
             <data>69</data>
         </row>
         <row>
-            <data>u_DDR3_50H/u_ddrphy_top/ddrphy_slice_top/u_slice_rddata_align/dqs_read_valid_r [2]</data>
-            <data>u_DDR3_50H/u_ddrphy_top/ddrphy_slice_top/u_slice_rddata_align/dqs_read_valid_r[2]</data>
+            <data>u_DDR3_50H/u_ddrphy_top/ddrphy_slice_top/u_slice_rddata_align/dqs_read_valid_r [1]</data>
+            <data>u_DDR3_50H/u_ddrphy_top/ddrphy_slice_top/u_slice_rddata_align/dqs_read_valid_r[1]</data>
             <data>69</data>
         </row>
         <row>
@@ -3553,12 +3553,7 @@
         <row>
             <data>u_DDR3_50H/u_ddrphy_top/gatecal_start</data>
             <data>u_DDR3_50H/u_ddrphy_top/ddrphy_calib_top/rdcal/gatecal_start</data>
-            <data>61</data>
-        </row>
-        <row>
-            <data>coms1_reg_config/N4</data>
-            <data>coms1_reg_config/N4</data>
-            <data>58</data>
+            <data>63</data>
         </row>
         <row>
             <data>u_CORES/u_debug_core_0/ram_radr [0]</data>
@@ -3566,34 +3561,14 @@
             <data>58</data>
         </row>
         <row>
+            <data>coms1_reg_config/N4</data>
+            <data>coms1_reg_config/N4</data>
+            <data>58</data>
+        </row>
+        <row>
             <data>u_CORES/u_debug_core_0/ram_radr [1]</data>
             <data>u_CORES/u_debug_core_0/u_rd_addr_gen/confck_same_ram.ram_radr[1]</data>
             <data>57</data>
-        </row>
-        <row>
-            <data>u_CORES/u_debug_core_0/ram_radr [5]</data>
-            <data>u_CORES/u_debug_core_0/u_rd_addr_gen/confck_same_ram.ram_radr[5]</data>
-            <data>56</data>
-        </row>
-        <row>
-            <data>u_CORES/u_debug_core_0/ram_radr [9]</data>
-            <data>u_CORES/u_debug_core_0/u_rd_addr_gen/confck_same_ram.ram_radr[9]</data>
-            <data>56</data>
-        </row>
-        <row>
-            <data>u_CORES/u_debug_core_0/ram_radr [6]</data>
-            <data>u_CORES/u_debug_core_0/u_rd_addr_gen/confck_same_ram.ram_radr[6]</data>
-            <data>56</data>
-        </row>
-        <row>
-            <data>u_CORES/u_debug_core_0/ram_radr [2]</data>
-            <data>u_CORES/u_debug_core_0/u_rd_addr_gen/confck_same_ram.ram_radr[2]</data>
-            <data>56</data>
-        </row>
-        <row>
-            <data>u_CORES/u_debug_core_0/ram_radr [4]</data>
-            <data>u_CORES/u_debug_core_0/u_rd_addr_gen/confck_same_ram.ram_radr[4]</data>
-            <data>56</data>
         </row>
         <row>
             <data>u_DDR3_50H/u_ddrphy_top/ddrphy_slice_top/i_dqs_group[0].u_ddrphy_data_slice/data_slice_dqs_gate_cal/dqs_gate_coarse_cal/_N11713</data>
@@ -3606,14 +3581,44 @@
             <data>56</data>
         </row>
         <row>
+            <data>u_CORES/u_debug_core_0/ram_radr [7]</data>
+            <data>u_CORES/u_debug_core_0/u_rd_addr_gen/confck_same_ram.ram_radr[7]</data>
+            <data>56</data>
+        </row>
+        <row>
+            <data>u_CORES/u_debug_core_0/ram_radr [6]</data>
+            <data>u_CORES/u_debug_core_0/u_rd_addr_gen/confck_same_ram.ram_radr[6]</data>
+            <data>56</data>
+        </row>
+        <row>
+            <data>u_CORES/u_debug_core_0/ram_radr [5]</data>
+            <data>u_CORES/u_debug_core_0/u_rd_addr_gen/confck_same_ram.ram_radr[5]</data>
+            <data>56</data>
+        </row>
+        <row>
+            <data>u_CORES/u_debug_core_0/ram_radr [2]</data>
+            <data>u_CORES/u_debug_core_0/u_rd_addr_gen/confck_same_ram.ram_radr[2]</data>
+            <data>56</data>
+        </row>
+        <row>
             <data>u_CORES/u_debug_core_0/ram_radr [3]</data>
             <data>u_CORES/u_debug_core_0/u_rd_addr_gen/confck_same_ram.ram_radr[3]</data>
             <data>56</data>
         </row>
         <row>
-            <data>u_CORES/u_debug_core_0/ram_radr [7]</data>
-            <data>u_CORES/u_debug_core_0/u_rd_addr_gen/confck_same_ram.ram_radr[7]</data>
+            <data>u_CORES/u_debug_core_0/ram_radr [4]</data>
+            <data>u_CORES/u_debug_core_0/u_rd_addr_gen/confck_same_ram.ram_radr[4]</data>
             <data>56</data>
+        </row>
+        <row>
+            <data>u_CORES/u_debug_core_0/ram_radr [9]</data>
+            <data>u_CORES/u_debug_core_0/u_rd_addr_gen/confck_same_ram.ram_radr[9]</data>
+            <data>56</data>
+        </row>
+        <row>
+            <data>u_CORES/u_debug_core_0/ram_wren</data>
+            <data>u_CORES/u_debug_core_0/ram_wren</data>
+            <data>55</data>
         </row>
         <row>
             <data>u_CORES/u_debug_core_0/ram_wadr [9]</data>
@@ -3623,36 +3628,6 @@
         <row>
             <data>u_CORES/u_debug_core_0/ram_wadr [8]</data>
             <data>u_CORES/u_debug_core_0/ram_wadr[8]</data>
-            <data>55</data>
-        </row>
-        <row>
-            <data>u_CORES/u_debug_core_0/ram_wadr [2]</data>
-            <data>u_CORES/u_debug_core_0/ram_wadr[2]</data>
-            <data>55</data>
-        </row>
-        <row>
-            <data>u_CORES/u_debug_core_0/ram_wadr [1]</data>
-            <data>u_CORES/u_debug_core_0/ram_wadr[1]</data>
-            <data>55</data>
-        </row>
-        <row>
-            <data>u_CORES/u_debug_core_0/ram_wadr [0]</data>
-            <data>u_CORES/u_debug_core_0/ram_wadr[0]</data>
-            <data>55</data>
-        </row>
-        <row>
-            <data>u_CORES/u_debug_core_0/ram_wadr [7]</data>
-            <data>u_CORES/u_debug_core_0/ram_wadr[7]</data>
-            <data>55</data>
-        </row>
-        <row>
-            <data>u_CORES/u_debug_core_0/ram_wadr [6]</data>
-            <data>u_CORES/u_debug_core_0/ram_wadr[6]</data>
-            <data>55</data>
-        </row>
-        <row>
-            <data>u_CORES/u_debug_core_0/ram_wadr [5]</data>
-            <data>u_CORES/u_debug_core_0/ram_wadr[5]</data>
             <data>55</data>
         </row>
         <row>
@@ -3666,18 +3641,43 @@
             <data>55</data>
         </row>
         <row>
-            <data>u_CORES/u_debug_core_0/ram_wren</data>
-            <data>u_CORES/u_debug_core_0/ram_wren</data>
+            <data>u_CORES/u_debug_core_0/ram_wadr [2]</data>
+            <data>u_CORES/u_debug_core_0/ram_wadr[2]</data>
             <data>55</data>
         </row>
         <row>
-            <data>u_DDR3_50H/u_ipsxb_ddrc_top/mcdq_dcp_top/mcdq_dcp_back_ctrl/norm_cmd_m_wr</data>
-            <data>u_DDR3_50H/u_ipsxb_ddrc_top/mcdq_dcp_top/mcdq_dcp_back_ctrl/N252</data>
-            <data>53</data>
+            <data>u_CORES/u_debug_core_0/ram_wadr [7]</data>
+            <data>u_CORES/u_debug_core_0/ram_wadr[7]</data>
+            <data>55</data>
+        </row>
+        <row>
+            <data>u_CORES/u_debug_core_0/ram_wadr [6]</data>
+            <data>u_CORES/u_debug_core_0/ram_wadr[6]</data>
+            <data>55</data>
+        </row>
+        <row>
+            <data>u_CORES/u_debug_core_0/ram_wadr [1]</data>
+            <data>u_CORES/u_debug_core_0/ram_wadr[1]</data>
+            <data>55</data>
+        </row>
+        <row>
+            <data>u_CORES/u_debug_core_0/ram_wadr [5]</data>
+            <data>u_CORES/u_debug_core_0/ram_wadr[5]</data>
+            <data>55</data>
+        </row>
+        <row>
+            <data>u_CORES/u_debug_core_0/ram_wadr [0]</data>
+            <data>u_CORES/u_debug_core_0/ram_wadr[0]</data>
+            <data>55</data>
         </row>
         <row>
             <data>u_CORES/u_debug_core_0/u_rd_addr_gen/counter [2]</data>
             <data>u_CORES/u_debug_core_0/u_rd_addr_gen/confck_same.counter[2]</data>
+            <data>53</data>
+        </row>
+        <row>
+            <data>u_DDR3_50H/u_ipsxb_ddrc_top/mcdq_dcp_top/mcdq_dcp_back_ctrl/norm_cmd_m_wr</data>
+            <data>u_DDR3_50H/u_ipsxb_ddrc_top/mcdq_dcp_top/mcdq_dcp_back_ctrl/N252</data>
             <data>53</data>
         </row>
         <row>
@@ -3711,19 +3711,14 @@
             <data>49</data>
         </row>
         <row>
-            <data>u_DDR3_50H/u_ipsxb_ddrc_top/mcdq_ui_axi/u_user_cmd_fifo/N10</data>
-            <data>u_DDR3_50H/u_ipsxb_ddrc_top/mcdq_ui_axi/u_user_cmd_fifo/N10</data>
-            <data>48</data>
-        </row>
-        <row>
             <data>u_DDR3_50H/u_ipsxb_ddrc_top/mcdq_ui_axi/u_user_cmd_fifo/N14</data>
             <data>u_DDR3_50H/u_ipsxb_ddrc_top/mcdq_ui_axi/u_user_cmd_fifo/N14</data>
             <data>48</data>
         </row>
         <row>
-            <data>u_DDR3_50H/u_ddrphy_top/gate_move_en</data>
-            <data>u_DDR3_50H/u_ddrphy_top/ddrphy_calib_top/rdcal/gate_move_en</data>
-            <data>47</data>
+            <data>u_DDR3_50H/u_ipsxb_ddrc_top/mcdq_ui_axi/u_user_cmd_fifo/N10</data>
+            <data>u_DDR3_50H/u_ipsxb_ddrc_top/mcdq_ui_axi/u_user_cmd_fifo/N10</data>
+            <data>48</data>
         </row>
         <row>
             <data>u_CORES/u_debug_core_0/G_M_2.u2_trig_unit/u_cfg_reg_file/bit_cnt [0]</data>
@@ -3731,13 +3726,18 @@
             <data>47</data>
         </row>
         <row>
-            <data>u_DDR3_50H/u_ddrphy_top/phy_addr [15]</data>
-            <data>u_DDR3_50H/u_ddrphy_top/ddrphy_dfi/phy_addr[15]</data>
-            <data>46</data>
+            <data>u_DDR3_50H/u_ddrphy_top/gate_move_en</data>
+            <data>u_DDR3_50H/u_ddrphy_top/ddrphy_calib_top/rdcal/gate_move_en</data>
+            <data>47</data>
         </row>
         <row>
             <data>u_CORES/u_debug_core_0/u0_trig_unit/u_cfg_reg_file/bit_cnt [2]</data>
             <data>u_CORES/u_debug_core_0/u0_trig_unit/u_cfg_reg_file/bit_cnt[2]</data>
+            <data>46</data>
+        </row>
+        <row>
+            <data>u_DDR3_50H/u_ddrphy_top/phy_addr [15]</data>
+            <data>u_DDR3_50H/u_ddrphy_top/ddrphy_dfi/phy_addr[15]</data>
             <data>46</data>
         </row>
         <row>
@@ -3773,7 +3773,7 @@
         </row>
         <row>
             <data>LUT</data>
-            <data>17074</data>
+            <data>17073</data>
             <data>42800</data>
             <data>40</data>
         </row>
@@ -3809,9 +3809,9 @@
         </row>
         <row>
             <data>IO</data>
-            <data>158</data>
+            <data>166</data>
             <data>296</data>
-            <data>54</data>
+            <data>57</data>
         </row>
         <row>
             <data>IOCKDIV</data>
@@ -3909,13 +3909,13 @@
             <data>RAM(GB)</data>
         </column_headers>
         <row>
-            <data>0h:0m:13s</data>
-            <data>0h:0m:13s</data>
-            <data>0h:1m:31s</data>
-            <data>596</data>
+            <data>0h:0m:22s</data>
+            <data>0h:0m:23s</data>
+            <data>0h:1m:57s</data>
+            <data>593</data>
             <data>WINDOWS 10 x86_64</data>
-            <data>12th Gen Intel(R) Core(TM) i7-12700H</data>
-            <data>16</data>
+            <data>AMD Ryzen 7 5800H with Radeon Graphics</data>
+            <data>15</data>
         </row>
     </table>
     <table id="device_map_messages" title="Device Map Messages" column_number="1">
@@ -4473,10 +4473,10 @@
             <data message="4">Infer CARRY group, base inst: u_DDR3_50H/u_ddrphy_top/ddrphy_slice_top/i_dqs_group[3].u_ddrphy_data_slice/data_slice_dqs_gate_cal/gatecal/N81_1_0/gateop, insts:6.</data>
         </row>
         <row>
-            <data message="4">Infer CARRY group, base inst: u_CORES/u_debug_core_0/G_M_2.u2_trig_unit/u_cfg_reg_file/N262_1_1/gateop, insts:9.</data>
+            <data message="4">Infer CARRY group, base inst: u_DDR3_50H/u_ddrphy_top/ddrphy_slice_top/i_dqs_group[3].u_ddrphy_data_slice/data_slice_dqs_gate_cal/gatecal/N389_8.fsub_1/gateop, insts:5.</data>
         </row>
         <row>
-            <data message="4">Infer CARRY group, base inst: u_DDR3_50H/u_ddrphy_top/ddrphy_slice_top/i_dqs_group[3].u_ddrphy_data_slice/data_slice_dqs_gate_cal/gatecal/N389_8.fsub_1/gateop, insts:5.</data>
+            <data message="4">Infer CARRY group, base inst: u_CORES/u_debug_core_0/G_M_2.u2_trig_unit/u_cfg_reg_file/N262_1_1/gateop, insts:9.</data>
         </row>
         <row>
             <data message="4">Infer CARRY group, base inst: u_DDR3_50H/u_ipsxb_ddrc_top/mcdq_dcp_top/mcdq_dcp_back_ctrl/timing_act_pass/N31.lt_0/gateop, insts:4.</data>
@@ -4512,10 +4512,10 @@
             <data message="4">Infer CARRY group, base inst: u_DDR3_50H/u_ipsxb_ddrc_top/mcdq_dcp_top/mcdq_dcp_buf/B_ipsxb_distributed_fifo/u_ipsxb_distributed_fifo_distributed_fifo_v1_0/u_ipsxb_distributed_fifo_ctr/N2_1/gateop, insts:5.</data>
         </row>
         <row>
-            <data message="4">Infer CARRY group, base inst: u_CORES/u_debug_core_0/G_M_3.u3_trig_unit/u_cfg_reg_file/N262_1_1/gateop, insts:9.</data>
+            <data message="4">Infer CARRY group, base inst: u_DDR3_50H/u_ipsxb_ddrc_top/mcdq_dcp_top/mcdq_dcp_buf/B_ipsxb_distributed_fifo/u_ipsxb_distributed_fifo_distributed_fifo_v1_0/u_ipsxb_distributed_fifo_ctr/N9_1/gateop, insts:5.</data>
         </row>
         <row>
-            <data message="4">Infer CARRY group, base inst: u_DDR3_50H/u_ipsxb_ddrc_top/mcdq_dcp_top/mcdq_dcp_buf/B_ipsxb_distributed_fifo/u_ipsxb_distributed_fifo_distributed_fifo_v1_0/u_ipsxb_distributed_fifo_ctr/N9_1/gateop, insts:5.</data>
+            <data message="4">Infer CARRY group, base inst: u_CORES/u_debug_core_0/G_M_3.u3_trig_unit/u_cfg_reg_file/N262_1_1/gateop, insts:9.</data>
         </row>
         <row>
             <data message="4">Infer CARRY group, base inst: u_DDR3_50H/u_ipsxb_ddrc_top/mcdq_dcp_top/mcdq_dcp_buf/B_ipsxb_distributed_fifo/u_ipsxb_distributed_fifo_distributed_fifo_v1_0/u_ipsxb_distributed_fifo_ctr/N19.lt_0/gateop, insts:3.</data>
@@ -4536,7 +4536,7 @@
             <data message="4">Infer CARRY group, base inst: u_DDR3_50H/u_ddrphy_top/ddrphy_slice_top/i_dqs_group[0].u_ddrphy_data_slice/data_slice_dqs_gate_cal/gatecal/N81_1_1/gateop, insts:5.</data>
         </row>
         <row>
-            <data message="4">Infer CARRY group, base inst: u_DDR3_50H/u_ddrphy_top/ddrphy_slice_top/i_dqs_group[0].u_ddrphy_data_slice/data_slice_dqs_gate_cal/gatecal/N389_8.fsub_0/gateop, insts:6.</data>
+            <data message="4">Infer CARRY group, base inst: u_DDR3_50H/u_ddrphy_top/ddrphy_slice_top/i_dqs_group[0].u_ddrphy_data_slice/data_slice_dqs_gate_cal/gatecal/N389_8.fsub_1/gateop, insts:5.</data>
         </row>
         <row>
             <data message="4">Infer CARRY group, base inst: u_DDR3_50H/u_ddrphy_top/ddrphy_calib_top/ddrphy_init/N3_1_1/gateop, insts:15.</data>
@@ -4773,7 +4773,7 @@
             <data message="4">INST: &quot;r_out[7]/opit_0&quot; has been packed in IOL &quot;r_out_obuf[7]/opit_1&quot; success.</data>
         </row>
         <row>
-            <data message="5">Public-4010: Pcf file E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/device_map/hdmi_ddr_ov5640_top.pcf has been covered.</data>
+            <data message="5">Public-4010: Pcf file C:/Users/Kang/Desktop/ovMERGES/pixel-box/device_map/hdmi_ddr_ov5640_top.pcf has been covered.</data>
         </row>
     </table>
     <general_container id="device_map_settings">
@@ -14395,9 +14395,9 @@
                     <data>cmos_init_done[0]</data>
                     <data>output</data>
                     <data>B3</data>
-                    <data>1.2</data>
-                    <data>LVCMOS12</data>
-                    <data>2</data>
+                    <data>3.3</data>
+                    <data>LVCMOS33</data>
+                    <data>8</data>
                     <data>NONE</data>
                     <data>SLOW</data>
                     <data></data>
@@ -14419,9 +14419,9 @@
                     <data>cmos_init_done[1]</data>
                     <data>output</data>
                     <data>A2</data>
-                    <data>1.2</data>
-                    <data>LVCMOS12</data>
-                    <data>2</data>
+                    <data>3.3</data>
+                    <data>LVCMOS33</data>
+                    <data>8</data>
                     <data>NONE</data>
                     <data>SLOW</data>
                     <data></data>
@@ -14443,9 +14443,9 @@
                     <data>ddr_init_done</data>
                     <data>output</data>
                     <data>A3</data>
-                    <data>1.2</data>
-                    <data>LVCMOS12</data>
-                    <data>2</data>
+                    <data>3.3</data>
+                    <data>LVCMOS33</data>
+                    <data>8</data>
                     <data>NONE</data>
                     <data>SLOW</data>
                     <data></data>
@@ -14683,9 +14683,9 @@
                     <data>hdmi_int_led</data>
                     <data>output</data>
                     <data>B2</data>
-                    <data>1.2</data>
-                    <data>LVCMOS12</data>
-                    <data>2</data>
+                    <data>3.3</data>
+                    <data>LVCMOS33</data>
+                    <data>8</data>
                     <data>NONE</data>
                     <data>SLOW</data>
                     <data></data>
@@ -14707,9 +14707,9 @@
                     <data>heart_beat_led</data>
                     <data>output</data>
                     <data>C5</data>
-                    <data>1.2</data>
-                    <data>LVCMOS12</data>
-                    <data>2</data>
+                    <data>3.3</data>
+                    <data>LVCMOS33</data>
+                    <data>8</data>
                     <data>NONE</data>
                     <data>SLOW</data>
                     <data></data>
@@ -14782,6 +14782,30 @@
                     <data>3.3</data>
                     <data>LVCMOS33</data>
                     <data>8</data>
+                    <data>NONE</data>
+                    <data>FAST</data>
+                    <data></data>
+                    <data></data>
+                    <data></data>
+                    <data></data>
+                    <data></data>
+                    <data></data>
+                    <data></data>
+                    <data></data>
+                    <data></data>
+                    <data></data>
+                    <data></data>
+                    <data></data>
+                    <data></data>
+                    <data></data>
+                </row>
+                <row>
+                    <data>led</data>
+                    <data>output</data>
+                    <data>A5</data>
+                    <data>3.3</data>
+                    <data>LVCMOS33</data>
+                    <data>4</data>
                     <data>NONE</data>
                     <data>FAST</data>
                     <data></data>
@@ -15544,6 +15568,30 @@
                     <data></data>
                 </row>
                 <row>
+                    <data>phy_rstn</data>
+                    <data>output</data>
+                    <data>B20</data>
+                    <data>3.3</data>
+                    <data>LVCMOS33</data>
+                    <data>4</data>
+                    <data>NONE</data>
+                    <data>FAST</data>
+                    <data></data>
+                    <data></data>
+                    <data></data>
+                    <data></data>
+                    <data></data>
+                    <data></data>
+                    <data></data>
+                    <data></data>
+                    <data></data>
+                    <data></data>
+                    <data></data>
+                    <data></data>
+                    <data></data>
+                    <data></data>
+                </row>
+                <row>
                     <data>pix_clk</data>
                     <data>output</data>
                     <data>M22</data>
@@ -15757,6 +15805,150 @@
                     <data></data>
                     <data></data>
                     <data>TRUE</data>
+                    <data></data>
+                </row>
+                <row>
+                    <data>rgmii_tx_ctl</data>
+                    <data>output</data>
+                    <data>B18</data>
+                    <data>3.3</data>
+                    <data>LVCMOS33</data>
+                    <data>4</data>
+                    <data>NONE</data>
+                    <data>FAST</data>
+                    <data></data>
+                    <data></data>
+                    <data></data>
+                    <data></data>
+                    <data></data>
+                    <data></data>
+                    <data></data>
+                    <data></data>
+                    <data></data>
+                    <data></data>
+                    <data></data>
+                    <data></data>
+                    <data></data>
+                    <data></data>
+                </row>
+                <row>
+                    <data>rgmii_txc</data>
+                    <data>output</data>
+                    <data>G16</data>
+                    <data>3.3</data>
+                    <data>LVCMOS33</data>
+                    <data>4</data>
+                    <data>NONE</data>
+                    <data>FAST</data>
+                    <data></data>
+                    <data></data>
+                    <data></data>
+                    <data></data>
+                    <data></data>
+                    <data></data>
+                    <data></data>
+                    <data></data>
+                    <data></data>
+                    <data></data>
+                    <data></data>
+                    <data></data>
+                    <data></data>
+                    <data></data>
+                </row>
+                <row>
+                    <data>rgmii_txd[0]</data>
+                    <data>output</data>
+                    <data>F17</data>
+                    <data>3.3</data>
+                    <data>LVCMOS33</data>
+                    <data>4</data>
+                    <data>NONE</data>
+                    <data>FAST</data>
+                    <data></data>
+                    <data></data>
+                    <data></data>
+                    <data></data>
+                    <data></data>
+                    <data></data>
+                    <data></data>
+                    <data></data>
+                    <data></data>
+                    <data></data>
+                    <data></data>
+                    <data></data>
+                    <data></data>
+                    <data></data>
+                </row>
+                <row>
+                    <data>rgmii_txd[1]</data>
+                    <data>output</data>
+                    <data>D17</data>
+                    <data>3.3</data>
+                    <data>LVCMOS33</data>
+                    <data>4</data>
+                    <data>NONE</data>
+                    <data>FAST</data>
+                    <data></data>
+                    <data></data>
+                    <data></data>
+                    <data></data>
+                    <data></data>
+                    <data></data>
+                    <data></data>
+                    <data></data>
+                    <data></data>
+                    <data></data>
+                    <data></data>
+                    <data></data>
+                    <data></data>
+                    <data></data>
+                </row>
+                <row>
+                    <data>rgmii_txd[2]</data>
+                    <data>output</data>
+                    <data>C18</data>
+                    <data>3.3</data>
+                    <data>LVCMOS33</data>
+                    <data>4</data>
+                    <data>NONE</data>
+                    <data>FAST</data>
+                    <data></data>
+                    <data></data>
+                    <data></data>
+                    <data></data>
+                    <data></data>
+                    <data></data>
+                    <data></data>
+                    <data></data>
+                    <data></data>
+                    <data></data>
+                    <data></data>
+                    <data></data>
+                    <data></data>
+                    <data></data>
+                </row>
+                <row>
+                    <data>rgmii_txd[3]</data>
+                    <data>output</data>
+                    <data>A18</data>
+                    <data>3.3</data>
+                    <data>LVCMOS33</data>
+                    <data>4</data>
+                    <data>NONE</data>
+                    <data>FAST</data>
+                    <data></data>
+                    <data></data>
+                    <data></data>
+                    <data></data>
+                    <data></data>
+                    <data></data>
+                    <data></data>
+                    <data></data>
+                    <data></data>
+                    <data></data>
+                    <data></data>
+                    <data></data>
+                    <data></data>
                     <data></data>
                 </row>
                 <row>
@@ -16989,6 +17181,150 @@
                     <data>Y14</data>
                     <data>3.3</data>
                     <data>LVCMOS12</data>
+                    <data></data>
+                    <data>NONE</data>
+                    <data></data>
+                    <data></data>
+                    <data></data>
+                    <data></data>
+                    <data></data>
+                    <data></data>
+                    <data></data>
+                    <data></data>
+                    <data></data>
+                    <data></data>
+                    <data></data>
+                    <data></data>
+                    <data></data>
+                    <data></data>
+                    <data></data>
+                </row>
+                <row>
+                    <data>rgmii_rx_ctl</data>
+                    <data>input</data>
+                    <data>F9</data>
+                    <data>3.3</data>
+                    <data>LVCMOS33</data>
+                    <data></data>
+                    <data>NONE</data>
+                    <data></data>
+                    <data></data>
+                    <data></data>
+                    <data></data>
+                    <data></data>
+                    <data></data>
+                    <data></data>
+                    <data></data>
+                    <data></data>
+                    <data></data>
+                    <data></data>
+                    <data></data>
+                    <data></data>
+                    <data></data>
+                    <data></data>
+                </row>
+                <row>
+                    <data>rgmii_rxc</data>
+                    <data>input</data>
+                    <data>F14</data>
+                    <data>3.3</data>
+                    <data>LVCMOS33</data>
+                    <data></data>
+                    <data>NONE</data>
+                    <data></data>
+                    <data></data>
+                    <data></data>
+                    <data></data>
+                    <data></data>
+                    <data></data>
+                    <data></data>
+                    <data></data>
+                    <data></data>
+                    <data></data>
+                    <data></data>
+                    <data></data>
+                    <data></data>
+                    <data></data>
+                    <data></data>
+                </row>
+                <row>
+                    <data>rgmii_rxd[0]</data>
+                    <data>input</data>
+                    <data>H10</data>
+                    <data>3.3</data>
+                    <data>LVCMOS33</data>
+                    <data></data>
+                    <data>NONE</data>
+                    <data></data>
+                    <data></data>
+                    <data></data>
+                    <data></data>
+                    <data></data>
+                    <data></data>
+                    <data></data>
+                    <data></data>
+                    <data></data>
+                    <data></data>
+                    <data></data>
+                    <data></data>
+                    <data></data>
+                    <data></data>
+                    <data></data>
+                </row>
+                <row>
+                    <data>rgmii_rxd[1]</data>
+                    <data>input</data>
+                    <data>H11</data>
+                    <data>3.3</data>
+                    <data>LVCMOS33</data>
+                    <data></data>
+                    <data>NONE</data>
+                    <data></data>
+                    <data></data>
+                    <data></data>
+                    <data></data>
+                    <data></data>
+                    <data></data>
+                    <data></data>
+                    <data></data>
+                    <data></data>
+                    <data></data>
+                    <data></data>
+                    <data></data>
+                    <data></data>
+                    <data></data>
+                    <data></data>
+                </row>
+                <row>
+                    <data>rgmii_rxd[2]</data>
+                    <data>input</data>
+                    <data>G13</data>
+                    <data>3.3</data>
+                    <data>LVCMOS33</data>
+                    <data></data>
+                    <data>NONE</data>
+                    <data></data>
+                    <data></data>
+                    <data></data>
+                    <data></data>
+                    <data></data>
+                    <data></data>
+                    <data></data>
+                    <data></data>
+                    <data></data>
+                    <data></data>
+                    <data></data>
+                    <data></data>
+                    <data></data>
+                    <data></data>
+                    <data></data>
+                </row>
+                <row>
+                    <data>rgmii_rxd[3]</data>
+                    <data>input</data>
+                    <data>H13</data>
+                    <data>3.3</data>
+                    <data>LVCMOS33</data>
                     <data></data>
                     <data>NONE</data>
                     <data></data>

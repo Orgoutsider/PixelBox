@@ -181,8 +181,8 @@
             <data>RAM(GB)</data>
         </column_headers>
         <row>
-            <data>0h:0m:4s</data>
-            <data>0h:0m:4s</data>
+            <data>0h:0m:5s</data>
+            <data>0h:0m:5s</data>
             <data>0h:0m:16s</data>
             <data>267</data>
             <data>WINDOWS 10 x86_64</data>
@@ -8275,6 +8275,9 @@
         </row>
         <row>
             <data message="4">FSM test_wr_state_fsm[3:0] inferred.</data>
+        </row>
+        <row>
+            <data message="4">FSM read_port_fsm[1:0] inferred.</data>
         </row>
         <row>
             <data message="4">FSM test_rd_state_fsm[2:0] inferred.</data>
