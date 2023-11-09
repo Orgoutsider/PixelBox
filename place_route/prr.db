@@ -23,6 +23,111 @@
             <data>IO_REGISTER</data>
         </column_headers>
         <row>
+            <data>b_in[3]</data>
+            <data>input</data>
+            <data>W15</data>
+            <data>BANK2</data>
+            <data>3.3</data>
+            <data>LVCMOS12</data>
+            <data>NA</data>
+            <data>NONE</data>
+            <data>NA</data>
+            <data>NA</data>
+            <data>UD</data>
+            <data>NA</data>
+            <data>NA</data>
+            <data>NA</data>
+            <data>NA</data>
+            <data>NA</data>
+            <data>NA</data>
+            <data>YES</data>
+            <data>NA</data>
+        </row>
+        <row>
+            <data>b_in[4]</data>
+            <data>input</data>
+            <data>Y16</data>
+            <data>BANK2</data>
+            <data>3.3</data>
+            <data>LVCMOS12</data>
+            <data>NA</data>
+            <data>NONE</data>
+            <data>NA</data>
+            <data>NA</data>
+            <data>UD</data>
+            <data>NA</data>
+            <data>NA</data>
+            <data>NA</data>
+            <data>NA</data>
+            <data>NA</data>
+            <data>NA</data>
+            <data>YES</data>
+            <data>NA</data>
+        </row>
+        <row>
+            <data>b_in[5]</data>
+            <data>input</data>
+            <data>AB16</data>
+            <data>BANK2</data>
+            <data>3.3</data>
+            <data>LVCMOS12</data>
+            <data>NA</data>
+            <data>NONE</data>
+            <data>NA</data>
+            <data>NA</data>
+            <data>UD</data>
+            <data>NA</data>
+            <data>NA</data>
+            <data>NA</data>
+            <data>NA</data>
+            <data>NA</data>
+            <data>NA</data>
+            <data>YES</data>
+            <data>NA</data>
+        </row>
+        <row>
+            <data>b_in[6]</data>
+            <data>input</data>
+            <data>AA16</data>
+            <data>BANK2</data>
+            <data>3.3</data>
+            <data>LVCMOS12</data>
+            <data>NA</data>
+            <data>NONE</data>
+            <data>NA</data>
+            <data>NA</data>
+            <data>UD</data>
+            <data>NA</data>
+            <data>NA</data>
+            <data>NA</data>
+            <data>NA</data>
+            <data>NA</data>
+            <data>NA</data>
+            <data>YES</data>
+            <data>NA</data>
+        </row>
+        <row>
+            <data>b_in[7]</data>
+            <data>input</data>
+            <data>AB17</data>
+            <data>BANK2</data>
+            <data>3.3</data>
+            <data>LVCMOS12</data>
+            <data>NA</data>
+            <data>NONE</data>
+            <data>NA</data>
+            <data>NA</data>
+            <data>UD</data>
+            <data>NA</data>
+            <data>NA</data>
+            <data>NA</data>
+            <data>NA</data>
+            <data>NA</data>
+            <data>NA</data>
+            <data>YES</data>
+            <data>NA</data>
+        </row>
+        <row>
             <data>b_out[0]</data>
             <data>output</data>
             <data>V21</data>
@@ -842,6 +947,27 @@
             <data>NA</data>
         </row>
         <row>
+            <data>de_in</data>
+            <data>input</data>
+            <data>U13</data>
+            <data>BANK2</data>
+            <data>3.3</data>
+            <data>LVCMOS12</data>
+            <data>NA</data>
+            <data>NONE</data>
+            <data>NA</data>
+            <data>NA</data>
+            <data>UD</data>
+            <data>NA</data>
+            <data>NA</data>
+            <data>NA</data>
+            <data>NA</data>
+            <data>NA</data>
+            <data>NA</data>
+            <data>YES</data>
+            <data>NA</data>
+        </row>
+        <row>
             <data>de_out</data>
             <data>output</data>
             <data>Y22</data>
@@ -859,6 +985,132 @@
             <data>NA</data>
             <data>NA</data>
             <data>OFF</data>
+            <data>YES</data>
+            <data>NA</data>
+        </row>
+        <row>
+            <data>g_in[2]</data>
+            <data>input</data>
+            <data>W18</data>
+            <data>BANK2</data>
+            <data>3.3</data>
+            <data>LVCMOS12</data>
+            <data>NA</data>
+            <data>NONE</data>
+            <data>NA</data>
+            <data>NA</data>
+            <data>UD</data>
+            <data>NA</data>
+            <data>NA</data>
+            <data>NA</data>
+            <data>NA</data>
+            <data>NA</data>
+            <data>NA</data>
+            <data>YES</data>
+            <data>NA</data>
+        </row>
+        <row>
+            <data>g_in[3]</data>
+            <data>input</data>
+            <data>AB19</data>
+            <data>BANK2</data>
+            <data>3.3</data>
+            <data>LVCMOS12</data>
+            <data>NA</data>
+            <data>NONE</data>
+            <data>NA</data>
+            <data>NA</data>
+            <data>UD</data>
+            <data>NA</data>
+            <data>NA</data>
+            <data>NA</data>
+            <data>NA</data>
+            <data>NA</data>
+            <data>NA</data>
+            <data>YES</data>
+            <data>NA</data>
+        </row>
+        <row>
+            <data>g_in[4]</data>
+            <data>input</data>
+            <data>AA18</data>
+            <data>BANK2</data>
+            <data>3.3</data>
+            <data>LVCMOS12</data>
+            <data>NA</data>
+            <data>NONE</data>
+            <data>NA</data>
+            <data>NA</data>
+            <data>UD</data>
+            <data>NA</data>
+            <data>NA</data>
+            <data>NA</data>
+            <data>NA</data>
+            <data>NA</data>
+            <data>NA</data>
+            <data>YES</data>
+            <data>NA</data>
+        </row>
+        <row>
+            <data>g_in[5]</data>
+            <data>input</data>
+            <data>AB18</data>
+            <data>BANK2</data>
+            <data>3.3</data>
+            <data>LVCMOS12</data>
+            <data>NA</data>
+            <data>NONE</data>
+            <data>NA</data>
+            <data>NA</data>
+            <data>UD</data>
+            <data>NA</data>
+            <data>NA</data>
+            <data>NA</data>
+            <data>NA</data>
+            <data>NA</data>
+            <data>NA</data>
+            <data>YES</data>
+            <data>NA</data>
+        </row>
+        <row>
+            <data>g_in[6]</data>
+            <data>input</data>
+            <data>Y18</data>
+            <data>BANK2</data>
+            <data>3.3</data>
+            <data>LVCMOS12</data>
+            <data>NA</data>
+            <data>NONE</data>
+            <data>NA</data>
+            <data>NA</data>
+            <data>UD</data>
+            <data>NA</data>
+            <data>NA</data>
+            <data>NA</data>
+            <data>NA</data>
+            <data>NA</data>
+            <data>NA</data>
+            <data>YES</data>
+            <data>NA</data>
+        </row>
+        <row>
+            <data>g_in[7]</data>
+            <data>input</data>
+            <data>W17</data>
+            <data>BANK2</data>
+            <data>3.3</data>
+            <data>LVCMOS12</data>
+            <data>NA</data>
+            <data>NONE</data>
+            <data>NA</data>
+            <data>NA</data>
+            <data>UD</data>
+            <data>NA</data>
+            <data>NA</data>
+            <data>NA</data>
+            <data>NA</data>
+            <data>NA</data>
+            <data>NA</data>
             <data>YES</data>
             <data>NA</data>
         </row>
@@ -1094,6 +1346,48 @@
             <data>NA</data>
         </row>
         <row>
+            <data>iic_scl</data>
+            <data>output</data>
+            <data>V19</data>
+            <data>BANK1</data>
+            <data>3.3</data>
+            <data>LVCMOS33</data>
+            <data>8</data>
+            <data>NONE</data>
+            <data>SLOW</data>
+            <data>Y</data>
+            <data>NA</data>
+            <data>NA</data>
+            <data>NA</data>
+            <data>NA</data>
+            <data>NA</data>
+            <data>NA</data>
+            <data>OFF</data>
+            <data>YES</data>
+            <data>NA</data>
+        </row>
+        <row>
+            <data>iic_sda</data>
+            <data>inout</data>
+            <data>V20</data>
+            <data>BANK1</data>
+            <data>3.3</data>
+            <data>LVCMOS33</data>
+            <data>8</data>
+            <data>NONE</data>
+            <data>SLOW</data>
+            <data>Y</data>
+            <data>NOHYS</data>
+            <data>NA</data>
+            <data>NA</data>
+            <data>NA</data>
+            <data>NA</data>
+            <data>NA</data>
+            <data>NA</data>
+            <data>YES</data>
+            <data>NA</data>
+        </row>
+        <row>
             <data>iic_tx_scl</data>
             <data>output</data>
             <data>P17</data>
@@ -1125,6 +1419,27 @@
             <data>NONE</data>
             <data>FAST</data>
             <data>Y</data>
+            <data>NOHYS</data>
+            <data>NA</data>
+            <data>NA</data>
+            <data>NA</data>
+            <data>NA</data>
+            <data>NA</data>
+            <data>NA</data>
+            <data>YES</data>
+            <data>NA</data>
+        </row>
+        <row>
+            <data>key</data>
+            <data>input</data>
+            <data>K18</data>
+            <data>BANK1</data>
+            <data>3.3</data>
+            <data>LVCMOS33</data>
+            <data>NA</data>
+            <data>NONE</data>
+            <data>NA</data>
+            <data>NA</data>
             <data>NOHYS</data>
             <data>NA</data>
             <data>NA</data>
@@ -2648,6 +2963,132 @@
             <data>NA</data>
         </row>
         <row>
+            <data>pix_clk_in</data>
+            <data>input</data>
+            <data>AA12</data>
+            <data>BANK2</data>
+            <data>3.3</data>
+            <data>LVCMOS12</data>
+            <data>NA</data>
+            <data>NONE</data>
+            <data>NA</data>
+            <data>NA</data>
+            <data>UD</data>
+            <data>NA</data>
+            <data>NA</data>
+            <data>NA</data>
+            <data>NA</data>
+            <data>NA</data>
+            <data>NA</data>
+            <data>YES</data>
+            <data>NA</data>
+        </row>
+        <row>
+            <data>r_in[3]</data>
+            <data>input</data>
+            <data>V15</data>
+            <data>BANK2</data>
+            <data>3.3</data>
+            <data>LVCMOS12</data>
+            <data>NA</data>
+            <data>NONE</data>
+            <data>NA</data>
+            <data>NA</data>
+            <data>UD</data>
+            <data>NA</data>
+            <data>NA</data>
+            <data>NA</data>
+            <data>NA</data>
+            <data>NA</data>
+            <data>NA</data>
+            <data>YES</data>
+            <data>NA</data>
+        </row>
+        <row>
+            <data>r_in[4]</data>
+            <data>input</data>
+            <data>AA14</data>
+            <data>BANK2</data>
+            <data>3.3</data>
+            <data>LVCMOS12</data>
+            <data>NA</data>
+            <data>NONE</data>
+            <data>NA</data>
+            <data>NA</data>
+            <data>UD</data>
+            <data>NA</data>
+            <data>NA</data>
+            <data>NA</data>
+            <data>NA</data>
+            <data>NA</data>
+            <data>NA</data>
+            <data>YES</data>
+            <data>NA</data>
+        </row>
+        <row>
+            <data>r_in[5]</data>
+            <data>input</data>
+            <data>AB14</data>
+            <data>BANK2</data>
+            <data>3.3</data>
+            <data>LVCMOS12</data>
+            <data>NA</data>
+            <data>NONE</data>
+            <data>NA</data>
+            <data>NA</data>
+            <data>UD</data>
+            <data>NA</data>
+            <data>NA</data>
+            <data>NA</data>
+            <data>NA</data>
+            <data>NA</data>
+            <data>NA</data>
+            <data>YES</data>
+            <data>NA</data>
+        </row>
+        <row>
+            <data>r_in[6]</data>
+            <data>input</data>
+            <data>W14</data>
+            <data>BANK2</data>
+            <data>3.3</data>
+            <data>LVCMOS12</data>
+            <data>NA</data>
+            <data>NONE</data>
+            <data>NA</data>
+            <data>NA</data>
+            <data>UD</data>
+            <data>NA</data>
+            <data>NA</data>
+            <data>NA</data>
+            <data>NA</data>
+            <data>NA</data>
+            <data>NA</data>
+            <data>YES</data>
+            <data>NA</data>
+        </row>
+        <row>
+            <data>r_in[7]</data>
+            <data>input</data>
+            <data>Y14</data>
+            <data>BANK2</data>
+            <data>3.3</data>
+            <data>LVCMOS12</data>
+            <data>NA</data>
+            <data>NONE</data>
+            <data>NA</data>
+            <data>NA</data>
+            <data>UD</data>
+            <data>NA</data>
+            <data>NA</data>
+            <data>NA</data>
+            <data>NA</data>
+            <data>NA</data>
+            <data>NA</data>
+            <data>YES</data>
+            <data>NA</data>
+        </row>
+        <row>
             <data>r_out[0]</data>
             <data>output</data>
             <data>K17</data>
@@ -2848,6 +3289,27 @@
             <data>NA</data>
             <data>NA</data>
             <data>NOHYS</data>
+            <data>NA</data>
+            <data>NA</data>
+            <data>NA</data>
+            <data>NA</data>
+            <data>NA</data>
+            <data>NA</data>
+            <data>YES</data>
+            <data>NA</data>
+        </row>
+        <row>
+            <data>vs_in</data>
+            <data>input</data>
+            <data>W13</data>
+            <data>BANK2</data>
+            <data>3.3</data>
+            <data>LVCMOS12</data>
+            <data>NA</data>
+            <data>NONE</data>
+            <data>NA</data>
+            <data>NA</data>
+            <data>UD</data>
             <data>NA</data>
             <data>NA</data>
             <data>NA</data>
@@ -3308,9 +3770,9 @@
             <data>IOBS_LR_328_25</data>
             <data>BANK1</data>
             <data>DIFFI_B1_55P</data>
-            <data></data>
-            <data></data>
-            <data></data>
+            <data>iic_scl</data>
+            <data>output</data>
+            <data>YES</data>
         </row>
         <row>
             <data>T19</data>
@@ -3677,9 +4139,9 @@
             <data>IOBS_LR_328_24</data>
             <data>BANK1</data>
             <data>DIFFI_B1_55N/DOUT_BUSY</data>
-            <data></data>
-            <data></data>
-            <data></data>
+            <data>iic_sda</data>
+            <data>inout</data>
+            <data>YES</data>
         </row>
         <row>
             <data>T18</data>
@@ -3929,9 +4391,9 @@
             <data>IOBS_LR_328_256</data>
             <data>BANK1</data>
             <data>DIFFI_B1_19N</data>
-            <data></data>
-            <data></data>
-            <data></data>
+            <data>key</data>
+            <data>input</data>
+            <data>YES</data>
         </row>
         <row>
             <data>H20</data>
@@ -4109,18 +4571,18 @@
             <data>IOBD_281_0</data>
             <data>BANK2</data>
             <data>DIFFIO_B2_46P</data>
-            <data></data>
-            <data></data>
-            <data></data>
+            <data>g_in[7]</data>
+            <data>input</data>
+            <data>YES</data>
         </row>
         <row>
             <data>AA14</data>
             <data>IOBD_273_0</data>
             <data>BANK2</data>
             <data>DIFFIO_B2_45P</data>
-            <data></data>
-            <data></data>
-            <data></data>
+            <data>r_in[4]</data>
+            <data>input</data>
+            <data>YES</data>
         </row>
         <row>
             <data>R13</data>
@@ -4145,9 +4607,9 @@
             <data>IOBD_225_0</data>
             <data>BANK2</data>
             <data>DIFFIO_B2_37P/D11</data>
-            <data></data>
-            <data></data>
-            <data></data>
+            <data>g_in[4]</data>
+            <data>input</data>
+            <data>YES</data>
         </row>
         <row>
             <data>Y17</data>
@@ -4163,9 +4625,9 @@
             <data>IOBD_213_0</data>
             <data>BANK2</data>
             <data>DIFFIO_B2_34P</data>
-            <data></data>
-            <data></data>
-            <data></data>
+            <data>b_in[4]</data>
+            <data>input</data>
+            <data>YES</data>
         </row>
         <row>
             <data>V13</data>
@@ -4181,18 +4643,18 @@
             <data>IOBD_201_0</data>
             <data>BANK2</data>
             <data>DIFFIO_B2_32P</data>
-            <data></data>
-            <data></data>
-            <data></data>
+            <data>b_in[6]</data>
+            <data>input</data>
+            <data>YES</data>
         </row>
         <row>
             <data>W14</data>
             <data>IOBD_197_0</data>
             <data>BANK2</data>
             <data>DIFFIO_B2_31P</data>
-            <data></data>
-            <data></data>
-            <data></data>
+            <data>r_in[6]</data>
+            <data>input</data>
+            <data>YES</data>
         </row>
         <row>
             <data>Y15</data>
@@ -4244,9 +4706,9 @@
             <data>IOBD_161_0</data>
             <data>BANK2</data>
             <data>DIFFIO_B2_25P/GCLK31/PLL4_CLK7/PLL5_CLK7/D14</data>
-            <data></data>
-            <data></data>
-            <data></data>
+            <data>pix_clk_in</data>
+            <data>input</data>
+            <data>YES</data>
         </row>
         <row>
             <data>Y11</data>
@@ -4424,9 +4886,9 @@
             <data>IOBS_TB_316_0</data>
             <data>BANK2</data>
             <data>DIFFIO_B2_53N/MFG_TEST_OUT</data>
-            <data></data>
-            <data></data>
-            <data></data>
+            <data>g_in[2]</data>
+            <data>input</data>
+            <data>YES</data>
         </row>
         <row>
             <data>AB20</data>
@@ -4442,18 +4904,18 @@
             <data>IOBS_TB_280_0</data>
             <data>BANK2</data>
             <data>DIFFIO_B2_46N</data>
-            <data></data>
-            <data></data>
-            <data></data>
+            <data>g_in[6]</data>
+            <data>input</data>
+            <data>YES</data>
         </row>
         <row>
             <data>AB14</data>
             <data>IOBS_TB_272_0</data>
             <data>BANK2</data>
             <data>DIFFIO_B2_45N</data>
-            <data></data>
-            <data></data>
-            <data></data>
+            <data>r_in[5]</data>
+            <data>input</data>
+            <data>YES</data>
         </row>
         <row>
             <data>T14</data>
@@ -4469,63 +4931,63 @@
             <data>IOBS_TB_240_0</data>
             <data>BANK2</data>
             <data>DIFFIO_B2_38N/D10</data>
-            <data></data>
-            <data></data>
-            <data></data>
+            <data>g_in[3]</data>
+            <data>input</data>
+            <data>YES</data>
         </row>
         <row>
             <data>AB18</data>
             <data>IOBS_TB_224_0</data>
             <data>BANK2</data>
             <data>DIFFIO_B2_37N/D12</data>
-            <data></data>
-            <data></data>
-            <data></data>
+            <data>g_in[5]</data>
+            <data>input</data>
+            <data>YES</data>
         </row>
         <row>
             <data>AB17</data>
             <data>IOBS_TB_220_0</data>
             <data>BANK2</data>
             <data>DIFFIO_B2_36N</data>
-            <data></data>
-            <data></data>
-            <data></data>
+            <data>b_in[7]</data>
+            <data>input</data>
+            <data>YES</data>
         </row>
         <row>
             <data>W15</data>
             <data>IOBS_TB_212_0</data>
             <data>BANK2</data>
             <data>DIFFIO_B2_34N</data>
-            <data></data>
-            <data></data>
-            <data></data>
+            <data>b_in[3]</data>
+            <data>input</data>
+            <data>YES</data>
         </row>
         <row>
             <data>W13</data>
             <data>IOBS_TB_208_0</data>
             <data>BANK2</data>
             <data>DIFFIO_B2_33N</data>
-            <data></data>
-            <data></data>
-            <data></data>
+            <data>vs_in</data>
+            <data>input</data>
+            <data>YES</data>
         </row>
         <row>
             <data>AB16</data>
             <data>IOBS_TB_200_0</data>
             <data>BANK2</data>
             <data>DIFFIO_B2_32N</data>
-            <data></data>
-            <data></data>
-            <data></data>
+            <data>b_in[5]</data>
+            <data>input</data>
+            <data>YES</data>
         </row>
         <row>
             <data>Y14</data>
             <data>IOBS_TB_196_0</data>
             <data>BANK2</data>
             <data>DIFFIO_B2_31N</data>
-            <data></data>
-            <data></data>
-            <data></data>
+            <data>r_in[7]</data>
+            <data>input</data>
+            <data>YES</data>
         </row>
         <row>
             <data>AB15</data>
@@ -4748,18 +5210,18 @@
             <data>IOBR_TB_288_0</data>
             <data>BANK2</data>
             <data>DIFFIO_B2_47N/VREF_B2</data>
-            <data></data>
-            <data></data>
-            <data></data>
+            <data>r_in[3]</data>
+            <data>input</data>
+            <data>YES</data>
         </row>
         <row>
             <data>U13</data>
             <data>IOBR_TB_216_0</data>
             <data>BANK2</data>
             <data>DIFFIO_B2_35N/VREF_B2</data>
-            <data></data>
-            <data></data>
-            <data></data>
+            <data>de_in</data>
+            <data>input</data>
+            <data>YES</data>
         </row>
         <row>
             <data>AB10</data>
@@ -5575,50 +6037,93 @@
         </row>
         <row>
             <data>Use of CLMA</data>
-            <data>2956</data>
+<<<<<<< HEAD
+            <data>3605</data>
+=======
+            <data>3130</data>
+>>>>>>> testing
             <data>6450</data>
-            <data>46</data>
+            <data>49</data>
             <row>
                 <data>  FF</data>
-                <data>10955</data>
+<<<<<<< HEAD
+                <data>12692</data>
+                <data>38700</data>
+                <data>33</data>
+            </row>
+            <row>
+                <data>  LUT</data>
+                <data>10214</data>
+=======
+                <data>10911</data>
                 <data>38700</data>
                 <data>29</data>
             </row>
             <row>
                 <data>  LUT</data>
-                <data>8751</data>
+                <data>8993</data>
+>>>>>>> testing
                 <data>25800</data>
-                <data>34</data>
+                <data>35</data>
             </row>
             <row>
                 <data>  LUT-FF pairs</data>
-                <data>6121</data>
+<<<<<<< HEAD
+                <data>7191</data>
                 <data>25800</data>
-                <data>24</data>
+                <data>28</data>
+=======
+                <data>5820</data>
+                <data>25800</data>
+                <data>23</data>
+>>>>>>> testing
             </row>
         </row>
         <row>
             <data>Use of CLMS</data>
-            <data>1870</data>
+<<<<<<< HEAD
+            <data>2244</data>
             <data>4250</data>
-            <data>44</data>
+            <data>53</data>
             <row>
                 <data>  FF</data>
-                <data>6900</data>
+                <data>7822</data>
                 <data>25500</data>
-                <data>28</data>
+                <data>31</data>
             </row>
             <row>
                 <data>  LUT</data>
-                <data>5699</data>
+                <data>6257</data>
                 <data>17000</data>
-                <data>34</data>
+                <data>37</data>
             </row>
             <row>
                 <data>  LUT-FF pairs</data>
-                <data>3935</data>
+                <data>4324</data>
                 <data>17000</data>
-                <data>24</data>
+                <data>26</data>
+=======
+            <data>1926</data>
+            <data>4250</data>
+            <data>46</data>
+            <row>
+                <data>  FF</data>
+                <data>6685</data>
+                <data>25500</data>
+                <data>27</data>
+            </row>
+            <row>
+                <data>  LUT</data>
+                <data>5548</data>
+                <data>17000</data>
+                <data>33</data>
+            </row>
+            <row>
+                <data>  LUT-FF pairs</data>
+                <data>3536</data>
+                <data>17000</data>
+                <data>21</data>
+>>>>>>> testing
             </row>
             <row>
                 <data>  Distributed RAM</data>
@@ -5647,9 +6152,9 @@
         </row>
         <row>
             <data>Use of DRM</data>
-            <data>79.5</data>
+            <data>117.5</data>
             <data>134</data>
-            <data>60</data>
+            <data>88</data>
         </row>
         <row>
             <data>Use of FUSECODE</data>
@@ -5659,9 +6164,15 @@
         </row>
         <row>
             <data>Use of HARD0N1</data>
-            <data>815</data>
+<<<<<<< HEAD
+            <data>938</data>
             <data>6672</data>
-            <data>13</data>
+            <data>15</data>
+=======
+            <data>1017</data>
+            <data>6672</data>
+            <data>16</data>
+>>>>>>> testing
         </row>
         <row>
             <data>Use of HSST</data>
@@ -5671,14 +6182,18 @@
         </row>
         <row>
             <data>Use of IO</data>
-            <data>136</data>
+<<<<<<< HEAD
+            <data>147</data>
+=======
+            <data>158</data>
+>>>>>>> testing
             <data>296</data>
-            <data>46</data>
+            <data>54</data>
             <row>
                 <data>  IOBD</data>
-                <data>16</data>
+                <data>23</data>
                 <data>64</data>
-                <data>25</data>
+                <data>36</data>
             </row>
             <row>
                 <data>  IOBR_LR</data>
@@ -5688,21 +6203,21 @@
             </row>
             <row>
                 <data>  IOBR_TB</data>
-                <data>1</data>
+                <data>3</data>
                 <data>8</data>
-                <data>13</data>
+                <data>38</data>
             </row>
             <row>
                 <data>  IOBS_LR</data>
-                <data>101</data>
+                <data>104</data>
                 <data>161</data>
-                <data>63</data>
+                <data>65</data>
             </row>
             <row>
                 <data>  IOBS_TB</data>
-                <data>16</data>
+                <data>26</data>
                 <data>56</data>
-                <data>29</data>
+                <data>47</data>
             </row>
         </row>
         <row>
@@ -5731,9 +6246,13 @@
         </row>
         <row>
             <data>Use of IOL</data>
-            <data>136</data>
+<<<<<<< HEAD
+            <data>147</data>
+=======
+            <data>158</data>
+>>>>>>> testing
             <data>400</data>
-            <data>34</data>
+            <data>40</data>
         </row>
         <row>
             <data>Use of IPAL</data>
@@ -5785,6 +6304,7 @@
         </row>
         <row>
             <data>Use of RCKB</data>
+<<<<<<< HEAD
             <data>0</data>
             <data>24</data>
             <data>0</data>
@@ -5793,6 +6313,16 @@
                 <data>0</data>
                 <data>24</data>
                 <data>0</data>
+=======
+            <data>1</data>
+            <data>24</data>
+            <data>5</data>
+            <row>
+                <data> RCKB dataused</data>
+                <data>1</data>
+                <data>24</data>
+                <data>5</data>
+>>>>>>> testing
             </row>
         </row>
         <row>
@@ -5827,9 +6357,9 @@
         </row>
         <row>
             <data>Use of USCM</data>
-            <data>12</data>
+            <data>13</data>
             <data>30</data>
-            <data>40</data>
+            <data>44</data>
             <row>
                 <data> USCM dataused</data>
                 <data>0</data>
@@ -5880,34 +6410,48 @@
         </column_headers>
         <row>
             <data>hdmi_ddr_ov5640_top</data>
-            <data>14420</data>
-            <data>17855</data>
+<<<<<<< HEAD
+            <data>16434</data>
+            <data>20514</data>
+=======
+            <data>14514</data>
+            <data>17596</data>
+>>>>>>> testing
             <data>72</data>
             <data>0</data>
-            <data>79.5</data>
+            <data>117.5</data>
             <data>0</data>
             <data>1</data>
             <data>8</data>
             <data>0</data>
             <data>0</data>
-            <data>136</data>
+<<<<<<< HEAD
+            <data>147</data>
+            <data>2</data>
+=======
+            <data>158</data>
             <data>3</data>
+>>>>>>> testing
             <data>0</data>
             <data>6</data>
             <data>0</data>
             <data>0</data>
             <data>0</data>
             <data>3</data>
+<<<<<<< HEAD
             <data>0</data>
+=======
+            <data>1</data>
+>>>>>>> testing
             <data>0</data>
             <data>1</data>
             <data>0</data>
             <data>0</data>
-            <data>12</data>
+            <data>13</data>
             <row>
                 <data>cmos1_8_16bit</data>
                 <data>6</data>
-                <data>82</data>
+                <data>67</data>
                 <data>0</data>
                 <data>0</data>
                 <data>0</data>
@@ -5932,9 +6476,36 @@
                 <data>0</data>
             </row>
             <row>
+                <data>cmos1_mix</data>
+                <data>14</data>
+                <data>30</data>
+                <data>0</data>
+                <data>0</data>
+                <data>0</data>
+                <data>0</data>
+                <data>0</data>
+                <data>0</data>
+                <data>0</data>
+                <data>0</data>
+                <data>0</data>
+                <data>0</data>
+                <data>0</data>
+                <data>0</data>
+                <data>0</data>
+                <data>0</data>
+                <data>0</data>
+                <data>0</data>
+                <data>0</data>
+                <data>0</data>
+                <data>0</data>
+                <data>0</data>
+                <data>0</data>
+                <data>0</data>
+            </row>
+            <row>
                 <data>cmos2_8_16bit</data>
                 <data>6</data>
-                <data>82</data>
+                <data>67</data>
                 <data>0</data>
                 <data>0</data>
                 <data>0</data>
@@ -5947,6 +6518,33 @@
                 <data>1</data>
                 <data>0</data>
                 <data>1</data>
+                <data>0</data>
+                <data>0</data>
+                <data>0</data>
+                <data>0</data>
+                <data>0</data>
+                <data>0</data>
+                <data>0</data>
+                <data>0</data>
+                <data>0</data>
+                <data>0</data>
+            </row>
+            <row>
+                <data>cmos2_mix</data>
+                <data>17</data>
+                <data>30</data>
+                <data>0</data>
+                <data>0</data>
+                <data>0</data>
+                <data>0</data>
+                <data>0</data>
+                <data>0</data>
+                <data>0</data>
+                <data>0</data>
+                <data>0</data>
+                <data>0</data>
+                <data>0</data>
+                <data>0</data>
                 <data>0</data>
                 <data>0</data>
                 <data>0</data>
@@ -6068,11 +6666,19 @@
             </row>
             <row>
                 <data>fram_buf</data>
-                <data>871</data>
-                <data>1100</data>
+<<<<<<< HEAD
+                <data>821</data>
+                <data>1150</data>
                 <data>0</data>
                 <data>0</data>
-                <data>32</data>
+                <data>49</data>
+=======
+                <data>1408</data>
+                <data>1607</data>
+                <data>0</data>
+                <data>0</data>
+                <data>73</data>
+>>>>>>> testing
                 <data>0</data>
                 <data>0</data>
                 <data>0</data>
@@ -6094,11 +6700,19 @@
                 <data>0</data>
                 <row>
                     <data>rd_buf</data>
-                    <data>133</data>
-                    <data>166</data>
+<<<<<<< HEAD
+                    <data>183</data>
+                    <data>207</data>
                     <data>0</data>
                     <data>0</data>
-                    <data>16</data>
+                    <data>17</data>
+=======
+                    <data>244</data>
+                    <data>265</data>
+                    <data>0</data>
+                    <data>0</data>
+                    <data>25</data>
+>>>>>>> testing
                     <data>0</data>
                     <data>0</data>
                     <data>0</data>
@@ -6120,8 +6734,13 @@
                     <data>0</data>
                     <row>
                         <data>rd_cell1</data>
-                        <data>58</data>
+<<<<<<< HEAD
+                        <data>57</data>
                         <data>78</data>
+=======
+                        <data>58</data>
+                        <data>79</data>
+>>>>>>> testing
                         <data>0</data>
                         <data>0</data>
                         <data>8</data>
@@ -6201,8 +6820,8 @@
                     </row>
                     <row>
                         <data>rd_cell2</data>
-                        <data>42</data>
-                        <data>57</data>
+                        <data>40</data>
+                        <data>56</data>
                         <data>0</data>
                         <data>0</data>
                         <data>8</data>
@@ -6280,37 +6899,14 @@
                             </row>
                         </row>
                     </row>
-                </row>
-                <row>
-                    <data>wr_buf</data>
-                    <data>518</data>
-                    <data>746</data>
-                    <data>0</data>
-                    <data>0</data>
-                    <data>16</data>
-                    <data>0</data>
-                    <data>0</data>
-                    <data>0</data>
-                    <data>0</data>
-                    <data>0</data>
-                    <data>0</data>
-                    <data>0</data>
-                    <data>0</data>
-                    <data>0</data>
-                    <data>0</data>
-                    <data>0</data>
-                    <data>0</data>
-                    <data>0</data>
-                    <data>0</data>
-                    <data>0</data>
-                    <data>0</data>
-                    <data>0</data>
-                    <data>0</data>
-                    <data>0</data>
                     <row>
-                        <data>wr_cell1</data>
-                        <data>67</data>
-                        <data>373</data>
+<<<<<<< HEAD
+                        <data>u_osd_display</data>
+                        <data>36</data>
+=======
+                        <data>rd_cell3</data>
+                        <data>43</data>
+                        <data>58</data>
                         <data>0</data>
                         <data>0</data>
                         <data>8</data>
@@ -6334,7 +6930,7 @@
                         <data>0</data>
                         <data>0</data>
                         <row>
-                            <data>wr_fram_buf</data>
+                            <data>rd_fram_buf</data>
                             <data>0</data>
                             <data>0</data>
                             <data>0</data>
@@ -6360,7 +6956,7 @@
                             <data>0</data>
                             <data>0</data>
                             <row>
-                                <data>U_ipml_sdpram_wr_fram_buf</data>
+                                <data>U_ipml_sdpram_rd_fram_buf</data>
                                 <data>0</data>
                                 <data>0</data>
                                 <data>0</data>
@@ -6389,12 +6985,148 @@
                         </row>
                     </row>
                     <row>
-                        <data>wr_cell2</data>
-                        <data>67</data>
-                        <data>373</data>
+                        <data>u_osd_display</data>
+                        <data>34</data>
+>>>>>>> testing
+                        <data>20</data>
                         <data>0</data>
                         <data>0</data>
-                        <data>8</data>
+                        <data>1</data>
+                        <data>0</data>
+                        <data>0</data>
+                        <data>0</data>
+                        <data>0</data>
+                        <data>0</data>
+                        <data>0</data>
+                        <data>0</data>
+                        <data>0</data>
+                        <data>0</data>
+                        <data>0</data>
+                        <data>0</data>
+                        <data>0</data>
+                        <data>0</data>
+                        <data>0</data>
+                        <data>0</data>
+                        <data>0</data>
+                        <data>0</data>
+                        <data>0</data>
+                        <data>0</data>
+                        <row>
+                            <data>osd_rom_m0</data>
+                            <data>0</data>
+                            <data>0</data>
+                            <data>0</data>
+                            <data>0</data>
+                            <data>1</data>
+                            <data>0</data>
+                            <data>0</data>
+                            <data>0</data>
+                            <data>0</data>
+                            <data>0</data>
+                            <data>0</data>
+                            <data>0</data>
+                            <data>0</data>
+                            <data>0</data>
+                            <data>0</data>
+                            <data>0</data>
+                            <data>0</data>
+                            <data>0</data>
+                            <data>0</data>
+                            <data>0</data>
+                            <data>0</data>
+                            <data>0</data>
+                            <data>0</data>
+                            <data>0</data>
+                            <row>
+                                <data>U_ipml_rom_osd_rom</data>
+                                <data>0</data>
+                                <data>0</data>
+                                <data>0</data>
+                                <data>0</data>
+                                <data>1</data>
+                                <data>0</data>
+                                <data>0</data>
+                                <data>0</data>
+                                <data>0</data>
+                                <data>0</data>
+                                <data>0</data>
+                                <data>0</data>
+                                <data>0</data>
+                                <data>0</data>
+                                <data>0</data>
+                                <data>0</data>
+                                <data>0</data>
+                                <data>0</data>
+                                <data>0</data>
+                                <data>0</data>
+                                <data>0</data>
+                                <data>0</data>
+                                <data>0</data>
+                                <data>0</data>
+                                <row>
+                                    <data>U_ipml_spram_osd_rom</data>
+                                    <data>0</data>
+                                    <data>0</data>
+                                    <data>0</data>
+                                    <data>0</data>
+                                    <data>1</data>
+                                    <data>0</data>
+                                    <data>0</data>
+                                    <data>0</data>
+                                    <data>0</data>
+                                    <data>0</data>
+                                    <data>0</data>
+                                    <data>0</data>
+                                    <data>0</data>
+                                    <data>0</data>
+                                    <data>0</data>
+                                    <data>0</data>
+                                    <data>0</data>
+                                    <data>0</data>
+                                    <data>0</data>
+                                    <data>0</data>
+                                    <data>0</data>
+                                    <data>0</data>
+                                    <data>0</data>
+                                    <data>0</data>
+                                </row>
+                            </row>
+                        </row>
+                    </row>
+                </row>
+                <row>
+                    <data>wr_buf</data>
+                    <data>923</data>
+                    <data>1148</data>
+                    <data>0</data>
+                    <data>0</data>
+                    <data>48</data>
+                    <data>0</data>
+                    <data>0</data>
+                    <data>0</data>
+                    <data>0</data>
+                    <data>0</data>
+                    <data>0</data>
+                    <data>0</data>
+                    <data>0</data>
+                    <data>0</data>
+                    <data>0</data>
+                    <data>0</data>
+                    <data>0</data>
+                    <data>0</data>
+                    <data>0</data>
+                    <data>0</data>
+                    <data>0</data>
+                    <data>0</data>
+                    <data>0</data>
+                    <data>0</data>
+                    <row>
+                        <data>wr_cell1</data>
+                        <data>89</data>
+                        <data>383</data>
+                        <data>0</data>
+                        <data>0</data>
+                        <data>16</data>
                         <data>0</data>
                         <data>0</data>
                         <data>0</data>
@@ -6420,7 +7152,7 @@
                             <data>0</data>
                             <data>0</data>
                             <data>0</data>
-                            <data>8</data>
+                            <data>16</data>
                             <data>0</data>
                             <data>0</data>
                             <data>0</data>
@@ -6446,7 +7178,169 @@
                                 <data>0</data>
                                 <data>0</data>
                                 <data>0</data>
-                                <data>8</data>
+                                <data>16</data>
+                                <data>0</data>
+                                <data>0</data>
+                                <data>0</data>
+                                <data>0</data>
+                                <data>0</data>
+                                <data>0</data>
+                                <data>0</data>
+                                <data>0</data>
+                                <data>0</data>
+                                <data>0</data>
+                                <data>0</data>
+                                <data>0</data>
+                                <data>0</data>
+                                <data>0</data>
+                                <data>0</data>
+                                <data>0</data>
+                                <data>0</data>
+                                <data>0</data>
+                                <data>0</data>
+                            </row>
+                        </row>
+                    </row>
+                    <row>
+                        <data>wr_cell2</data>
+                        <data>87</data>
+                        <data>382</data>
+                        <data>0</data>
+                        <data>0</data>
+                        <data>16</data>
+                        <data>0</data>
+                        <data>0</data>
+                        <data>0</data>
+                        <data>0</data>
+                        <data>0</data>
+                        <data>0</data>
+                        <data>0</data>
+                        <data>0</data>
+                        <data>0</data>
+                        <data>0</data>
+                        <data>0</data>
+                        <data>0</data>
+                        <data>0</data>
+                        <data>0</data>
+                        <data>0</data>
+                        <data>0</data>
+                        <data>0</data>
+                        <data>0</data>
+                        <data>0</data>
+                        <row>
+                            <data>wr_fram_buf</data>
+                            <data>0</data>
+                            <data>0</data>
+                            <data>0</data>
+                            <data>0</data>
+                            <data>16</data>
+                            <data>0</data>
+                            <data>0</data>
+                            <data>0</data>
+                            <data>0</data>
+                            <data>0</data>
+                            <data>0</data>
+                            <data>0</data>
+                            <data>0</data>
+                            <data>0</data>
+                            <data>0</data>
+                            <data>0</data>
+                            <data>0</data>
+                            <data>0</data>
+                            <data>0</data>
+                            <data>0</data>
+                            <data>0</data>
+                            <data>0</data>
+                            <data>0</data>
+                            <data>0</data>
+                            <row>
+                                <data>U_ipml_sdpram_wr_fram_buf</data>
+                                <data>0</data>
+                                <data>0</data>
+                                <data>0</data>
+                                <data>0</data>
+                                <data>16</data>
+                                <data>0</data>
+                                <data>0</data>
+                                <data>0</data>
+                                <data>0</data>
+                                <data>0</data>
+                                <data>0</data>
+                                <data>0</data>
+                                <data>0</data>
+                                <data>0</data>
+                                <data>0</data>
+                                <data>0</data>
+                                <data>0</data>
+                                <data>0</data>
+                                <data>0</data>
+                                <data>0</data>
+                                <data>0</data>
+                                <data>0</data>
+                                <data>0</data>
+                                <data>0</data>
+                            </row>
+                        </row>
+                    </row>
+                    <row>
+                        <data>wr_cell3</data>
+                        <data>88</data>
+                        <data>383</data>
+                        <data>0</data>
+                        <data>0</data>
+                        <data>16</data>
+                        <data>0</data>
+                        <data>0</data>
+                        <data>0</data>
+                        <data>0</data>
+                        <data>0</data>
+                        <data>0</data>
+                        <data>0</data>
+                        <data>0</data>
+                        <data>0</data>
+                        <data>0</data>
+                        <data>0</data>
+                        <data>0</data>
+                        <data>0</data>
+                        <data>0</data>
+                        <data>0</data>
+                        <data>0</data>
+                        <data>0</data>
+                        <data>0</data>
+                        <data>0</data>
+                        <row>
+                            <data>wr_fram_buf</data>
+                            <data>0</data>
+                            <data>0</data>
+                            <data>0</data>
+                            <data>0</data>
+                            <data>16</data>
+                            <data>0</data>
+                            <data>0</data>
+                            <data>0</data>
+                            <data>0</data>
+                            <data>0</data>
+                            <data>0</data>
+                            <data>0</data>
+                            <data>0</data>
+                            <data>0</data>
+                            <data>0</data>
+                            <data>0</data>
+                            <data>0</data>
+                            <data>0</data>
+                            <data>0</data>
+                            <data>0</data>
+                            <data>0</data>
+                            <data>0</data>
+                            <data>0</data>
+                            <data>0</data>
+                            <row>
+                                <data>U_ipml_sdpram_wr_fram_buf</data>
+                                <data>0</data>
+                                <data>0</data>
+                                <data>0</data>
+                                <data>0</data>
+                                <data>16</data>
                                 <data>0</data>
                                 <data>0</data>
                                 <data>0</data>
@@ -6472,8 +7366,8 @@
                 </row>
                 <row>
                     <data>wr_rd_ctrl_top</data>
-                    <data>219</data>
-                    <data>187</data>
+                    <data>239</data>
+                    <data>193</data>
                     <data>0</data>
                     <data>0</data>
                     <data>0</data>
@@ -6498,8 +7392,8 @@
                     <data>0</data>
                     <row>
                         <data>rd_ctrl</data>
-                        <data>13</data>
-                        <data>38</data>
+                        <data>9</data>
+                        <data>40</data>
                         <data>0</data>
                         <data>0</data>
                         <data>0</data>
@@ -6525,8 +7419,8 @@
                     </row>
                     <row>
                         <data>wr_cmd_trans</data>
-                        <data>185</data>
-                        <data>108</data>
+                        <data>209</data>
+                        <data>116</data>
                         <data>0</data>
                         <data>0</data>
                         <data>0</data>
@@ -6553,7 +7447,7 @@
                     <row>
                         <data>wr_ctrl</data>
                         <data>21</data>
-                        <data>41</data>
+                        <data>37</data>
                         <data>0</data>
                         <data>0</data>
                         <data>0</data>
@@ -6580,19 +7474,97 @@
                 </row>
             </row>
             <row>
+                <data>hdmi_in</data>
+                <data>34</data>
+                <data>44</data>
+                <data>0</data>
+                <data>0</data>
+                <data>0</data>
+                <data>0</data>
+                <data>0</data>
+                <data>0</data>
+                <data>0</data>
+                <data>0</data>
+                <data>0</data>
+                <data>0</data>
+                <data>0</data>
+                <data>0</data>
+                <data>0</data>
+                <data>0</data>
+                <data>0</data>
+                <data>0</data>
+                <data>0</data>
+                <data>0</data>
+                <data>0</data>
+                <data>0</data>
+                <data>0</data>
+                <data>0</data>
+            </row>
+            <row>
+                <data>key_ctl</data>
+                <data>31</data>
+                <data>27</data>
+                <data>0</data>
+                <data>0</data>
+                <data>0</data>
+                <data>0</data>
+                <data>0</data>
+                <data>0</data>
+                <data>0</data>
+                <data>0</data>
+                <data>0</data>
+                <data>0</data>
+                <data>0</data>
+                <data>0</data>
+                <data>0</data>
+                <data>0</data>
+                <data>0</data>
+                <data>0</data>
+                <data>0</data>
+                <data>0</data>
+                <data>0</data>
+                <data>0</data>
+                <data>0</data>
+                <data>0</data>
+                <row>
+                    <data>u_btn_deb</data>
+                    <data>26</data>
+                    <data>22</data>
+                    <data>0</data>
+                    <data>0</data>
+                    <data>0</data>
+                    <data>0</data>
+                    <data>0</data>
+                    <data>0</data>
+                    <data>0</data>
+                    <data>0</data>
+                    <data>0</data>
+                    <data>0</data>
+                    <data>0</data>
+                    <data>0</data>
+                    <data>0</data>
+                    <data>0</data>
+                    <data>0</data>
+                    <data>0</data>
+                    <data>0</data>
+                    <data>0</data>
+                    <data>0</data>
+                    <data>0</data>
+                    <data>0</data>
+                    <data>0</data>
+                </row>
+            </row>
+            <row>
                 <data>ms72xx_ctl</data>
-                <data>169</data>
-                <data>128</data>
+<<<<<<< HEAD
+                <data>350</data>
+=======
+                <data>348</data>
+>>>>>>> testing
+                <data>272</data>
                 <data>0</data>
                 <data>0</data>
-                <data>0.5</data>
-                <data>0</data>
-                <data>0</data>
-                <data>0</data>
-                <data>0</data>
-                <data>0</data>
-                <data>0</data>
-                <data>0</data>
+                <data>1.5</data>
                 <data>0</data>
                 <data>0</data>
                 <data>0</data>
@@ -6605,6 +7577,40 @@
                 <data>0</data>
                 <data>0</data>
                 <data>0</data>
+                <data>0</data>
+                <data>0</data>
+                <data>0</data>
+                <data>0</data>
+                <data>0</data>
+                <data>0</data>
+                <data>0</data>
+                <row>
+                    <data>iic_dri_rx</data>
+                    <data>80</data>
+                    <data>61</data>
+                    <data>0</data>
+                    <data>0</data>
+                    <data>0</data>
+                    <data>0</data>
+                    <data>0</data>
+                    <data>0</data>
+                    <data>0</data>
+                    <data>0</data>
+                    <data>0</data>
+                    <data>0</data>
+                    <data>0</data>
+                    <data>0</data>
+                    <data>0</data>
+                    <data>0</data>
+                    <data>0</data>
+                    <data>0</data>
+                    <data>0</data>
+                    <data>0</data>
+                    <data>0</data>
+                    <data>0</data>
+                    <data>0</data>
+                    <data>0</data>
+                </row>
                 <row>
                     <data>iic_dri_tx</data>
                     <data>77</data>
@@ -6634,11 +7640,15 @@
                 </row>
                 <row>
                     <data>ms7200_ctl</data>
-                    <data>4</data>
-                    <data>2</data>
+<<<<<<< HEAD
+                    <data>102</data>
+=======
+                    <data>100</data>
+>>>>>>> testing
+                    <data>84</data>
                     <data>0</data>
                     <data>0</data>
-                    <data>0</data>
+                    <data>1</data>
                     <data>0</data>
                     <data>0</data>
                     <data>0</data>
@@ -6661,8 +7671,8 @@
                 </row>
                 <row>
                     <data>ms7210_ctl</data>
-                    <data>87</data>
-                    <data>62</data>
+                    <data>90</data>
+                    <data>63</data>
                     <data>0</data>
                     <data>0</data>
                     <data>0.5</data>
@@ -6743,8 +7753,13 @@
             </row>
             <row>
                 <data>u_DDR3_50H</data>
-                <data>4132</data>
+<<<<<<< HEAD
+                <data>4250</data>
                 <data>4039</data>
+=======
+                <data>4383</data>
+                <data>4040</data>
+>>>>>>> testing
                 <data>72</data>
                 <data>0</data>
                 <data>0</data>
@@ -6796,8 +7811,12 @@
                 </row>
                 <row>
                     <data>u_ddrphy_top</data>
-                    <data>2457</data>
+                    <data>2706</data>
+<<<<<<< HEAD
                     <data>2398</data>
+=======
+                    <data>2397</data>
+>>>>>>> testing
                     <data>0</data>
                     <data>0</data>
                     <data>0</data>
@@ -6822,7 +7841,11 @@
                     <data>0</data>
                     <row>
                         <data>ddrphy_calib_top</data>
+<<<<<<< HEAD
                         <data>327</data>
+=======
+                        <data>328</data>
+>>>>>>> testing
                         <data>236</data>
                         <data>0</data>
                         <data>0</data>
@@ -6956,7 +7979,7 @@
                         </row>
                         <row>
                             <data>rdcal</data>
-                            <data>110</data>
+                            <data>111</data>
                             <data>74</data>
                             <data>0</data>
                             <data>0</data>
@@ -7011,7 +8034,7 @@
                     </row>
                     <row>
                         <data>ddrphy_dfi</data>
-                        <data>307</data>
+                        <data>558</data>
                         <data>607</data>
                         <data>0</data>
                         <data>0</data>
@@ -7200,7 +8223,11 @@
                     </row>
                     <row>
                         <data>ddrphy_slice_top</data>
-                        <data>1633</data>
+<<<<<<< HEAD
+                        <data>1632</data>
+=======
+                        <data>1631</data>
+>>>>>>> testing
                         <data>1415</data>
                         <data>0</data>
                         <data>0</data>
@@ -7226,7 +8253,11 @@
                         <data>0</data>
                         <row>
                             <data>i_dqs_group[0].u_ddrphy_data_slice</data>
-                            <data>469</data>
+<<<<<<< HEAD
+                            <data>470</data>
+=======
+                            <data>476</data>
+>>>>>>> testing
                             <data>308</data>
                             <data>0</data>
                             <data>0</data>
@@ -7252,7 +8283,7 @@
                             <data>0</data>
                             <row>
                                 <data>data_slice_dqs_gate_cal</data>
-                                <data>146</data>
+                                <data>145</data>
                                 <data>69</data>
                                 <data>0</data>
                                 <data>0</data>
@@ -7305,7 +8336,7 @@
                                 </row>
                                 <row>
                                     <data>gatecal</data>
-                                    <data>49</data>
+                                    <data>48</data>
                                     <data>35</data>
                                     <data>0</data>
                                     <data>0</data>
@@ -7333,7 +8364,7 @@
                             </row>
                             <row>
                                 <data>data_slice_wrlvl</data>
-                                <data>107</data>
+                                <data>108</data>
                                 <data>76</data>
                                 <data>0</data>
                                 <data>0</data>
@@ -7360,7 +8391,7 @@
                             </row>
                             <row>
                                 <data>dqs_rddata_align</data>
-                                <data>44</data>
+                                <data>45</data>
                                 <data>74</data>
                                 <data>0</data>
                                 <data>0</data>
@@ -7387,7 +8418,7 @@
                             </row>
                             <row>
                                 <data>dqsi_rdel_cal</data>
-                                <data>163</data>
+                                <data>169</data>
                                 <data>84</data>
                                 <data>0</data>
                                 <data>0</data>
@@ -7442,7 +8473,11 @@
                         </row>
                         <row>
                             <data>i_dqs_group[1].u_ddrphy_data_slice</data>
-                            <data>409</data>
+<<<<<<< HEAD
+                            <data>410</data>
+=======
+                            <data>397</data>
+>>>>>>> testing
                             <data>284</data>
                             <data>0</data>
                             <data>0</data>
@@ -7468,7 +8503,7 @@
                             <data>0</data>
                             <row>
                                 <data>data_slice_dqs_gate_cal</data>
-                                <data>83</data>
+                                <data>82</data>
                                 <data>61</data>
                                 <data>0</data>
                                 <data>0</data>
@@ -7521,7 +8556,9 @@
                                 </row>
                                 <row>
                                     <data>gatecal</data>
-                                    <data>49</data>
+                                    <data>48</data>
+<<<<<<< HEAD
+=======
                                     <data>35</data>
                                     <data>0</data>
                                     <data>0</data>
@@ -7549,7 +8586,7 @@
                             </row>
                             <row>
                                 <data>data_slice_wrlvl</data>
-                                <data>104</data>
+                                <data>102</data>
                                 <data>68</data>
                                 <data>0</data>
                                 <data>0</data>
@@ -7603,7 +8640,7 @@
                             </row>
                             <row>
                                 <data>dqsi_rdel_cal</data>
-                                <data>173</data>
+                                <data>164</data>
                                 <data>81</data>
                                 <data>0</data>
                                 <data>0</data>
@@ -7658,8 +8695,236 @@
                         </row>
                         <row>
                             <data>i_dqs_group[2].u_ddrphy_data_slice</data>
-                            <data>334</data>
+                            <data>336</data>
                             <data>262</data>
+                            <data>0</data>
+                            <data>0</data>
+                            <data>0</data>
+                            <data>0</data>
+                            <data>0</data>
+                            <data>1</data>
+                            <data>0</data>
+                            <data>0</data>
+                            <data>11</data>
+                            <data>0</data>
+                            <data>0</data>
+                            <data>0</data>
+                            <data>0</data>
+                            <data>0</data>
+                            <data>0</data>
+                            <data>0</data>
+                            <data>0</data>
+                            <data>0</data>
+                            <data>0</data>
+                            <data>0</data>
+                            <data>0</data>
+                            <data>0</data>
+                            <row>
+                                <data>data_slice_dqs_gate_cal</data>
+                                <data>82</data>
+                                <data>61</data>
+                                <data>0</data>
+                                <data>0</data>
+                                <data>0</data>
+                                <data>0</data>
+                                <data>0</data>
+                                <data>0</data>
+                                <data>0</data>
+                                <data>0</data>
+                                <data>0</data>
+                                <data>0</data>
+                                <data>0</data>
+                                <data>0</data>
+                                <data>0</data>
+                                <data>0</data>
+                                <data>0</data>
+                                <data>0</data>
+                                <data>0</data>
+                                <data>0</data>
+                                <data>0</data>
+                                <data>0</data>
+                                <data>0</data>
+                                <data>0</data>
+                                <row>
+                                    <data>dqs_gate_coarse_cal</data>
+                                    <data>34</data>
+                                    <data>26</data>
+                                    <data>0</data>
+                                    <data>0</data>
+                                    <data>0</data>
+                                    <data>0</data>
+                                    <data>0</data>
+                                    <data>0</data>
+                                    <data>0</data>
+                                    <data>0</data>
+                                    <data>0</data>
+                                    <data>0</data>
+                                    <data>0</data>
+                                    <data>0</data>
+                                    <data>0</data>
+                                    <data>0</data>
+                                    <data>0</data>
+                                    <data>0</data>
+                                    <data>0</data>
+                                    <data>0</data>
+                                    <data>0</data>
+                                    <data>0</data>
+                                    <data>0</data>
+                                    <data>0</data>
+                                </row>
+                                <row>
+                                    <data>gatecal</data>
+                                    <data>48</data>
+>>>>>>> testing
+                                    <data>35</data>
+                                    <data>0</data>
+                                    <data>0</data>
+                                    <data>0</data>
+                                    <data>0</data>
+                                    <data>0</data>
+                                    <data>0</data>
+                                    <data>0</data>
+                                    <data>0</data>
+                                    <data>0</data>
+                                    <data>0</data>
+                                    <data>0</data>
+                                    <data>0</data>
+                                    <data>0</data>
+                                    <data>0</data>
+                                    <data>0</data>
+                                    <data>0</data>
+                                    <data>0</data>
+                                    <data>0</data>
+                                    <data>0</data>
+                                    <data>0</data>
+                                    <data>0</data>
+                                    <data>0</data>
+                                </row>
+                            </row>
+                            <row>
+                                <data>data_slice_wrlvl</data>
+                                <data>106</data>
+                                <data>68</data>
+                                <data>0</data>
+                                <data>0</data>
+                                <data>0</data>
+                                <data>0</data>
+                                <data>0</data>
+                                <data>0</data>
+                                <data>0</data>
+                                <data>0</data>
+                                <data>0</data>
+                                <data>0</data>
+                                <data>0</data>
+                                <data>0</data>
+                                <data>0</data>
+                                <data>0</data>
+                                <data>0</data>
+                                <data>0</data>
+                                <data>0</data>
+                                <data>0</data>
+                                <data>0</data>
+                                <data>0</data>
+                                <data>0</data>
+                                <data>0</data>
+                            </row>
+                            <row>
+                                <data>dqs_rddata_align</data>
+                                <data>44</data>
+                                <data>74</data>
+                                <data>0</data>
+                                <data>0</data>
+                                <data>0</data>
+                                <data>0</data>
+                                <data>0</data>
+                                <data>0</data>
+                                <data>0</data>
+                                <data>0</data>
+                                <data>0</data>
+                                <data>0</data>
+                                <data>0</data>
+                                <data>0</data>
+                                <data>0</data>
+                                <data>0</data>
+                                <data>0</data>
+                                <data>0</data>
+                                <data>0</data>
+                                <data>0</data>
+                                <data>0</data>
+                                <data>0</data>
+                                <data>0</data>
+                                <data>0</data>
+                            </row>
+                            <row>
+                                <data>dqsi_rdel_cal</data>
+<<<<<<< HEAD
+                                <data>173</data>
+                                <data>81</data>
+=======
+                                <data>102</data>
+                                <data>59</data>
+>>>>>>> testing
+                                <data>0</data>
+                                <data>0</data>
+                                <data>0</data>
+                                <data>0</data>
+                                <data>0</data>
+                                <data>0</data>
+                                <data>0</data>
+                                <data>0</data>
+                                <data>0</data>
+                                <data>0</data>
+                                <data>0</data>
+                                <data>0</data>
+                                <data>0</data>
+                                <data>0</data>
+                                <data>0</data>
+                                <data>0</data>
+                                <data>0</data>
+                                <data>0</data>
+                                <data>0</data>
+                                <data>0</data>
+                                <data>0</data>
+                                <data>0</data>
+                            </row>
+                            <row>
+                                <data>wdata_path_adj</data>
+                                <data>5</data>
+                                <data>0</data>
+                                <data>0</data>
+                                <data>0</data>
+                                <data>0</data>
+                                <data>0</data>
+                                <data>0</data>
+                                <data>0</data>
+                                <data>0</data>
+                                <data>0</data>
+                                <data>0</data>
+                                <data>0</data>
+                                <data>0</data>
+                                <data>0</data>
+                                <data>0</data>
+                                <data>0</data>
+                                <data>0</data>
+                                <data>0</data>
+                                <data>0</data>
+                                <data>0</data>
+                                <data>0</data>
+                                <data>0</data>
+                                <data>0</data>
+                                <data>0</data>
+                            </row>
+                        </row>
+                        <row>
+<<<<<<< HEAD
+                            <data>i_dqs_group[2].u_ddrphy_data_slice</data>
+                            <data>335</data>
+                            <data>262</data>
+=======
+                            <data>i_dqs_group[3].u_ddrphy_data_slice</data>
+                            <data>387</data>
+                            <data>284</data>
+>>>>>>> testing
                             <data>0</data>
                             <data>0</data>
                             <data>0</data>
@@ -7765,7 +9030,7 @@
                             </row>
                             <row>
                                 <data>data_slice_wrlvl</data>
-                                <data>103</data>
+                                <data>104</data>
                                 <data>68</data>
                                 <data>0</data>
                                 <data>0</data>
@@ -7819,6 +9084,7 @@
                             </row>
                             <row>
                                 <data>dqsi_rdel_cal</data>
+<<<<<<< HEAD
                                 <data>100</data>
                                 <data>59</data>
                                 <data>0</data>
@@ -7874,7 +9140,7 @@
                         </row>
                         <row>
                             <data>i_dqs_group[3].u_ddrphy_data_slice</data>
-                            <data>387</data>
+                            <data>383</data>
                             <data>284</data>
                             <data>0</data>
                             <data>0</data>
@@ -7900,7 +9166,7 @@
                             <data>0</data>
                             <row>
                                 <data>data_slice_dqs_gate_cal</data>
-                                <data>83</data>
+                                <data>82</data>
                                 <data>61</data>
                                 <data>0</data>
                                 <data>0</data>
@@ -7926,7 +9192,7 @@
                                 <data>0</data>
                                 <row>
                                     <data>dqs_gate_coarse_cal</data>
-                                    <data>35</data>
+                                    <data>34</data>
                                     <data>26</data>
                                     <data>0</data>
                                     <data>0</data>
@@ -7981,7 +9247,7 @@
                             </row>
                             <row>
                                 <data>data_slice_wrlvl</data>
-                                <data>104</data>
+                                <data>101</data>
                                 <data>68</data>
                                 <data>0</data>
                                 <data>0</data>
@@ -8036,6 +9302,9 @@
                             <row>
                                 <data>dqsi_rdel_cal</data>
                                 <data>151</data>
+=======
+                                <data>152</data>
+>>>>>>> testing
                                 <data>81</data>
                                 <data>0</data>
                                 <data>0</data>
@@ -8172,8 +9441,8 @@
                     </row>
                     <row>
                         <data>ddrphy_training_ctrl</data>
-                        <data>5</data>
-                        <data>8</data>
+                        <data>4</data>
+                        <data>7</data>
                         <data>0</data>
                         <data>0</data>
                         <data>0</data>
@@ -8200,8 +9469,13 @@
                 </row>
                 <row>
                     <data>u_ipsxb_ddrc_top</data>
-                    <data>1674</data>
+<<<<<<< HEAD
+                    <data>1543</data>
                     <data>1639</data>
+=======
+                    <data>1676</data>
+                    <data>1641</data>
+>>>>>>> testing
                     <data>72</data>
                     <data>0</data>
                     <data>0</data>
@@ -8280,7 +9554,7 @@
                     </row>
                     <row>
                         <data>mcdq_dcd_top</data>
-                        <data>172</data>
+                        <data>170</data>
                         <data>143</data>
                         <data>0</data>
                         <data>0</data>
@@ -8306,7 +9580,7 @@
                         <data>0</data>
                         <row>
                             <data>mcdq_dcd_bm</data>
-                            <data>123</data>
+                            <data>122</data>
                             <data>74</data>
                             <data>0</data>
                             <data>0</data>
@@ -8332,7 +9606,7 @@
                             <data>0</data>
                             <row>
                                 <data>mcdq_dcd_rowaddr</data>
-                                <data>17</data>
+                                <data>16</data>
                                 <data>8</data>
                                 <data>0</data>
                                 <data>0</data>
@@ -8360,7 +9634,11 @@
                         </row>
                         <row>
                             <data>mcdq_dcd_sm</data>
-                            <data>49</data>
+<<<<<<< HEAD
+                            <data>47</data>
+=======
+                            <data>53</data>
+>>>>>>> testing
                             <data>69</data>
                             <data>0</data>
                             <data>0</data>
@@ -8388,7 +9666,11 @@
                     </row>
                     <row>
                         <data>mcdq_dcp_top</data>
+<<<<<<< HEAD
                         <data>814</data>
+=======
+                        <data>809</data>
+>>>>>>> testing
                         <data>577</data>
                         <data>70</data>
                         <data>0</data>
@@ -8414,7 +9696,11 @@
                         <data>0</data>
                         <row>
                             <data>mcdq_dcp_back_ctrl</data>
+<<<<<<< HEAD
                             <data>541</data>
+=======
+                            <data>537</data>
+>>>>>>> testing
                             <data>388</data>
                             <data>0</data>
                             <data>0</data>
@@ -8872,7 +10158,7 @@
                             </row>
                             <row>
                                 <data>TRDA2ACT_LOOP[0].trda2act_timing</data>
-                                <data>7</data>
+                                <data>8</data>
                                 <data>5</data>
                                 <data>0</data>
                                 <data>0</data>
@@ -9007,7 +10293,7 @@
                             </row>
                             <row>
                                 <data>TRDA2ACT_LOOP[5].trda2act_timing</data>
-                                <data>8</data>
+                                <data>7</data>
                                 <data>5</data>
                                 <data>0</data>
                                 <data>0</data>
@@ -9439,7 +10725,11 @@
                             </row>
                             <row>
                                 <data>timing_act_pass</data>
+<<<<<<< HEAD
                                 <data>28</data>
+=======
+                                <data>26</data>
+>>>>>>> testing
                                 <data>8</data>
                                 <data>0</data>
                                 <data>0</data>
@@ -9520,7 +10810,7 @@
                             </row>
                             <row>
                                 <data>timing_wr_pass</data>
-                                <data>9</data>
+                                <data>10</data>
                                 <data>5</data>
                                 <data>0</data>
                                 <data>0</data>
@@ -9548,7 +10838,7 @@
                         </row>
                         <row>
                             <data>mcdq_dcp_buf</data>
-                            <data>223</data>
+                            <data>222</data>
                             <data>141</data>
                             <data>70</data>
                             <data>0</data>
@@ -9819,7 +11109,7 @@
                     </row>
                     <row>
                         <data>mcdq_dfi</data>
-                        <data>72</data>
+                        <data>74</data>
                         <data>83</data>
                         <data>0</data>
                         <data>0</data>
@@ -9846,8 +11136,13 @@
                     </row>
                     <row>
                         <data>mcdq_ui_axi</data>
-                        <data>200</data>
+<<<<<<< HEAD
+                        <data>197</data>
                         <data>314</data>
+=======
+                        <data>202</data>
+                        <data>316</data>
+>>>>>>> testing
                         <data>0</data>
                         <data>0</data>
                         <data>0</data>
@@ -9872,8 +11167,13 @@
                         <data>0</data>
                         <row>
                             <data>mcdq_reg_fifo2</data>
+<<<<<<< HEAD
                             <data>85</data>
                             <data>59</data>
+=======
+                            <data>89</data>
+                            <data>61</data>
+>>>>>>> testing
                             <data>0</data>
                             <data>0</data>
                             <data>0</data>
@@ -9899,7 +11199,7 @@
                         </row>
                         <row>
                             <data>u_user_cmd_fifo</data>
-                            <data>42</data>
+                            <data>41</data>
                             <data>98</data>
                             <data>0</data>
                             <data>0</data>
@@ -10199,11 +11499,19 @@
             </row>
             <row>
                 <data>u_CORES</data>
-                <data>8980</data>
-                <data>12242</data>
+<<<<<<< HEAD
+                <data>10687</data>
+                <data>14728</data>
                 <data>0</data>
                 <data>0</data>
-                <data>45</data>
+                <data>54</data>
+=======
+                <data>8011</data>
+                <data>11230</data>
+                <data>0</data>
+                <data>0</data>
+                <data>41</data>
+>>>>>>> testing
                 <data>0</data>
                 <data>0</data>
                 <data>0</data>
@@ -10237,10 +11545,17 @@
             <data>RAM(GB)</data>
         </column_headers>
         <row>
-            <data>0h:2m:13s</data>
-            <data>0h:2m:59s</data>
-            <data>0h:3m:39s</data>
-            <data>1,870</data>
+<<<<<<< HEAD
+            <data>0h:1m:55s</data>
+            <data>0h:2m:44s</data>
+            <data>0h:3m:6s</data>
+            <data>2,009</data>
+=======
+            <data>0h:2m:33s</data>
+            <data>0h:3m:13s</data>
+            <data>0h:3m:46s</data>
+            <data>1,901</data>
+>>>>>>> testing
             <data>WINDOWS 10 x86_64</data>
             <data>12th Gen Intel(R) Core(TM) i7-12700H</data>
             <data>16</data>
@@ -10252,58 +11567,109 @@
             <data message="6">ConstraintEditor-2002: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/device_map/hdmi_ddr_ov5640_top.pcf(line number: 4)] | Port cmos1_sda has been placed at location Y13, whose type is share pin.</data>
         </row>
         <row>
-            <data message="6">ConstraintEditor-2002: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/device_map/hdmi_ddr_ov5640_top.pcf(line number: 17)] | Port mem_dq[9] has been placed at location M2, whose type is share pin.</data>
+            <data message="6">ConstraintEditor-2002: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/device_map/hdmi_ddr_ov5640_top.pcf(line number: 7)] | Port iic_sda has been placed at location V20, whose type is share pin.</data>
         </row>
         <row>
-            <data message="6">ConstraintEditor-2002: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/device_map/hdmi_ddr_ov5640_top.pcf(line number: 19)] | Port mem_dq[11] has been placed at location M1, whose type is share pin.</data>
+            <data message="6">ConstraintEditor-2002: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/device_map/hdmi_ddr_ov5640_top.pcf(line number: 18)] | Port mem_dq[9] has been placed at location M2, whose type is share pin.</data>
         </row>
         <row>
-            <data message="6">ConstraintEditor-2002: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/device_map/hdmi_ddr_ov5640_top.pcf(line number: 22)] | Port mem_dq[14] has been placed at location P3, whose type is share pin.</data>
+            <data message="6">ConstraintEditor-2002: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/device_map/hdmi_ddr_ov5640_top.pcf(line number: 20)] | Port mem_dq[11] has been placed at location M1, whose type is share pin.</data>
         </row>
         <row>
-            <data message="6">ConstraintEditor-2002: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/device_map/hdmi_ddr_ov5640_top.pcf(line number: 50)] | Port b_out[2] has been placed at location T21, whose type is share pin.</data>
+            <data message="6">ConstraintEditor-2002: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/device_map/hdmi_ddr_ov5640_top.pcf(line number: 23)] | Port mem_dq[14] has been placed at location P3, whose type is share pin.</data>
         </row>
         <row>
-            <data message="6">ConstraintEditor-2002: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/device_map/hdmi_ddr_ov5640_top.pcf(line number: 52)] | Port b_out[4] has been placed at location R20, whose type is share pin.</data>
+            <data message="6">ConstraintEditor-2002: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/device_map/hdmi_ddr_ov5640_top.pcf(line number: 51)] | Port b_out[2] has been placed at location T21, whose type is share pin.</data>
         </row>
         <row>
-            <data message="6">ConstraintEditor-2002: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/device_map/hdmi_ddr_ov5640_top.pcf(line number: 53)] | Port b_out[5] has been placed at location R22, whose type is share pin.</data>
+            <data message="6">ConstraintEditor-2002: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/device_map/hdmi_ddr_ov5640_top.pcf(line number: 53)] | Port b_out[4] has been placed at location R20, whose type is share pin.</data>
         </row>
         <row>
-            <data message="6">ConstraintEditor-2002: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/device_map/hdmi_ddr_ov5640_top.pcf(line number: 62)] | Port g_out[0] has been placed at location M21, whose type is share pin.</data>
+            <data message="6">ConstraintEditor-2002: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/device_map/hdmi_ddr_ov5640_top.pcf(line number: 54)] | Port b_out[5] has been placed at location R22, whose type is share pin.</data>
         </row>
         <row>
-            <data message="6">ConstraintEditor-2002: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/device_map/hdmi_ddr_ov5640_top.pcf(line number: 67)] | Port g_out[5] has been placed at location L19, whose type is share pin.</data>
+            <data message="6">ConstraintEditor-2002: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/device_map/hdmi_ddr_ov5640_top.pcf(line number: 63)] | Port g_out[0] has been placed at location M21, whose type is share pin.</data>
         </row>
         <row>
-            <data message="6">ConstraintEditor-2002: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/device_map/hdmi_ddr_ov5640_top.pcf(line number: 68)] | Port g_out[6] has been placed at location K20, whose type is share pin.</data>
+            <data message="6">ConstraintEditor-2002: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/device_map/hdmi_ddr_ov5640_top.pcf(line number: 68)] | Port g_out[5] has been placed at location L19, whose type is share pin.</data>
         </row>
         <row>
-            <data message="6">ConstraintEditor-2002: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/device_map/hdmi_ddr_ov5640_top.pcf(line number: 69)] | Port g_out[7] has been placed at location L17, whose type is share pin.</data>
+            <data message="6">ConstraintEditor-2002: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/device_map/hdmi_ddr_ov5640_top.pcf(line number: 69)] | Port g_out[6] has been placed at location K20, whose type is share pin.</data>
         </row>
         <row>
-            <data message="6">ConstraintEditor-2002: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/device_map/hdmi_ddr_ov5640_top.pcf(line number: 105)] | Port pix_clk has been placed at location M22, whose type is share pin.</data>
+            <data message="6">ConstraintEditor-2002: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/device_map/hdmi_ddr_ov5640_top.pcf(line number: 70)] | Port g_out[7] has been placed at location L17, whose type is share pin.</data>
         </row>
         <row>
-            <data message="6">ConstraintEditor-2002: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/device_map/hdmi_ddr_ov5640_top.pcf(line number: 106)] | Port r_out[0] has been placed at location K17, whose type is share pin.</data>
+            <data message="6">ConstraintEditor-2002: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/device_map/hdmi_ddr_ov5640_top.pcf(line number: 74)] | Port iic_scl has been placed at location V19, whose type is share pin.</data>
         </row>
         <row>
-            <data message="6">ConstraintEditor-2002: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/device_map/hdmi_ddr_ov5640_top.pcf(line number: 111)] | Port r_out[5] has been placed at location H21, whose type is share pin.</data>
+            <data message="6">ConstraintEditor-2002: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/device_map/hdmi_ddr_ov5640_top.pcf(line number: 107)] | Port pix_clk has been placed at location M22, whose type is share pin.</data>
         </row>
         <row>
-            <data message="6">ConstraintEditor-2002: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/device_map/hdmi_ddr_ov5640_top.pcf(line number: 112)] | Port r_out[6] has been placed at location H22, whose type is share pin.</data>
+            <data message="6">ConstraintEditor-2002: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/device_map/hdmi_ddr_ov5640_top.pcf(line number: 108)] | Port r_out[0] has been placed at location K17, whose type is share pin.</data>
         </row>
         <row>
-            <data message="6">ConstraintEditor-2002: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/device_map/hdmi_ddr_ov5640_top.pcf(line number: 113)] | Port r_out[7] has been placed at location H19, whose type is share pin.</data>
+            <data message="6">ConstraintEditor-2002: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/device_map/hdmi_ddr_ov5640_top.pcf(line number: 113)] | Port r_out[5] has been placed at location H21, whose type is share pin.</data>
         </row>
         <row>
-            <data message="6">ConstraintEditor-2002: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/device_map/hdmi_ddr_ov5640_top.pcf(line number: 123)] | Port cmos1_data[7] has been placed at location AB13, whose type is share pin.</data>
+            <data message="6">ConstraintEditor-2002: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/device_map/hdmi_ddr_ov5640_top.pcf(line number: 114)] | Port r_out[6] has been placed at location H22, whose type is share pin.</data>
         </row>
         <row>
-            <data message="6">ConstraintEditor-2002: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/device_map/hdmi_ddr_ov5640_top.pcf(line number: 135)] | Port cmos2_href has been placed at location AB5, whose type is share pin.</data>
+            <data message="6">ConstraintEditor-2002: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/device_map/hdmi_ddr_ov5640_top.pcf(line number: 115)] | Port r_out[7] has been placed at location H19, whose type is share pin.</data>
         </row>
         <row>
-            <data message="6">ConstraintEditor-2002: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/device_map/hdmi_ddr_ov5640_top.pcf(line number: 137)] | Port cmos2_vsync has been placed at location Y5, whose type is share pin.</data>
+            <data message="6">ConstraintEditor-2001: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/device_map/hdmi_ddr_ov5640_top.pcf(line number: 118)] Object 'b_in[0]' is dangling, which has no connection. it will be ignored.</data>
+        </row>
+        <row>
+            <data message="6">ConstraintEditor-2001: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/device_map/hdmi_ddr_ov5640_top.pcf(line number: 119)] Object 'b_in[1]' is dangling, which has no connection. it will be ignored.</data>
+        </row>
+        <row>
+            <data message="6">ConstraintEditor-2001: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/device_map/hdmi_ddr_ov5640_top.pcf(line number: 120)] Object 'b_in[2]' is dangling, which has no connection. it will be ignored.</data>
+        </row>
+        <row>
+            <data message="6">ConstraintEditor-2002: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/device_map/hdmi_ddr_ov5640_top.pcf(line number: 133)] | Port cmos1_data[7] has been placed at location AB13, whose type is share pin.</data>
+        </row>
+        <row>
+            <data message="6">ConstraintEditor-2002: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/device_map/hdmi_ddr_ov5640_top.pcf(line number: 145)] | Port cmos2_href has been placed at location AB5, whose type is share pin.</data>
+        </row>
+        <row>
+            <data message="6">ConstraintEditor-2002: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/device_map/hdmi_ddr_ov5640_top.pcf(line number: 147)] | Port cmos2_vsync has been placed at location Y5, whose type is share pin.</data>
+        </row>
+        <row>
+            <data message="6">ConstraintEditor-2001: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/device_map/hdmi_ddr_ov5640_top.pcf(line number: 149)] Object 'g_in[0]' is dangling, which has no connection. it will be ignored.</data>
+        </row>
+        <row>
+            <data message="6">ConstraintEditor-2001: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/device_map/hdmi_ddr_ov5640_top.pcf(line number: 150)] Object 'g_in[1]' is dangling, which has no connection. it will be ignored.</data>
+        </row>
+        <row>
+            <data message="6">ConstraintEditor-2002: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/device_map/hdmi_ddr_ov5640_top.pcf(line number: 151)] | Port g_in[2] has been placed at location W18, whose type is share pin.</data>
+        </row>
+        <row>
+            <data message="6">ConstraintEditor-2002: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/device_map/hdmi_ddr_ov5640_top.pcf(line number: 152)] | Port g_in[3] has been placed at location AB19, whose type is share pin.</data>
+        </row>
+        <row>
+            <data message="6">ConstraintEditor-2002: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/device_map/hdmi_ddr_ov5640_top.pcf(line number: 153)] | Port g_in[4] has been placed at location AA18, whose type is share pin.</data>
+        </row>
+        <row>
+            <data message="6">ConstraintEditor-2002: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/device_map/hdmi_ddr_ov5640_top.pcf(line number: 154)] | Port g_in[5] has been placed at location AB18, whose type is share pin.</data>
+        </row>
+        <row>
+            <data message="6">ConstraintEditor-2001: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/device_map/hdmi_ddr_ov5640_top.pcf(line number: 157)] Object 'hs_in' is dangling, which has no connection. it will be ignored.</data>
+        </row>
+        <row>
+            <data message="6">ConstraintEditor-2002: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/device_map/hdmi_ddr_ov5640_top.pcf(line number: 158)] | Port key has been placed at location K18, whose type is share pin.</data>
+        </row>
+        <row>
+            <data message="6">ConstraintEditor-2002: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/device_map/hdmi_ddr_ov5640_top.pcf(line number: 159)] | Port pix_clk_in has been placed at location AA12, whose type is share pin.</data>
+        </row>
+        <row>
+            <data message="6">ConstraintEditor-2001: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/device_map/hdmi_ddr_ov5640_top.pcf(line number: 160)] Object 'r_in[0]' is dangling, which has no connection. it will be ignored.</data>
+        </row>
+        <row>
+            <data message="6">ConstraintEditor-2001: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/device_map/hdmi_ddr_ov5640_top.pcf(line number: 161)] Object 'r_in[1]' is dangling, which has no connection. it will be ignored.</data>
+        </row>
+        <row>
+            <data message="6">ConstraintEditor-2001: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/device_map/hdmi_ddr_ov5640_top.pcf(line number: 162)] Object 'r_in[2]' is dangling, which has no connection. it will be ignored.</data>
         </row>
         <row>
             <data message="4">Column Clock Check open.</data>
@@ -10324,6 +11690,8 @@
             <data message="6">Route-2036: The clock path from u_CORES/u_GTP_SCANCHAIN_PG/scanchain:TCK_USER to clkbufg_4/gopclkbufg:CLK is routed by SRB.</data>
         </row>
         <row>
+<<<<<<< HEAD
+=======
             <data message="4">Design net coms1_reg_config/clock_20k is routed by general path.</data>
         </row>
         <row>
@@ -10333,19 +11701,30 @@
             <data message="4">Design net nt_cmos2_pclk is routed by general path.</data>
         </row>
         <row>
-            <data message="6">Route-2036: The clock path from cmos2_pclk_ibuf/opit_1:OUT to clkbufg_9/gopclkbufg:CLK is routed by SRB.</data>
+            <data message="6">Route-2036: The clock path from cmos2_pclk_ibuf/opit_1:OUT to clkbufg_11/gopclkbufg:CLK is routed by SRB.</data>
         </row>
         <row>
+>>>>>>> testing
             <data message="4">Design net u_CORES/capt_o is routed by general path.</data>
         </row>
         <row>
             <data message="6">Route-2036: The clock path from u_CORES/u_GTP_SCANCHAIN_PG/scanchain:CAPDR to u_CORES/u_debug_core_0/u_hub_data_decode/id_sample.conf_id[4]/opit_0_inv:CLK is routed by SRB.</data>
         </row>
         <row>
+            <data message="4">Design net coms1_reg_config/clock_20k is routed by general path.</data>
+        </row>
+        <row>
+            <data message="6">Route-2036: The clock path from coms1_reg_config/clock_20k/opit_0_inv_L5Q:Q to coms1_reg_config/config_step_reg[2]/opit_0_inv:CLK is routed by SRB.</data>
+        </row>
+        <row>
             <data message="4">Design net nt_sys_clk is routed by general path.</data>
         </row>
         <row>
-            <data message="6">Route-2036: The clock path from sys_clk_ibuf/opit_1:OUT to power_on_delay_inst/camera_pwnd_reg/opit_0_L5Q:CLK is routed by SRB.</data>
+<<<<<<< HEAD
+            <data message="6">Route-2036: The clock path from sys_clk_ibuf/opit_1:OUT to key_ctl/btn_deb_1d/opit_0:CLK is routed by SRB.</data>
+=======
+            <data message="6">Route-2036: The clock path from sys_clk_ibuf/opit_1:OUT to key_ctl/u_btn_deb/genblk1[0].flag[0]/opit_0_L5Q:CLK is routed by SRB.</data>
+>>>>>>> testing
         </row>
     </table>
     <general_container id="pnr_settings">
@@ -10625,9 +12004,13 @@
                 </column_headers>
                 <row>
                     <data>clkbufg_3/gopclkbufg</data>
-                    <data>USCM_84_114</data>
+                    <data>USCM_84_115</data>
                     <data>ntclkbufg_0</data>
-                    <data>14510</data>
+<<<<<<< HEAD
+                    <data>16527</data>
+=======
+                    <data>14070</data>
+>>>>>>> testing
                     <data>0</data>
                     <data>u_DDR3_50H/I_GTP_CLKDIV/gopclkdiv</data>
                     <data>CLKDIV</data>
@@ -10635,9 +12018,13 @@
                 </row>
                 <row>
                     <data>clkbufg_4/gopclkbufg</data>
-                    <data>USCM_84_117</data>
+                    <data>USCM_84_118</data>
                     <data>ntclkbufg_1</data>
-                    <data>2564</data>
+<<<<<<< HEAD
+                    <data>3065</data>
+=======
+                    <data>2350</data>
+>>>>>>> testing
                     <data>0</data>
                     <data>u_CORES/u_GTP_SCANCHAIN_PG/scanchain</data>
                     <data>TCK_USER</data>
@@ -10647,27 +12034,31 @@
                     <data>clkbufg_5/gopclkbufg</data>
                     <data>USCM_84_108</data>
                     <data>ntclkbufg_2</data>
-                    <data>130</data>
-                    <data>0</data>
-                    <data>u_pll/u_pll_e3/goppll</data>
-                    <data>CLKOUT0</data>
-                    <data>PLL_158_55</data>
-                </row>
-                <row>
-                    <data>clkbufg_6/gopclkbufg</data>
-                    <data>USCM_84_109</data>
-                    <data>ntclkbufg_3</data>
-                    <data>125</data>
+                    <data>267</data>
                     <data>0</data>
                     <data>u_pll/u_pll_e3/goppll</data>
                     <data>CLKOUT1</data>
                     <data>PLL_158_55</data>
                 </row>
                 <row>
+                    <data>clkbufg_6/gopclkbufg</data>
+                    <data>USCM_84_109</data>
+                    <data>ntclkbufg_3</data>
+<<<<<<< HEAD
+                    <data>159</data>
+=======
+                    <data>191</data>
+>>>>>>> testing
+                    <data>0</data>
+                    <data>u_pll/u_pll_e3/goppll</data>
+                    <data>CLKOUT0</data>
+                    <data>PLL_158_55</data>
+                </row>
+                <row>
                     <data>clkbufg_7/gopclkbufg</data>
-                    <data>USCM_84_116</data>
+                    <data>USCM_84_117</data>
                     <data>ntclkbufg_4</data>
-                    <data>127</data>
+                    <data>145</data>
                     <data>0</data>
                     <data>cmos2_8_16bit/u_GTP_IOCLKDIV/gopclkdiv</data>
                     <data>CLKDIV</data>
@@ -10675,9 +12066,9 @@
                 </row>
                 <row>
                     <data>clkbufg_8/gopclkbufg</data>
-                    <data>USCM_84_115</data>
+                    <data>USCM_84_116</data>
                     <data>ntclkbufg_5</data>
-                    <data>127</data>
+                    <data>145</data>
                     <data>0</data>
                     <data>cmos1_8_16bit/u_GTP_IOCLKDIV/gopclkdiv</data>
                     <data>CLKDIV</data>
@@ -10685,17 +12076,17 @@
                 </row>
                 <row>
                     <data>clkbufg_9/gopclkbufg</data>
-                    <data>USCM_84_118</data>
+                    <data>USCM_84_110</data>
                     <data>ntclkbufg_6</data>
-                    <data>41</data>
+                    <data>118</data>
                     <data>0</data>
-                    <data>cmos2_pclk_ibuf/opit_1</data>
-                    <data>OUT</data>
-                    <data>IOL_39_6</data>
+                    <data>pix_clk_in_ibuf/opit_1</data>
+                    <data>INCK</data>
+                    <data>IOL_163_6</data>
                 </row>
                 <row>
                     <data>clkbufg_10/gopclkbufg</data>
-                    <data>USCM_84_111</data>
+                    <data>USCM_84_112</data>
                     <data>ntclkbufg_7</data>
                     <data>41</data>
                     <data>0</data>
@@ -10705,8 +12096,18 @@
                 </row>
                 <row>
                     <data>clkbufg_11/gopclkbufg</data>
-                    <data>USCM_84_112</data>
+                    <data>USCM_84_119</data>
                     <data>ntclkbufg_8</data>
+                    <data>41</data>
+                    <data>0</data>
+                    <data>cmos2_pclk_ibuf/opit_1</data>
+                    <data>OUT</data>
+                    <data>IOL_39_6</data>
+                </row>
+                <row>
+                    <data>clkbufg_12/gopclkbufg</data>
+                    <data>USCM_84_113</data>
+                    <data>ntclkbufg_9</data>
                     <data>7</data>
                     <data>0</data>
                     <data>u_pll/u_pll_e3/goppll</data>
@@ -10715,7 +12116,7 @@
                 </row>
                 <row>
                     <data>u_DDR3_50H/u_clkbufg/gopclkbufg</data>
-                    <data>USCM_84_110</data>
+                    <data>USCM_84_111</data>
                     <data>u_DDR3_50H/pll_clkin</data>
                     <data>68</data>
                     <data>0</data>
@@ -10725,7 +12126,7 @@
                 </row>
                 <row>
                     <data>u_DDR3_50H/u_clkbufg_gate/gopclkbufg</data>
-                    <data>USCM_84_113</data>
+                    <data>USCM_84_114</data>
                     <data>u_DDR3_50H/ioclk_gate_clk</data>
                     <data>1</data>
                     <data>0</data>
@@ -10769,13 +12170,17 @@
                     <data> - </data>
                     <data>u_DDR3_50H/u_clkbufg/gopclkbufg</data>
                     <data>CLKOUT</data>
-                    <data>USCM_84_110</data>
+                    <data>USCM_84_111</data>
                 </row>
                 <row>
                     <data>u_DDR3_50H/u_ipsxb_ddrphy_pll_0/u_pll_e3/goppll</data>
                     <data>PLL_158_199</data>
                     <data>CLKIN2</data>
-                    <data>ntR3410</data>
+<<<<<<< HEAD
+                    <data>ntR3617</data>
+=======
+                    <data>ntR3512</data>
+>>>>>>> testing
                     <data> - </data>
                     <data> - </data>
                     <data>GND_2</data>
@@ -10802,16 +12207,23 @@
                     <data> - </data>
                     <data>u_DDR3_50H/u_clkbufg/gopclkbufg</data>
                     <data>CLKOUT</data>
-                    <data>USCM_84_110</data>
+                    <data>USCM_84_111</data>
                 </row>
                 <row>
                     <data>u_DDR3_50H/u_ipsxb_ddrphy_pll_1/u_pll_e3/goppll</data>
                     <data>PLL_158_179</data>
                     <data>CLKIN2</data>
-                    <data>ntR3414</data>
+<<<<<<< HEAD
+                    <data>ntR3621</data>
                     <data> - </data>
                     <data> - </data>
-                    <data>GND_670</data>
+                    <data>GND_751</data>
+=======
+                    <data>ntR3516</data>
+                    <data> - </data>
+                    <data> - </data>
+                    <data>GND_839</data>
+>>>>>>> testing
                     <data>Z</data>
                     <data>HARD0N1_156_181</data>
                 </row>
@@ -10830,7 +12242,7 @@
                     <data>u_pll/u_pll_e3/goppll</data>
                     <data>PLL_158_55</data>
                     <data>CLKIN1</data>
-                    <data>_N19</data>
+                    <data>_N27</data>
                     <data> - </data>
                     <data> - </data>
                     <data>sys_clk_ibuf/opit_1</data>
@@ -10841,10 +12253,17 @@
                     <data>u_pll/u_pll_e3/goppll</data>
                     <data>PLL_158_55</data>
                     <data>CLKIN2</data>
-                    <data>ntR3418</data>
+<<<<<<< HEAD
+                    <data>ntR3625</data>
                     <data> - </data>
                     <data> - </data>
-                    <data>GND_671</data>
+                    <data>GND_750</data>
+=======
+                    <data>ntR3520</data>
+                    <data> - </data>
+                    <data> - </data>
+                    <data>GND_840</data>
+>>>>>>> testing
                     <data>Z</data>
                     <data>HARD0N1_156_57</data>
                 </row>
@@ -10853,7 +12272,11 @@
                     <data>PLL_158_199</data>
                     <data>CLKOUT0_WL</data>
                     <data>clkout0_wl_0</data>
-                    <data>14511</data>
+<<<<<<< HEAD
+                    <data>16528</data>
+=======
+                    <data>14071</data>
+>>>>>>> testing
                     <data>0</data>
                     <data> ... </data>
                     <data> ... </data>
@@ -10868,7 +12291,7 @@
                     <data>0</data>
                     <data>u_DDR3_50H/u_clkbufg_gate/gopclkbufg</data>
                     <data>CLK</data>
-                    <data>USCM_84_113</data>
+                    <data>USCM_84_114</data>
                 </row>
                 <row>
                     <data>u_DDR3_50H/u_ipsxb_ddrphy_pll_1/u_pll_e3/goppll</data>
@@ -10886,7 +12309,11 @@
                     <data>PLL_158_55</data>
                     <data>CLKOUT0</data>
                     <data>nt_pix_clk</data>
-                    <data>130</data>
+<<<<<<< HEAD
+                    <data>159</data>
+=======
+                    <data>191</data>
+>>>>>>> testing
                     <data>1</data>
                     <data> ... </data>
                     <data> ... </data>
@@ -10897,7 +12324,7 @@
                     <data>PLL_158_55</data>
                     <data>CLKOUT1</data>
                     <data>cfg_clk</data>
-                    <data>125</data>
+                    <data>267</data>
                     <data>0</data>
                     <data> ... </data>
                     <data> ... </data>
