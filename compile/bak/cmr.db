@@ -181,8 +181,8 @@
             <data>RAM(GB)</data>
         </column_headers>
         <row>
-            <data>0h:0m:4s</data>
-            <data>0h:0m:4s</data>
+            <data>0h:0m:7s</data>
+            <data>0h:0m:7s</data>
             <data>0h:0m:16s</data>
             <data>267</data>
             <data>WINDOWS 10 x86_64</data>
@@ -1755,7 +1755,7 @@
             <data message="4">Module instance {hdmi_ddr_ov5640_top/video_block_move} parameter value:
     H_DISP = 32'b00000000000000000000001010000000
     V_DISP = 32'b00000000000000000000001011010000
-    VIDEO_CLK = 32'b00000010001101100111101110001000
+    VIDEO_CLK = 32'b00000100100011110100110000100000
     BLOCK_CLK = 32'b00000000000000000000000001100100
     SIDE_W = 32'b00000000000000000000000000101000
     BLOCK_W = 32'b00000000000000000000000001010000
@@ -1786,7 +1786,7 @@
             <data message="4">Module instance {hdmi_ddr_ov5640_top/video_block_move/u_rgb_display} parameter value:
     H_DISP = 32'b00000000000000000000001010000000
     V_DISP = 32'b00000000000000000000001011010000
-    VIDEO_CLK = 32'b00000010001101100111101110001000
+    VIDEO_CLK = 32'b00000100100011110100110000100000
     BLOCK_CLK = 32'b00000000000000000000000001100100
     SIDE_W = 32'b00000000000000000000000000101000
     BLOCK_W = 32'b00000000000000000000000001010000
@@ -1852,7 +1852,7 @@
         <row>
             <data message="4">Module instance {hdmi_ddr_ov5640_top/cmos1_mix} parameter value:
     H_ACT = 12'b000101000000
-    H_OFFSET = 12'b000010100000
+    H_OFFSET = 12'b000100111111
     LEFT = 1'b1</data>
         </row>
         <row>
@@ -1870,7 +1870,7 @@
         <row>
             <data message="4">Module instance {hdmi_ddr_ov5640_top/cmos2_mix} parameter value:
     H_ACT = 12'b000101000000
-    H_OFFSET = 12'b000010100000
+    H_OFFSET = 12'b000100111111
     LEFT = 1'b0</data>
         </row>
         <row>
@@ -1941,7 +1941,7 @@
     FRAME_CNT_WIDTH = 16'b0000000000001000</data>
         </row>
         <row>
-            <data message="4">Verilog-0004: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/wr_cell.v(line number: 176)] Elaborating instance wr_fram_buf</data>
+            <data message="4">Verilog-0004: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/wr_cell.v(line number: 178)] Elaborating instance wr_fram_buf</data>
         </row>
         <row>
             <data message="4">Verilog-0003: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/wr_fram_buf/wr_fram_buf.v(line number: 16)] Elaborating module wr_fram_buf</data>
@@ -2979,7 +2979,7 @@
     FRAME_CNT_WIDTH = 16'b0000000000001000</data>
         </row>
         <row>
-            <data message="4">Verilog-0004: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/wr_cell.v(line number: 176)] Elaborating instance wr_fram_buf</data>
+            <data message="4">Verilog-0004: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/wr_cell.v(line number: 178)] Elaborating instance wr_fram_buf</data>
         </row>
         <row>
             <data message="4">Verilog-0003: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/wr_fram_buf/wr_fram_buf.v(line number: 16)] Elaborating module wr_fram_buf</data>
@@ -8275,6 +8275,9 @@
         </row>
         <row>
             <data message="4">FSM test_wr_state_fsm[3:0] inferred.</data>
+        </row>
+        <row>
+            <data message="4">FSM read_port_fsm[1:0] inferred.</data>
         </row>
         <row>
             <data message="4">FSM test_rd_state_fsm[2:0] inferred.</data>
