@@ -1220,3 +1220,5 @@ define_attribute {p:led} {PAP_IO_STANDARD} {LVCMOS33}
 define_attribute {p:led} {PAP_IO_DRIVE} {4}
 define_attribute {p:led} {PAP_IO_NONE} {TRUE}
 define_attribute {p:led} {PAP_IO_SLEW} {FAST}
+create_generated_clock -name {clk_200m} -source [get_ports {sys_clk}] [get_nets {u_pll/clkout3}] -master_clock [get_clocks {sys_clk}] -multiply_by {4} -divide_by {1} -duty_cycle {50.000}
+create_generated_clock -name {clk_125m} -source [get_ports {sys_clk}] [get_nets {u_pll/clkout4}] -master_clock [get_clocks {sys_clk}] -multiply_by {5} -divide_by {2}

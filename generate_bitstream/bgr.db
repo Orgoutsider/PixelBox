@@ -11,20 +11,13 @@
             <data>RAM(GB)</data>
         </column_headers>
         <row>
-<<<<<<< HEAD
             <data>0h:0m:13s</data>
             <data>0h:0m:13s</data>
-            <data>0h:0m:26s</data>
-            <data>882</data>
-=======
-            <data>0h:0m:36s</data>
-            <data>0h:0m:36s</data>
-            <data>0h:0m:36s</data>
-            <data>910</data>
->>>>>>> db3bc7ab8949d3324a7ca5ee2675bf97b6b170d9
+            <data>0h:0m:27s</data>
+            <data>921</data>
             <data>WINDOWS 10 x86_64</data>
-            <data>AMD Ryzen 7 5800H with Radeon Graphics</data>
-            <data>15</data>
+            <data>12th Gen Intel(R) Core(TM) i7-12700H</data>
+            <data>16</data>
         </row>
     </table>
     <general_container id="generate_bit_stream_settings">
