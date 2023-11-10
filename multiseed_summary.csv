@@ -3,42 +3,23 @@ project name,HDMI_DDR3_OV5640_test.pds
 
 Single Seed:
 Seed,State,Convergence,Setup(Slow),Setup(Fast),Hold(Slow),Hold(Fast),Recovery(Slow),Recovery(Fast),Removal(Slow),Removal(Fast),PBM-GP,PBM-PreGP,PBM-PostGP,LP,Total Placement Cpu Time,Detailed routing,Total Routing Cpu Time,Wire Length After Post-GP,Wire Length After LP,Wire Length After DP,Routing Arc Length,Worst Slack After GP Timing,Worst Slack After LP Timing,Worst Slack Before RP,Worst Slack Before DP,Worst Slack After DP,Worst Slack After Placement,Worst Slack After TA By Preroute,TNS After DP,TNS Before Route,Setup(Slow) Total Failing TNS,Setup(Slow) Total Failing Endpoints,Hold(Slow) Total Failing THS,Hold(Slow) Total Failing Endpoints
-<<<<<<< HEAD
-single,OK,OK,1.692,1.834,0.227,0.109,3.096,4.088,0.428,0.295,NA,NA,NA,0.89,17.48,25.89,55.19,188789,218205,218205,251406,NA,NA,1691,NA,NA,1691,NA,NA,0,0.000,0,0.000,0
+single,OK,OK,1.692,1.834,0.172,0.101,3.245,4.145,0.473,0.303,NA,NA,NA,0.80,14.83,13.17,23.44,192811,224897,224897,260522,NA,NA,1691,NA,NA,1691,NA,NA,0,0.000,0,0.000,0
 Pass Rate/Convergence Rate,100.00%,100.00%
 
 Synthesize:
-control_set,252
+control_set,383
 Synthesize Performance Summary:
 slack category,Synthesize Setup WNS,Synthesize Setup TNS,Synthesize Recovery WNS,Synthesize Recovery TNS
 slack value,1.088,0.000,4.688,0.000
-Synthesize Process Cpu Time,0h:0m:27s
-=======
-single,OK,OK,1.692,1.834,0.117,0.010,3.204,4.121,0.423,0.285,NA,NA,NA,1.16,15.61,22.14,98.03,180765,216222,216222,235392,NA,NA,1691,NA,NA,1691,NA,NA,0,0.000,0,0.000,0
-Pass Rate/Convergence Rate,100.00%,100.00%
-
-Synthesize:
-control_set,269
-Synthesize Performance Summary:
-slack category,Synthesize Setup WNS,Synthesize Setup TNS,Synthesize Recovery WNS,Synthesize Recovery TNS
-slack value,1.088,0.000,4.688,0.000
-Synthesize Process Cpu Time,0h:0m:21s
->>>>>>> testing
+Synthesize Process Cpu Time,0h:0m:26s
 
 Device Map:
 Device Map Resource Usage Summary:
 Logic Utilization,LUT,FF,DRM,APM,Distributed RAM,HSSTHP,USCM,HCKB,RCKB
-<<<<<<< HEAD
-Used,16434,20514,106.5,0,72,NA,10,NA,0
+Used,16568,19700,120,0,80,NA,14,NA,0
 Available,42800,64200,134,84,17000,NA,30,NA,24
-Utilization(%),39%,32%,80%,0%,1%,NA,34%,NA,0%
-Device Map Process Cpu Time,0h:0m:12s
-=======
-Used,14514,17596,117.5,0,72,NA,12,NA,0
-Available,42800,64200,134,84,17000,NA,30,NA,24
-Utilization(%),34%,28%,88%,0%,1%,NA,40%,NA,0%
+Utilization(%),39%,31%,90%,0%,1%,NA,47%,NA,0%
 Device Map Process Cpu Time,0h:0m:9s
->>>>>>> testing
 
 Project Configurations:
 top module,hdmi_ddr_ov5640_top

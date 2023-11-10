@@ -1071,8 +1071,6 @@ dev_map
 pnr 
 report_timing 
 gen_bit_stream -master_configuration_clock_frequency {40M} 
-<<<<<<< HEAD
-=======
 add_design "E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/cmos_mix.v"
 set_arch -family Logos -device PGL50H -speedgrade -6 -package FBG484
 compile -top_module hdmi_ddr_ov5640_top
@@ -1165,6 +1163,7 @@ dev_map
 pnr 
 report_timing 
 gen_bit_stream -master_configuration_clock_frequency {40M} 
+<<<<<<< HEAD
 set_arch -family Logos -device PGL50H -speedgrade -6 -package FBG484
 compile -top_module hdmi_ddr_ov5640_top
 synthesize -ads -selected_syn_tool_opt 2 
@@ -1193,6 +1192,33 @@ dev_map
 pnr 
 report_timing 
 gen_bit_stream -master_configuration_clock_frequency {40M} 
+=======
+add_design "C:/Users/Kang/Desktop/ovMERGES/pixel-box/source/rtl/ethernet/rtl/arp_cache.v"
+add_design "C:/Users/Kang/Desktop/ovMERGES/pixel-box/source/rtl/ethernet/rtl/arp_mac_top.v"
+add_design "C:/Users/Kang/Desktop/ovMERGES/pixel-box/source/rtl/ethernet/rtl/arp_rx.v"
+add_design "C:/Users/Kang/Desktop/ovMERGES/pixel-box/source/rtl/ethernet/rtl/arp_tx.v"
+add_design "C:/Users/Kang/Desktop/ovMERGES/pixel-box/source/rtl/ethernet/rtl/crc32_gen.v"
+add_design "C:/Users/Kang/Desktop/ovMERGES/pixel-box/source/rtl/ethernet/rtl/eth_udp_test.v"
+add_design "C:/Users/Kang/Desktop/ovMERGES/pixel-box/source/rtl/ethernet/rtl/ethernet_test.v"
+add_design "C:/Users/Kang/Desktop/ovMERGES/pixel-box/source/rtl/ethernet/rtl/icmp.v"
+add_design "C:/Users/Kang/Desktop/ovMERGES/pixel-box/source/rtl/ethernet/rtl/ip_layer.v"
+add_design "C:/Users/Kang/Desktop/ovMERGES/pixel-box/source/rtl/ethernet/rtl/ip_rx.v"
+add_design "C:/Users/Kang/Desktop/ovMERGES/pixel-box/source/rtl/ethernet/rtl/ip_tx.v"
+add_design "C:/Users/Kang/Desktop/ovMERGES/pixel-box/source/rtl/ethernet/rtl/ip_tx_mode.v"
+add_design "C:/Users/Kang/Desktop/ovMERGES/pixel-box/source/rtl/ethernet/rtl/mac_layer.v"
+add_design "C:/Users/Kang/Desktop/ovMERGES/pixel-box/source/rtl/ethernet/rtl/mac_rx.v"
+add_design "C:/Users/Kang/Desktop/ovMERGES/pixel-box/source/rtl/ethernet/rtl/mac_tx.v"
+add_design "C:/Users/Kang/Desktop/ovMERGES/pixel-box/source/rtl/ethernet/rtl/mac_tx_mode.v"
+add_design "C:/Users/Kang/Desktop/ovMERGES/pixel-box/source/rtl/ethernet/rtl/rgmii_interface.v"
+add_design "C:/Users/Kang/Desktop/ovMERGES/pixel-box/source/rtl/ethernet/rtl/udp_ip_mac_top.v"
+add_design "C:/Users/Kang/Desktop/ovMERGES/pixel-box/source/rtl/ethernet/rtl/udp_layer.v"
+add_design "C:/Users/Kang/Desktop/ovMERGES/pixel-box/source/rtl/ethernet/rtl/udp_rx.v"
+add_design "C:/Users/Kang/Desktop/ovMERGES/pixel-box/source/rtl/ethernet/rtl/udp_rx_bac.v"
+add_design "C:/Users/Kang/Desktop/ovMERGES/pixel-box/source/rtl/ethernet/rtl/udp_tx.v"
+add_design "C:/Users/Kang/Desktop/ovMERGES/pixel-box/source/rtl/ethernet/ipcore/icmp_rx_ram_8_256/icmp_rx_ram_8_256.idf"
+add_design "C:/Users/Kang/Desktop/ovMERGES/pixel-box/source/rtl/ethernet/ipcore/ref_clock/ref_clock.idf"
+add_design "C:/Users/Kang/Desktop/ovMERGES/pixel-box/source/rtl/ethernet/ipcore/udp_shift_register/udp_shift_register.idf"
+>>>>>>> db3bc7ab8949d3324a7ca5ee2675bf97b6b170d9
 set_arch -family Logos -device PGL50H -speedgrade -6 -package FBG484
 compile -top_module hdmi_ddr_ov5640_top
 synthesize -ads -selected_syn_tool_opt 2 
@@ -1201,6 +1227,7 @@ dev_map
 pnr 
 report_timing 
 gen_bit_stream -master_configuration_clock_frequency {40M} 
+<<<<<<< HEAD
 set_arch -family Logos -device PGL50H -speedgrade -6 -package FBG484
 compile -top_module hdmi_ddr_ov5640_top
 synthesize -ads -selected_syn_tool_opt 2 
@@ -1268,4 +1295,24 @@ dev_map
 pnr 
 report_timing 
 gen_bit_stream -master_configuration_clock_frequency {40M} 
->>>>>>> testing
+=======
+>>>>>>> db3bc7ab8949d3324a7ca5ee2675bf97b6b170d9
+set_arch -family Logos -device PGL50H -speedgrade -6 -package FBG484
+compile -top_module hdmi_ddr_ov5640_top
+synthesize -ads -selected_syn_tool_opt 2 
+set_arch -family Logos -device PGL50H -speedgrade -6 -package FBG484
+compile -top_module PDS_HDMA
+set_arch -family Logos -device PGL50H -speedgrade -6 -package FBG484
+compile -top_module hdmi_ddr_ov5640_top
+synthesize -ads -selected_syn_tool_opt 2 
+dev_map 
+pnr 
+report_timing 
+gen_bit_stream -master_configuration_clock_frequency {40M} 
+set_arch -family Logos -device PGL50H -speedgrade -6 -package FBG484
+compile -top_module hdmi_ddr_ov5640_top
+synthesize -ads -selected_syn_tool_opt 2 
+dev_map 
+pnr 
+report_timing 
+gen_bit_stream -master_configuration_clock_frequency {40M} 
