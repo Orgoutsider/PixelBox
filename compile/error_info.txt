@@ -1,0 +1,1 @@
+Verilog-4146: [C:/Users/Kang/Desktop/ovMERGES/pixel-box/source/rtl/ethernet/rtl/udp_rx_bac.v(line number: 23)] Duplicate module name udp_rx is not allowed. Enable Allow Duplicate Modules first.
