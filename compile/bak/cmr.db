@@ -230,6 +230,10 @@
             <data>Verilog</data>
         </row>
         <row>
+            <data>E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/gamma.v</data>
+            <data>Verilog</data>
+        </row>
+        <row>
             <data>E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/pll/pll.idf</data>
             <data>IP</data>
         </row>
@@ -269,6 +273,14 @@
             <data>E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/ethernet/ipcore/udp_shift_register/udp_shift_register.idf</data>
             <data>IP</data>
         </row>
+        <row>
+            <data>E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/rom_square/rom_square.idf</data>
+            <data>IP</data>
+        </row>
+        <row>
+            <data>E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/rom_sqrt/rom_sqrt.idf</data>
+            <data>IP</data>
+        </row>
     </table>
     <table id="compile_runtime" title="Compile Runtime &amp; Memory" column_number="7">
         <column_headers>
@@ -281,10 +293,10 @@
             <data>RAM(GB)</data>
         </column_headers>
         <row>
-            <data>0h:0m:9s</data>
-            <data>0h:0m:9s</data>
-            <data>0h:0m:18s</data>
-            <data>278</data>
+            <data>0h:0m:4s</data>
+            <data>0h:0m:4s</data>
+            <data>0h:0m:20s</data>
+            <data>280</data>
             <data>WINDOWS 10 x86_64</data>
             <data>12th Gen Intel(R) Core(TM) i7-12700H</data>
             <data>16</data>
@@ -690,6 +702,12 @@
         </row>
         <row>
             <data message="4">Verilog-0002: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/ethernet/rtl/udp_tx.v(line number: 23)] Analyzing module udp_tx (library work)</data>
+        </row>
+        <row>
+            <data message="4">Verilog-0001: Analyzing file E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/gamma.v</data>
+        </row>
+        <row>
+            <data message="4">Verilog-0002: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/gamma.v(line number: 1)] Analyzing module gamma (library work)</data>
         </row>
         <row>
             <data message="4">Verilog-0001: Analyzing file E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/pll/pll.v</data>
@@ -1178,10 +1196,10 @@
             <data message="4">Verilog-0002: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/wr_fifo/wr_fifo.v(line number: 16)] Analyzing module wr_fifo (library work)</data>
         </row>
         <row>
-            <data message="4">Verilog-0001: Analyzing file E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/ethernet/ipcore/udp_shift_register/udp_shift_register.v</data>
+            <data message="4">Verilog-0001: Analyzing file E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/rom_sqrt/rom_sqrt.v</data>
         </row>
         <row>
-            <data message="4">Verilog-0002: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/ethernet/ipcore/udp_shift_register/udp_shift_register.v(line number: 21)] Analyzing module udp_shift_register (library work)</data>
+            <data message="4">Verilog-0002: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/rom_sqrt/rom_sqrt.v(line number: 16)] Analyzing module rom_sqrt (library work)</data>
         </row>
         <row>
             <data message="4">Verilog-0001: Analyzing file E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/rd_fifo/rtl/ipml_sdpram_v1_6_rd_fifo.v</data>
@@ -2045,6 +2063,252 @@
             <data message="4">Verilog-0002: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/ethernet/ipcore/udp_shift_register/rtl/ipm_distributed_shiftregister_v1_3_udp_shift_register.v(line number: 21)] Analyzing module ipm_distributed_shiftregister_v1_3_udp_shift_register (library work)</data>
         </row>
         <row>
+            <data message="4">Verilog-0001: Analyzing file E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/ethernet/ipcore/udp_shift_register/udp_shift_register.v</data>
+        </row>
+        <row>
+            <data message="4">Verilog-0002: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/ethernet/ipcore/udp_shift_register/udp_shift_register.v(line number: 21)] Analyzing module udp_shift_register (library work)</data>
+        </row>
+        <row>
+            <data message="4">Verilog-0001: Analyzing file E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/rom_square/rtl/ipml_rom_v1_5_rom_square.v</data>
+        </row>
+        <row>
+            <data message="4">Verilog-0002: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/rom_square/rtl/ipml_rom_v1_5_rom_square.v(line number: 18)] Analyzing module ipml_rom_v1_5_rom_square (library work)</data>
+        </row>
+        <row>
+            <data message="4">Verilog-0001: Analyzing file E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/rom_square/rtl/ipml_spram_v1_5_rom_square.v</data>
+        </row>
+        <row>
+            <data message="4">Verilog-0002: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/rom_square/rtl/ipml_spram_v1_5_rom_square.v(line number: 17)] Analyzing module ipml_spram_v1_5_rom_square (library work)</data>
+        </row>
+        <row>
+            <data message="4">Found Verilog include file E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/rom_square/rtl/rom_square_init_param.v</data>
+        </row>
+        <row>
+            <data message="5">Verilog-2008: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/rom_square/rtl/ipml_spram_v1_5_rom_square.v(line number: 140)] Ignore 'system task' $display</data>
+        </row>
+        <row>
+            <data message="5">Verilog-2008: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/rom_square/rtl/ipml_spram_v1_5_rom_square.v(line number: 144)] Ignore 'system task' $display</data>
+        </row>
+        <row>
+            <data message="5">Verilog-2008: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/rom_square/rtl/ipml_spram_v1_5_rom_square.v(line number: 148)] Ignore 'system task' $display</data>
+        </row>
+        <row>
+            <data message="5">Verilog-2008: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/rom_square/rtl/ipml_spram_v1_5_rom_square.v(line number: 149)] Ignore 'system task' $finish</data>
+        </row>
+        <row>
+            <data message="5">Verilog-2008: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/rom_square/rtl/ipml_spram_v1_5_rom_square.v(line number: 152)] Ignore 'system task' $display</data>
+        </row>
+        <row>
+            <data message="5">Verilog-2008: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/rom_square/rtl/ipml_spram_v1_5_rom_square.v(line number: 153)] Ignore 'system task' $finish</data>
+        </row>
+        <row>
+            <data message="5">Verilog-2008: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/rom_square/rtl/ipml_spram_v1_5_rom_square.v(line number: 156)] Ignore 'system task' $display</data>
+        </row>
+        <row>
+            <data message="5">Verilog-2008: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/rom_square/rtl/ipml_spram_v1_5_rom_square.v(line number: 157)] Ignore 'system task' $finish</data>
+        </row>
+        <row>
+            <data message="5">Verilog-2008: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/rom_square/rtl/ipml_spram_v1_5_rom_square.v(line number: 160)] Ignore 'system task' $display</data>
+        </row>
+        <row>
+            <data message="5">Verilog-2008: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/rom_square/rtl/ipml_spram_v1_5_rom_square.v(line number: 161)] Ignore 'system task' $finish</data>
+        </row>
+        <row>
+            <data message="5">Verilog-2008: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/rom_square/rtl/ipml_spram_v1_5_rom_square.v(line number: 164)] Ignore 'system task' $display</data>
+        </row>
+        <row>
+            <data message="5">Verilog-2008: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/rom_square/rtl/ipml_spram_v1_5_rom_square.v(line number: 165)] Ignore 'system task' $finish</data>
+        </row>
+        <row>
+            <data message="5">Verilog-2008: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/rom_square/rtl/ipml_spram_v1_5_rom_square.v(line number: 168)] Ignore 'system task' $display</data>
+        </row>
+        <row>
+            <data message="5">Verilog-2008: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/rom_square/rtl/ipml_spram_v1_5_rom_square.v(line number: 169)] Ignore 'system task' $finish</data>
+        </row>
+        <row>
+            <data message="5">Verilog-2008: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/rom_square/rtl/ipml_spram_v1_5_rom_square.v(line number: 172)] Ignore 'system task' $display</data>
+        </row>
+        <row>
+            <data message="5">Verilog-2008: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/rom_square/rtl/ipml_spram_v1_5_rom_square.v(line number: 173)] Ignore 'system task' $finish</data>
+        </row>
+        <row>
+            <data message="5">Verilog-2008: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/rom_square/rtl/ipml_spram_v1_5_rom_square.v(line number: 176)] Ignore 'system task' $display</data>
+        </row>
+        <row>
+            <data message="5">Verilog-2008: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/rom_square/rtl/ipml_spram_v1_5_rom_square.v(line number: 177)] Ignore 'system task' $finish</data>
+        </row>
+        <row>
+            <data message="5">Verilog-2008: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/rom_square/rtl/ipml_spram_v1_5_rom_square.v(line number: 180)] Ignore 'system task' $display</data>
+        </row>
+        <row>
+            <data message="5">Verilog-2008: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/rom_square/rtl/ipml_spram_v1_5_rom_square.v(line number: 181)] Ignore 'system task' $finish</data>
+        </row>
+        <row>
+            <data message="5">Verilog-2008: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/rom_square/rtl/ipml_spram_v1_5_rom_square.v(line number: 184)] Ignore 'system task' $display</data>
+        </row>
+        <row>
+            <data message="5">Verilog-2008: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/rom_square/rtl/ipml_spram_v1_5_rom_square.v(line number: 185)] Ignore 'system task' $finish</data>
+        </row>
+        <row>
+            <data message="5">Verilog-2008: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/rom_square/rtl/ipml_spram_v1_5_rom_square.v(line number: 188)] Ignore 'system task' $display</data>
+        </row>
+        <row>
+            <data message="5">Verilog-2008: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/rom_square/rtl/ipml_spram_v1_5_rom_square.v(line number: 189)] Ignore 'system task' $finish</data>
+        </row>
+        <row>
+            <data message="5">Verilog-2008: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/rom_square/rtl/ipml_spram_v1_5_rom_square.v(line number: 192)] Ignore 'system task' $display</data>
+        </row>
+        <row>
+            <data message="5">Verilog-2008: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/rom_square/rtl/ipml_spram_v1_5_rom_square.v(line number: 193)] Ignore 'system task' $finish</data>
+        </row>
+        <row>
+            <data message="5">Verilog-2008: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/rom_square/rtl/ipml_spram_v1_5_rom_square.v(line number: 197)] Ignore 'system task' $display</data>
+        </row>
+        <row>
+            <data message="5">Verilog-2008: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/rom_square/rtl/ipml_spram_v1_5_rom_square.v(line number: 198)] Ignore 'system task' $finish</data>
+        </row>
+        <row>
+            <data message="5">Verilog-2008: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/rom_square/rtl/ipml_spram_v1_5_rom_square.v(line number: 201)] Ignore 'system task' $display</data>
+        </row>
+        <row>
+            <data message="5">Verilog-2008: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/rom_square/rtl/ipml_spram_v1_5_rom_square.v(line number: 202)] Ignore 'system task' $finish</data>
+        </row>
+        <row>
+            <data message="5">Verilog-2008: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/rom_square/rtl/ipml_spram_v1_5_rom_square.v(line number: 206)] Ignore 'system task' $display</data>
+        </row>
+        <row>
+            <data message="5">Verilog-2008: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/rom_square/rtl/ipml_spram_v1_5_rom_square.v(line number: 207)] Ignore 'system task' $finish</data>
+        </row>
+        <row>
+            <data message="5">Verilog-2008: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/rom_square/rtl/ipml_spram_v1_5_rom_square.v(line number: 214)] Ignore 'system task' $display</data>
+        </row>
+        <row>
+            <data message="5">Verilog-2008: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/rom_square/rtl/ipml_spram_v1_5_rom_square.v(line number: 215)] Ignore 'system task' $finish</data>
+        </row>
+        <row>
+            <data message="4">Verilog-0001: Analyzing file E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/rom_square/rom_square.v</data>
+        </row>
+        <row>
+            <data message="4">Verilog-0002: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/rom_square/rom_square.v(line number: 16)] Analyzing module rom_square (library work)</data>
+        </row>
+        <row>
+            <data message="4">Verilog-0001: Analyzing file E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/rom_sqrt/rtl/ipml_rom_v1_5_rom_sqrt.v</data>
+        </row>
+        <row>
+            <data message="4">Verilog-0002: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/rom_sqrt/rtl/ipml_rom_v1_5_rom_sqrt.v(line number: 18)] Analyzing module ipml_rom_v1_5_rom_sqrt (library work)</data>
+        </row>
+        <row>
+            <data message="4">Verilog-0001: Analyzing file E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/rom_sqrt/rtl/ipml_spram_v1_5_rom_sqrt.v</data>
+        </row>
+        <row>
+            <data message="4">Verilog-0002: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/rom_sqrt/rtl/ipml_spram_v1_5_rom_sqrt.v(line number: 17)] Analyzing module ipml_spram_v1_5_rom_sqrt (library work)</data>
+        </row>
+        <row>
+            <data message="4">Found Verilog include file E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/rom_sqrt/rtl/rom_sqrt_init_param.v</data>
+        </row>
+        <row>
+            <data message="5">Verilog-2008: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/rom_sqrt/rtl/ipml_spram_v1_5_rom_sqrt.v(line number: 140)] Ignore 'system task' $display</data>
+        </row>
+        <row>
+            <data message="5">Verilog-2008: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/rom_sqrt/rtl/ipml_spram_v1_5_rom_sqrt.v(line number: 144)] Ignore 'system task' $display</data>
+        </row>
+        <row>
+            <data message="5">Verilog-2008: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/rom_sqrt/rtl/ipml_spram_v1_5_rom_sqrt.v(line number: 148)] Ignore 'system task' $display</data>
+        </row>
+        <row>
+            <data message="5">Verilog-2008: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/rom_sqrt/rtl/ipml_spram_v1_5_rom_sqrt.v(line number: 149)] Ignore 'system task' $finish</data>
+        </row>
+        <row>
+            <data message="5">Verilog-2008: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/rom_sqrt/rtl/ipml_spram_v1_5_rom_sqrt.v(line number: 152)] Ignore 'system task' $display</data>
+        </row>
+        <row>
+            <data message="5">Verilog-2008: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/rom_sqrt/rtl/ipml_spram_v1_5_rom_sqrt.v(line number: 153)] Ignore 'system task' $finish</data>
+        </row>
+        <row>
+            <data message="5">Verilog-2008: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/rom_sqrt/rtl/ipml_spram_v1_5_rom_sqrt.v(line number: 156)] Ignore 'system task' $display</data>
+        </row>
+        <row>
+            <data message="5">Verilog-2008: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/rom_sqrt/rtl/ipml_spram_v1_5_rom_sqrt.v(line number: 157)] Ignore 'system task' $finish</data>
+        </row>
+        <row>
+            <data message="5">Verilog-2008: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/rom_sqrt/rtl/ipml_spram_v1_5_rom_sqrt.v(line number: 160)] Ignore 'system task' $display</data>
+        </row>
+        <row>
+            <data message="5">Verilog-2008: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/rom_sqrt/rtl/ipml_spram_v1_5_rom_sqrt.v(line number: 161)] Ignore 'system task' $finish</data>
+        </row>
+        <row>
+            <data message="5">Verilog-2008: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/rom_sqrt/rtl/ipml_spram_v1_5_rom_sqrt.v(line number: 164)] Ignore 'system task' $display</data>
+        </row>
+        <row>
+            <data message="5">Verilog-2008: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/rom_sqrt/rtl/ipml_spram_v1_5_rom_sqrt.v(line number: 165)] Ignore 'system task' $finish</data>
+        </row>
+        <row>
+            <data message="5">Verilog-2008: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/rom_sqrt/rtl/ipml_spram_v1_5_rom_sqrt.v(line number: 168)] Ignore 'system task' $display</data>
+        </row>
+        <row>
+            <data message="5">Verilog-2008: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/rom_sqrt/rtl/ipml_spram_v1_5_rom_sqrt.v(line number: 169)] Ignore 'system task' $finish</data>
+        </row>
+        <row>
+            <data message="5">Verilog-2008: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/rom_sqrt/rtl/ipml_spram_v1_5_rom_sqrt.v(line number: 172)] Ignore 'system task' $display</data>
+        </row>
+        <row>
+            <data message="5">Verilog-2008: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/rom_sqrt/rtl/ipml_spram_v1_5_rom_sqrt.v(line number: 173)] Ignore 'system task' $finish</data>
+        </row>
+        <row>
+            <data message="5">Verilog-2008: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/rom_sqrt/rtl/ipml_spram_v1_5_rom_sqrt.v(line number: 176)] Ignore 'system task' $display</data>
+        </row>
+        <row>
+            <data message="5">Verilog-2008: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/rom_sqrt/rtl/ipml_spram_v1_5_rom_sqrt.v(line number: 177)] Ignore 'system task' $finish</data>
+        </row>
+        <row>
+            <data message="5">Verilog-2008: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/rom_sqrt/rtl/ipml_spram_v1_5_rom_sqrt.v(line number: 180)] Ignore 'system task' $display</data>
+        </row>
+        <row>
+            <data message="5">Verilog-2008: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/rom_sqrt/rtl/ipml_spram_v1_5_rom_sqrt.v(line number: 181)] Ignore 'system task' $finish</data>
+        </row>
+        <row>
+            <data message="5">Verilog-2008: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/rom_sqrt/rtl/ipml_spram_v1_5_rom_sqrt.v(line number: 184)] Ignore 'system task' $display</data>
+        </row>
+        <row>
+            <data message="5">Verilog-2008: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/rom_sqrt/rtl/ipml_spram_v1_5_rom_sqrt.v(line number: 185)] Ignore 'system task' $finish</data>
+        </row>
+        <row>
+            <data message="5">Verilog-2008: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/rom_sqrt/rtl/ipml_spram_v1_5_rom_sqrt.v(line number: 188)] Ignore 'system task' $display</data>
+        </row>
+        <row>
+            <data message="5">Verilog-2008: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/rom_sqrt/rtl/ipml_spram_v1_5_rom_sqrt.v(line number: 189)] Ignore 'system task' $finish</data>
+        </row>
+        <row>
+            <data message="5">Verilog-2008: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/rom_sqrt/rtl/ipml_spram_v1_5_rom_sqrt.v(line number: 192)] Ignore 'system task' $display</data>
+        </row>
+        <row>
+            <data message="5">Verilog-2008: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/rom_sqrt/rtl/ipml_spram_v1_5_rom_sqrt.v(line number: 193)] Ignore 'system task' $finish</data>
+        </row>
+        <row>
+            <data message="5">Verilog-2008: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/rom_sqrt/rtl/ipml_spram_v1_5_rom_sqrt.v(line number: 197)] Ignore 'system task' $display</data>
+        </row>
+        <row>
+            <data message="5">Verilog-2008: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/rom_sqrt/rtl/ipml_spram_v1_5_rom_sqrt.v(line number: 198)] Ignore 'system task' $finish</data>
+        </row>
+        <row>
+            <data message="5">Verilog-2008: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/rom_sqrt/rtl/ipml_spram_v1_5_rom_sqrt.v(line number: 201)] Ignore 'system task' $display</data>
+        </row>
+        <row>
+            <data message="5">Verilog-2008: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/rom_sqrt/rtl/ipml_spram_v1_5_rom_sqrt.v(line number: 202)] Ignore 'system task' $finish</data>
+        </row>
+        <row>
+            <data message="5">Verilog-2008: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/rom_sqrt/rtl/ipml_spram_v1_5_rom_sqrt.v(line number: 206)] Ignore 'system task' $display</data>
+        </row>
+        <row>
+            <data message="5">Verilog-2008: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/rom_sqrt/rtl/ipml_spram_v1_5_rom_sqrt.v(line number: 207)] Ignore 'system task' $finish</data>
+        </row>
+        <row>
+            <data message="5">Verilog-2008: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/rom_sqrt/rtl/ipml_spram_v1_5_rom_sqrt.v(line number: 214)] Ignore 'system task' $display</data>
+        </row>
+        <row>
+            <data message="5">Verilog-2008: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/rom_sqrt/rtl/ipml_spram_v1_5_rom_sqrt.v(line number: 215)] Ignore 'system task' $finish</data>
+        </row>
+        <row>
             <data message="4">Module &quot;hdmi_ddr_ov5640_top&quot; is set as top module.</data>
         </row>
         <row>
@@ -2061,7 +2325,7 @@
     TH_1S = 27'b001111101111000101001000000</data>
         </row>
         <row>
-            <data message="4">Verilog-0004: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/hdmi_ddr_ov5640_top.v(line number: 180)] Elaborating instance u_pll</data>
+            <data message="4">Verilog-0004: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/hdmi_ddr_ov5640_top.v(line number: 181)] Elaborating instance u_pll</data>
         </row>
         <row>
             <data message="4">Verilog-0003: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/pll/pll.v(line number: 18)] Elaborating module pll</data>
@@ -2133,7 +2397,7 @@
             <data message="5">Verilog-2021: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/pll/pll.v(line number: 145)] Net dyn_duty4 in pll(original module pll) does not have a driver, tie it to 0</data>
         </row>
         <row>
-            <data message="4">Verilog-0004: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/hdmi_ddr_ov5640_top.v(line number: 191)] Elaborating instance ms72xx_ctl</data>
+            <data message="4">Verilog-0004: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/hdmi_ddr_ov5640_top.v(line number: 192)] Elaborating instance ms72xx_ctl</data>
         </row>
         <row>
             <data message="4">Verilog-0003: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/ms72xx_ctl.v(line number: 23)] Elaborating module ms72xx_ctl</data>
@@ -2200,7 +2464,7 @@
     DATA_BYTE = 2'b01</data>
         </row>
         <row>
-            <data message="4">Verilog-0004: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/hdmi_ddr_ov5640_top.v(line number: 229)] Elaborating instance video_block_move</data>
+            <data message="4">Verilog-0004: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/hdmi_ddr_ov5640_top.v(line number: 230)] Elaborating instance video_block_move</data>
         </row>
         <row>
             <data message="4">Verilog-0003: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/helai_color_move/video_block_move.v(line number: 1)] Elaborating module video_block_move</data>
@@ -2249,13 +2513,13 @@
     MOVE_BLOCK_COLOR = 24'b111111111111111111111111</data>
         </row>
         <row>
-            <data message="4">Verilog-0004: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/hdmi_ddr_ov5640_top.v(line number: 240)] Elaborating instance power_on_delay_inst</data>
+            <data message="4">Verilog-0004: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/hdmi_ddr_ov5640_top.v(line number: 241)] Elaborating instance power_on_delay_inst</data>
         </row>
         <row>
             <data message="4">Verilog-0003: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/power_on_delay.v(line number: 22)] Elaborating module power_on_delay</data>
         </row>
         <row>
-            <data message="4">Verilog-0004: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/hdmi_ddr_ov5640_top.v(line number: 252)] Elaborating instance coms1_reg_config</data>
+            <data message="4">Verilog-0004: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/hdmi_ddr_ov5640_top.v(line number: 253)] Elaborating instance coms1_reg_config</data>
         </row>
         <row>
             <data message="4">Verilog-0003: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/reg_config.v(line number: 22)] Elaborating module reg_config</data>
@@ -2275,7 +2539,7 @@
             <data message="5">Verilog-2048: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/i2c_com.v(line number: 51)] Zero-extending on all bits z values may cause simulation mismatch.</data>
         </row>
         <row>
-            <data message="4">Verilog-0004: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/hdmi_ddr_ov5640_top.v(line number: 267)] Elaborating instance coms2_reg_config</data>
+            <data message="4">Verilog-0004: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/hdmi_ddr_ov5640_top.v(line number: 268)] Elaborating instance coms2_reg_config</data>
         </row>
         <row>
             <data message="4">Verilog-0003: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/reg_config.v(line number: 22)] Elaborating module reg_config</data>
@@ -2286,7 +2550,7 @@
     DISPAY_V = 32'b00000000000000000000001011010000</data>
         </row>
         <row>
-            <data message="4">Verilog-0004: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/hdmi_ddr_ov5640_top.v(line number: 288)] Elaborating instance cmos1_8_16bit</data>
+            <data message="4">Verilog-0004: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/hdmi_ddr_ov5640_top.v(line number: 289)] Elaborating instance cmos1_8_16bit</data>
         </row>
         <row>
             <data message="4">Verilog-0003: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/cmos_8_16bit.v(line number: 24)] Elaborating module cmos_8_16bit</data>
@@ -2298,7 +2562,7 @@
             <data message="4">Verilog-0004: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/cmos_8_16bit.v(line number: 74)] Elaborating instance u_GTP_IOCLKDIV</data>
         </row>
         <row>
-            <data message="4">Verilog-0004: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/hdmi_ddr_ov5640_top.v(line number: 304)] Elaborating instance cmos1_mix</data>
+            <data message="4">Verilog-0004: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/hdmi_ddr_ov5640_top.v(line number: 305)] Elaborating instance cmos1_mix</data>
         </row>
         <row>
             <data message="4">Verilog-0003: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/cmos_mix.v(line number: 1)] Elaborating module cmos_mix</data>
@@ -2310,13 +2574,240 @@
     LEFT = 1'b1</data>
         </row>
         <row>
-            <data message="4">Verilog-0004: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/hdmi_ddr_ov5640_top.v(line number: 324)] Elaborating instance cmos2_8_16bit</data>
+            <data message="4">Verilog-0004: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/cmos_mix.v(line number: 35)] Elaborating instance u_gamma</data>
+        </row>
+        <row>
+            <data message="4">Verilog-0003: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/gamma.v(line number: 1)] Elaborating module gamma</data>
+        </row>
+        <row>
+            <data message="4">Verilog-0004: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/gamma.v(line number: 27)] Elaborating instance u_R_sqrt</data>
+        </row>
+        <row>
+            <data message="4">Verilog-0003: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/rom_sqrt/rom_sqrt.v(line number: 16)] Elaborating module rom_sqrt</data>
+        </row>
+        <row>
+            <data message="4">Verilog-0004: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/rom_sqrt/rom_sqrt.v(line number: 102)] Elaborating instance U_ipml_rom_rom_sqrt</data>
+        </row>
+        <row>
+            <data message="4">Verilog-0003: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/rom_sqrt/rtl/ipml_rom_v1_5_rom_sqrt.v(line number: 18)] Elaborating module ipml_rom_v1_5_rom_sqrt</data>
+        </row>
+        <row>
+            <data message="4">Module instance {hdmi_ddr_ov5640_top/cmos1_mix/u_gamma/u_R_sqrt/U_ipml_rom_rom_sqrt} parameter value:
+    c_SIM_DEVICE = LOGOS
+    c_ADDR_WIDTH = 32'b00000000000000000000000000001000
+    c_DATA_WIDTH = 32'b00000000000000000000000000001000
+    c_OUTPUT_REG = 32'b00000000000000000000000000000000
+    c_RD_OCE_EN = 32'b00000000000000000000000000000000
+    c_CLK_EN = 32'b00000000000000000000000000000000
+    c_ADDR_STROBE_EN = 32'b00000000000000000000000000000000
+    c_RESET_TYPE = ASYNC_RESET
+    c_POWER_OPT = 32'b00000000000000000000000000000000
+    c_CLK_OR_POL_INV = 32'b00000000000000000000000000000000
+    c_INIT_FILE = NONE
+    c_INIT_FORMAT = HEX</data>
+        </row>
+        <row>
+            <data message="4">Verilog-0004: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/rom_sqrt/rtl/ipml_rom_v1_5_rom_sqrt.v(line number: 69)] Elaborating instance U_ipml_spram_rom_sqrt</data>
+        </row>
+        <row>
+            <data message="4">Verilog-0003: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/rom_sqrt/rtl/ipml_spram_v1_5_rom_sqrt.v(line number: 17)] Elaborating module ipml_spram_v1_5_rom_sqrt</data>
+        </row>
+        <row>
+            <data message="4">Module instance {hdmi_ddr_ov5640_top/cmos1_mix/u_gamma/u_R_sqrt/U_ipml_rom_rom_sqrt/U_ipml_spram_rom_sqrt} parameter value:
+    c_SIM_DEVICE = LOGOS
+    c_ADDR_WIDTH = 32'b00000000000000000000000000001000
+    c_DATA_WIDTH = 32'b00000000000000000000000000001000
+    c_OUTPUT_REG = 32'b00000000000000000000000000000000
+    c_RD_OCE_EN = 32'b00000000000000000000000000000000
+    c_CLK_EN = 32'b00000000000000000000000000000000
+    c_ADDR_STROBE_EN = 32'b00000000000000000000000000000000
+    c_RESET_TYPE = ASYNC_RESET
+    c_POWER_OPT = 32'b00000000000000000000000000000000
+    c_CLK_OR_POL_INV = 32'b00000000000000000000000000000000
+    c_INIT_FILE = NONE
+    c_INIT_FORMAT = HEX
+    c_WR_BYTE_EN = 32'b00000000000000000000000000000000
+    c_BE_WIDTH = 32'b00000000000000000000000000000001
+    c_RAM_MODE = ROM
+    c_WRITE_MODE = NORMAL_WRITE</data>
+        </row>
+        <row>
+            <data message="5">Verilog-2010: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/rom_sqrt/rtl/ipml_spram_v1_5_rom_sqrt.v(line number: 138)] Ignore initial statements except memory $readmemh/$readmemb initialization statements</data>
+        </row>
+        <row>
+            <data message="5">Verilog-2038: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/rom_sqrt/rtl/ipml_spram_v1_5_rom_sqrt.v(line number: 266)] Case condition never applies</data>
+        </row>
+        <row>
+            <data message="5">Verilog-2038: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/rom_sqrt/rtl/ipml_spram_v1_5_rom_sqrt.v(line number: 270)] Case condition never applies</data>
+        </row>
+        <row>
+            <data message="5">Verilog-2038: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/rom_sqrt/rtl/ipml_spram_v1_5_rom_sqrt.v(line number: 274)] Case condition never applies</data>
+        </row>
+        <row>
+            <data message="5">Verilog-2038: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/rom_sqrt/rtl/ipml_spram_v1_5_rom_sqrt.v(line number: 278)] Case condition never applies</data>
+        </row>
+        <row>
+            <data message="5">Verilog-2038: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/rom_sqrt/rtl/ipml_spram_v1_5_rom_sqrt.v(line number: 278)] Case condition never applies</data>
+        </row>
+        <row>
+            <data message="5">Verilog-2038: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/rom_sqrt/rtl/ipml_spram_v1_5_rom_sqrt.v(line number: 282)] Case condition never applies</data>
+        </row>
+        <row>
+            <data message="5">Verilog-2038: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/rom_sqrt/rtl/ipml_spram_v1_5_rom_sqrt.v(line number: 282)] Case condition never applies</data>
+        </row>
+        <row>
+            <data message="4">Verilog-0004: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/rom_sqrt/rtl/ipml_spram_v1_5_rom_sqrt.v(line number: 568)] Elaborating instance U_GTP_DRM18K</data>
+        </row>
+        <row>
+            <data message="5">Verilog-2020: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/rom_sqrt/rtl/ipml_spram_v1_5_rom_sqrt.v(line number: 427)] Net DA_bus[8] in ipml_spram_v1_5_rom_sqrt(original module ipml_spram_v1_5_rom_sqrt) does not have a driver, tie it to 0</data>
+        </row>
+        <row>
+            <data message="5">Verilog-2020: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/rom_sqrt/rtl/ipml_spram_v1_5_rom_sqrt.v(line number: 427)] Net DA_bus[17] in ipml_spram_v1_5_rom_sqrt(original module ipml_spram_v1_5_rom_sqrt) does not have a driver, tie it to 0</data>
+        </row>
+        <row>
+            <data message="5">Verilog-2020: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/rom_sqrt/rtl/ipml_spram_v1_5_rom_sqrt.v(line number: 428)] Net DB_bus[8] in ipml_spram_v1_5_rom_sqrt(original module ipml_spram_v1_5_rom_sqrt) does not have a driver, tie it to 0</data>
+        </row>
+        <row>
+            <data message="5">Verilog-2020: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/rom_sqrt/rtl/ipml_spram_v1_5_rom_sqrt.v(line number: 428)] Net DB_bus[17] in ipml_spram_v1_5_rom_sqrt(original module ipml_spram_v1_5_rom_sqrt) does not have a driver, tie it to 0</data>
+        </row>
+        <row>
+            <data message="5">Verilog-2023: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/rom_sqrt/rtl/ipml_rom_v1_5_rom_sqrt.v(line number: 69)] Give initial value 0 for the no drive pin wr_data in module instance hdmi_ddr_ov5640_top/cmos1_mix/u_gamma/u_R_sqrt/U_ipml_rom_rom_sqrt.U_ipml_spram_rom_sqrt</data>
+        </row>
+        <row>
+            <data message="5">Verilog-2023: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/rom_sqrt/rtl/ipml_rom_v1_5_rom_sqrt.v(line number: 69)] Give initial value 0 for the no drive pin wr_byte_en in module instance hdmi_ddr_ov5640_top/cmos1_mix/u_gamma/u_R_sqrt/U_ipml_rom_rom_sqrt.U_ipml_spram_rom_sqrt</data>
+        </row>
+        <row>
+            <data message="4">Verilog-0004: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/gamma.v(line number: 34)] Elaborating instance u_G_sqrt</data>
+        </row>
+        <row>
+            <data message="4">Verilog-0003: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/rom_sqrt/rom_sqrt.v(line number: 16)] Elaborating module rom_sqrt</data>
+        </row>
+        <row>
+            <data message="4">Verilog-0004: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/gamma.v(line number: 41)] Elaborating instance u_B_sqrt</data>
+        </row>
+        <row>
+            <data message="4">Verilog-0003: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/rom_sqrt/rom_sqrt.v(line number: 16)] Elaborating module rom_sqrt</data>
+        </row>
+        <row>
+            <data message="4">Verilog-0004: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/gamma.v(line number: 52)] Elaborating instance u_R_square</data>
+        </row>
+        <row>
+            <data message="4">Verilog-0003: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/rom_square/rom_square.v(line number: 16)] Elaborating module rom_square</data>
+        </row>
+        <row>
+            <data message="4">Verilog-0004: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/rom_square/rom_square.v(line number: 102)] Elaborating instance U_ipml_rom_rom_square</data>
+        </row>
+        <row>
+            <data message="4">Verilog-0003: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/rom_square/rtl/ipml_rom_v1_5_rom_square.v(line number: 18)] Elaborating module ipml_rom_v1_5_rom_square</data>
+        </row>
+        <row>
+            <data message="4">Module instance {hdmi_ddr_ov5640_top/cmos1_mix/u_gamma/u_R_square/U_ipml_rom_rom_square} parameter value:
+    c_SIM_DEVICE = LOGOS
+    c_ADDR_WIDTH = 32'b00000000000000000000000000001000
+    c_DATA_WIDTH = 32'b00000000000000000000000000001000
+    c_OUTPUT_REG = 32'b00000000000000000000000000000000
+    c_RD_OCE_EN = 32'b00000000000000000000000000000000
+    c_CLK_EN = 32'b00000000000000000000000000000000
+    c_ADDR_STROBE_EN = 32'b00000000000000000000000000000000
+    c_RESET_TYPE = ASYNC_RESET
+    c_POWER_OPT = 32'b00000000000000000000000000000000
+    c_CLK_OR_POL_INV = 32'b00000000000000000000000000000000
+    c_INIT_FILE = NONE
+    c_INIT_FORMAT = HEX</data>
+        </row>
+        <row>
+            <data message="4">Verilog-0004: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/rom_square/rtl/ipml_rom_v1_5_rom_square.v(line number: 69)] Elaborating instance U_ipml_spram_rom_square</data>
+        </row>
+        <row>
+            <data message="4">Verilog-0003: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/rom_square/rtl/ipml_spram_v1_5_rom_square.v(line number: 17)] Elaborating module ipml_spram_v1_5_rom_square</data>
+        </row>
+        <row>
+            <data message="4">Module instance {hdmi_ddr_ov5640_top/cmos1_mix/u_gamma/u_R_square/U_ipml_rom_rom_square/U_ipml_spram_rom_square} parameter value:
+    c_SIM_DEVICE = LOGOS
+    c_ADDR_WIDTH = 32'b00000000000000000000000000001000
+    c_DATA_WIDTH = 32'b00000000000000000000000000001000
+    c_OUTPUT_REG = 32'b00000000000000000000000000000000
+    c_RD_OCE_EN = 32'b00000000000000000000000000000000
+    c_CLK_EN = 32'b00000000000000000000000000000000
+    c_ADDR_STROBE_EN = 32'b00000000000000000000000000000000
+    c_RESET_TYPE = ASYNC_RESET
+    c_POWER_OPT = 32'b00000000000000000000000000000000
+    c_CLK_OR_POL_INV = 32'b00000000000000000000000000000000
+    c_INIT_FILE = NONE
+    c_INIT_FORMAT = HEX
+    c_WR_BYTE_EN = 32'b00000000000000000000000000000000
+    c_BE_WIDTH = 32'b00000000000000000000000000000001
+    c_RAM_MODE = ROM
+    c_WRITE_MODE = NORMAL_WRITE</data>
+        </row>
+        <row>
+            <data message="5">Verilog-2010: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/rom_square/rtl/ipml_spram_v1_5_rom_square.v(line number: 138)] Ignore initial statements except memory $readmemh/$readmemb initialization statements</data>
+        </row>
+        <row>
+            <data message="5">Verilog-2038: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/rom_square/rtl/ipml_spram_v1_5_rom_square.v(line number: 266)] Case condition never applies</data>
+        </row>
+        <row>
+            <data message="5">Verilog-2038: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/rom_square/rtl/ipml_spram_v1_5_rom_square.v(line number: 270)] Case condition never applies</data>
+        </row>
+        <row>
+            <data message="5">Verilog-2038: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/rom_square/rtl/ipml_spram_v1_5_rom_square.v(line number: 274)] Case condition never applies</data>
+        </row>
+        <row>
+            <data message="5">Verilog-2038: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/rom_square/rtl/ipml_spram_v1_5_rom_square.v(line number: 278)] Case condition never applies</data>
+        </row>
+        <row>
+            <data message="5">Verilog-2038: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/rom_square/rtl/ipml_spram_v1_5_rom_square.v(line number: 278)] Case condition never applies</data>
+        </row>
+        <row>
+            <data message="5">Verilog-2038: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/rom_square/rtl/ipml_spram_v1_5_rom_square.v(line number: 282)] Case condition never applies</data>
+        </row>
+        <row>
+            <data message="5">Verilog-2038: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/rom_square/rtl/ipml_spram_v1_5_rom_square.v(line number: 282)] Case condition never applies</data>
+        </row>
+        <row>
+            <data message="4">Verilog-0004: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/rom_square/rtl/ipml_spram_v1_5_rom_square.v(line number: 568)] Elaborating instance U_GTP_DRM18K</data>
+        </row>
+        <row>
+            <data message="5">Verilog-2020: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/rom_square/rtl/ipml_spram_v1_5_rom_square.v(line number: 427)] Net DA_bus[8] in ipml_spram_v1_5_rom_square(original module ipml_spram_v1_5_rom_square) does not have a driver, tie it to 0</data>
+        </row>
+        <row>
+            <data message="5">Verilog-2020: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/rom_square/rtl/ipml_spram_v1_5_rom_square.v(line number: 427)] Net DA_bus[17] in ipml_spram_v1_5_rom_square(original module ipml_spram_v1_5_rom_square) does not have a driver, tie it to 0</data>
+        </row>
+        <row>
+            <data message="5">Verilog-2020: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/rom_square/rtl/ipml_spram_v1_5_rom_square.v(line number: 428)] Net DB_bus[8] in ipml_spram_v1_5_rom_square(original module ipml_spram_v1_5_rom_square) does not have a driver, tie it to 0</data>
+        </row>
+        <row>
+            <data message="5">Verilog-2020: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/rom_square/rtl/ipml_spram_v1_5_rom_square.v(line number: 428)] Net DB_bus[17] in ipml_spram_v1_5_rom_square(original module ipml_spram_v1_5_rom_square) does not have a driver, tie it to 0</data>
+        </row>
+        <row>
+            <data message="5">Verilog-2023: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/rom_square/rtl/ipml_rom_v1_5_rom_square.v(line number: 69)] Give initial value 0 for the no drive pin wr_data in module instance hdmi_ddr_ov5640_top/cmos1_mix/u_gamma/u_R_square/U_ipml_rom_rom_square.U_ipml_spram_rom_square</data>
+        </row>
+        <row>
+            <data message="5">Verilog-2023: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/rom_square/rtl/ipml_rom_v1_5_rom_square.v(line number: 69)] Give initial value 0 for the no drive pin wr_byte_en in module instance hdmi_ddr_ov5640_top/cmos1_mix/u_gamma/u_R_square/U_ipml_rom_rom_square.U_ipml_spram_rom_square</data>
+        </row>
+        <row>
+            <data message="4">Verilog-0004: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/gamma.v(line number: 59)] Elaborating instance u_G_square</data>
+        </row>
+        <row>
+            <data message="4">Verilog-0003: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/rom_square/rom_square.v(line number: 16)] Elaborating module rom_square</data>
+        </row>
+        <row>
+            <data message="4">Verilog-0004: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/gamma.v(line number: 66)] Elaborating instance u_B_square</data>
+        </row>
+        <row>
+            <data message="4">Verilog-0003: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/rom_square/rom_square.v(line number: 16)] Elaborating module rom_square</data>
+        </row>
+        <row>
+            <data message="5">Verilog-2024: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/gamma.v(line number: 1)] Give an initial value for the no drive output pin gamma_data_square in graph of sdm module gamma</data>
+        </row>
+        <row>
+            <data message="4">Verilog-0004: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/hdmi_ddr_ov5640_top.v(line number: 326)] Elaborating instance cmos2_8_16bit</data>
         </row>
         <row>
             <data message="4">Verilog-0003: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/cmos_8_16bit.v(line number: 24)] Elaborating module cmos_8_16bit</data>
         </row>
         <row>
-            <data message="4">Verilog-0004: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/hdmi_ddr_ov5640_top.v(line number: 340)] Elaborating instance cmos2_mix</data>
+            <data message="4">Verilog-0004: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/hdmi_ddr_ov5640_top.v(line number: 342)] Elaborating instance cmos2_mix</data>
         </row>
         <row>
             <data message="4">Verilog-0003: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/cmos_mix.v(line number: 1)] Elaborating module cmos_mix</data>
@@ -2328,7 +2819,13 @@
     LEFT = 1'b0</data>
         </row>
         <row>
-            <data message="4">Verilog-0004: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/hdmi_ddr_ov5640_top.v(line number: 352)] Elaborating instance hdmi_in</data>
+            <data message="4">Verilog-0004: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/cmos_mix.v(line number: 35)] Elaborating instance u_gamma</data>
+        </row>
+        <row>
+            <data message="4">Verilog-0003: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/gamma.v(line number: 1)] Elaborating module gamma</data>
+        </row>
+        <row>
+            <data message="4">Verilog-0004: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/hdmi_ddr_ov5640_top.v(line number: 355)] Elaborating instance hdmi_in</data>
         </row>
         <row>
             <data message="4">Verilog-0003: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/hdmi_in.v(line number: 1)] Elaborating module hdmi_in</data>
@@ -2339,7 +2836,7 @@
     V_ACT = 12'b001011010000</data>
         </row>
         <row>
-            <data message="4">Verilog-0004: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/hdmi_ddr_ov5640_top.v(line number: 387)] Elaborating instance fram_buf</data>
+            <data message="4">Verilog-0004: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/hdmi_ddr_ov5640_top.v(line number: 390)] Elaborating instance fram_buf</data>
         </row>
         <row>
             <data message="4">Verilog-0003: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/fram_buf.v(line number: 22)] Elaborating module fram_buf</data>
@@ -4071,7 +4568,7 @@
     MEM_DQ_WIDTH = 32'b00000000000000000000000000100000</data>
         </row>
         <row>
-            <data message="4">Verilog-0004: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/hdmi_ddr_ov5640_top.v(line number: 450)] Elaborating instance sync_vg</data>
+            <data message="4">Verilog-0004: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/hdmi_ddr_ov5640_top.v(line number: 453)] Elaborating instance sync_vg</data>
         </row>
         <row>
             <data message="4">Verilog-0003: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/sync_vg.v(line number: 35)] Elaborating module sync_vg</data>
@@ -4093,7 +4590,7 @@
     HV_OFFSET = 12'b000000000000</data>
         </row>
         <row>
-            <data message="4">Verilog-0004: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/hdmi_ddr_ov5640_top.v(line number: 460)] Elaborating instance u_DDR3_50H</data>
+            <data message="4">Verilog-0004: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/hdmi_ddr_ov5640_top.v(line number: 463)] Elaborating instance u_DDR3_50H</data>
         </row>
         <row>
             <data message="4">Verilog-0003: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/DDR3_50H/DDR3_50H.v(line number: 7)] Elaborating module DDR3_50H</data>
@@ -8672,7 +9169,7 @@
             <data message="5">Verilog-2024: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/DDR3_50H/DDR3_50H.v(line number: 7)] Give an initial value for the no drive output pin apb_int in graph of sdm module DDR3_50H</data>
         </row>
         <row>
-            <data message="4">Verilog-0004: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/hdmi_ddr_ov5640_top.v(line number: 550)] Elaborating instance key_ctl</data>
+            <data message="4">Verilog-0004: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/hdmi_ddr_ov5640_top.v(line number: 553)] Elaborating instance key_ctl</data>
         </row>
         <row>
             <data message="4">Verilog-0003: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/key_ctl.v(line number: 23)] Elaborating module key_ctl</data>
@@ -8689,7 +9186,7 @@
     BTN_DELAY = 20'b01111111111111111111</data>
         </row>
         <row>
-            <data message="4">Verilog-0004: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/hdmi_ddr_ov5640_top.v(line number: 556)] Elaborating instance ethernet_test</data>
+            <data message="4">Verilog-0004: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/hdmi_ddr_ov5640_top.v(line number: 559)] Elaborating instance ethernet_test</data>
         </row>
         <row>
             <data message="4">Verilog-0003: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/ethernet/rtl/ethernet_test.v(line number: 23)] Elaborating module ethernet_test</data>
@@ -9804,6 +10301,12 @@
             <data message="5">Loop was found during constant probe.</data>
         </row>
         <row>
+            <data message="5">Loop was found during constant probe.</data>
+        </row>
+        <row>
+            <data message="5">Loop was found during constant probe.</data>
+        </row>
+        <row>
             <data message="4">Constant propagation done on N45 (bmsWIDEMUX).</data>
         </row>
         <row>
@@ -9847,12 +10350,6 @@
         </row>
         <row>
             <data message="4">Constant propagation done on N142 (bmsWIDEMUX).</data>
-        </row>
-        <row>
-            <data message="5">Loop was found during constant probe.</data>
-        </row>
-        <row>
-            <data message="5">Loop was found during constant probe.</data>
         </row>
         <row>
             <data message="5">Loop was found during constant probe.</data>
