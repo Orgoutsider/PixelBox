@@ -293,10 +293,10 @@
             <data>RAM(GB)</data>
         </column_headers>
         <row>
-            <data>0h:0m:4s</data>
-            <data>0h:0m:4s</data>
-            <data>0h:0m:20s</data>
-            <data>280</data>
+            <data>0h:0m:7s</data>
+            <data>0h:0m:7s</data>
+            <data>0h:0m:19s</data>
+            <data>281</data>
             <data>WINDOWS 10 x86_64</data>
             <data>12th Gen Intel(R) Core(TM) i7-12700H</data>
             <data>16</data>
@@ -2796,9 +2796,6 @@
         </row>
         <row>
             <data message="4">Verilog-0003: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/rom_square/rom_square.v(line number: 16)] Elaborating module rom_square</data>
-        </row>
-        <row>
-            <data message="5">Verilog-2024: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/gamma.v(line number: 1)] Give an initial value for the no drive output pin gamma_data_square in graph of sdm module gamma</data>
         </row>
         <row>
             <data message="4">Verilog-0004: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/hdmi_ddr_ov5640_top.v(line number: 326)] Elaborating instance cmos2_8_16bit</data>
@@ -10287,9 +10284,6 @@
         </row>
         <row>
             <data message="4">Constant propagation done on N1111 (bmsWIDEMUX).</data>
-        </row>
-        <row>
-            <data message="5">Loop was found during constant probe.</data>
         </row>
         <row>
             <data message="5">Loop was found during constant probe.</data>

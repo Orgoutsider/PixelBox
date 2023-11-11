@@ -2737,14 +2737,14 @@
             <data>cmos2_8_16bit/u_GTP_IOCLKDIV</data>
             <data>clkbufg_7</data>
             <data>ntclkbufg_4</data>
-            <data>167</data>
+            <data>173</data>
         </row>
         <row>
             <data>CLKDIVOUT</data>
             <data>cmos1_8_16bit/u_GTP_IOCLKDIV</data>
             <data>clkbufg_8</data>
             <data>ntclkbufg_5</data>
-            <data>167</data>
+            <data>173</data>
         </row>
         <row>
             <data>O</data>
@@ -2856,7 +2856,7 @@
         <row>
             <data>_$$_GND_$$_</data>
             <data>_$$_GND_$$_</data>
-            <data>123</data>
+            <data>135</data>
         </row>
         <row>
             <data>ethernet_test/N47</data>
@@ -3523,12 +3523,12 @@
         <row>
             <data>ntclkbufg_5</data>
             <data>clkbufg_8</data>
-            <data>167</data>
+            <data>173</data>
         </row>
         <row>
             <data>ntclkbufg_4</data>
             <data>clkbufg_7</data>
-            <data>167</data>
+            <data>173</data>
         </row>
         <row>
             <data>ethernet_test/eth_udp_test/udp_ip_mac_top/ip_layer/ip_tx/N377</data>
@@ -3552,8 +3552,8 @@
         </row>
         <row>
             <data>u_DDR3_50H/u_ddrphy_top/ddrphy_slice_top/wrlvl_ck_dly_start</data>
-            <data>u_DDR3_50H/u_ddrphy_top/ddrphy_slice_top/i_dqs_group[1].u_ddrphy_data_slice/data_slice_wrlvl/N466_4</data>
-            <data>114</data>
+            <data>u_DDR3_50H/u_ddrphy_top/ddrphy_slice_top/i_dqs_group[0].u_ddrphy_data_slice/data_slice_wrlvl/wrlvl_dq_seq[3:0]_380</data>
+            <data>120</data>
         </row>
         <row>
             <data>u_DDR3_50H/ddrphy_dqs_rst</data>
@@ -3716,11 +3716,6 @@
             <data>52</data>
         </row>
         <row>
-            <data>u_CORES/u_debug_core_0/u_rd_addr_gen/counter [1]</data>
-            <data>u_CORES/u_debug_core_0/u_rd_addr_gen/confck_same.counter[1]</data>
-            <data>51</data>
-        </row>
-        <row>
             <data>u_DDR3_50H/u_ipsxb_ddrc_top/mcdq_dcp_top/mcdq_dcp_back_ctrl/norm_cmd_l_wr</data>
             <data>u_DDR3_50H/u_ipsxb_ddrc_top/mcdq_dcp_top/mcdq_dcp_back_ctrl/N216</data>
             <data>51</data>
@@ -3731,8 +3726,13 @@
             <data>51</data>
         </row>
         <row>
-            <data>u_DDR3_50H/u_ddrphy_top/init_adj_rdel</data>
-            <data>u_DDR3_50H/u_ddrphy_top/ddrphy_calib_top/rdcal/init_adj_rdel</data>
+            <data>u_CORES/u_debug_core_0/u_rd_addr_gen/counter [1]</data>
+            <data>u_CORES/u_debug_core_0/u_rd_addr_gen/confck_same.counter[1]</data>
+            <data>51</data>
+        </row>
+        <row>
+            <data>ethernet_test/eth_udp_test/udp_ip_mac_top/mac_rx_dataout [3]</data>
+            <data>ethernet_test/eth_udp_test/udp_ip_mac_top/arp_mac_top_U1/mac_layer/mac_rx/mac_rx_data_3d[3]</data>
             <data>50</data>
         </row>
         <row>
@@ -3741,28 +3741,23 @@
             <data>50</data>
         </row>
         <row>
-            <data>ethernet_test/eth_udp_test/udp_ip_mac_top/ip_layer/ip_tx/ip_send_cnt [0]</data>
-            <data>ethernet_test/eth_udp_test/udp_ip_mac_top/ip_layer/ip_tx/ip_send_cnt[0]</data>
-            <data>50</data>
-        </row>
-        <row>
             <data>ethernet_test/eth_udp_test/udp_ip_mac_top/mac_rx_dataout [2]</data>
             <data>ethernet_test/eth_udp_test/udp_ip_mac_top/arp_mac_top_U1/mac_layer/mac_rx/mac_rx_data_3d[2]</data>
             <data>50</data>
         </row>
         <row>
-            <data>ethernet_test/eth_udp_test/udp_ip_mac_top/mac_rx_dataout [3]</data>
-            <data>ethernet_test/eth_udp_test/udp_ip_mac_top/arp_mac_top_U1/mac_layer/mac_rx/mac_rx_data_3d[3]</data>
+            <data>ethernet_test/eth_udp_test/udp_ip_mac_top/ip_layer/ip_tx/ip_send_cnt [0]</data>
+            <data>ethernet_test/eth_udp_test/udp_ip_mac_top/ip_layer/ip_tx/ip_send_cnt[0]</data>
             <data>50</data>
         </row>
         <row>
-            <data>ethernet_test/eth_udp_test/udp_ip_mac_top/arp_mac_top_U1/arp_cache/_N75571</data>
-            <data>ethernet_test/eth_udp_test/udp_ip_mac_top/arp_mac_top_U1/arp_cache/N6_29</data>
-            <data>49</data>
+            <data>u_DDR3_50H/u_ddrphy_top/init_adj_rdel</data>
+            <data>u_DDR3_50H/u_ddrphy_top/ddrphy_calib_top/rdcal/init_adj_rdel</data>
+            <data>50</data>
         </row>
         <row>
-            <data>ethernet_test/eth_udp_test/udp_ip_mac_top/ip_layer/icmp/N651</data>
-            <data>ethernet_test/eth_udp_test/udp_ip_mac_top/ip_layer/icmp/N651</data>
+            <data>ethernet_test/eth_udp_test/udp_ip_mac_top/arp_mac_top_U1/arp_cache/_N75262</data>
+            <data>ethernet_test/eth_udp_test/udp_ip_mac_top/arp_mac_top_U1/arp_cache/N6_29</data>
             <data>49</data>
         </row>
         <row>
@@ -3776,24 +3771,24 @@
             <data>49</data>
         </row>
         <row>
-            <data>ethernet_test/eth_udp_test/udp_ip_mac_top/arp_mac_top_U1/arp_cache/_N75562</data>
+            <data>ethernet_test/eth_udp_test/udp_ip_mac_top/arp_mac_top_U1/arp_cache/_N75253</data>
             <data>ethernet_test/eth_udp_test/udp_ip_mac_top/arp_mac_top_U1/arp_cache/N6_20</data>
             <data>49</data>
         </row>
         <row>
-            <data>ethernet_test/eth_udp_test/udp_ip_mac_top/arp_mac_top_U1/arp_cache/_N75570</data>
-            <data>ethernet_test/eth_udp_test/udp_ip_mac_top/arp_mac_top_U1/arp_cache/N6_28</data>
-            <data>49</data>
-        </row>
-        <row>
-            <data>ethernet_test/eth_udp_test/udp_ip_mac_top/arp_mac_top_U1/arp_cache/_N75566</data>
+            <data>ethernet_test/eth_udp_test/udp_ip_mac_top/arp_mac_top_U1/arp_cache/_N75257</data>
             <data>ethernet_test/eth_udp_test/udp_ip_mac_top/arp_mac_top_U1/arp_cache/N6_24</data>
             <data>49</data>
         </row>
         <row>
-            <data>ethernet_test/eth_udp_test/udp_ip_mac_top/mac_rx_dataout [7]</data>
-            <data>ethernet_test/eth_udp_test/udp_ip_mac_top/arp_mac_top_U1/mac_layer/mac_rx/mac_rx_data_3d[7]</data>
-            <data>48</data>
+            <data>ethernet_test/eth_udp_test/udp_ip_mac_top/ip_layer/icmp/N651</data>
+            <data>ethernet_test/eth_udp_test/udp_ip_mac_top/ip_layer/icmp/N651</data>
+            <data>49</data>
+        </row>
+        <row>
+            <data>ethernet_test/eth_udp_test/udp_ip_mac_top/arp_mac_top_U1/arp_cache/_N75261</data>
+            <data>ethernet_test/eth_udp_test/udp_ip_mac_top/arp_mac_top_U1/arp_cache/N6_28</data>
+            <data>49</data>
         </row>
         <row>
             <data>u_DDR3_50H/u_ipsxb_ddrc_top/mcdq_ui_axi/u_user_cmd_fifo/N10</data>
@@ -3803,11 +3798,31 @@
         <row>
             <data>u_DDR3_50H/u_ipsxb_ddrc_top/mcdq_ui_axi/u_user_cmd_fifo/N14</data>
             <data>u_DDR3_50H/u_ipsxb_ddrc_top/mcdq_ui_axi/u_user_cmd_fifo/N14</data>
+            <data>48</data>
+        </row>
+        <row>
+            <data>ethernet_test/eth_udp_test/udp_ip_mac_top/mac_rx_dataout [4]</data>
+            <data>ethernet_test/eth_udp_test/udp_ip_mac_top/arp_mac_top_U1/mac_layer/mac_rx/mac_rx_data_3d[4]</data>
+            <data>48</data>
+        </row>
+        <row>
+            <data>u_DDR3_50H/u_ddrphy_top/gate_move_en</data>
+            <data>u_DDR3_50H/u_ddrphy_top/ddrphy_calib_top/rdcal/gate_move_en</data>
+            <data>48</data>
+        </row>
+        <row>
+            <data>ethernet_test/eth_udp_test/udp_ip_mac_top/mac_rx_dataout [5]</data>
+            <data>ethernet_test/eth_udp_test/udp_ip_mac_top/arp_mac_top_U1/mac_layer/mac_rx/mac_rx_data_3d[5]</data>
             <data>48</data>
         </row>
         <row>
             <data>ethernet_test/eth_udp_test/udp_ip_mac_top/mac_rx_dataout [6]</data>
             <data>ethernet_test/eth_udp_test/udp_ip_mac_top/arp_mac_top_U1/mac_layer/mac_rx/mac_rx_data_3d[6]</data>
+            <data>48</data>
+        </row>
+        <row>
+            <data>ethernet_test/eth_udp_test/udp_ip_mac_top/mac_rx_dataout [7]</data>
+            <data>ethernet_test/eth_udp_test/udp_ip_mac_top/arp_mac_top_U1/mac_layer/mac_rx/mac_rx_data_3d[7]</data>
             <data>48</data>
         </row>
         <row>
@@ -3819,21 +3834,6 @@
             <data>u_CORES/u_debug_core_0/u0_trig_unit/u_cfg_reg_file/bit_cnt [2]</data>
             <data>u_CORES/u_debug_core_0/u0_trig_unit/u_cfg_reg_file/bit_cnt[2]</data>
             <data>48</data>
-        </row>
-        <row>
-            <data>ethernet_test/eth_udp_test/udp_ip_mac_top/mac_rx_dataout [5]</data>
-            <data>ethernet_test/eth_udp_test/udp_ip_mac_top/arp_mac_top_U1/mac_layer/mac_rx/mac_rx_data_3d[5]</data>
-            <data>48</data>
-        </row>
-        <row>
-            <data>ethernet_test/eth_udp_test/udp_ip_mac_top/mac_rx_dataout [4]</data>
-            <data>ethernet_test/eth_udp_test/udp_ip_mac_top/arp_mac_top_U1/mac_layer/mac_rx/mac_rx_data_3d[4]</data>
-            <data>48</data>
-        </row>
-        <row>
-            <data>u_DDR3_50H/u_ddrphy_top/gate_move_en</data>
-            <data>u_DDR3_50H/u_ddrphy_top/ddrphy_calib_top/rdcal/gate_move_en</data>
-            <data>47</data>
         </row>
         <row>
             <data>u_CORES/u_debug_core_0/G_M_2.u2_trig_unit/u_cfg_reg_file/bit_cnt [3]</data>
@@ -3878,7 +3878,7 @@
         </row>
         <row>
             <data>LUT</data>
-            <data>16630</data>
+            <data>16628</data>
             <data>42800</data>
             <data>39</data>
         </row>
@@ -3902,9 +3902,9 @@
         </row>
         <row>
             <data>DRM</data>
-            <data>126</data>
+            <data>132</data>
             <data>134</data>
-            <data>95</data>
+            <data>99</data>
         </row>
         <row>
             <data>FUSECODE</data>
@@ -4016,8 +4016,8 @@
         <row>
             <data>0h:0m:12s</data>
             <data>0h:0m:12s</data>
-            <data>0h:1m:20s</data>
-            <data>589</data>
+            <data>0h:1m:16s</data>
+            <data>590</data>
             <data>WINDOWS 10 x86_64</data>
             <data>12th Gen Intel(R) Core(TM) i7-12700H</data>
             <data>16</data>
