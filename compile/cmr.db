@@ -222,10 +222,6 @@
             <data>Verilog</data>
         </row>
         <row>
-            <data>E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/ethernet/rtl/udp_rx_bac.v</data>
-            <data>Verilog</data>
-        </row>
-        <row>
             <data>E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/ethernet/rtl/udp_tx.v</data>
             <data>Verilog</data>
         </row>
@@ -270,10 +266,6 @@
             <data>IP</data>
         </row>
         <row>
-            <data>E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/ethernet/ipcore/ref_clock/ref_clock.idf</data>
-            <data>IP</data>
-        </row>
-        <row>
             <data>E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/ethernet/ipcore/udp_shift_register/udp_shift_register.idf</data>
             <data>IP</data>
         </row>
@@ -283,6 +275,10 @@
         </row>
         <row>
             <data>E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/rom_sqrt/rom_sqrt.idf</data>
+            <data>IP</data>
+        </row>
+        <row>
+            <data>E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rotate_fram_buf/rotate_fram_buf.idf</data>
             <data>IP</data>
         </row>
     </table>
@@ -297,10 +293,10 @@
             <data>RAM(GB)</data>
         </column_headers>
         <row>
-            <data>0h:0m:8s</data>
-            <data>0h:0m:8s</data>
-            <data>0h:0m:19s</data>
-            <data>281</data>
+            <data>0h:0m:6s</data>
+            <data>0h:0m:6s</data>
+            <data>0h:0m:18s</data>
+            <data>280</data>
             <data>WINDOWS 10 x86_64</data>
             <data>12th Gen Intel(R) Core(TM) i7-12700H</data>
             <data>16</data>
@@ -2052,12 +2048,6 @@
             <data message="4">Verilog-0002: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/ethernet/ipcore/icmp_rx_ram_8_256/icmp_rx_ram_8_256.v(line number: 18)] Analyzing module icmp_rx_ram_8_256 (library work)</data>
         </row>
         <row>
-            <data message="4">Verilog-0001: Analyzing file E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/ethernet/ipcore/ref_clock/ref_clock.v</data>
-        </row>
-        <row>
-            <data message="4">Verilog-0002: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/ethernet/ipcore/ref_clock/ref_clock.v(line number: 20)] Analyzing module ref_clock (library work)</data>
-        </row>
-        <row>
             <data message="4">Verilog-0001: Analyzing file E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/ethernet/ipcore/udp_shift_register/rtl/ipm_distributed_sdpram_v1_2_udp_shift_register.v</data>
         </row>
         <row>
@@ -2645,40 +2635,43 @@
             <data message="5">Verilog-2010: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/rom_sqrt/rtl/ipml_spram_v1_5_rom_sqrt.v(line number: 138)] Ignore initial statements except memory $readmemh/$readmemb initialization statements</data>
         </row>
         <row>
-            <data message="5">Verilog-2038: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/rom_sqrt/rtl/ipml_spram_v1_5_rom_sqrt.v(line number: 266)] Case condition never applies</data>
+            <data message="5">Verilog-2039: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/rom_sqrt/rtl/ipml_spram_v1_5_rom_sqrt.v(line number: 256)] Repeat multiplier in concatenation evaluates to 0</data>
         </row>
         <row>
-            <data message="5">Verilog-2038: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/rom_sqrt/rtl/ipml_spram_v1_5_rom_sqrt.v(line number: 270)] Case condition never applies</data>
+            <data message="5">Verilog-2038: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/rom_sqrt/rtl/ipml_spram_v1_5_rom_sqrt.v(line number: 265)] Case condition never applies</data>
         </row>
         <row>
-            <data message="5">Verilog-2038: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/rom_sqrt/rtl/ipml_spram_v1_5_rom_sqrt.v(line number: 274)] Case condition never applies</data>
+            <data message="5">Verilog-2038: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/rom_sqrt/rtl/ipml_spram_v1_5_rom_sqrt.v(line number: 269)] Case condition never applies</data>
         </row>
         <row>
-            <data message="5">Verilog-2038: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/rom_sqrt/rtl/ipml_spram_v1_5_rom_sqrt.v(line number: 278)] Case condition never applies</data>
+            <data message="5">Verilog-2038: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/rom_sqrt/rtl/ipml_spram_v1_5_rom_sqrt.v(line number: 273)] Case condition never applies</data>
         </row>
         <row>
-            <data message="5">Verilog-2038: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/rom_sqrt/rtl/ipml_spram_v1_5_rom_sqrt.v(line number: 278)] Case condition never applies</data>
+            <data message="5">Verilog-2038: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/rom_sqrt/rtl/ipml_spram_v1_5_rom_sqrt.v(line number: 277)] Case condition never applies</data>
         </row>
         <row>
-            <data message="5">Verilog-2038: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/rom_sqrt/rtl/ipml_spram_v1_5_rom_sqrt.v(line number: 282)] Case condition never applies</data>
+            <data message="5">Verilog-2038: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/rom_sqrt/rtl/ipml_spram_v1_5_rom_sqrt.v(line number: 277)] Case condition never applies</data>
         </row>
         <row>
-            <data message="5">Verilog-2038: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/rom_sqrt/rtl/ipml_spram_v1_5_rom_sqrt.v(line number: 282)] Case condition never applies</data>
+            <data message="5">Verilog-2038: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/rom_sqrt/rtl/ipml_spram_v1_5_rom_sqrt.v(line number: 281)] Case condition never applies</data>
         </row>
         <row>
-            <data message="4">Verilog-0004: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/rom_sqrt/rtl/ipml_spram_v1_5_rom_sqrt.v(line number: 568)] Elaborating instance U_GTP_DRM18K</data>
+            <data message="5">Verilog-2038: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/rom_sqrt/rtl/ipml_spram_v1_5_rom_sqrt.v(line number: 281)] Case condition never applies</data>
         </row>
         <row>
-            <data message="5">Verilog-2020: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/rom_sqrt/rtl/ipml_spram_v1_5_rom_sqrt.v(line number: 427)] Net DA_bus[8] in ipml_spram_v1_5_rom_sqrt(original module ipml_spram_v1_5_rom_sqrt) does not have a driver, tie it to 0</data>
+            <data message="4">Verilog-0004: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/rom_sqrt/rtl/ipml_spram_v1_5_rom_sqrt.v(line number: 545)] Elaborating instance U_GTP_DRM9K</data>
         </row>
         <row>
-            <data message="5">Verilog-2020: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/rom_sqrt/rtl/ipml_spram_v1_5_rom_sqrt.v(line number: 427)] Net DA_bus[17] in ipml_spram_v1_5_rom_sqrt(original module ipml_spram_v1_5_rom_sqrt) does not have a driver, tie it to 0</data>
+            <data message="5">Verilog-2020: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/rom_sqrt/rtl/ipml_spram_v1_5_rom_sqrt.v(line number: 426)] Net DA_bus[8] in ipml_spram_v1_5_rom_sqrt(original module ipml_spram_v1_5_rom_sqrt) does not have a driver, tie it to 0</data>
         </row>
         <row>
-            <data message="5">Verilog-2020: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/rom_sqrt/rtl/ipml_spram_v1_5_rom_sqrt.v(line number: 428)] Net DB_bus[8] in ipml_spram_v1_5_rom_sqrt(original module ipml_spram_v1_5_rom_sqrt) does not have a driver, tie it to 0</data>
+            <data message="5">Verilog-2020: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/rom_sqrt/rtl/ipml_spram_v1_5_rom_sqrt.v(line number: 426)] Net DA_bus[17] in ipml_spram_v1_5_rom_sqrt(original module ipml_spram_v1_5_rom_sqrt) does not have a driver, tie it to 0</data>
         </row>
         <row>
-            <data message="5">Verilog-2020: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/rom_sqrt/rtl/ipml_spram_v1_5_rom_sqrt.v(line number: 428)] Net DB_bus[17] in ipml_spram_v1_5_rom_sqrt(original module ipml_spram_v1_5_rom_sqrt) does not have a driver, tie it to 0</data>
+            <data message="5">Verilog-2020: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/rom_sqrt/rtl/ipml_spram_v1_5_rom_sqrt.v(line number: 427)] Net DB_bus[8] in ipml_spram_v1_5_rom_sqrt(original module ipml_spram_v1_5_rom_sqrt) does not have a driver, tie it to 0</data>
+        </row>
+        <row>
+            <data message="5">Verilog-2020: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/rom_sqrt/rtl/ipml_spram_v1_5_rom_sqrt.v(line number: 427)] Net DB_bus[17] in ipml_spram_v1_5_rom_sqrt(original module ipml_spram_v1_5_rom_sqrt) does not have a driver, tie it to 0</data>
         </row>
         <row>
             <data message="5">Verilog-2023: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/rom_sqrt/rtl/ipml_rom_v1_5_rom_sqrt.v(line number: 69)] Give initial value 0 for the no drive pin wr_data in module instance hdmi_ddr_ov5640_top/cmos1_mix/u_gamma/u_R_sqrt/U_ipml_rom_rom_sqrt.U_ipml_spram_rom_sqrt</data>
@@ -10371,7 +10364,22 @@
             <data message="5">Loop was found during constant probe.</data>
         </row>
         <row>
-            <data message="5">Loop was found during constant probe.</data>
+            <data message="4">Constant propagation done on N34 (bmsWIDEMUX).</data>
+        </row>
+        <row>
+            <data message="4">Constant propagation done on N106 (bmsREDAND).</data>
+        </row>
+        <row>
+            <data message="4">Constant propagation done on N103 (bmsWIDEINV).</data>
+        </row>
+        <row>
+            <data message="4">Constant propagation done on N66 (bmsREDOR).</data>
+        </row>
+        <row>
+            <data message="4">Constant propagation done on N80 (bmsREDAND).</data>
+        </row>
+        <row>
+            <data message="4">Constant propagation done on N81 (bmsREDAND).</data>
         </row>
         <row>
             <data message="5">Loop was found during constant probe.</data>
@@ -10401,22 +10409,7 @@
             <data message="5">Loop was found during constant probe.</data>
         </row>
         <row>
-            <data message="4">Constant propagation done on N45 (bmsWIDEMUX).</data>
-        </row>
-        <row>
-            <data message="4">Constant propagation done on N52 (bmsWIDEMUX).</data>
-        </row>
-        <row>
-            <data message="4">Constant propagation done on N58 (bmsWIDEMUX).</data>
-        </row>
-        <row>
-            <data message="4">Constant propagation done on N66 (bmsWIDEMUX).</data>
-        </row>
-        <row>
-            <data message="4">Constant propagation done on N73 (bmsWIDEMUX).</data>
-        </row>
-        <row>
-            <data message="4">Constant propagation done on N80 (bmsWIDEMUX).</data>
+            <data message="5">Loop was found during constant probe.</data>
         </row>
         <row>
             <data message="5">Loop was found during constant probe.</data>

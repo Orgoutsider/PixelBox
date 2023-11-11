@@ -3942,9 +3942,9 @@
         </row>
         <row>
             <data>DRM</data>
-            <data>132</data>
+            <data>129</data>
             <data>134</data>
-            <data>99</data>
+            <data>97</data>
         </row>
         <row>
             <data>FUSECODE</data>
@@ -4054,10 +4054,10 @@
             <data>RAM(GB)</data>
         </column_headers>
         <row>
-            <data>0h:0m:13s</data>
-            <data>0h:0m:13s</data>
-            <data>0h:1m:18s</data>
-            <data>590</data>
+            <data>0h:0m:14s</data>
+            <data>0h:0m:14s</data>
+            <data>0h:1m:16s</data>
+            <data>593</data>
             <data>WINDOWS 10 x86_64</data>
             <data>12th Gen Intel(R) Core(TM) i7-12700H</data>
             <data>16</data>

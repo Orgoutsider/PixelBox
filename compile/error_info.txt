@@ -1,1 +1,0 @@
-Verilog-4146: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/ethernet/rtl/udp_rx_bac.v(line number: 23)] Duplicate module name udp_rx is not allowed. Enable Allow Duplicate Modules first.
