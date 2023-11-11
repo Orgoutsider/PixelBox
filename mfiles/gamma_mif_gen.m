@@ -14,32 +14,40 @@ r = [0:1:255];
 s_qrt = 16*sqrt(r);  %开根 
 z1    = round(s_qrt); 
 
-fid = fopen('sqrt.mif','w');
-fprintf(fid,'depth= %d; \n',depth); 
-fprintf(fid,'width= %d; \n',width); 
-fprintf(fid,'address_radix=uns;\n'); 
-fprintf(fid,'data_radix = uns;\n'); 
-fprintf(fid,'Content Begin \n'); 
+fid = fopen('sqrt.dat','w');
+% fprintf(fid,'depth= %d; \n',depth); 
+% fprintf(fid,'width= %d; \n',width); 
+% fprintf(fid,'address_radix=uns;\n'); 
+% fprintf(fid,'data_radix = uns;\n'); 
+% fprintf(fid,'Content Begin \n'); 
 for(k=1:depth)
-    fprintf(fid,'%d: %d; \n',k-1,z1(k));
+    if z1(k) <= 15
+        fprintf(fid,'0%x\n',z1(k));
+    else
+        fprintf(fid,'%x\n',z1(k));
+    end
 end
-fprintf(fid,'end;');
+% fprintf(fid,'end;');
 %--------------------------------------------------------------------------
 %--                     square开方
 %--------------------------------------------------------------------------
 s_quare = (1/256)*r.^2;   %平方
 z2 = round(s_quare);
 
-fid = fopen('square.mif','w');
-fprintf(fid,'depth= %d; \n',depth); 
-fprintf(fid,'width= %d; \n',width); 
-fprintf(fid,'address_radix=uns;\n'); 
-fprintf(fid,'data_radix = uns;\n'); 
-fprintf(fid,'Content Begin \n'); 
+fid = fopen('square.dat','w');
+% fprintf(fid,'depth= %d; \n',depth); 
+% fprintf(fid,'width= %d; \n',width); 
+% fprintf(fid,'address_radix=uns;\n'); 
+% fprintf(fid,'data_radix = uns;\n'); 
+% fprintf(fid,'Content Begin \n'); 
 for(k=1:depth)
-    fprintf(fid,'%d: %d; \n',k-1,z2(k));
+    if z2(k) <= 15
+        fprintf(fid,'0%x\n',z2(k));
+    else
+        fprintf(fid,'%x\n',z2(k));
+    end
 end
-fprintf(fid,'end;');
+% fprintf(fid,'end;');
 %--------------------------------------------------------------------------
 %--                     曲线展示
 %--------------------------------------------------------------------------

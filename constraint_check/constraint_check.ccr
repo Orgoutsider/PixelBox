@@ -1,4 +1,4 @@
-##### Written on 2023/11/10 13:29:44 ###############################
+##### Written on 2023/11/11 20:03:07 ###############################
 
 
 ##### INFO ##################################################
@@ -14,7 +14,7 @@ Constraint File(s) :
 
 ##### SUMMARY ######################################################
 
-Found 0 error(s), 33 critical warning(s), 0 warning(s), out of 1214 constraint(s)
+Found 0 error(s), 33 critical warning(s), 0 warning(s), out of 1219 constraint(s)
 
 
 Inapplicable constraints(except overwritten constraints):
@@ -101,23 +101,23 @@ define_attribute {p:iic_scl} {PAP_IO_LOC} {V19}
 define_attribute {p:pix_clk_in} {PAP_IO_LOC} {AA12}
 	C: ConstraintEditor-2002: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/hdmi_ddr_ov5640_top.fdc(line number: 1121)] | Port pix_clk_in has been placed at location AA12, whose type is share pin.
 
-define_attribute {p:key} {PAP_IO_LOC} {K18}
-	C: ConstraintEditor-2002: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/hdmi_ddr_ov5640_top.fdc(line number: 1133)] | Port key has been placed at location K18, whose type is share pin.
-
 define_attribute {p:rgmii_txd[3]} {PAP_IO_LOC} {A18}
-	C: ConstraintEditor-2002: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/hdmi_ddr_ov5640_top.fdc(line number: 1138)] | Port rgmii_txd[3] has been placed at location A18, whose type is share pin.
+	C: ConstraintEditor-2002: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/hdmi_ddr_ov5640_top.fdc(line number: 1133)] | Port rgmii_txd[3] has been placed at location A18, whose type is share pin.
 
 define_attribute {p:rgmii_txd[2]} {PAP_IO_LOC} {C18}
-	C: ConstraintEditor-2002: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/hdmi_ddr_ov5640_top.fdc(line number: 1145)] | Port rgmii_txd[2] has been placed at location C18, whose type is share pin.
+	C: ConstraintEditor-2002: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/hdmi_ddr_ov5640_top.fdc(line number: 1140)] | Port rgmii_txd[2] has been placed at location C18, whose type is share pin.
 
 define_attribute {p:rgmii_txd[1]} {PAP_IO_LOC} {D17}
-	C: ConstraintEditor-2002: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/hdmi_ddr_ov5640_top.fdc(line number: 1152)] | Port rgmii_txd[1] has been placed at location D17, whose type is share pin.
+	C: ConstraintEditor-2002: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/hdmi_ddr_ov5640_top.fdc(line number: 1147)] | Port rgmii_txd[1] has been placed at location D17, whose type is share pin.
 
 define_attribute {p:phy_rstn} {PAP_IO_LOC} {B20}
-	C: ConstraintEditor-2002: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/hdmi_ddr_ov5640_top.fdc(line number: 1186)] | Port phy_rstn has been placed at location B20, whose type is share pin.
+	C: ConstraintEditor-2002: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/hdmi_ddr_ov5640_top.fdc(line number: 1181)] | Port phy_rstn has been placed at location B20, whose type is share pin.
 
 define_attribute {p:rgmii_tx_ctl} {PAP_IO_LOC} {B18}
-	C: ConstraintEditor-2002: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/hdmi_ddr_ov5640_top.fdc(line number: 1193)] | Port rgmii_tx_ctl has been placed at location B18, whose type is share pin.
+	C: ConstraintEditor-2002: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/hdmi_ddr_ov5640_top.fdc(line number: 1188)] | Port rgmii_tx_ctl has been placed at location B18, whose type is share pin.
+
+define_attribute {p:key_gamma} {PAP_IO_LOC} {K18}
+	C: ConstraintEditor-2002: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/hdmi_ddr_ov5640_top.fdc(line number: 1221)] | Port key_gamma has been placed at location K18, whose type is share pin.
 
 
 Constraints with issues:
