@@ -42,49 +42,86 @@ module rd_buf #(
     input                         init_done,
     
     output                        ddr_rreq,
-    output [ADDR_WIDTH- 1'b1 : 0] ddr_raddr,
-    output [LEN_WIDTH- 1'b1 : 0]  ddr_rd_len,
+    output reg [ADDR_WIDTH- 1'b1 : 0] ddr_raddr,
+    output reg [LEN_WIDTH- 1'b1 : 0]  ddr_rd_len,
     input                         ddr_rrdy,
     input                         ddr_rdone,
     
     input [8*DQ_WIDTH- 1'b1 : 0]  ddr_rdata,
     input                         ddr_rdata_en1, 
     input                         ddr_rdata_en2,
-    input                         rd_opera_en_2 
+    input                         ddr_rdata_en3,
+    input                         rd_opera_en_1,
+    input                         rd_opera_en_2,
+    input [3 : 0]                 num,
+    input                         num_vld 
 );
 
     localparam RAM_WIDTH      = 16'd32;
+    localparam H_NUM2         = H_NUM / 2;
     
     //===========================================================================
-    reg [12:0]  rd_cnt;
+    reg [12:0]  x_cnt;
+    reg [12:0]  y_cnt;
+    reg         rd_fsync_1d;
     wire      rd_en_part1;
     wire      rd_en_part2;
+    wire      rd_en_part3;
     wire      ddr_rreq1;
     wire      ddr_rreq2;
-    wire [RAM_WIDTH-1:0]        rd_data;
-    wire [RAM_WIDTH-1:0]        rd_data_1d;
+    wire      ddr_rreq3;
+    reg [RAM_WIDTH-1:0]        rd_data;
+    reg [RAM_WIDTH-1:0]        rd_data_1d;
     wire [RAM_WIDTH-1:0]        rd_data1;
     wire [RAM_WIDTH-1:0]        rd_data2;
+    wire [RAM_WIDTH-1:0]        rd_data3;
     wire [RAM_WIDTH-1:0]        rd_data1_1d;
     wire [RAM_WIDTH-1:0]        rd_data2_1d;
+    wire [RAM_WIDTH-1:0]        rd_data3_1d;
     wire [ADDR_WIDTH- 1'b1 : 0] ddr_raddr1;
     wire [ADDR_WIDTH- 1'b1 : 0] ddr_raddr2;
+    wire [ADDR_WIDTH- 1'b1 : 0] ddr_raddr3;
     wire [LEN_WIDTH- 1'b1 : 0] ddr_rd_len1;
     wire [LEN_WIDTH- 1'b1 : 0] ddr_rd_len2;
+    wire [LEN_WIDTH- 1'b1 : 0] ddr_rd_len3;
     wire [1:0] rd_cnt1;
     wire [1:0] rd_cnt2;
-    wire [1:0] rd_cnt_part;
+    wire [1:0] rd_cnt3;
+    reg [1:0] rd_cnt_part;
     reg rd_en_1d, rd_en_2d;
     reg [PIX_WIDTH- 1'b1 : 0]  read_data;
+    wire pos_en;
 
     //像素显示请求信号切换，即显示器左侧请求buf0显示，右侧请求buf1显示
-    assign rd_en_part1 = (rd_cnt <= H_NUM - 1) ? rd_en : 1'b0;
-    assign rd_en_part2 = (rd_cnt <= H_NUM - 1) ? 1'b0 : rd_en;
+    assign rd_en_part1 = (x_cnt <= H_NUM2 - 1'b1) ? rd_en : 1'b0;
+    assign rd_en_part2 = (x_cnt <= H_NUM - 1'b1) ? 1'b0 : rd_en;
+    assign rd_en_part3 = (x_cnt <= H_NUM - 1'b1 && x_cnt > H_NUM2 - 1'b1) ? rd_en : 1'b0;
 
     //像素在显示器显示位置的切换
-    assign rd_data = (rd_cnt <= H_NUM) ? rd_data1 : rd_data2; 
-    assign rd_data_1d = (rd_cnt <= H_NUM) ? rd_data1_1d : rd_data2_1d;
-    assign rd_cnt_part = (rd_cnt <= H_NUM) ? rd_cnt1 : rd_cnt2;
+    always @(*) begin
+        if (x_cnt <= H_NUM2)
+            rd_data = rd_data1;
+        else if (x_cnt > H_NUM)
+            rd_data = rd_data2;
+        else
+            rd_data = rd_data3;
+    end
+    always @(*) begin
+        if (x_cnt <= H_NUM2)
+            rd_data_1d = rd_data1_1d;
+        else if (x_cnt > H_NUM)
+            rd_data_1d = rd_data2_1d;
+        else
+            rd_data_1d = rd_data3_1d;
+    end
+    always @(*) begin
+        if (x_cnt <= H_NUM2)
+            rd_cnt_part = rd_cnt1;
+        else if (x_cnt > H_NUM)
+            rd_cnt_part = rd_cnt2;
+        else
+            rd_cnt_part = rd_cnt3;
+    end
 
     always @(posedge vout_clk) begin
         rd_en_1d <= rd_en;
@@ -135,16 +172,31 @@ module rd_buf #(
         end
     endgenerate
 
-    //对读请求信号计数
+    //对读请求信号列计数
     always @(posedge vout_clk) begin
-        if(rd_en) rd_cnt <= rd_cnt + 1'b1;
-        else rd_cnt <= 13'd0;
+        if(rd_en) x_cnt <= x_cnt + 1'b1;
+        else x_cnt <= 13'd0;
     end
+
+    always @(posedge vout_clk) begin
+        rd_fsync_1d <= rd_fsync;
+    end
+
+    //对读请求信号行计数
+    always @(posedge vout_clk)
+    begin 
+        if(~rd_fsync_1d & rd_fsync)
+            y_cnt <= 13'd0;
+        else if(rd_en_1d & ~rd_en)
+            y_cnt <= y_cnt + 1'b1;
+        else
+            y_cnt <= y_cnt;
+    end 
 
     rd_cell #(  
         .ADDR_WIDTH      (ADDR_WIDTH),
         .ADDR_OFFSET     (ADDR_OFFSET),
-        .H_NUM           (H_NUM),
+        .H_NUM           (H_NUM2),
         .V_NUM           (V_NUM),
         .DQ_WIDTH        (DQ_WIDTH),
         .LEN_WIDTH       (LEN_WIDTH),
@@ -170,7 +222,7 @@ module rd_buf #(
         .ddr_rdone(ddr_rdone)      ,   // input                         ddr_rdone,      
         .ddr_rdata(ddr_rdata)      ,   // input [8*DQ_WIDTH- 1'b1 : 0]  ddr_rdata,
         .ddr_rdata_en(ddr_rdata_en1),         // input                         ddr_rdata_en,
-        .ddr_part(1'b0)        , // input                         ddr_part 
+        .ddr_part(2'd0)        , // input                         ddr_part 
         .rd_cnt(rd_cnt1) // output [1:0] rd_cnt    
     );
 
@@ -203,14 +255,105 @@ module rd_buf #(
         .ddr_rdone(ddr_rdone)      ,   // input                         ddr_rdone,      
         .ddr_rdata(ddr_rdata)      ,   // input [8*DQ_WIDTH- 1'b1 : 0]  ddr_rdata,
         .ddr_rdata_en(ddr_rdata_en2),         // input                         ddr_rdata_en,
-        .ddr_part(1'b1)        , // input                         ddr_part 
+        .ddr_part(2'd1)        , // input                         ddr_part 
         .rd_cnt(rd_cnt2) // output [1:0] rd_cnt    
     );
 
+    rd_cell #(  
+        .ADDR_WIDTH      (ADDR_WIDTH),
+        .ADDR_OFFSET     (ADDR_OFFSET),
+        .H_NUM           (H_NUM2),
+        .V_NUM           (V_NUM),
+        .DQ_WIDTH        (DQ_WIDTH),
+        .LEN_WIDTH       (LEN_WIDTH),
+        .PIX_WIDTH       (PIX_WIDTH),
+        .LINE_ADDR_WIDTH (LINE_ADDR_WIDTH),
+        .FRAME_CNT_WIDTH (FRAME_CNT_WIDTH),
+        .RAM_WIDTH       (RAM_WIDTH)
+    ) rd_cell3 (
+        .ddr_clk(ddr_clk)          ,// input                         ddr_clk,
+        .ddr_rstn(ddr_rstn)        , // input                         ddr_rstn,         
+        .vout_clk(vout_clk)        , // input                         vout_clk,
+        .rd_fsync(rd_fsync)        , // input                         rd_fsync,
+        .rd_en(rd_en)              ,// input                         rd_en,
+        .rd_en_part(rd_en_part3)    ,     // input                         rd_en_part,
+        .rd_data(rd_data3)           , // output [RAM_WIDTH-1:0]        rd_data,
+        .rd_data_1d(rd_data3_1d)     ,       // output [RAM_WIDTH-1:0]        rd_data_1d,
+        // .vout_data(vout_data1)      ,   // output [PIX_WIDTH- 1'b1 : 0]  vout_data,       
+        // input                         init_done,     
+        .ddr_rreq(ddr_rreq3)        , // output                        ddr_rreq,
+        .ddr_raddr(ddr_raddr3)      ,   // output [ADDR_WIDTH- 1'b1 : 0] ddr_raddr,
+        .ddr_rd_len(ddr_rd_len3)    ,     // output [LEN_WIDTH- 1'b1 : 0]  ddr_rd_len,
+        // .ddr_rrdy(ddr_rrdy)        , // input                         ddr_rrdy,
+        .ddr_rdone(ddr_rdone)      ,   // input                         ddr_rdone,      
+        .ddr_rdata(ddr_rdata)      ,   // input [8*DQ_WIDTH- 1'b1 : 0]  ddr_rdata,
+        .ddr_rdata_en(ddr_rdata_en3),         // input                         ddr_rdata_en,
+        .ddr_part(2'd2)        , // input                         ddr_part 
+        .rd_cnt(rd_cnt3) // output [1:0] rd_cnt    
+    );
+
     assign vout_de = rd_en_2d;
-    assign vout_data = read_data;
+    assign vout_data = pos_en ? 16'hf800 : read_data;
     assign ddr_rreq = ddr_rreq1;
-    assign ddr_raddr = ~rd_opera_en_2 ? ddr_raddr1 : ddr_raddr2;
-    assign ddr_rd_len = ~rd_opera_en_2 ? ddr_rd_len1 : ddr_rd_len2;
+    // 3路切换
+    always @(*) begin
+        if (rd_opera_en_1)
+            ddr_raddr = ddr_raddr1;
+        else if (rd_opera_en_2)
+            ddr_raddr = ddr_raddr2;
+        else
+            ddr_raddr = ddr_raddr3; 
+    end
+    always @(*) begin
+        if (rd_opera_en_1)
+            ddr_rd_len = ddr_rd_len1;
+        else if (rd_opera_en_2)
+            ddr_rd_len = ddr_rd_len2;
+        else
+            ddr_rd_len = ddr_rd_len3; 
+    end
+
+    // num转时钟域
+    reg [3:0] num_1d;
+    reg [3:0] num_2d;
+    reg num_vld_1d;
+    reg num_vld_2d;
+    reg num_vld_3d;
+    reg num_en=1'b0;
+    reg [3:0] num_reg;
+
+    always @(posedge vout_clk) begin
+        num_1d <= num;
+        num_2d <= num_1d;
+        num_vld_1d <= num_vld;
+        num_vld_2d <= num_vld_1d;
+        num_vld_3d <= num_vld_2d;
+    end
+
+    always @(posedge vout_clk) begin
+        if (num_vld_2d & ~num_vld_3d)
+            num_en <= 1'b1;
+    end
+
+    always @(posedge vout_clk) begin
+        if (!num_en)
+            num_reg <= 4'd10; 
+        else
+            num_reg <= num_2d;
+    end
+
+    osd_display  #(
+        .OSD_WIDTH   (12'd16),
+        .OSD_HEGIHT  (12'd32)
+    )u_osd_display
+    (
+        .clk(vout_clk),    // input clk,
+        .num(num_reg),//input [3:0] num,
+        .pos_x(x_cnt),    // input [12:0] pos_x,
+        .pos_y(y_cnt),    // input [12:0] pos_y,
+        .pos_de(rd_en),    // input pos_de,
+        .pos_vs(rd_fsync),    // input pos_vs,
+        .pos_en(pos_en)       // output pos_en
+    );
 
 endmodule
