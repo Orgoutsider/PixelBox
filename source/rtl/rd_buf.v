@@ -54,7 +54,8 @@ module rd_buf #(
     input                         rd_opera_en_1,
     input                         rd_opera_en_2,
     input [3 : 0]                 num,
-    input                         num_vld 
+    input                         num_vld,
+    input                         rotate_180 
 );
 
     localparam RAM_WIDTH      = 16'd32;
@@ -223,7 +224,8 @@ module rd_buf #(
         .ddr_rdata(ddr_rdata)      ,   // input [8*DQ_WIDTH- 1'b1 : 0]  ddr_rdata,
         .ddr_rdata_en(ddr_rdata_en1),         // input                         ddr_rdata_en,
         .ddr_part(2'd0)        , // input                         ddr_part 
-        .rd_cnt(rd_cnt1) // output [1:0] rd_cnt    
+        .rd_cnt(rd_cnt1)   ,// output [1:0] rd_cnt  
+        .rotate_180(1'b0)  
     );
 
     rd_cell #(  
@@ -256,7 +258,8 @@ module rd_buf #(
         .ddr_rdata(ddr_rdata)      ,   // input [8*DQ_WIDTH- 1'b1 : 0]  ddr_rdata,
         .ddr_rdata_en(ddr_rdata_en2),         // input                         ddr_rdata_en,
         .ddr_part(2'd1)        , // input                         ddr_part 
-        .rd_cnt(rd_cnt2) // output [1:0] rd_cnt    
+        .rd_cnt(rd_cnt2)    , // output [1:0] rd_cnt    
+        .rotate_180(rotate_180)
     );
 
     rd_cell #(  
@@ -289,7 +292,8 @@ module rd_buf #(
         .ddr_rdata(ddr_rdata)      ,   // input [8*DQ_WIDTH- 1'b1 : 0]  ddr_rdata,
         .ddr_rdata_en(ddr_rdata_en3),         // input                         ddr_rdata_en,
         .ddr_part(2'd2)        , // input                         ddr_part 
-        .rd_cnt(rd_cnt3) // output [1:0] rd_cnt    
+        .rd_cnt(rd_cnt3)      , // output [1:0] rd_cnt    
+        .rotate_180(1'b0)
     );
 
     assign vout_de = rd_en_2d;
