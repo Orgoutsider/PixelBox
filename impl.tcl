@@ -1351,3 +1351,112 @@ dev_map
 pnr 
 report_timing 
 gen_bit_stream -master_configuration_clock_frequency {40M} 
+set_arch -family Logos -device PGL50H -speedgrade -6 -package FBG484
+compile -top_module hdmi_ddr_ov5640_top
+add_design C:/Users/Kang/Desktop/ovMERGES/newpixel/pixel-box/ipcore/Distributed_FIFO/Distributed_FIFO.idf
+remove_design C:/Users/Kang/Desktop/ovMERGES/newpixel/pixel-box/ipcore/Distributed_FIFO/Distributed_FIFO.idf
+add_design C:/Users/Kang/Desktop/ovMERGES/newpixel/pixel-box/source/rtl/mat_fifo/mat_fifo.idf
+add_design "C:/Users/Kang/Desktop/ovMERGES/newpixel/pixel-box/source/rtl/sub_median_filter_module.v"
+add_design "C:/Users/Kang/Desktop/ovMERGES/newpixel/pixel-box/source/rtl/up_midean_filter.v"
+set_arch -family Logos -device PGL50H -speedgrade -6 -package FBG484
+compile -top_module hdmi_ddr_ov5640_top
+add_design "C:/Users/Kang/Desktop/ovMERGES/newpixel/pixel-box/source/rtl/RGB_565TO888.v"
+add_design "C:/Users/Kang/Desktop/ovMERGES/newpixel/pixel-box/source/rtl/RGB_888TO565.v"
+set_arch -family Logos -device PGL50H -speedgrade -6 -package FBG484
+compile -top_module hdmi_ddr_ov5640_top
+set_arch -family Logos -device PGL50H -speedgrade -6 -package FBG484
+compile -top_module hdmi_ddr_ov5640_top
+synthesize -ads -selected_syn_tool_opt 2 
+dev_map 
+pnr 
+remove_design -verilog "C:/Users/Kang/Desktop/ovMERGES/newpixel/pixel-box/source/rtl/median_filter.v"
+set_arch -family Logos -device PGL50H -speedgrade -6 -package FBG484
+compile -top_module hdmi_ddr_ov5640_top
+synthesize -ads -selected_syn_tool_opt 2 
+dev_map 
+pnr 
+report_timing 
+gen_bit_stream -master_configuration_clock_frequency {40M} 
+set_arch -family Logos -device PGL50H -speedgrade -6 -package FBG484
+compile -top_module hdmi_ddr_ov5640_top
+synthesize -ads -selected_syn_tool_opt 2 
+dev_map 
+pnr 
+report_timing 
+gen_bit_stream -master_configuration_clock_frequency {40M} 
+dev_map 
+pnr 
+report_timing 
+gen_bit_stream -master_configuration_clock_frequency {40M} 
+dev_map 
+pnr 
+report_timing 
+gen_bit_stream -master_configuration_clock_frequency {40M} 
+remove_fic "C:/Users/Kang/Desktop/ovMERGES/newpixel/pixel-box/source/pango_prj/hdmi_ddr_ov5640_top_syn.fic"
+add_fic "C:/Users/Kang/Desktop/ovMERGES/newpixel/pixel-box/synthesize/hdmi_ddr_ov5640_top_syn.fic"
+dev_map 
+pnr 
+dev_map 
+pnr 
+report_timing 
+gen_bit_stream -master_configuration_clock_frequency {40M} 
+dev_map 
+pnr 
+report_timing 
+gen_bit_stream -master_configuration_clock_frequency {40M} 
+set_arch -family Logos -device PGL50H -speedgrade -6 -package FBG484
+compile -top_module hdmi_ddr_ov5640_top
+synthesize -ads -selected_syn_tool_opt 2 
+dev_map 
+pnr 
+report_timing 
+gen_bit_stream -master_configuration_clock_frequency {40M} 
+set_arch -family Logos -device PGL50H -speedgrade -6 -package FBG484
+compile -top_module hdmi_ddr_ov5640_top
+synthesize -ads -selected_syn_tool_opt 2 
+synthesize -ads -selected_syn_tool_opt 2 
+dev_map 
+pnr 
+report_timing 
+gen_bit_stream -master_configuration_clock_frequency {40M} 
+set_arch -family Logos -device PGL50H -speedgrade -6 -package FBG484
+compile -top_module hdmi_ddr_ov5640_top
+set_arch -family Logos -device PGL50H -speedgrade -6 -package FBG484
+compile -top_module hdmi_ddr_ov5640_top
+synthesize -ads -selected_syn_tool_opt 2 
+dev_map 
+pnr 
+report_timing 
+gen_bit_stream -master_configuration_clock_frequency {40M} 
+set_arch -family Logos -device PGL50H -speedgrade -6 -package FBG484
+compile -top_module hdmi_ddr_ov5640_top
+synthesize -ads -selected_syn_tool_opt 2 
+dev_map 
+pnr 
+report_timing 
+gen_bit_stream -master_configuration_clock_frequency {40M} 
+dev_map 
+pnr 
+report_timing 
+gen_bit_stream -master_configuration_clock_frequency {40M} 
+set_arch -family Logos -device PGL50H -speedgrade -6 -package FBG484
+compile -top_module hdmi_ddr_ov5640_top
+synthesize -ads -selected_syn_tool_opt 2 
+dev_map 
+pnr 
+report_timing 
+gen_bit_stream -master_configuration_clock_frequency {40M} 
+set_arch -family Logos -device PGL50H -speedgrade -6 -package FBG484
+compile -top_module hdmi_ddr_ov5640_top
+synthesize -ads -selected_syn_tool_opt 2 
+dev_map 
+pnr 
+report_timing 
+gen_bit_stream -master_configuration_clock_frequency {40M} 
+set_arch -family Logos -device PGL50H -speedgrade -6 -package FBG484
+compile -top_module hdmi_ddr_ov5640_top
+synthesize -ads -selected_syn_tool_opt 2 
+dev_map 
+pnr 
+report_timing 
+gen_bit_stream -master_configuration_clock_frequency {40M} 
