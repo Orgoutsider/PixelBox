@@ -18,9 +18,9 @@ module  rotate_fram_buf_tb;
 localparam  T_CLK_PERIOD       = 10 ;       //clock a half perid
 localparam  T_RST_TIME         = 200 ;       //reset time 
 
-localparam WR_ADDR_WIDTH = 12 ; // @IPC int 9,20
+localparam WR_ADDR_WIDTH = 8 ; // @IPC int 9,20
 
-localparam WR_DATA_WIDTH = 16 ; // @IPC int 1,1152
+localparam WR_DATA_WIDTH = 256 ; // @IPC int 1,1152
 
 localparam RD_ADDR_WIDTH = 8 ; // @IPC int 9,20
 
@@ -50,7 +50,7 @@ localparam BYTE_SIZE = 8 ; // @IPC enum 8,9
 
 localparam INIT_EN = 0 ; // @IPC bool
 
-localparam SAMEWIDTH_EN = 0 ; // @IPC bool
+localparam SAMEWIDTH_EN = 1 ; // @IPC bool
 
 localparam WR_CLK_EN = 0 ; // @IPC bool
 

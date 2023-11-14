@@ -30,9 +30,9 @@ module rotate_fram_buf
     );
 
 
-localparam WR_ADDR_WIDTH = 12 ; // @IPC int 9,20
+localparam WR_ADDR_WIDTH = 8 ; // @IPC int 9,20
 
-localparam WR_DATA_WIDTH = 16 ; // @IPC int 1,1152
+localparam WR_DATA_WIDTH = 256 ; // @IPC int 1,1152
 
 localparam RD_ADDR_WIDTH = 8 ; // @IPC int 9,20
 
@@ -62,7 +62,7 @@ localparam BYTE_SIZE = 8 ; // @IPC enum 8,9
 
 localparam INIT_EN = 0 ; // @IPC bool
 
-localparam SAMEWIDTH_EN = 0 ; // @IPC bool
+localparam SAMEWIDTH_EN = 1 ; // @IPC bool
 
 localparam WR_CLK_EN = 0 ; // @IPC bool
 

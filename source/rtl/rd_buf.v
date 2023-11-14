@@ -53,9 +53,12 @@ module rd_buf #(
     input                         ddr_rdata_en3,
     input                         rd_opera_en_1,
     input                         rd_opera_en_2,
+    input                         rd_opera_en_3,
     input [3 : 0]                 num,
     input                         num_vld,
-    input                         rotate_180 
+    input                         rotate_180, 
+    input  [ADDR_WIDTH- 1'b1 : 0]  ddr_raddr4,
+    input  [LEN_WIDTH- 1'b1 : 0]   ddr_rd_len4
 );
 
     localparam RAM_WIDTH      = 16'd32;
@@ -305,16 +308,20 @@ module rd_buf #(
             ddr_raddr = ddr_raddr1;
         else if (rd_opera_en_2)
             ddr_raddr = ddr_raddr2;
+        else if (rd_opera_en_3)
+            ddr_raddr = ddr_raddr3;
         else
-            ddr_raddr = ddr_raddr3; 
+            ddr_raddr = ddr_raddr4; 
     end
     always @(*) begin
         if (rd_opera_en_1)
             ddr_rd_len = ddr_rd_len1;
         else if (rd_opera_en_2)
             ddr_rd_len = ddr_rd_len2;
+        else if (rd_opera_en_3)
+            ddr_rd_len = ddr_rd_len3;
         else
-            ddr_rd_len = ddr_rd_len3; 
+            ddr_rd_len = ddr_rd_len4;
     end
 
     // num×ªÊ±ÖÓÓò

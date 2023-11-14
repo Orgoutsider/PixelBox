@@ -7,8 +7,8 @@
 
 
 rotate_fram_buf the_instance_name (
-  .wr_data(wr_data),    // input [15:0]
-  .wr_addr(wr_addr),    // input [11:0]
+  .wr_data(wr_data),    // input [255:0]
+  .wr_addr(wr_addr),    // input [7:0]
   .wr_en(wr_en),        // input
   .wr_clk(wr_clk),      // input
   .wr_rst(wr_rst),      // input

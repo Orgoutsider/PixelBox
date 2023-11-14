@@ -16,9 +16,15 @@ module rotate_buf#(
     input                         ddr_rdone  /* synthesis PAP_MARK_DEBUG="true" */,
     input [8*DQ_WIDTH- 1'b1 : 0]  ddr_rdata,
     input                         ddr_rdata_en  /* synthesis PAP_MARK_DEBUG="true" */,
-    input [1:0]                   ddr_part_rd,
-    input [9:0]                   angle,
-    output                        ddr_line  /* synthesis PAP_MARK_DEBUG="true" */  
+    input [1:0]                   ddr_part_wr,
+    output                        ddr_wreq,
+    output [ADDR_WIDTH- 1'b1 : 0] ddr_waddr,
+    output [LEN_WIDTH- 1'b1 : 0]  ddr_wr_len,
+    input                         ddr_wdone,
+    output [8*DQ_WIDTH- 1'b1 : 0] ddr_wdata,
+    input                         ddr_wdata_req,
+    input  [1:0]                  ddr_part_rd,
+    output                        ddr_line 
 );
 
     localparam RAM_WIDTH      = 16'd32;
@@ -27,24 +33,34 @@ module rotate_buf#(
     localparam RD_LINE_NUM    = WR_LINE_NUM * RAM_WIDTH/DDR_DATA_WIDTH; // DDR中列数
     localparam DDR_ADDR_OFFSET= RD_LINE_NUM*DDR_DATA_WIDTH/DQ_WIDTH; // 一列多少个32bit
 
-    reg [31:0]  x_cnt;
-    reg [31:0]  y_cnt;
-    wire [31:0]  x_rotate;
-    wire [31:0]  y_rotate;
-    reg [31:0]  x_rotate_reg;
-    reg [31:0]  y_rotate_reg;
+    reg [12:0]  x_cnt;
+    reg [12:0]  y_cnt;
+    reg [3:0] cnt; // 16次一计数
+    // wire [31:0]  x_rotate;
+    // wire [31:0]  y_rotate;
+    // reg [31:0]  x_rotate_reg;
+    // reg [31:0]  y_rotate_reg;
     reg doing;
     reg ddr_rdata_en_1d;
     wire [LINE_ADDR_WIDTH - 1'b1 :0] wr_cnt;
     reg [LINE_ADDR_WIDTH:0] pix_cnt;
-    reg [11:0] wr_addr;
+    reg [7:0] wr_addr;
     reg [7:0] rd_addr=8'd0;
-    wire [DDR_DATA_WIDTH-1'b1:0] rd_data;
-    wire [15:0] wr_data;
+    // wire [DDR_DATA_WIDTH-1'b1:0] rd_data;
+    // wire [15:0] wr_data;
 
     always @(posedge ddr_clk) begin
         ddr_rdata_en_1d <= ddr_rdata_en;
     end
+
+    always @(posedge ddr_clk) begin
+        if (~ddr_rstn)
+            cnt <= 4'd0;
+        else if (ddr_rdone & doing) begin
+            cnt <= cnt + 4'd1;
+        end
+    end
+
     //  使得wr_cnt在适当的时候累加 
     always @(posedge ddr_clk) begin
         if(~ddr_rstn)
@@ -57,89 +73,221 @@ module rotate_buf#(
         else
             doing <= doing;
     end
+    
     always @(posedge ddr_clk) begin
         if(~ddr_rstn)
-            x_cnt <= 32'd0;
-        else if (ddr_rdone && doing) begin
-            if (x_cnt == H_NUM - 32'd1)
-                x_cnt <= 32'd0;
+            x_cnt <= 13'd0;
+        else if (ddr_rdone && doing && (cnt == 4'd15)) begin
+            if (x_cnt + 13'd256 > H_NUM - 13'd1)
+                x_cnt <= 13'd0;
             else
-                x_cnt <= x_cnt + 32'd1;
+                x_cnt <= x_cnt + 13'd256;
         end 
     end
+    // y_cnt是从非黑色区域开始计
     always @(posedge ddr_clk) begin
         if (~ddr_rstn)
-            y_cnt <= 32'd0;
-        else if (ddr_rdone && doing && x_cnt == H_NUM - 32'd1) begin
-            if (y_cnt == V_NUM - 32'd1) begin
-                y_cnt <= 32'd0;
+            y_cnt <= 13'd0;
+        else if (ddr_rdone && doing) begin
+            if (cnt == 4'd15) begin
+                if(x_cnt + 13'd256 > H_NUM - 13'd1)
+                begin
+                    if(y_cnt >= H_NUM - 13'd1)
+                        y_cnt <= 13'd0;
+                    else
+                        y_cnt <= y_cnt + 13'd1;
+                end
+                else
+                    y_cnt <= y_cnt - 13'd15;
             end
             else
-                y_cnt <= y_cnt + 32'd1;
+                y_cnt <= y_cnt + 13'd1;
         end 
     end
 
     reg [FRAME_CNT_WIDTH - 1'b1 :0] wr_frame_cnt=0;
     always @(posedge ddr_clk)
     begin 
-        if(ddr_rdone && doing && x_cnt == H_NUM - 32'd1 && y_cnt == V_NUM - 32'd1)
+        if(ddr_rdone && doing && (x_cnt + 13'd256 > H_NUM - 13'd1) && (y_cnt >= H_NUM - 13'd1) && (cnt == 4'd15))
             wr_frame_cnt <= wr_frame_cnt + 1'b1;
         else
             wr_frame_cnt <= wr_frame_cnt;
     end 
 
-    coor_trans #(
-        .IMAGE_W(H_NUM),
-        .IMAGE_H(V_NUM)
-    )
-    coor_trans_inst
-    (
-        .clk		(	ddr_clk			),
-        .rst_n		(	~ddr_rstn		),
+    // coor_trans #(
+    //     .IMAGE_W(H_NUM),
+    //     .IMAGE_H(V_NUM)
+    // )
+    // coor_trans_inst
+    // (
+    //     .clk		(	ddr_clk			),
+    //     .rst_n		(	~ddr_rstn		),
         
         
-        .angle		(	angle			),
-        .x_in		(	x_cnt			),
-        .y_in		(	y_cnt			),
+    //     .angle		(	angle			),
+    //     .x_in		(	x_cnt			),
+    //     .y_in		(	y_cnt			),
     
 
-        .x_out		(	x_rotate		),
-        .y_out		(	y_rotate		)
-    );
+    //     .x_out		(	x_rotate		),
+    //     .y_out		(	y_rotate		)
+    // );
     always @(posedge ddr_clk) begin
-        x_rotate_reg <= x_rotate;
-        y_rotate_reg <= y_rotate;
-        pix_cnt <= x_rotate_reg + (y_rotate_reg << 9) + (y_rotate_reg << 6); // y_rotate*640
+        pix_cnt <= x_cnt + (y_cnt << 9) + (y_cnt << 7); 
+        // y_cnt*640
     end
 
     // DQ32位，去掉pix_cnt最后1位做地址
-    assign wr_cnt = pix_cnt[LINE_ADDR_WIDTH:1]; 
-    assign ddr_raddr = {wr_frame_cnt[0],ddr_part_rd,wr_cnt} + ADDR_OFFSET;
-    assign ddr_rd_len = RD_LINE_NUM;
+    assign wr_cnt = pix_cnt[LINE_ADDR_WIDTH:1] + (V_NUM/2-H_NUM/2)*DDR_ADDR_OFFSET; 
+    assign ddr_raddr = {wr_frame_cnt[0],ddr_part_wr,wr_cnt} + ADDR_OFFSET;
+    assign ddr_rd_len = 16'd16;
 
     always @(posedge ddr_clk)
     begin
-        if(x_cnt == H_NUM - 32'd1 && doing && ddr_rdone)
-            wr_addr <= 12'd0;
+        if (~ddr_rstn)
+            wr_addr <= 8'd0;
+        else if(ddr_rdone && doing && (cnt == 4'd15))
+            wr_addr <= 8'd0;
         else if(ddr_rdata_en)
-            wr_addr <= wr_addr + 12'd1;
+            wr_addr <= wr_addr + 8'd1;
         else
             wr_addr <= wr_addr;
     end
 
-    assign wr_data = pix_cnt[0] ? ddr_rdata[31:16] : ddr_rdata[15:0];
+    // assign wr_data = pix_cnt[0] ? ddr_rdata[31:16] : ddr_rdata[15:0];
 
     rotate_fram_buf rotate_fram_buf (
-    .wr_data(wr_data),    // input [15:0]
-    .wr_addr(wr_addr),    // input [11:0]
-    .wr_en(ddr_rdata_en),        // input
-    .wr_clk(ddr_clk),      // input
-    .wr_rst(~ddr_rstn),      // input
-    .rd_addr(rd_addr),    // input [7:0]
-    .rd_data(rd_data),    // output [255:0]
-    .rd_clk(ddr_clk),      // input
-    .rd_rst(~ddr_rstn)       // input
+        .wr_data(ddr_rdata),    // input [255:0]
+        .wr_addr(wr_addr),    // input [7:0]
+        .wr_en(ddr_rdata_en),        // input
+        .wr_clk(ddr_clk),      // input
+        .wr_rst(~ddr_rstn),      // input
+        .rd_addr(rd_addr),    // input [7:0]
+        .rd_data(ddr_wdata),    // output [255:0]
+        .rd_clk(ddr_clk),      // input
+        .rd_rst(~ddr_rstn)       // input
     );
 
-    assign ddr_line = doing && (x_cnt == H_NUM - 32'd1);
+    reg ddr_wr_req=0;
+    always @(posedge ddr_clk) begin
+        if (~ddr_rstn)
+            ddr_wr_req <= 1'b0;
+        else if(ddr_rdone && doing && (cnt == 4'd15))
+            ddr_wr_req <= 1'b1;
+        else if (ddr_wdata_req)
+            ddr_wr_req <= 1'b0;
+        else
+            ddr_wr_req <= ddr_wr_req;
+    end
+
+    reg [3:0] rd_len; // 阅读多少个块
+    reg rd_img; // 写完一幅图标志
+    reg [3:0] rd_row_cnt;
+    reg [3:0] rd_col_cnt;
+    reg doing_w;
+    always @(posedge ddr_clk) begin
+        if(~ddr_rstn)
+            rd_len <= 4'd0;
+        else if (ddr_rdone && doing && (cnt == 4'd15) && (x_cnt + 13'd256 > H_NUM - 13'd1))
+            rd_len <= 4'd7;
+        else if (ddr_rdone & doing && (cnt == 4'd15) )
+            rd_len <= 4'd15;
+        else if (ddr_wdone & doing_w)
+            rd_len <= 4'd0;
+    end
+
+    always @(posedge ddr_clk) begin
+        if(~ddr_rstn)
+            rd_row_cnt <= 4'd0;
+        else if (ddr_wdone & doing_w)
+            rd_row_cnt <= 4'd0;
+        else if (ddr_wdata_req)
+            rd_row_cnt <= rd_row_cnt + 1'b1; 
+    end
+
+    always @(posedge ddr_clk) begin
+        if (~ddr_rstn)
+            rd_col_cnt <= 4'd0;
+        else if (ddr_wdone & doing_w)
+            rd_col_cnt <= 4'd0;
+        else if (ddr_wdata_req & (rd_row_cnt == 4'd15))
+        begin
+            if (rd_col_cnt < rd_len)
+                rd_col_cnt <= rd_col_cnt + 1'b1;
+            else
+                rd_col_cnt <= 4'd0;
+        end
+    end
+
+    always @(posedge ddr_clk) begin
+        if(~ddr_rstn)
+            rd_addr <= 8'd0;
+        else if (ddr_wdone & doing_w)
+            rd_addr <= 8'd0;
+        else if(ddr_wdata_req) 
+        begin
+            if ((rd_col_cnt >= rd_len) && (rd_row_cnt == 4'd15))
+                rd_addr <= 8'd0;
+            else if(rd_row_cnt == 4'd15)
+                rd_addr <= rd_addr + 8'd17;    
+            else
+                rd_addr <= rd_addr + 8'd16;     
+        end 
+    end
+
+    reg [FRAME_CNT_WIDTH - 1'b1 :0] rd_frame_cnt=1;
+
+    always @(posedge ddr_clk)
+    begin
+        if(~ddr_rstn)
+            rd_img <= 1'b0;
+        else if(ddr_rdone && doing && (x_cnt + 13'd256 > H_NUM - 13'd1) && (y_cnt >= H_NUM - 13'd1) && (cnt == 4'd15)) 
+            rd_img <= 1'b1;
+        else if (ddr_wdone && doing_w)
+            rd_img <= 1'b0;
+        else 
+            rd_img <= rd_img;
+    end
+
+    always @(posedge ddr_clk)
+    begin 
+        if(~ddr_rstn)
+            rd_frame_cnt <= 'd0;
+        else if(ddr_wdone & doing_w & rd_img)
+            rd_frame_cnt <= rd_frame_cnt + 1'b1;
+        else
+            rd_frame_cnt <= rd_frame_cnt;
+    end 
+
+    reg [LINE_ADDR_WIDTH - 1'b1 :0] rd_cnt;
+    reg ddr_wdata_req_1d;
+
+    always @(posedge ddr_clk) begin
+        ddr_wdata_req_1d <= ddr_wdata_req;
+    end
+
+    always @(posedge ddr_clk) begin
+        if(~ddr_rstn) begin
+            rd_cnt <= {LINE_ADDR_WIDTH{1'b0}};
+            doing_w <= 1'b0;
+        end
+        else if(~ddr_wdata_req_1d & ddr_wdata_req)
+        begin
+            rd_cnt <= rd_cnt;
+            doing_w <= 1'b1;
+        end
+        else if(ddr_wdone & doing_w)
+        begin
+            rd_cnt <= rd_cnt + 22'd128 * (rd_len + 22'd1);
+            doing_w <= 1'b0;
+        end
+        else begin
+            rd_cnt <= rd_cnt;
+            doing_w <= doing_w;
+        end
+    end
+    assign ddr_wreq = ddr_wr_req;
+    assign ddr_waddr = {rd_frame_cnt[0],ddr_part_rd,rd_cnt} + ADDR_OFFSET;
+    assign ddr_wr_len = (rd_len + 16'b1) * 16'd16;
+    assign ddr_line = doing && (x_cnt == H_NUM - 13'd1);
 endmodule

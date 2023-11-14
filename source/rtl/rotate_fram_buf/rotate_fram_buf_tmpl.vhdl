@@ -8,8 +8,8 @@
 
 COMPONENT rotate_fram_buf
   PORT (
-    wr_data : IN STD_LOGIC_VECTOR(15 DOWNTO 0);
-    wr_addr : IN STD_LOGIC_VECTOR(11 DOWNTO 0);
+    wr_data : IN STD_LOGIC_VECTOR(255 DOWNTO 0);
+    wr_addr : IN STD_LOGIC_VECTOR(7 DOWNTO 0);
     wr_en : IN STD_LOGIC;
     wr_clk : IN STD_LOGIC;
     wr_rst : IN STD_LOGIC;
