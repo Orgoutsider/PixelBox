@@ -38,12 +38,14 @@
 
 
 
-
 E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/ethernet/rtl/icmp.v|E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/ethernet/rtl/check_sum.vh|
 
 
 E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/ethernet/rtl/ip_rx.v|E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/ethernet/rtl/check_sum.vh|
 E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/ethernet/rtl/ip_tx.v|E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/ethernet/rtl/check_sum.vh|
+
+
+
 
 
 
@@ -156,6 +158,8 @@ E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/rom_square/rtl/ipml_spram_
 
 
 E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/rom_sqrt/rtl/ipml_spram_v1_5_rom_sqrt.v|E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/rom_sqrt/rtl/rom_sqrt_init_param.v|
+
+
 
 
 

@@ -1351,9 +1351,31 @@ dev_map
 pnr 
 report_timing 
 gen_bit_stream -master_configuration_clock_frequency {40M} 
+<<<<<<< HEAD
 add_design E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rotate_fram_buf/rotate_fram_buf.idf
 remove_design -force E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/ethernet/ipcore/ref_clock/ref_clock.idf
 remove_design -force -verilog "E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/ethernet/rtl/udp_rx_bac.v"
+=======
+set_arch -family Logos -device PGL50H -speedgrade -6 -package FBG484
+compile -top_module hdmi_ddr_ov5640_top
+add_design C:/Users/Kang/Desktop/ovMERGES/newpixel/pixel-box/ipcore/Distributed_FIFO/Distributed_FIFO.idf
+remove_design C:/Users/Kang/Desktop/ovMERGES/newpixel/pixel-box/ipcore/Distributed_FIFO/Distributed_FIFO.idf
+add_design C:/Users/Kang/Desktop/ovMERGES/newpixel/pixel-box/source/rtl/mat_fifo/mat_fifo.idf
+add_design "C:/Users/Kang/Desktop/ovMERGES/newpixel/pixel-box/source/rtl/sub_median_filter_module.v"
+add_design "C:/Users/Kang/Desktop/ovMERGES/newpixel/pixel-box/source/rtl/up_midean_filter.v"
+set_arch -family Logos -device PGL50H -speedgrade -6 -package FBG484
+compile -top_module hdmi_ddr_ov5640_top
+add_design "C:/Users/Kang/Desktop/ovMERGES/newpixel/pixel-box/source/rtl/RGB_565TO888.v"
+add_design "C:/Users/Kang/Desktop/ovMERGES/newpixel/pixel-box/source/rtl/RGB_888TO565.v"
+set_arch -family Logos -device PGL50H -speedgrade -6 -package FBG484
+compile -top_module hdmi_ddr_ov5640_top
+set_arch -family Logos -device PGL50H -speedgrade -6 -package FBG484
+compile -top_module hdmi_ddr_ov5640_top
+synthesize -ads -selected_syn_tool_opt 2 
+dev_map 
+pnr 
+remove_design -verilog "C:/Users/Kang/Desktop/ovMERGES/newpixel/pixel-box/source/rtl/median_filter.v"
+>>>>>>> bce462e73c0bb4e0b214739023f5a875a96e7423
 set_arch -family Logos -device PGL50H -speedgrade -6 -package FBG484
 compile -top_module hdmi_ddr_ov5640_top
 synthesize -ads -selected_syn_tool_opt 2 
@@ -1361,11 +1383,14 @@ dev_map
 pnr 
 report_timing 
 gen_bit_stream -master_configuration_clock_frequency {40M} 
+<<<<<<< HEAD
 add_design "E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/coor_trans.v"
 add_design "E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/coor_trans_forward.v"
 add_design "E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/coor_trans_reverse.v"
 add_design "E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/cos_table.v"
 add_design "E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/sin_table.v"
+=======
+>>>>>>> bce462e73c0bb4e0b214739023f5a875a96e7423
 set_arch -family Logos -device PGL50H -speedgrade -6 -package FBG484
 compile -top_module hdmi_ddr_ov5640_top
 synthesize -ads -selected_syn_tool_opt 2 
@@ -1373,11 +1398,57 @@ dev_map
 pnr 
 report_timing 
 gen_bit_stream -master_configuration_clock_frequency {40M} 
+<<<<<<< HEAD
 remove_design -force E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rotate_fram_buf/rotate_fram_buf.idf
+=======
+dev_map 
+pnr 
+report_timing 
+gen_bit_stream -master_configuration_clock_frequency {40M} 
+dev_map 
+pnr 
+report_timing 
+gen_bit_stream -master_configuration_clock_frequency {40M} 
+remove_fic "C:/Users/Kang/Desktop/ovMERGES/newpixel/pixel-box/source/pango_prj/hdmi_ddr_ov5640_top_syn.fic"
+add_fic "C:/Users/Kang/Desktop/ovMERGES/newpixel/pixel-box/synthesize/hdmi_ddr_ov5640_top_syn.fic"
+dev_map 
+pnr 
+dev_map 
+pnr 
+report_timing 
+gen_bit_stream -master_configuration_clock_frequency {40M} 
+dev_map 
+pnr 
+report_timing 
+gen_bit_stream -master_configuration_clock_frequency {40M} 
+>>>>>>> bce462e73c0bb4e0b214739023f5a875a96e7423
 set_arch -family Logos -device PGL50H -speedgrade -6 -package FBG484
 compile -top_module hdmi_ddr_ov5640_top
 synthesize -ads -selected_syn_tool_opt 2 
 dev_map 
+<<<<<<< HEAD
+=======
+pnr 
+report_timing 
+gen_bit_stream -master_configuration_clock_frequency {40M} 
+set_arch -family Logos -device PGL50H -speedgrade -6 -package FBG484
+compile -top_module hdmi_ddr_ov5640_top
+synthesize -ads -selected_syn_tool_opt 2 
+synthesize -ads -selected_syn_tool_opt 2 
+dev_map 
+pnr 
+report_timing 
+gen_bit_stream -master_configuration_clock_frequency {40M} 
+set_arch -family Logos -device PGL50H -speedgrade -6 -package FBG484
+compile -top_module hdmi_ddr_ov5640_top
+set_arch -family Logos -device PGL50H -speedgrade -6 -package FBG484
+compile -top_module hdmi_ddr_ov5640_top
+synthesize -ads -selected_syn_tool_opt 2 
+dev_map 
+pnr 
+report_timing 
+gen_bit_stream -master_configuration_clock_frequency {40M} 
+>>>>>>> bce462e73c0bb4e0b214739023f5a875a96e7423
 set_arch -family Logos -device PGL50H -speedgrade -6 -package FBG484
 compile -top_module hdmi_ddr_ov5640_top
 synthesize -ads -selected_syn_tool_opt 2 
@@ -1396,24 +1467,11 @@ dev_map
 pnr 
 report_timing 
 gen_bit_stream -master_configuration_clock_frequency {40M} 
-remove_fic "E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/pango_prj/hdmi_ddr_ov5640_top_syn.fic"
-add_design "E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/rotate_buf.v"
-add_design "E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/rotate_fram_buf/rotate_fram_buf.idf"
+<<<<<<< HEAD
+=======
 set_arch -family Logos -device PGL50H -speedgrade -6 -package FBG484
 compile -top_module hdmi_ddr_ov5640_top
 synthesize -ads -selected_syn_tool_opt 2 
-dev_map 
-pnr 
-dev_map 
-pnr 
-add_fic "E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/synthesize/hdmi_ddr_ov5640_top_syn.fic"
-dev_map 
-pnr 
-report_timing 
-gen_bit_stream -master_configuration_clock_frequency {40M} 
-dev_map 
-pnr 
-pnr 
 dev_map 
 pnr 
 report_timing 
@@ -1421,6 +1479,64 @@ gen_bit_stream -master_configuration_clock_frequency {40M}
 set_arch -family Logos -device PGL50H -speedgrade -6 -package FBG484
 compile -top_module hdmi_ddr_ov5640_top
 synthesize -ads -selected_syn_tool_opt 2 
+dev_map 
+pnr 
+report_timing 
+gen_bit_stream -master_configuration_clock_frequency {40M} 
+>>>>>>> bce462e73c0bb4e0b214739023f5a875a96e7423
+set_arch -family Logos -device PGL50H -speedgrade -6 -package FBG484
+compile -top_module hdmi_ddr_ov5640_top
+add_design "E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/mat_fifo/mat_fifo.idf"
+set_arch -family Logos -device PGL50H -speedgrade -6 -package FBG484
+compile -top_module hdmi_ddr_ov5640_top
+synthesize -dir {} -ads -selected_syn_tool_opt 2 
+dev_map 
+pnr 
+report_timing 
+gen_bit_stream -master_configuration_clock_frequency {40M} 
+remove_design -force E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/mat_fifo/mat_fifo.idf
+add_design E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/mat_fifo/mat_fifo.idf
+set_arch -family Logos -device PGL50H -speedgrade -6 -package FBG484
+compile -top_module hdmi_ddr_ov5640_top
+synthesize -dir {} -ads -selected_syn_tool_opt 2 
+dev_map 
+pnr 
+report_timing 
+gen_bit_stream -master_configuration_clock_frequency {40M} 
+set_arch -family Logos -device PGL50H -speedgrade -6 -package FBG484
+compile -top_module hdmi_ddr_ov5640_top
+synthesize -dir {} -ads -selected_syn_tool_opt 2 
+dev_map 
+pnr 
+report_timing 
+gen_bit_stream -master_configuration_clock_frequency {40M} 
+dev_map 
+pnr 
+report_timing 
+gen_bit_stream -master_configuration_clock_frequency {40M} 
+set_arch -family Logos -device PGL50H -speedgrade -6 -package FBG484
+compile -top_module hdmi_ddr_ov5640_top
+synthesize -dir {} -ads -selected_syn_tool_opt 2 
+set_arch -family Logos -device PGL50H -speedgrade -6 -package FBG484
+compile -top_module hdmi_ddr_ov5640_top
+synthesize -dir {} -ads -selected_syn_tool_opt 2 
+dev_map 
+pnr 
+report_timing 
+gen_bit_stream -master_configuration_clock_frequency {40M} 
+set_arch -family Logos -device PGL50H -speedgrade -6 -package FBG484
+compile -top_module hdmi_ddr_ov5640_top
+synthesize -dir {} -ads -selected_syn_tool_opt 2 
+dev_map 
+pnr 
+report_timing 
+gen_bit_stream -master_configuration_clock_frequency {40M} 
+set_arch -family Logos -device PGL50H -speedgrade -6 -package FBG484
+compile -top_module hdmi_ddr_ov5640_top
+set_arch -family Logos -device PGL50H -speedgrade -6 -package FBG484
+compile -top_module hdmi_ddr_ov5640_top
+synthesize -dir {} -ads -selected_syn_tool_opt 2 
+dev_map 
 dev_map 
 dev_map 
 pnr 
