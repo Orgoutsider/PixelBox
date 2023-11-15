@@ -1542,3 +1542,25 @@ dev_map
 pnr 
 report_timing 
 gen_bit_stream -master_configuration_clock_frequency {40M} 
+add_design "E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/source/bilinterpoaltion_test/image_scaler.v"
+remove_design -verilog "E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/source/bilinterpoaltion_test/image_scaler.v"
+add_design "E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/source/source/bilinterpoaltion_test/image_scaler.v"
+add_design "E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/ipcore/image_resize_ram/image_resize_ram.idf"
+set_arch -family Logos -device PGL50H -speedgrade -6 -package FBG484
+compile -top_module hdmi_ddr_ov5640_top
+synthesize -dir {} -ads -selected_syn_tool_opt 2 
+dev_map 
+pnr 
+report_timing 
+gen_bit_stream -master_configuration_clock_frequency {40M} 
+set_arch -family Logos -device PGL50H -speedgrade -6 -package FBG484
+compile -top_module hdmi_ddr_ov5640_top
+set_arch -family Logos -device PGL50H -speedgrade -6 -package FBG484
+compile -top_module hdmi_ddr_ov5640_top
+set_arch -family Logos -device PGL50H -speedgrade -6 -package FBG484
+compile -top_module hdmi_ddr_ov5640_top
+synthesize -dir {} -ads -selected_syn_tool_opt 2 
+dev_map 
+pnr 
+report_timing 
+gen_bit_stream -master_configuration_clock_frequency {40M} 
