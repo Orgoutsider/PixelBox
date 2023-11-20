@@ -52,8 +52,11 @@ end
 %--                     曲线展示
 %--------------------------------------------------------------------------
 hold on
-plot(r);        %原曲线
-plot(s_qrt);    %开根
-plot(s_quare);  %开方
-legend('原曲线','开根曲线','开方曲线');
+plot(r,'LineWidth',1);        %原曲线
+plot(s_qrt,'LineWidth',1);    %开根
+plot(s_quare,'LineWidth',1);  %开方
+xlim([0,255])
+ylim([0,255])
+grid on
+legend('原曲线','开根曲线','平方曲线');
 hold off
