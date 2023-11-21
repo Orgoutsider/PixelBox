@@ -6,7 +6,7 @@ module wr_cell #(
     parameter                     DQ_WIDTH        = 12'd32,
     parameter                     LEN_WIDTH       = 12'd16,
     parameter                     PIX_WIDTH       = 12'd24,
-    parameter                     LINE_ADDR_WIDTH = 16'd18,
+    parameter                     LINE_ADDR_WIDTH = 16'd19,
     parameter                     FRAME_CNT_WIDTH = 16'd8
 ) (
     input                         ddr_clk,
@@ -26,14 +26,17 @@ module wr_cell #(
     output [8*DQ_WIDTH- 1'b1 : 0] ddr_wdata,
     input                         ddr_wdata_req,
     output                        frame_wirq,
-    input                         ddr_part 
-    //ddr·ÖÇø
+    input  [1:0]                   ddr_part,
+    output reg  [5:0]             ddr_wreq_cnt,
+    output                        ddr_wreq_rst 
+    //ddrï¿½ï¿½ï¿½ï¿½
    );
     localparam RAM_WIDTH      = 16'd32;
     localparam DDR_DATA_WIDTH = DQ_WIDTH * 8;
     localparam WR_LINE_NUM    = H_NUM*PIX_WIDTH/RAM_WIDTH;
     localparam RD_LINE_NUM    = WR_LINE_NUM*RAM_WIDTH/DDR_DATA_WIDTH; // 0x28
-    localparam DDR_ADDR_OFFSET= RD_LINE_NUM*DDR_DATA_WIDTH/DQ_WIDTH;
+    localparam DDR_ADDR_OFFSET= RD_LINE_NUM*DDR_DATA_WIDTH/DQ_WIDTH; // 0x140
+    localparam CNT_MAX        = 16'd400 / RD_LINE_NUM;
 
     reg       wr_fsync_1d;
     reg       wr_en_1d;
@@ -53,6 +56,8 @@ module wr_cell #(
         
         if(~wr_fsync_1d & wr_fsync && ddr_rstn_2d) 
             wr_enable <= 1'b1;
+        else if (ddr_wreq_cnt >= CNT_MAX)
+            wr_enable <= 1'b0;
         else 
             wr_enable <= wr_enable;
     end
@@ -69,7 +74,10 @@ module wr_cell #(
         rd_fsync_3d <= rd_fsync_2d;
     end 
     
-    assign rd_rst = (~rd_fsync_3d && rd_fsync_2d) | (~ddr_rstn);
+    // assign rd_rst = (~rd_fsync_3d && rd_fsync_2d) || (~ddr_rstn) || (rd_cnt >= RD_CNT_MAX);
+    assign rd_rst = (~rd_fsync_3d && rd_fsync_2d) || (~ddr_rstn);
+    // ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ú½ï¿½ï¿½ÐµÄ¶ï¿½È¡/ï¿½ï¿½ï¿½ï¿½
+    assign ddr_wreq_rst = rd_rst & ~doing & ~ddr_wr_req;
 
     //===========================================================================
     // wr_addr control
@@ -78,7 +86,7 @@ module wr_cell #(
     reg [31 : 0]  write_data;
     reg [PIX_WIDTH- 1'b1 : 0]  wr_data_1d;
     reg                        write_en;
-    reg [11:0]                 wr_addr=0;
+    reg [12:0]                 wr_addr=0;
     
     generate
         if(PIX_WIDTH == 6'd24)
@@ -125,11 +133,11 @@ module wr_cell #(
     always @(posedge wr_clk)
     begin
         if(wr_rst)
-            wr_addr <= 12'd0;
+            wr_addr <= 13'd0;
         else
         begin
             if(write_en & wr_enable)
-                wr_addr <= wr_addr + 12'd1;
+                wr_addr <= wr_addr + 13'd1;
             else
                 wr_addr <= wr_addr;
         end 
@@ -164,17 +172,17 @@ module wr_cell #(
             rd_pulse <= 1'b0; 
     end 
     
-    reg  [8:0] rd_addr=0;
+    reg  [9:0] rd_addr=0;
     wire [255:0] rd_wdata;
     reg  [255:0] rd_wdata_1d=0;
     wr_fram_buf wr_fram_buf (
         .wr_data            (  write_data     ),// input [31:0]               
-        .wr_addr            (  wr_addr        ),// input [11:0]               
+        .wr_addr            (  wr_addr        ),// input [12:0]            
         .wr_en              (  write_en       ),// input                      
         .wr_clk             (  wr_clk         ),// input                      
         .wr_rst             (  ~ddr_rstn_2d   ),// input    
                           
-        .rd_addr            (  rd_addr        ),// input [8:0]                
+        .rd_addr            (  rd_addr        ),// input [9:0]           
         .rd_data            (  rd_wdata       ),// output [255:0]             
         .rd_clk             (  ddr_clk        ),// input                      
         .rd_rst             (  ~ddr_rstn      ) // input                      
@@ -194,12 +202,18 @@ module wr_cell #(
     reg ddr_wr_req=0;
     reg ddr_wr_req_1d;
     assign ddr_wreq =ddr_wr_req;
+    reg ddr_wdone_1d;
     
     always @(posedge ddr_clk)
     begin 
         ddr_wr_req_1d <= ddr_wr_req;
+        ddr_wdone_1d <= (ddr_wdone && doing);
         
-        if(rd_trig)
+        if(rd_rst)
+            ddr_wr_req <= 1'b0;
+        else if(rd_trig && (ddr_wreq_cnt == 6'b0))
+            ddr_wr_req <= 1'b1;
+        else if (ddr_wdone_1d && (ddr_wreq_cnt != 6'b0))
             ddr_wr_req <= 1'b1;
         else if(ddr_wdata_req)
             ddr_wr_req <= 1'b0;
@@ -233,6 +247,18 @@ module wr_cell #(
         else
             line_flag <= line_flag;
     end 
+
+    // ï¿½Ô¶ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ÅºÅ¼ï¿½ï¿½ï¿½
+    always @(posedge ddr_clk) begin
+        if(rd_rst)
+            ddr_wreq_cnt <= 6'b0;
+        else if (rd_trig && ddr_wdone && doing)
+            ddr_wreq_cnt <= ddr_wreq_cnt;
+        else if (rd_trig && (ddr_wreq_cnt != 6'b111111))
+            ddr_wreq_cnt <= ddr_wreq_cnt + 1'b1;
+        else if (ddr_wdone && doing)
+            ddr_wreq_cnt <= ddr_wreq_cnt - 1'b1;
+    end
     
     always @(posedge ddr_clk)
     begin 
@@ -242,8 +268,10 @@ module wr_cell #(
             rd_addr <= rd_addr + 1'b1;
         else if(ddr_wdata_req)
             rd_addr <= rd_addr + 1'b1;
-        else if(rd_trig & line_flag)
+        else if(((rd_trig && (ddr_wreq_cnt == 6'b0)) || (ddr_wdone_1d && (ddr_wreq_cnt != 6'b0))) && line_flag)
             rd_addr <= rd_addr - 1'b1;
+        else if (ddr_wdone & doing & ~rd_addr[0])
+            rd_addr <= rd_addr + 1'b1;
         else
             rd_addr <= rd_addr;
     end 
@@ -261,7 +289,7 @@ module wr_cell #(
     
     reg [LINE_ADDR_WIDTH - 1'b1 :0] rd_cnt;
     reg doing;
-     //  Ê¹µÃrd_cntÔÚÊÊµ±µÄÊ±ºòÀÛ¼Ó 
+     //  Ê¹ï¿½ï¿½rd_cntï¿½ï¿½ï¿½Êµï¿½ï¿½ï¿½Ê±ï¿½ï¿½ï¿½Û¼ï¿½ 
     always @(posedge ddr_clk)
     begin 
         if(rd_rst) begin

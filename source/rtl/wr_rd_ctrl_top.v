@@ -36,6 +36,7 @@ module wr_rd_ctrl_top # (
     input  [MEM_DQ_WIDTH*8-1:0]  wr_ctrl_data,
     output                       wr_data_re1  ,
     output                       wr_data_re2  ,
+    output                       wr_data_re3  ,
     
     input                        rd_cmd_en   ,
     input  [CTRL_ADDR_WIDTH-1:0] rd_cmd_addr ,
@@ -47,6 +48,7 @@ module wr_rd_ctrl_top # (
     output [MEM_DQ_WIDTH*8-1:0]  read_rdata  /* synthesis PAP_MARK_DEBUG="true" */,    
     output                       read_en1     /* synthesis PAP_MARK_DEBUG="true" */,    
     output                       read_en2     /* synthesis PAP_MARK_DEBUG="true" */,    
+    output                       read_en3     /* synthesis PAP_MARK_DEBUG="true" */,    
                                       
     // write channel                            
     output [CTRL_ADDR_WIDTH-1:0] axi_awaddr  ,  
@@ -82,8 +84,16 @@ module wr_rd_ctrl_top # (
     input                        axi_rlast   ,
     input  [3:0]                 axi_rid     ,
     input  [1:0]                 axi_rresp   ,
+    output                       wr_opera_en_1,
     output                       wr_opera_en_2,
-    output                       rd_opera_en_2
+    output                       rd_opera_en_1,
+    output                       rd_opera_en_2,
+    input                        wr_cmd_en_1,
+    input                        wr_cmd_en_2,
+    input                        wr_cmd_en_3,
+    input                        wr_rst_1,
+    input                        wr_rst_2,
+    input                        wr_rst_3
 );
 
     wire                        wr_en      /* synthesis PAP_MARK_DEBUG="true" */;            
@@ -102,6 +112,13 @@ module wr_rd_ctrl_top # (
     wire [3:0]                  rd_len     /* synthesis PAP_MARK_DEBUG="true" */;            
     wire                        rd_done_p  /* synthesis PAP_MARK_DEBUG="true" */; 
     wire                        rd_cmd_en_p;
+    wire [1:0]                  wr_port;
+    wire [1:0]                  rd_port;
+
+    assign wr_opera_en_1 = (wr_port == 2'd0);
+    assign wr_opera_en_2 = (wr_port == 2'd1);
+    assign rd_opera_en_1 = (rd_port == 2'd0);
+    assign rd_opera_en_2 = (rd_port == 2'd1);
 
     wr_cmd_trans#(
         .CTRL_ADDR_WIDTH  (  CTRL_ADDR_WIDTH  ),//parameter                    CTRL_ADDR_WIDTH      = 28,
@@ -129,7 +146,7 @@ module wr_rd_ctrl_top # (
         .wr_ready         (  axi_wready         ),//input                            wr_ready,
         .wr_done          (  wr_done          ),//input                            wr_done,
                                               
-        .rd_cmd_en        (  rd_cmd_en  | rd_cmd_en_p     ),//input                            rd_cmd_en,
+        .rd_cmd_en        (  rd_cmd_en | rd_cmd_en_p     ),//input                            rd_cmd_en,
         .rd_cmd_addr      (  rd_cmd_addr      ),//input  [CTRL_ADDR_WIDTH-1:0]     rd_cmd_addr,
         .rd_cmd_len       (  rd_cmd_len       ),//input  [31£º0]                   rd_cmd_len,
         .rd_cmd_ready     (  rd_cmd_ready     ),//output reg                       rd_cmd_ready,
@@ -157,11 +174,15 @@ module wr_rd_ctrl_top # (
         .wr_cmd_done      (  wr_done          ),//output reg                           wr_cmd_done      ,
         .wr_ready1         (  wr_data_re1         ),//output                               wr_ready         ,
         .wr_ready2         (  wr_data_re2         ),//output                               wr_ready         ,
+        .wr_ready3         (  wr_data_re3         ),//output                               wr_ready         ,
         .wr_data_en       (  wr_data_en       ),//input                                wr_data_en       ,
         .wr_data          (  wr_data          ),//input      [MEM_DQ_WIDTH*8-1:0]      wr_data          ,
         .wr_bac           (  wr_bac           ),//output                               wr_bac           ,
         .wr_done          (  wr_cmd_done    ), // input
-                                              
+        .wr_en1           (wr_cmd_en_1), //input
+        .wr_en2           (wr_cmd_en_2), //input
+        .wr_en3           (wr_cmd_en_3), //input
+
         .axi_awaddr       (  axi_awaddr       ),//output reg [CTRL_ADDR_WIDTH-1:0]     axi_awaddr       ,  
         .axi_awid         (  axi_awid         ),//output reg [3:0]                     axi_awid         ,
         .axi_awlen        (  axi_awlen        ),//output reg [3:0]                     axi_awlen        ,
@@ -180,7 +201,10 @@ module wr_rd_ctrl_top # (
         .axi_bvalid       (  axi_bvalid       ),//input                                axi_bvalid       , // Write response valid. This signal indicates that the channel is signaling a valid write response.
         .axi_bready       (  axi_bready       ),//output reg                           axi_bready       , // Response ready. This signal indicates that the master can accept a write response.
         .test_wr_state    (                   ),//output reg [2:0]                     test_wr_state
-        .flag             (wr_opera_en_2)
+        .wr_port          (wr_port), //output
+        .wr_rst_1         (wr_rst_1), // input
+        .wr_rst_2         (wr_rst_2),
+        .wr_rst_3         (wr_rst_3)
     );
 
     rd_ctrl #(
@@ -200,6 +224,7 @@ module wr_rd_ctrl_top # (
         .read_rdata       (  read_rdata       ),//output   [MEM_DQ_WIDTH*8-1:0]        read_rdata      ,
         .read_rdata_en1    (  read_en1          ),//output                               read_en         ,
         .read_rdata_en2    (  read_en2          ),//output                               read_en         ,
+        .read_rdata_en3    (  read_en3          ),//output                               read_en         ,
         .read_done         (  rd_cmd_done     ), //input                               read_done       ,
         .read_cmd_en_p     (  rd_cmd_en_p ),                // output                               read_cmd_en_p,
 
@@ -217,7 +242,7 @@ module wr_rd_ctrl_top # (
         .axi_rlast        (  axi_rlast        ),//input                                axi_rlast       ,
         .axi_rid          (  axi_rid          ),//input   [3:0]                        axi_rid         ,
         .axi_rresp        (  axi_rresp        ), //input   [1:0]                        axi_rresp 
-        .flag             (  rd_opera_en_2)      
+        .read_port        (  rd_port)      
     );
 
 endmodule

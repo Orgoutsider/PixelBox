@@ -30,7 +30,8 @@ module cmos_8_16bit(
 
     output                 pixel_clk    ,
  	output	reg			   de_o         ,
-	output  reg [15:0]	   pdata_o
+	output  reg [15:0]	   pdata_o      ,
+    output  reg            vs_o
 ); 
 reg			de_out1          ;
 reg [15:0]	pdata_out1       ;
@@ -42,8 +43,10 @@ reg         vs_i_reg        ;
 reg         enble           ;
 reg [7:0] pdata_i_reg;
 reg de_i_r,de_i_r1;
-reg			de_out3          ;
-reg [15:0]	pdata_out3       ;  
+// reg			de_out3          ;
+// reg [15:0]	pdata_out3       ;
+reg         vs_out1         ;  
+reg         vs_out2         ;  
 always @(posedge pclk)begin
        vs_i_reg <= vs_i ;
 end
@@ -122,12 +125,14 @@ GTP_IOCLKDIV #(
  
     always@(posedge pixel_clk)begin
         de_out2<=de_out1;
-        de_out3<=de_out2;
-        de_o   <=de_out3;
+        de_o<=de_out2;
     end
     always@(posedge pixel_clk)begin
         pdata_out2<=pdata_out1;
-        pdata_out3<=pdata_out2;
-        pdata_o   <=pdata_out3;
+        pdata_o<=pdata_out2;
+    end
+    always@(posedge pixel_clk)begin
+        vs_out1 <= vs_i;
+        vs_o <= vs_out1;
     end
 endmodule
