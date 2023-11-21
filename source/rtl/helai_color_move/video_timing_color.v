@@ -29,92 +29,92 @@ module video_timing_color #(
 
 //1920x1080 148.5Mhz
 `ifdef  COLOR_VIDEO_1920_1080
-localparam  H_ACTIVE 		= 1920;// è¡Œæ•°æ®æœ‰æ•ˆæ—¶é—´
-localparam  H_FRONT_PORCH 	= 88;  // è¡Œæ¶ˆéšå‰è‚©æ—¶é—´
-localparam  H_SYNC_TIME 		= 44;  // è¡ŒåŒæ­¥ä¿¡å·æ—¶é—´
-localparam  H_BACK_PORCH 	= 148; // è¡Œæ¶ˆéšåŽè‚©æ—¶é—´ 
-localparam  H_POLARITY       = 1;   // è¡ŒåŒæ­¥æžæ€§                                   
-localparam  V_ACTIVE 		= 1080;// åˆ—æ•°æ®æœ‰æ•ˆæ—¶é—´
-localparam  V_FRONT_PORCH 	= 4;   // åˆ—æ¶ˆéšå‰è‚©æ—¶é—´
-localparam  V_SYNC_TIME  	= 5;   // åˆ—åŒæ­¥ä¿¡å·æ—¶é—´
-localparam  V_BACK_PORCH 	= 36;  // åˆ—æ¶ˆéšåŽè‚©æ—¶é—´
-localparam  V_POLARITY       = 1;   // åœºåŒæ­¥æžæ€§
+localparam  H_ACTIVE 		= 1920;// ÐÐÊý¾ÝÓÐÐ§Ê±¼ä
+localparam  H_FRONT_PORCH 	= 88;  // ÐÐÏûÒþÇ°¼çÊ±¼ä
+localparam  H_SYNC_TIME 		= 44;  // ÐÐÍ¬²½ÐÅºÅÊ±¼ä
+localparam  H_BACK_PORCH 	= 148; // ÐÐÏûÒþºó¼çÊ±¼ä 
+localparam  H_POLARITY       = 1;   // ÐÐÍ¬²½¼«ÐÔ                                   
+localparam  V_ACTIVE 		= 1080;// ÁÐÊý¾ÝÓÐÐ§Ê±¼ä
+localparam  V_FRONT_PORCH 	= 4;   // ÁÐÏûÒþÇ°¼çÊ±¼ä
+localparam  V_SYNC_TIME  	= 5;   // ÁÐÍ¬²½ÐÅºÅÊ±¼ä
+localparam  V_BACK_PORCH 	= 36;  // ÁÐÏûÒþºó¼çÊ±¼ä
+localparam  V_POLARITY       = 1;   // ³¡Í¬²½¼«ÐÔ
 `endif
 
 //1680x1050 119Mhz
 `ifdef  COLOR_VIDEO_1680_1050
-localparam  H_ACTIVE 		= 1680;// è¡Œæ•°æ®æœ‰æ•ˆæ—¶é—´
-localparam  H_FRONT_PORCH 	= 48;  // è¡Œæ¶ˆéšå‰è‚©æ—¶é—´
-localparam  H_SYNC_TIME 		= 32;  // è¡ŒåŒæ­¥ä¿¡å·æ—¶é—´
-localparam  H_BACK_PORCH 	= 80;  // è¡Œæ¶ˆéšåŽè‚©æ—¶é—´                                 
-localparam  V_ACTIVE 		= 1050;// åˆ—æ•°æ®æœ‰æ•ˆæ—¶é—´
-localparam  V_FRONT_PORCH 	= 3;   // åˆ—æ¶ˆéšå‰è‚©æ—¶é—´
-localparam  V_SYNC_TIME  	= 6;   // åˆ—åŒæ­¥ä¿¡å·æ—¶é—´
-localparam  V_BACK_PORCH 	= 21;  // åˆ—æ¶ˆéšåŽè‚©æ—¶é—´
+localparam  H_ACTIVE 		= 1680;// ÐÐÊý¾ÝÓÐÐ§Ê±¼ä
+localparam  H_FRONT_PORCH 	= 48;  // ÐÐÏûÒþÇ°¼çÊ±¼ä
+localparam  H_SYNC_TIME 		= 32;  // ÐÐÍ¬²½ÐÅºÅÊ±¼ä
+localparam  H_BACK_PORCH 	= 80;  // ÐÐÏûÒþºó¼çÊ±¼ä                                 
+localparam  V_ACTIVE 		= 1050;// ÁÐÊý¾ÝÓÐÐ§Ê±¼ä
+localparam  V_FRONT_PORCH 	= 3;   // ÁÐÏûÒþÇ°¼çÊ±¼ä
+localparam  V_SYNC_TIME  	= 6;   // ÁÐÍ¬²½ÐÅºÅÊ±¼ä
+localparam  V_BACK_PORCH 	= 21;  // ÁÐÏûÒþºó¼çÊ±¼ä
 `endif
 
 //1280x1024 108Mhz
 `ifdef  COLOR_VIDEO_1280_1024
-localparam  H_ACTIVE 		= 1280;// è¡Œæ•°æ®æœ‰æ•ˆæ—¶é—´
-localparam  H_FRONT_PORCH 	= 48;  // è¡Œæ¶ˆéšå‰è‚©æ—¶é—´
-localparam  H_SYNC_TIME 		= 112; // è¡ŒåŒæ­¥ä¿¡å·æ—¶é—´
-localparam  H_BACK_PORCH 	= 248; // è¡Œæ¶ˆéšåŽè‚©æ—¶é—´                                   
-localparam  V_ACTIVE 		= 1024;// åˆ—æ•°æ®æœ‰æ•ˆæ—¶é—´
-localparam  V_FRONT_PORCH 	= 1;   // åˆ—æ¶ˆéšå‰è‚©æ—¶é—´
-localparam  V_SYNC_TIME  	= 3;   // åˆ—åŒæ­¥ä¿¡å·æ—¶é—´
-localparam  V_BACK_PORCH 	= 38;  // åˆ—æ¶ˆéšåŽè‚©æ—¶é—´
+localparam  H_ACTIVE 		= 1280;// ÐÐÊý¾ÝÓÐÐ§Ê±¼ä
+localparam  H_FRONT_PORCH 	= 48;  // ÐÐÏûÒþÇ°¼çÊ±¼ä
+localparam  H_SYNC_TIME 		= 112; // ÐÐÍ¬²½ÐÅºÅÊ±¼ä
+localparam  H_BACK_PORCH 	= 248; // ÐÐÏûÒþºó¼çÊ±¼ä                                   
+localparam  V_ACTIVE 		= 1024;// ÁÐÊý¾ÝÓÐÐ§Ê±¼ä
+localparam  V_FRONT_PORCH 	= 1;   // ÁÐÏûÒþÇ°¼çÊ±¼ä
+localparam  V_SYNC_TIME  	= 3;   // ÁÐÍ¬²½ÐÅºÅÊ±¼ä
+localparam  V_BACK_PORCH 	= 38;  // ÁÐÏûÒþºó¼çÊ±¼ä
 `endif
 
 //1280X720 74.25MHZ
 `ifdef  COLOR_VIDEO_1280_720
-localparam  H_ACTIVE 		= 640;// è¡Œæ•°æ®æœ‰æ•ˆæ—¶é—´
-localparam  H_FRONT_PORCH 	= 110; // è¡Œæ¶ˆéšå‰è‚©æ—¶é—´
-localparam  H_SYNC_TIME 		= 40;  // è¡ŒåŒæ­¥ä¿¡å·æ—¶é—´
-localparam  H_BACK_PORCH 	= 220; // è¡Œæ¶ˆéšåŽè‚©æ—¶é—´    
-localparam  H_POLARITY       = 1;   // è¡ŒåŒæ­¥æžæ€§                                    
-localparam  V_ACTIVE 		= 720; // åˆ—æ•°æ®æœ‰æ•ˆæ—¶é—´
-localparam  V_FRONT_PORCH 	= 5;   // åˆ—æ¶ˆéšå‰è‚©æ—¶é—´
-localparam  V_SYNC_TIME  	= 5;   // åˆ—åŒæ­¥ä¿¡å·æ—¶é—´
-localparam  V_BACK_PORCH 	= 20;  // åˆ—æ¶ˆéšåŽè‚©æ—¶é—´
-localparam  V_POLARITY       = 1;   // åœºåŒæ­¥æžæ€§
+localparam  H_ACTIVE 		= 640;// ÐÐÊý¾ÝÓÐÐ§Ê±¼ä
+localparam  H_FRONT_PORCH 	= 110; // ÐÐÏûÒþÇ°¼çÊ±¼ä
+localparam  H_SYNC_TIME 		= 40;  // ÐÐÍ¬²½ÐÅºÅÊ±¼ä
+localparam  H_BACK_PORCH 	= 220; // ÐÐÏûÒþºó¼çÊ±¼ä    
+localparam  H_POLARITY       = 1;   // ÐÐÍ¬²½¼«ÐÔ                                    
+localparam  V_ACTIVE 		= 720; // ÁÐÊý¾ÝÓÐÐ§Ê±¼ä
+localparam  V_FRONT_PORCH 	= 5;   // ÁÐÏûÒþÇ°¼çÊ±¼ä
+localparam  V_SYNC_TIME  	= 5;   // ÁÐÍ¬²½ÐÅºÅÊ±¼ä
+localparam  V_BACK_PORCH 	= 20;  // ÁÐÏûÒþºó¼çÊ±¼ä
+localparam  V_POLARITY       = 1;   // ³¡Í¬²½¼«ÐÔ
 `endif
 
 //1024x768 65Mhz
 `ifdef  COLOR_VIDEO_1024_768
-localparam  H_ACTIVE 		= 1024;// è¡Œæ•°æ®æœ‰æ•ˆæ—¶é—´
-localparam  H_FRONT_PORCH 	= 24;  // è¡Œæ¶ˆéšå‰è‚©æ—¶é—´
-localparam  H_SYNC_TIME 		= 136; // è¡ŒåŒæ­¥ä¿¡å·æ—¶é—´
-localparam  H_BACK_PORCH 	= 160; // è¡Œæ¶ˆéšåŽè‚©æ—¶é—´                                       
-localparam  V_ACTIVE 		= 768; // åˆ—æ•°æ®æœ‰æ•ˆæ—¶é—´
-localparam  V_FRONT_PORCH 	= 3;   // åˆ—æ¶ˆéšå‰è‚©æ—¶é—´
-localparam  V_SYNC_TIME  	= 6;   // åˆ—åŒæ­¥ä¿¡å·æ—¶é—´
-localparam  V_BACK_PORCH 	= 29;  // åˆ—æ¶ˆéšåŽè‚©æ—¶é—´
+localparam  H_ACTIVE 		= 1024;// ÐÐÊý¾ÝÓÐÐ§Ê±¼ä
+localparam  H_FRONT_PORCH 	= 24;  // ÐÐÏûÒþÇ°¼çÊ±¼ä
+localparam  H_SYNC_TIME 		= 136; // ÐÐÍ¬²½ÐÅºÅÊ±¼ä
+localparam  H_BACK_PORCH 	= 160; // ÐÐÏûÒþºó¼çÊ±¼ä                                       
+localparam  V_ACTIVE 		= 768; // ÁÐÊý¾ÝÓÐÐ§Ê±¼ä
+localparam  V_FRONT_PORCH 	= 3;   // ÁÐÏûÒþÇ°¼çÊ±¼ä
+localparam  V_SYNC_TIME  	= 6;   // ÁÐÍ¬²½ÐÅºÅÊ±¼ä
+localparam  V_BACK_PORCH 	= 29;  // ÁÐÏûÒþºó¼çÊ±¼ä
 `endif
 
 //800x600 40Mhz
 `ifdef  COLOR_VIDEO_800_600
-localparam  H_ACTIVE 		= 800;// è¡Œæ•°æ®æœ‰æ•ˆæ—¶é—´
-localparam  H_FRONT_PORCH 	= 40 ;// è¡Œæ¶ˆéšå‰è‚©æ—¶é—´ 
-localparam  H_SYNC_TIME 		= 128;// è¡ŒåŒæ­¥ä¿¡å·æ—¶é—´
-localparam  H_BACK_PORCH 	= 88 ;// è¡Œæ¶ˆéšåŽè‚©æ—¶é—´                                       
-localparam  V_ACTIVE 		= 600;// åˆ—æ•°æ®æœ‰æ•ˆæ—¶é—´
-localparam  V_FRONT_PORCH 	= 1  ;// åˆ—æ¶ˆéšå‰è‚©æ—¶é—´  
-localparam  V_SYNC_TIME  	= 4  ;// åˆ—åŒæ­¥ä¿¡å·æ—¶é—´  
-localparam  V_BACK_PORCH 	= 23 ;// åˆ—æ¶ˆéšåŽè‚©æ—¶é—´ 
+localparam  H_ACTIVE 		= 800;// ÐÐÊý¾ÝÓÐÐ§Ê±¼ä
+localparam  H_FRONT_PORCH 	= 40 ;// ÐÐÏûÒþÇ°¼çÊ±¼ä 
+localparam  H_SYNC_TIME 		= 128;// ÐÐÍ¬²½ÐÅºÅÊ±¼ä
+localparam  H_BACK_PORCH 	= 88 ;// ÐÐÏûÒþºó¼çÊ±¼ä                                       
+localparam  V_ACTIVE 		= 600;// ÁÐÊý¾ÝÓÐÐ§Ê±¼ä
+localparam  V_FRONT_PORCH 	= 1  ;// ÁÐÏûÒþÇ°¼çÊ±¼ä  
+localparam  V_SYNC_TIME  	= 4  ;// ÁÐÍ¬²½ÐÅºÅÊ±¼ä  
+localparam  V_BACK_PORCH 	= 23 ;// ÁÐÏûÒþºó¼çÊ±¼ä 
 `endif
 
 //640x480 25.175Mhz
 `ifdef  COLOR_VIDEO_640_480
-localparam H_ACTIVE 			= 640; // è¡Œæ•°æ®æœ‰æ•ˆæ—¶é—´
-localparam H_FRONT_PORCH 	= 16 ; // è¡Œæ¶ˆéšå‰è‚©æ—¶é—´
-localparam H_SYNC_TIME 		= 96 ; // è¡ŒåŒæ­¥ä¿¡å·æ—¶é—´
-localparam H_BACK_PORCH 		= 48 ; // è¡Œæ¶ˆéšåŽè‚©æ—¶é—´
-localparam H_POLARITY        = 0;   // è¡ŒåŒæ­¥æžæ€§								 
-localparam V_ACTIVE 			= 480; // åˆ—æ•°æ®æœ‰æ•ˆæ—¶é—´
-localparam V_FRONT_PORCH 	= 10 ; // åˆ—æ¶ˆéšå‰è‚©æ—¶é—´
-localparam V_SYNC_TIME 		= 2	 ; // åˆ—åŒæ­¥ä¿¡å·æ—¶é—´
-localparam V_BACK_PORCH 		= 33 ; // åˆ—æ¶ˆéšåŽè‚©æ—¶é—´
-localparam V_POLARITY        = 0;   // åœºåŒæ­¥æžæ€§
+localparam H_ACTIVE 			= 640; // ÐÐÊý¾ÝÓÐÐ§Ê±¼ä
+localparam H_FRONT_PORCH 	= 16 ; // ÐÐÏûÒþÇ°¼çÊ±¼ä
+localparam H_SYNC_TIME 		= 96 ; // ÐÐÍ¬²½ÐÅºÅÊ±¼ä
+localparam H_BACK_PORCH 		= 48 ; // ÐÐÏûÒþºó¼çÊ±¼ä
+localparam H_POLARITY        = 0;   // ÐÐÍ¬²½¼«ÐÔ								 
+localparam V_ACTIVE 			= 480; // ÁÐÊý¾ÝÓÐÐ§Ê±¼ä
+localparam V_FRONT_PORCH 	= 10 ; // ÁÐÏûÒþÇ°¼çÊ±¼ä
+localparam V_SYNC_TIME 		= 2	 ; // ÁÐÍ¬²½ÐÅºÅÊ±¼ä
+localparam V_BACK_PORCH 		= 33 ; // ÁÐÏûÒþºó¼çÊ±¼ä
+localparam V_POLARITY        = 0;   // ³¡Í¬²½¼«ÐÔ
 `endif
 
 localparam  H_TOTAL_TIME 	= H_ACTIVE + H_FRONT_PORCH + H_SYNC_TIME + H_BACK_PORCH; 
@@ -154,14 +154,14 @@ end
 
 assign o_rgb= o_data_req? i_rgb: 24'd0;
 
-// è¡Œæ‰«æè®¡æ•°å™¨
+// ÐÐÉ¨Ãè¼ÆÊýÆ÷
 always@(posedge i_clk) begin
 	if(~i_rst_n) h_syn_cnt <= 0;
 	else if(h_syn_cnt == H_TOTAL_TIME) h_syn_cnt <= 0;
     else h_syn_cnt <= h_syn_cnt + 1;
 end
 
-// åˆ—æ‰«æè®¡æ•°å™¨
+// ÁÐÉ¨Ãè¼ÆÊýÆ÷
 always@(posedge i_clk) begin
 	if(~i_rst_n) v_syn_cnt <= 0;
 	else if(h_syn_cnt == H_TOTAL_TIME)
@@ -171,19 +171,19 @@ always@(posedge i_clk) begin
 	end
 end
 
-// è¡ŒåŒæ­¥æŽ§åˆ¶
+// ÐÐÍ¬²½¿ØÖÆ
 always@(posedge i_clk) begin
     if(h_syn_cnt < H_SYNC_TIME) r_hs <= H_POLARITY;
     else r_hs <= ~H_POLARITY;
 end
 
-// åœºåŒæ­¥æŽ§åˆ¶
+// ³¡Í¬²½¿ØÖÆ
 always@(posedge i_clk) begin
     if(v_syn_cnt < V_SYNC_TIME) r_vs <= V_POLARITY;
     else r_vs <= ~V_POLARITY;
 end
 
-// åæ ‡ä½¿èƒ½.
+// ×ø±êÊ¹ÄÜ.
 always@(posedge i_clk) begin
     if(v_syn_cnt >= V_SYNC_TIME + V_BACK_PORCH && v_syn_cnt < V_SYNC_TIME + V_BACK_PORCH + V_ACTIVE)
     begin

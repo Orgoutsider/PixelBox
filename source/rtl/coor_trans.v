@@ -64,8 +64,9 @@ sin_table sin_table_inst
 assign	x_rotate_temp	=    ( x_wire <<< 8 ) * cos_value	-	( y_wire <<< 8 ) * sin_value;	
 assign	y_rotate_temp	=    ( x_wire <<< 8 ) * sin_value	+	( y_wire <<< 8 ) * cos_value;
 
-assign x_rotate = x_rotate_temp	>>>	16;
-assign y_rotate = y_rotate_temp	>>>	16;
+assign	x_rotate		=	x_rotate_temp	>>>	16;
+assign	y_rotate		=	y_rotate_temp	>>>	16;
+
 
 coor_trans_reverse coor_trans_reverse_inst
 (

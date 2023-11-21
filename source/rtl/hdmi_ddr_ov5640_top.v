@@ -19,9 +19,9 @@
 // 
 //////////////////////////////////////////////////////////////////////////////////
 `define UD #1
-//cmos1¡¢cmos2¶þÑ¡Ò»£¬×÷ÎªÊÓÆµÔ´ÊäÈë
-// `define CMOS_1      //cmos1×÷ÎªÊÓÆµÊäÈë£»
-// `define CMOS_2      //cmos2×÷ÎªÊÓÆµÊäÈë£»
+//cmos1ï¿½ï¿½cmos2ï¿½ï¿½Ñ¡Ò»ï¿½ï¿½ï¿½ï¿½Îªï¿½ï¿½ÆµÔ´ï¿½ï¿½ï¿½ï¿½
+// `define CMOS_1      //cmos1ï¿½ï¿½Îªï¿½ï¿½Æµï¿½ï¿½ï¿½ë£»
+// `define CMOS_2      //cmos2ï¿½ï¿½Îªï¿½ï¿½Æµï¿½ï¿½ï¿½ë£»
 // `define COLOR
 
 module hdmi_ddr_ov5640_top#(
@@ -33,7 +33,7 @@ module hdmi_ddr_ov5640_top#(
 )(
 	input                                sys_clk              ,//50Mhz
 //OV5647
-    output  [1:0]                        cmos_init_done       ,//OV5640¼Ä´æÆ÷³õÊ¼»¯Íê³É
+    output  [1:0]                        cmos_init_done       ,//OV5640ï¿½Ä´ï¿½ï¿½ï¿½ï¿½ï¿½Ê¼ï¿½ï¿½ï¿½ï¿½ï¿?
     //coms1	
     inout                                cmos1_scl            ,//cmos1 i2c 
     inout                                cmos1_sda            ,//cmos1 i2c 
@@ -74,7 +74,7 @@ module hdmi_ddr_ov5640_top#(
     inout                                iic_tx_sda                ,
     output                               iic_scl,
     inout                                iic_sda, 
-    output                               hdmi_int_led              ,//HDMI_OUT³õÊ¼»¯Íê³É
+    output                               hdmi_int_led              ,//HDMI_OUTï¿½ï¿½Ê¼ï¿½ï¿½ï¿½ï¿½ï¿?
 //HDMI_OUT
     output                               pix_clk                   ,//pixclk                           
     output     reg                       vs_out                    , 
@@ -95,6 +95,7 @@ module hdmi_ddr_ov5640_top#(
     input                                key_gamma,
     input                                key_saturation,
     input                                key_rotate,
+    input                                key_scaler,
 //Ethernet
     output                               led,
     output                               phy_rstn,
@@ -180,6 +181,7 @@ module hdmi_ddr_ov5640_top#(
     wire  [1:0]                 gamma_ctrl                   ;
     wire                        saturation_ctrl                   ;
     wire                        rotate_ctrl                   ;
+    wire                        scaler_ctrl                   ;
 /////////////////////////////////////////////////////////////////////////////////////
 //PLL
     pll u_pll (
@@ -192,7 +194,7 @@ module hdmi_ddr_ov5640_top#(
         .pll_lock (  locked     )
     );
 
-//ÅäÖÃ7210
+//ï¿½ï¿½ï¿½ï¿½7210
     ms72xx_ctl ms72xx_ctl(
         .clk             (  cfg_clk        ), //input       clk,
         .rst_n           (  rstn_out       ), //input       rstn,
@@ -220,7 +222,7 @@ module hdmi_ddr_ov5640_top#(
     
     assign rstn_out = (rstn_1ms == 16'h2710);
 
-    // ²ÊÌõ
+    // ï¿½ï¿½ï¿½ï¿½
     video_block_move #(
     .H_DISP            (640)        ,  //video h
     .V_DISP            (720)        ,  //video v
@@ -240,7 +242,7 @@ module hdmi_ddr_ov5640_top#(
         .video_rgb(video_rgb)
     );
 
-//ÅäÖÃCMOS///////////////////////////////////////////////////////////////////////////////////
+//ï¿½ï¿½ï¿½ï¿½CMOS///////////////////////////////////////////////////////////////////////////////////
 //OV5640 register configure enable    
     power_on_delay	power_on_delay_inst(
     	.clk_50M                 (sys_clk        ),//input
@@ -253,7 +255,7 @@ module hdmi_ddr_ov5640_top#(
 //CMOS1 Camera 
     reg_config #(
     .DISPAY_H(640),
-    .DISPAY_V(720)
+    .DISPAY_V(722)
     )	coms1_reg_config  (
     	.clk_25M                 (clk_25M            ),//input
     	.camera_rstn             (cmos1_reset        ),//input
@@ -268,7 +270,7 @@ module hdmi_ddr_ov5640_top#(
 //CMOS2 Camera 
     reg_config	#(
     .DISPAY_H(640),
-    .DISPAY_V(720)
+    .DISPAY_V(722)
     ) coms2_reg_config(
     	.clk_25M                 (clk_25M            ),//input
     	.camera_rstn             (cmos2_reset        ),//input
@@ -366,7 +368,8 @@ module hdmi_ddr_ov5640_top#(
     .de_in(de_in),                // input de_in,
     . r_in(r_in),                // input [7:0] r_in,
     . g_in(g_in),                // input [7:0] g_in,
-    . b_in(b_in),                 // input [7:0] b_in, 
+    . b_in(b_in),                 // input [7:0] b_in,
+    .scaler_ctrl(scaler_ctrl), 
     .vs_out(hdmi_vs),                // output reg vs_out,
     .hs_out(),                // output reg hs_out,
     .de_out(hdmi_de),                // output reg de_out,
@@ -374,7 +377,7 @@ module hdmi_ddr_ov5640_top#(
     );
 
     assign hdmi_pclk = pix_clk_in;
-//ÊäÈëÊÓÆµÔ´Ñ¡Ôñ//////////////////////////////////////////////////////////////////////////////////////////
+//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ÆµÔ´Ñ¡ï¿½ï¿½//////////////////////////////////////////////////////////////////////////////////////////
 // `ifdef CMOS_1
 // assign     pclk_in_test    =    cmos1_pclk_16bit    ;
 // assign     vs_in_test      =    cmos1_vsync_d0      ;
@@ -392,7 +395,7 @@ module hdmi_ddr_ov5640_top#(
 // assign     i_rgb565        =    {video_rgb[23:19],video_rgb[15:10],video_rgb[7:3]};
 // `endif
 //////////////////////////////////////////////////////////////////////////////////////////////////////////
-//ÐÞ¸Äddr¶ÁÐ´Ä£¿év1
+//ï¿½Þ¸ï¿½ddrï¿½ï¿½Ð´Ä£ï¿½ï¿½v1
     fram_buf fram_buf(
         .ddr_clk        (  core_clk             ),//input                         ddr_clk,
         .ddr_rstn       (  ddr_init_done        ),//input                         ddr_rstn,
@@ -456,7 +459,7 @@ module hdmi_ddr_ov5640_top#(
         de_out<=de_o;
      end
 /////////////////////////////////////////////////////////////////////////////////////
-//²úÉúvisaÊ±Ðò 
+//ï¿½ï¿½ï¿½ï¿½visaÊ±ï¿½ï¿½ 
      sync_vg sync_vg(                            
         .clk            (  pix_clk              ),//input                   clk,                                 
         .rstn           (  init_done            ),//input                   rstn,                            
@@ -539,7 +542,7 @@ module hdmi_ddr_ov5640_top#(
              .rd_fake_stop              (1'b0               ) // input
        );
 
-//ÐÄÌøÐÅºÅ
+//ï¿½ï¿½ï¿½ï¿½ï¿½Åºï¿½
      always@(posedge core_clk) begin
         if (!ddr_init_done)
             cnt <= 27'd0;
@@ -582,6 +585,15 @@ module hdmi_ddr_ov5640_top#(
         .clk (sys_clk),// input           clk,//50MHz
         .key (key_rotate),// input           key,    
         .ctrl(rotate_ctrl) //output     [1:0] ctrl
+    );
+    // scaler_ctrl
+    key_ctl#(
+        .CNT_WIDTH(4'd1),
+        .CNT_MAX  (4'd1)
+    ) key_ctl_scaler(
+        .clk (sys_clk),// input           clk,//50MHz
+        .key (key_scaler),// input           key,    
+        .ctrl(scaler_ctrl) //output     [1:0] ctrl
     );
 
     ethernet_test ethernet_test(

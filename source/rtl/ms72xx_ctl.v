@@ -83,7 +83,7 @@ module ms72xx_ctl(
     
     ms7210_ctl ms7210_ctl(
         .clk             (  clk           ),//input               
-        .rstn            (  rstn          ),//input    rstn),//                       
+        .rstn            (  init_over_rx  ),//input    rstn),//                       
         .init_over       (  init_over_tx  ),//output reg          
         .device_id       (  device_id_tx  ),//output        [7:0] 
         .iic_trig        (  iic_trig_tx   ),//output reg          

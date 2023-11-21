@@ -183,7 +183,10 @@ module rd_ctrl #(
     assign read_rdata_en1 = (read_port == 2'd0) ? axi_rvalid : 1'b0;
     assign read_rdata_en2 = (read_port == 2'd1) ? axi_rvalid : 1'b0;
     assign read_rdata_en3 = (read_port == 2'd2) ? axi_rvalid : 1'b0;
+<<<<<<< HEAD
     assign read_rdata_en4 = (read_port == 2'd3) ? axi_rvalid : 1'b0;
+=======
+>>>>>>> master
     assign axi_rready = 1'b1;
  
 endmodule  

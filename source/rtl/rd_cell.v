@@ -47,7 +47,14 @@ module rd_cell #(
     wire      rd_rst;
     reg       ddr_rstn_1d,ddr_rstn_2d;
     wire [RAM_WIDTH-1:0]        rd_data_raw;   
-    wire [RAM_WIDTH-1:0]        rd_data_reverse;   
+    wire [RAM_WIDTH-1:0]        rd_data_reverse; 
+    reg rotate_180_1d, rotate_180_2d;
+    reg wr_rotate_180_1d, wr_rotate_180_2d;
+
+    always @(posedge vout_clk) begin
+        rotate_180_1d <= rotate_180;
+        rotate_180_2d <= rotate_180_1d;
+    end  
 
     always @(posedge vout_clk)
     begin
@@ -75,6 +82,9 @@ module rd_cell #(
         wr_en_3d <= wr_en_2d;
         
         wr_trig <= wr_rst || (~wr_en_3d && wr_en_2d && wr_line != V_NUM);
+
+        wr_rotate_180_1d <= rotate_180;
+        wr_rotate_180_2d <= wr_rotate_180_1d;
     end 
     always @(posedge ddr_clk)
     begin
@@ -103,7 +113,7 @@ module rd_cell #(
     always @(posedge ddr_clk)
     begin 
         if(wr_rst) begin
-            if(!rotate_180)
+            if(!wr_rotate_180_2d)
                 wr_cnt <= {LINE_ADDR_WIDTH{1'b0}};
             else
                 wr_cnt <= DDR_ADDR_IMAGE - DDR_ADDR_OFFSET;
@@ -114,7 +124,7 @@ module rd_cell #(
             doing <= 1'b1;
         end
         else if(ddr_rdone && doing) begin
-            if(!rotate_180)
+            if(!wr_rotate_180_2d)
                 wr_cnt <= wr_cnt + DDR_ADDR_OFFSET;
             else
                 wr_cnt <= wr_cnt - DDR_ADDR_OFFSET;
@@ -173,7 +183,7 @@ module rd_cell #(
     );
 
     assign rd_data_reverse = {rd_data_raw[15:0],rd_data_raw[31:16]};
-    assign rd_data = rotate_180 ? rd_data_reverse : rd_data_raw;
+    assign rd_data = rotate_180_2d ? rd_data_reverse : rd_data_raw;
 
     // rd_fifo_buf rd_fifo_buf (
     //     .wr_clk(ddr_clk),                    // input
@@ -212,19 +222,19 @@ module rd_cell #(
     begin
         if(rd_rst)
         begin
-            if(!rotate_180)
+            if(!rotate_180_2d)
                 rd_addr <= 'd0;
             else
                 rd_addr <= DDR_ADDR_OFFSET - 1'b1;
         end
         else if(read_en)
         begin
-            if(!rotate_180)
+            if(!rotate_180_2d)
                 rd_addr <= rd_addr + 1'b1;
             else
                 rd_addr <= rd_addr - 1'b1;
         end
-        else if (rotate_180 & ~rd_en_1d & rd_en_2d)
+        else if (rotate_180_2d & ~rd_en_1d & rd_en_2d)
             rd_addr <= rd_addr + 2*DDR_ADDR_OFFSET;
         else
             rd_addr <= rd_addr;

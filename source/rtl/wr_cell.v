@@ -289,7 +289,7 @@ module wr_cell #(
     
     reg [LINE_ADDR_WIDTH - 1'b1 :0] rd_cnt;
     reg doing;
-     //  使得rd_cnt在适当的时候累加 
+     //  使锟斤拷rd_cnt锟斤拷锟绞碉拷锟斤拷时锟斤拷锟桔硷拷 
     always @(posedge ddr_clk)
     begin 
         if(rd_rst) begin

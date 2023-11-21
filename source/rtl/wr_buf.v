@@ -41,35 +41,63 @@ module wr_buf #(
     input                         wr_fsync2,
     input                         wr_en2,
     input  [PIX_WIDTH- 1'b1 : 0]  wr_data2,
+    input                         wr_clk3,
+    input                         wr_fsync3,
+    input                         wr_en3,
+    input  [PIX_WIDTH- 1'b1 : 0]  wr_data3,
     
     input                         rd_bac,
-    output                        ddr_wreq,
-    output [ADDR_WIDTH- 1'b1 : 0] ddr_waddr,
-    output [LEN_WIDTH- 1'b1 : 0]  ddr_wr_len,
+    output reg                     ddr_wreq,
+    output reg [ADDR_WIDTH- 1'b1 : 0] ddr_waddr,
+    output reg [LEN_WIDTH- 1'b1 : 0]  ddr_wr_len,
     input                         ddr_wrdy,
     input                         ddr_wdone,
-    output [8*DQ_WIDTH- 1'b1 : 0] ddr_wdata,
+    output reg [8*DQ_WIDTH- 1'b1 : 0] ddr_wdata,
     input                         ddr_wdata_req1,
     input                         ddr_wdata_req2,
+    input                         ddr_wdata_req3,
+    output                        ddr_wreq_rst1,
+    output                        ddr_wreq_rst2,
+    output                        ddr_wreq_rst3,
     
     // output [FRAME_CNT_WIDTH-1 :0] frame_wcnt,
     output                        frame_wirq,
-    input                         wr_opera_en_2
+    input                         wr_opera_en_1,
+    input                         wr_opera_en_2,
+    output                        ddr_wreq_en_1,
+    output                        ddr_wreq_en_2,
+    output                        ddr_wreq_en_3
 );
+    localparam H_NUM2 = H_NUM / 2;
 
     wire [ADDR_WIDTH- 1'b1 : 0] ddr_waddr1;
     wire [ADDR_WIDTH- 1'b1 : 0] ddr_waddr2;
+    wire [ADDR_WIDTH- 1'b1 : 0] ddr_waddr3;
     wire  [LEN_WIDTH- 1'b1 : 0]  ddr_wr_len1;
     wire  [LEN_WIDTH- 1'b1 : 0]  ddr_wr_len2;
+    wire  [LEN_WIDTH- 1'b1 : 0]  ddr_wr_len3;
     wire [8*DQ_WIDTH- 1'b1 : 0] ddr_wdata1;
     wire [8*DQ_WIDTH- 1'b1 : 0] ddr_wdata2;
+    wire [8*DQ_WIDTH- 1'b1 : 0] ddr_wdata3;
     wire frame_wirq1;
     wire frame_wirq2;
+    wire frame_wirq3;
+    wire ddr_wreq1;
+    wire ddr_wreq2;
+    wire ddr_wreq3;
+    // 端口1、2优先级
+    wire [5:0]             ddr_wreq_cnt1;
+    wire [5:0]             ddr_wreq_cnt2;
+    wire [5:0]             ddr_wreq_cnt3;
+
+    assign ddr_wreq_en_1 = (ddr_wreq_cnt1 > ddr_wreq_cnt2) && (ddr_wreq_cnt1 > ddr_wreq_cnt3);
+    assign ddr_wreq_en_2 = (ddr_wreq_cnt1 < ddr_wreq_cnt2) && (ddr_wreq_cnt3 < ddr_wreq_cnt2);
+    assign ddr_wreq_en_3 = (ddr_wreq_cnt1 < ddr_wreq_cnt3) && (ddr_wreq_cnt2 < ddr_wreq_cnt3);
 
     wr_cell #(
         .ADDR_WIDTH      (ADDR_WIDTH),
         .ADDR_OFFSET     (ADDR_OFFSET),
-        .H_NUM           (H_NUM),
+        .H_NUM           (H_NUM2),
         .V_NUM           (V_NUM),
         .DQ_WIDTH        (DQ_WIDTH),
         .LEN_WIDTH       (LEN_WIDTH),
@@ -93,7 +121,9 @@ module wr_buf #(
         .ddr_wdata(ddr_wdata1),// output [8*DQ_WIDTH- 1'b1 : 0] ddr_wdata,
         .ddr_wdata_req(ddr_wdata_req1),// input                         ddr_wdata_req,
         .frame_wirq(frame_wirq1),
-        .ddr_part(1'b0) // input                         ddr_part 
+        .ddr_part(2'd0), // input                         ddr_part 
+        .ddr_wreq_cnt(ddr_wreq_cnt1), // output
+        .ddr_wreq_rst(ddr_wreq_rst1)
     );
 
     wr_cell #(
@@ -123,14 +153,77 @@ module wr_buf #(
         .ddr_wdata(ddr_wdata2),// output [8*DQ_WIDTH- 1'b1 : 0] ddr_wdata,
         .ddr_wdata_req(ddr_wdata_req2),// input                         ddr_wdata_req,
         .frame_wirq(frame_wirq2),
-        .ddr_part(1'b1) // input                         ddr_part 
+        .ddr_part(2'd1), // input                         ddr_part 
+        .ddr_wreq_cnt(ddr_wreq_cnt2), // output
+        .ddr_wreq_rst(ddr_wreq_rst2)
     );
 
-    assign ddr_wdata = (~wr_opera_en_2) ? ddr_wdata1 : ddr_wdata2;
-    assign ddr_waddr = (~wr_opera_en_2) ? ddr_waddr1 : ddr_waddr2;
-    assign ddr_wr_len =(~wr_opera_en_2) ? ddr_wr_len1 : ddr_wr_len2;
-    assign frame_wirq =frame_wirq1 | frame_wirq2;
-    assign ddr_wreq = (~wr_opera_en_2) ? ddr_wreq1 : ddr_wreq2;
+    wr_cell #(
+        .ADDR_WIDTH      (ADDR_WIDTH),
+        .ADDR_OFFSET     (ADDR_OFFSET),
+        .H_NUM           (H_NUM2),
+        .V_NUM           (V_NUM),
+        .DQ_WIDTH        (DQ_WIDTH),
+        .LEN_WIDTH       (LEN_WIDTH),
+        .PIX_WIDTH       (PIX_WIDTH),
+        .LINE_ADDR_WIDTH (LINE_ADDR_WIDTH) 
+    ) wr_cell3 (
+        .ddr_clk(ddr_clk),// input                         ddr_clk,
+        .ddr_rstn(ddr_rstn),// input                         ddr_rstn,
+                          
+        .wr_clk(wr_clk3),// input                         wr_clk,
+        .wr_fsync(wr_fsync3),// input                         wr_fsync,
+        .wr_en(wr_en3),// input                         wr_en,
+        .wr_data(wr_data3),// input  [PIX_WIDTH- 1'b1 : 0]  wr_data,
+
+        // .rd_bac,// input                         rd_bac,
+        .ddr_wreq(ddr_wreq3),// output                        ddr_wreq,
+        .ddr_waddr(ddr_waddr3),// output [ADDR_WIDTH- 1'b1 : 0] ddr_waddr,
+        .ddr_wr_len(ddr_wr_len3),// output [LEN_WIDTH- 1'b1 : 0]  ddr_wr_len,
+        // .ddr_wrdy,// input                         ddr_wrdy,
+        .ddr_wdone(ddr_wdone),// input                         ddr_wdone,
+        .ddr_wdata(ddr_wdata3),// output [8*DQ_WIDTH- 1'b1 : 0] ddr_wdata,
+        .ddr_wdata_req(ddr_wdata_req3),// input                         ddr_wdata_req,
+        .frame_wirq(frame_wirq3),
+        .ddr_part(2'd2), // input                         ddr_part 
+        .ddr_wreq_cnt(ddr_wreq_cnt3), // output
+        .ddr_wreq_rst(ddr_wreq_rst3)
+    );
+
+    // 3条路径的切换
+    always @(*) begin
+        if (wr_opera_en_1)
+            ddr_wdata = ddr_wdata1;
+        else if (wr_opera_en_2)
+            ddr_wdata = ddr_wdata2;
+        else
+            ddr_wdata = ddr_wdata3;
+    end
+    always @(*) begin
+        if (wr_opera_en_1)
+            ddr_waddr = ddr_waddr1;
+        else if (wr_opera_en_2)
+            ddr_waddr = ddr_waddr2;
+        else
+            ddr_waddr = ddr_waddr3; 
+    end
+    always @(*) begin
+        if (wr_opera_en_1)
+            ddr_wr_len = ddr_wr_len1;
+        else if (wr_opera_en_2)
+            ddr_wr_len = ddr_wr_len2;
+        else
+            ddr_wr_len = ddr_wr_len3; 
+    end
+    always @(*) begin
+        if (wr_opera_en_1)
+            ddr_wreq = ddr_wreq1;
+        else if (wr_opera_en_2)
+            ddr_wreq = ddr_wreq2;
+        else
+            ddr_wreq = ddr_wreq3;
+    end
+    assign frame_wirq =frame_wirq1 | frame_wirq2 | frame_wirq3;
     // assign frame_wcnt = rd_frame_cnt;
     
 endmodule
