@@ -57,8 +57,10 @@ module rd_buf #(
     input [3 : 0]                 num,
     input                         num_vld,
     input                         rotate_180, 
+    input                         rotate_90, 
     input  [ADDR_WIDTH- 1'b1 : 0]  ddr_raddr4,
-    input  [LEN_WIDTH- 1'b1 : 0]   ddr_rd_len4
+    input  [LEN_WIDTH- 1'b1 : 0]   ddr_rd_len4,
+    output                         ddr_rdata_ban
 );
 
     localparam RAM_WIDTH      = 16'd32;
@@ -74,27 +76,45 @@ module rd_buf #(
     wire      ddr_rreq1;
     wire      ddr_rreq2;
     wire      ddr_rreq3;
+    wire      ddr_rreq4;
     reg [RAM_WIDTH-1:0]        rd_data;
     reg [RAM_WIDTH-1:0]        rd_data_1d;
     wire [RAM_WIDTH-1:0]        rd_data1;
     wire [RAM_WIDTH-1:0]        rd_data2;
     wire [RAM_WIDTH-1:0]        rd_data3;
+    wire [RAM_WIDTH-1:0]        rd_data4;
     wire [RAM_WIDTH-1:0]        rd_data1_1d;
     wire [RAM_WIDTH-1:0]        rd_data2_1d;
     wire [RAM_WIDTH-1:0]        rd_data3_1d;
+    wire [RAM_WIDTH-1:0]        rd_data4_1d;
     wire [ADDR_WIDTH- 1'b1 : 0] ddr_raddr1;
     wire [ADDR_WIDTH- 1'b1 : 0] ddr_raddr2;
     wire [ADDR_WIDTH- 1'b1 : 0] ddr_raddr3;
+    wire [ADDR_WIDTH- 1'b1 : 0] ddr_raddr5;
     wire [LEN_WIDTH- 1'b1 : 0] ddr_rd_len1;
     wire [LEN_WIDTH- 1'b1 : 0] ddr_rd_len2;
     wire [LEN_WIDTH- 1'b1 : 0] ddr_rd_len3;
+    wire [LEN_WIDTH- 1'b1 : 0] ddr_rd_len5;
     wire [1:0] rd_cnt1;
     wire [1:0] rd_cnt2;
     wire [1:0] rd_cnt3;
+    wire [1:0] rd_cnt4;
     reg [1:0] rd_cnt_part;
     reg rd_en_1d, rd_en_2d;
     reg [PIX_WIDTH- 1'b1 : 0]  read_data;
     wire pos_en;
+    reg rotate_90_1d, rotate_90_2d;
+    reg wr_rotate_90_1d, wr_rotate_90_2d;
+
+    always @(posedge vout_clk) begin
+        rotate_90_1d <= rotate_90;
+        rotate_90_2d <= rotate_90_1d;
+    end 
+
+    always @(posedge ddr_clk) begin
+        wr_rotate_90_1d <= rotate_90;
+        wr_rotate_90_2d <= wr_rotate_90_1d;
+    end
 
     //ÏñËØÏÔÊ¾ÇëÇóÐÅºÅÇÐ»»£¬¼´ÏÔÊ¾Æ÷×ó²àÇëÇóbuf0ÏÔÊ¾£¬ÓÒ²àÇëÇóbuf1ÏÔÊ¾
     assign rd_en_part1 = (x_cnt <= H_NUM2 - 1'b1) ? rd_en : 1'b0;
@@ -106,7 +126,12 @@ module rd_buf #(
         if (x_cnt <= H_NUM2)
             rd_data = rd_data1;
         else if (x_cnt > H_NUM)
-            rd_data = rd_data2;
+        begin
+            if (rotate_90_2d)
+                rd_data = rd_data4;
+            else
+                rd_data = rd_data2; 
+        end
         else
             rd_data = rd_data3;
     end
@@ -114,7 +139,12 @@ module rd_buf #(
         if (x_cnt <= H_NUM2)
             rd_data_1d = rd_data1_1d;
         else if (x_cnt > H_NUM)
-            rd_data_1d = rd_data2_1d;
+        begin
+            if (rotate_90_2d)
+                rd_data_1d = rd_data4_1d;
+            else
+                rd_data_1d = rd_data2_1d;
+        end
         else
             rd_data_1d = rd_data3_1d;
     end
@@ -122,7 +152,12 @@ module rd_buf #(
         if (x_cnt <= H_NUM2)
             rd_cnt_part = rd_cnt1;
         else if (x_cnt > H_NUM)
-            rd_cnt_part = rd_cnt2;
+        begin
+            if (rotate_90_2d)
+                rd_cnt_part = rd_cnt4;
+            else 
+                rd_cnt_part = rd_cnt2;
+        end
         else
             rd_cnt_part = rd_cnt3;
     end
@@ -299,6 +334,39 @@ module rd_buf #(
         .rotate_180(1'b0)
     );
 
+    rotate_cell #(
+        .ADDR_WIDTH      (ADDR_WIDTH),// parameter                     ADDR_WIDTH      = 6'd27,
+        .ADDR_OFFSET     (ADDR_OFFSET),// parameter                     ADDR_OFFSET     = 32'h0000_0000,
+        .H_NUM           (H_NUM),// parameter                     H_NUM           = 12'd1920,
+        .V_NUM           (V_NUM),// parameter                     V_NUM           = 12'd1080,
+        .DQ_WIDTH        (DQ_WIDTH),// parameter                     DQ_WIDTH        = 12'd32,
+        .LEN_WIDTH       (LEN_WIDTH),// parameter                     LEN_WIDTH       = 12'd16,
+        .PIX_WIDTH       (PIX_WIDTH),// parameter                     PIX_WIDTH       = 12'd24,
+        .LINE_ADDR_WIDTH (LINE_ADDR_WIDTH),// parameter                     LINE_ADDR_WIDTH = 16'd19,
+        .FRAME_CNT_WIDTH (FRAME_CNT_WIDTH),// parameter                     FRAME_CNT_WIDTH = 16'd8,
+        .RAM_WIDTH       (RAM_WIDTH)// parameter                     RAM_WIDTH       = 16'd32
+    ) rotate_cell (
+        .ddr_clk(ddr_clk),// input                         ddr_clk,
+        .ddr_rstn(ddr_rstn),// input                         ddr_rstn,
+        .vout_clk(vout_clk),// input                         vout_clk,
+        .rd_fsync(rd_fsync),// input                         rd_fsync,
+        .rd_en(rd_en),// input                         rd_en,
+        .rd_en_part(rd_en_part2),// input                         rd_en_part,
+        .rd_data(rd_data4),// output [RAM_WIDTH-1:0]        rd_data,
+        .rd_data_1d(rd_data4_1d),// output [RAM_WIDTH-1:0]        rd_data_1d,
+        .ddr_rreq(ddr_rreq4),// output                        ddr_rreq,
+        .ddr_raddr(ddr_raddr5),// output [ADDR_WIDTH- 1'b1 : 0] ddr_raddr,
+        .ddr_rd_len(ddr_rd_len5),// output [LEN_WIDTH- 1'b1 : 0]  ddr_rd_len,
+        .ddr_rdone(ddr_rdone),// input                         ddr_rdone,
+        .ddr_rdata(ddr_rdata),// input [8*DQ_WIDTH- 1'b1 : 0]  ddr_rdata,
+        .ddr_rdata_en(ddr_rdata_en2),// input                         ddr_rdata_en,
+        .ddr_rdata_ban(ddr_rdata_ban),// output reg                    ddr_rdata_ban,
+        .ddr_part(2'd3),// input [1:0]                   ddr_part,
+        .rd_cnt(rd_cnt4),// output reg [1:0]              rd_cnt,
+        .rd_line(y_cnt),// input [12:0]                  rd_line,
+        .rotate_90(wr_rotate_90_2d)// input                         rotate_90  
+    );
+
     assign vout_de = rd_en_2d;
     assign vout_data = pos_en ? 16'hf800 : read_data;
     assign ddr_rreq = ddr_rreq1;
@@ -307,7 +375,12 @@ module rd_buf #(
         if (rd_opera_en_1)
             ddr_raddr = ddr_raddr1;
         else if (rd_opera_en_2)
-            ddr_raddr = ddr_raddr2;
+        begin
+            if (wr_rotate_90_2d)
+                ddr_raddr = ddr_raddr5;
+            else 
+                ddr_raddr = ddr_raddr2;
+        end
         else if (rd_opera_en_3)
             ddr_raddr = ddr_raddr3;
         else
@@ -317,7 +390,12 @@ module rd_buf #(
         if (rd_opera_en_1)
             ddr_rd_len = ddr_rd_len1;
         else if (rd_opera_en_2)
-            ddr_rd_len = ddr_rd_len2;
+        begin
+            if (wr_rotate_90_2d)
+                ddr_rd_len = ddr_rd_len5;
+            else
+                ddr_rd_len = ddr_rd_len2; 
+        end
         else if (rd_opera_en_3)
             ddr_rd_len = ddr_rd_len3;
         else

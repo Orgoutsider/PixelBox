@@ -180,7 +180,7 @@ module hdmi_ddr_ov5640_top#(
     wire                        clk_125m                   ;
     wire  [1:0]                 gamma_ctrl                   ;
     wire                        saturation_ctrl                   ;
-    wire                        rotate_ctrl                   ;
+    wire  [1:0]                 rotate_ctrl                   ;
     wire                        scaler_ctrl                   ;
 /////////////////////////////////////////////////////////////////////////////////////
 //PLL
@@ -232,7 +232,7 @@ module hdmi_ddr_ov5640_top#(
     .BLOCK_W           (80)         ,  //move block size
     .SCREEN_SIDE_COLOR (24'hff00ff) ,   //screen side color
     .SCREEN_BKG_COLOR  (24'hffffff) ,   //screen background color
-    .MOVE_BLOCK_COLOR  (24'hffffff)  //move block color
+    .MOVE_BLOCK_COLOR  (24'hff7f7f)  //move block color
     ) video_block_move (
         .pixel_clk (pix_clk),
         .sys_rst_n (rstn_out),
@@ -447,7 +447,7 @@ module hdmi_ddr_ov5640_top#(
         .axi_rid        (  axi_rid              ), // input[3:0] 
         .num            (  num                  ),//input  [3:0]      
         .num_vld        (  num_vld              ),//input
-        .rotate_ctrl    (  rotate_ctrl         )
+        .rotate_ctrl    (  rotate_ctrl         )  //input[1:0]
     );
 
      always@(posedge pix_clk) begin
@@ -579,8 +579,8 @@ module hdmi_ddr_ov5640_top#(
     );
 
     key_ctl#(
-        .CNT_WIDTH(4'd1),
-        .CNT_MAX  (4'd1)
+        .CNT_WIDTH(4'd2),
+        .CNT_MAX  (4'd2)
     ) key_ctl_rotate(
         .clk (sys_clk),// input           clk,//50MHz
         .key (key_rotate),// input           key,    

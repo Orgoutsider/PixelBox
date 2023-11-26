@@ -23,8 +23,8 @@ module rotate_buf#(
     input                         ddr_wdone,
     output [8*DQ_WIDTH- 1'b1 : 0] ddr_wdata,
     input                         ddr_wdata_req,
-    input  [1:0]                  ddr_part_rd,
-    output                        ddr_line 
+    input  [1:0]                  ddr_part_rd
+    // output reg                    ddr_rdata_ban 
 );
 
     localparam RAM_WIDTH      = 16'd32;
@@ -46,15 +46,17 @@ module rotate_buf#(
     reg [LINE_ADDR_WIDTH:0] pix_cnt;
     reg [7:0] wr_addr;
     reg [7:0] rd_addr=8'd0;
+    wire rst;
     // wire [DDR_DATA_WIDTH-1'b1:0] rd_data;
     // wire [15:0] wr_data;
+    assign rst = doing_w & ddr_rdata_en & ~ddr_rdata_en_1d;
 
     always @(posedge ddr_clk) begin
         ddr_rdata_en_1d <= ddr_rdata_en;
     end
 
     always @(posedge ddr_clk) begin
-        if (~ddr_rstn)
+        if (~ddr_rstn | rst)
             cnt <= 4'd0;
         else if (ddr_rdone & doing) begin
             cnt <= cnt + 4'd1;
@@ -65,6 +67,8 @@ module rotate_buf#(
     always @(posedge ddr_clk) begin
         if(~ddr_rstn)
             doing <= 1'b0;
+        else if (rst)
+            doing <= 1'b1;
         else if (ddr_rdata_en && ~ddr_rdata_en_1d) begin
             doing <= 1'b1;
         end 
@@ -75,7 +79,7 @@ module rotate_buf#(
     end
     
     always @(posedge ddr_clk) begin
-        if(~ddr_rstn)
+        if(~ddr_rstn | rst)
             x_cnt <= 13'd0;
         else if (ddr_rdone && doing && (cnt == 4'd15)) begin
             if (x_cnt + 13'd256 > H_NUM - 13'd1)
@@ -86,7 +90,7 @@ module rotate_buf#(
     end
     // y_cnt是从非黑色区域开始计
     always @(posedge ddr_clk) begin
-        if (~ddr_rstn)
+        if (~ddr_rstn | rst)
             y_cnt <= 13'd0;
         else if (ddr_rdone && doing) begin
             if (cnt == 4'd15) begin
@@ -133,7 +137,7 @@ module rotate_buf#(
     //     .y_out		(	y_rotate		)
     // );
     always @(posedge ddr_clk) begin
-        pix_cnt <= x_cnt + (y_cnt << 9) + (y_cnt << 7); 
+        pix_cnt <= x_cnt + {y_cnt,9'b0} + {y_cnt,7'b0}; 
         // y_cnt*640
     end
 
@@ -146,6 +150,8 @@ module rotate_buf#(
     begin
         if (~ddr_rstn)
             wr_addr <= 8'd0;
+        else if (rst)
+            wr_addr <= 8'd1;
         else if(ddr_rdone && doing && (cnt == 4'd15))
             wr_addr <= 8'd0;
         else if(ddr_rdata_en)
@@ -170,7 +176,7 @@ module rotate_buf#(
 
     reg ddr_wr_req=0;
     always @(posedge ddr_clk) begin
-        if (~ddr_rstn)
+        if (~ddr_rstn | rst)
             ddr_wr_req <= 1'b0;
         else if(ddr_rdone && doing && (cnt == 4'd15))
             ddr_wr_req <= 1'b1;
@@ -186,18 +192,18 @@ module rotate_buf#(
     reg [3:0] rd_col_cnt;
     reg doing_w;
     always @(posedge ddr_clk) begin
-        if(~ddr_rstn)
+        if(~ddr_rstn | rst)
+            rd_len <= 4'd0;
+        else if (ddr_wdone & doing_w)
             rd_len <= 4'd0;
         else if (ddr_rdone && doing && (cnt == 4'd15) && (x_cnt + 13'd256 > H_NUM - 13'd1))
             rd_len <= 4'd7;
-        else if (ddr_rdone & doing && (cnt == 4'd15) )
+        else if (ddr_rdone && doing && (cnt == 4'd15) )
             rd_len <= 4'd15;
-        else if (ddr_wdone & doing_w)
-            rd_len <= 4'd0;
     end
 
     always @(posedge ddr_clk) begin
-        if(~ddr_rstn)
+        if(~ddr_rstn | rst)
             rd_row_cnt <= 4'd0;
         else if (ddr_wdone & doing_w)
             rd_row_cnt <= 4'd0;
@@ -206,7 +212,7 @@ module rotate_buf#(
     end
 
     always @(posedge ddr_clk) begin
-        if (~ddr_rstn)
+        if (~ddr_rstn | rst)
             rd_col_cnt <= 4'd0;
         else if (ddr_wdone & doing_w)
             rd_col_cnt <= 4'd0;
@@ -220,7 +226,7 @@ module rotate_buf#(
     end
 
     always @(posedge ddr_clk) begin
-        if(~ddr_rstn)
+        if(~ddr_rstn | rst)
             rd_addr <= 8'd0;
         else if (ddr_wdone & doing_w)
             rd_addr <= 8'd0;
@@ -239,12 +245,12 @@ module rotate_buf#(
 
     always @(posedge ddr_clk)
     begin
-        if(~ddr_rstn)
+        if(~ddr_rstn | rst)
+            rd_img <= 1'b0;
+        else if (ddr_wdone && doing_w)
             rd_img <= 1'b0;
         else if(ddr_rdone && doing && (x_cnt + 13'd256 > H_NUM - 13'd1) && (y_cnt >= H_NUM - 13'd1) && (cnt == 4'd15)) 
             rd_img <= 1'b1;
-        else if (ddr_wdone && doing_w)
-            rd_img <= 1'b0;
         else 
             rd_img <= rd_img;
     end
@@ -267,19 +273,22 @@ module rotate_buf#(
     end
 
     always @(posedge ddr_clk) begin
-        if(~ddr_rstn) begin
+        if(~ddr_rstn | rst) begin
             rd_cnt <= {LINE_ADDR_WIDTH{1'b0}};
+            doing_w <= 1'b0;
+        end
+        else if(ddr_wdone & doing_w)
+        begin
+            if (rd_img)
+                rd_cnt <= {LINE_ADDR_WIDTH{1'b0}};
+            else
+                rd_cnt <= rd_cnt + 22'd128 * (rd_len + 22'd1);
             doing_w <= 1'b0;
         end
         else if(~ddr_wdata_req_1d & ddr_wdata_req)
         begin
             rd_cnt <= rd_cnt;
             doing_w <= 1'b1;
-        end
-        else if(ddr_wdone & doing_w)
-        begin
-            rd_cnt <= rd_cnt + 22'd128 * (rd_len + 22'd1);
-            doing_w <= 1'b0;
         end
         else begin
             rd_cnt <= rd_cnt;
@@ -289,5 +298,16 @@ module rotate_buf#(
     assign ddr_wreq = ddr_wr_req;
     assign ddr_waddr = {rd_frame_cnt[0],ddr_part_rd,rd_cnt} + ADDR_OFFSET;
     assign ddr_wr_len = (rd_len + 16'b1) * 16'd16;
-    assign ddr_line = doing && (x_cnt == H_NUM - 13'd1);
+    // assign ddr_line = doing && (x_cnt == H_NUM - 13'd1);
+
+    // always @(posedge ddr_clk) begin
+    //     if(~ddr_rstn)
+    //         ddr_rdata_ban <= 1'b0;
+    //     else if (ddr_wdone & doing_w)
+    //         ddr_rdata_ban <= 1'b0;
+    //     else if (ddr_rdone && doing && (cnt == 4'd15)) 
+    //         ddr_rdata_ban <= 1'b1;
+    //     else
+    //         ddr_rdata_ban <= ddr_rdata_ban;
+    // end
 endmodule

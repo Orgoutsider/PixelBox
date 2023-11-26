@@ -35,6 +35,7 @@ module wr_ctrl #(
     output                               wr_ready1         ,
     output                               wr_ready2         ,
     output                               wr_ready3         ,
+    output                               wr_ready4         ,
     input                                wr_data_en       ,
     input      [MEM_DQ_WIDTH*8-1:0]      wr_data          ,
     output                               wr_bac           ,
@@ -42,6 +43,7 @@ module wr_ctrl #(
     input                                wr_en1,
     input                                wr_en2,
     input                                wr_en3,
+    input                                wr_en4,
 
     output reg [CTRL_ADDR_WIDTH-1:0]     axi_awaddr       =0,  
     output reg [3:0]                     axi_awid         =0,
@@ -60,7 +62,7 @@ module wr_ctrl #(
     input      [1 : 0]                   axi_bresp        , // Write response. This signal indicates the status of the write transaction.
     input                                axi_bvalid       , // Write response valid. This signal indicates that the channel is signaling a valid write response.
     output reg                           axi_bready       =1, // Response ready. This signal indicates that the master can accept a write response.
-    output reg [3:0]                     test_wr_state    =0,
+    output reg [4:0]                     test_wr_state    =0,
     output reg [1:0]                     wr_port,
     input                                wr_rst_1,
     input                                wr_rst_2,
@@ -69,10 +71,11 @@ module wr_ctrl #(
 
     localparam DQ_NUM = MEM_DQ_WIDTH/8;
     
-    localparam E_IDLE =  4'b0001;
-    localparam E_WR1   = 4'b0010;
-    localparam E_WR2   = 4'b0100;
-    localparam E_WR3   = 4'b1000;
+    localparam E_IDLE =  5'b00001;
+    localparam E_WR1   = 5'b00010;
+    localparam E_WR2   = 5'b00100;
+    localparam E_WR3   = 5'b01000;
+    localparam E_WR4   = 5'b10000;
 
     assign axi_awburst = 2'b01;
     assign axi_awsize  = 3'b110;
@@ -86,25 +89,31 @@ module wr_ctrl #(
         // else if (wr_en && (test_wr_state == E_IDLE))
         else if (wr_done)
         begin
-            if (wr_en1)
+            if (wr_en4)
+                wr_port <= 2'd3;
+            else if (wr_en1)
                 wr_port <= 2'd0;
             else if (wr_en2)
                 wr_port <= 2'd1;
             else if (wr_en3)
                 wr_port <= 2'd2;
+            else if (wr_port == 2'd3)
+                wr_port <= 2'd2;
             else
                 wr_port <= wr_port;
         end
         else if ((test_wr_state == E_IDLE) && !wr_en) begin
-            if (wr_rst_1 && (wr_port == 2'd0))
+            if (wr_en4)
+                wr_port <= 2'd3;
+            else if (wr_rst_1 && (wr_port == 2'd0))
                 wr_port <= wr_en3 ? 2'd2 : 2'd1;
             else if (wr_rst_2 && (wr_port == 2'd1))
                 wr_port <= wr_en1 ? 2'd0 : 2'd2;
             else if (wr_rst_3 && (wr_port == 2'd2))
-                wr_port <= wr_en2 ? 2'd1 :  2'd0;
+                wr_port <= wr_en2 ? 2'd1 : 2'd0;
         end
-        else if (wr_port == 2'd3)
-            wr_port <= 2'd0;
+        // else if (wr_port == 2'd3)
+        //     wr_port <= 2'd0;
     end
 
     always @(posedge clk ) begin
@@ -125,6 +134,9 @@ module wr_ctrl #(
                         else if (wr_port == 2'd2) begin
                             test_wr_state <= E_WR3; 
                         end
+                        else if (wr_port == 2'd3) begin
+                            test_wr_state <= E_WR4; 
+                        end
                     end
                 end 
                 E_WR1: begin
@@ -139,18 +151,24 @@ module wr_ctrl #(
                     if (axi_wlast)
                         test_wr_state <= E_IDLE;
                 end
+                E_WR4: begin
+                    if (axi_wlast)
+                        test_wr_state <= E_IDLE;
+                end
                 default: test_wr_state <= E_IDLE;
             endcase
         end
     end
 
-    wire        wr_opera_en_1,  wr_opera_en_2,  wr_opera_en_3 ;
+    wire        wr_opera_en_1,  wr_opera_en_2,  wr_opera_en_3, wr_opera_en_4 ;
     //写端口1操作使能
     assign wr_opera_en_1 = (test_wr_state == E_WR1);
     //写端口2操作使能 
     assign wr_opera_en_2 = (test_wr_state == E_WR2);
     //写端口3操作使能 
     assign wr_opera_en_3 = (test_wr_state == E_WR3);
+    //写端口4操作使能 
+    assign wr_opera_en_4 = (test_wr_state == E_WR4);
     //===========================================================================
     //   write ADDR channels
     //===========================================================================
@@ -233,6 +251,7 @@ module wr_ctrl #(
     assign wr_ready1 = axi_wready & wr_opera_en_1;
     assign wr_ready2 = axi_wready & wr_opera_en_2;
     assign wr_ready3 = axi_wready & wr_opera_en_3;
+    assign wr_ready4 = axi_wready & wr_opera_en_4;
     
     always @(posedge clk)
     begin

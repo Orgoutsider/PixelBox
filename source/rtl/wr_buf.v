@@ -64,9 +64,15 @@ module wr_buf #(
     output                        frame_wirq,
     input                         wr_opera_en_1,
     input                         wr_opera_en_2,
+    input                         wr_opera_en_3,
     output                        ddr_wreq_en_1,
     output                        ddr_wreq_en_2,
-    output                        ddr_wreq_en_3
+    output                        ddr_wreq_en_3,
+    output                        ddr_wreq_en_4,
+    input                         ddr_wreq4,
+    input [ADDR_WIDTH- 1'b1 : 0]  ddr_waddr4,    
+    input [LEN_WIDTH- 1'b1 : 0]   ddr_wr_len4,
+    input [8*DQ_WIDTH- 1'b1 : 0]  ddr_wdata4
 );
     localparam H_NUM2 = H_NUM / 2;
 
@@ -90,9 +96,10 @@ module wr_buf #(
     wire [5:0]             ddr_wreq_cnt2;
     wire [5:0]             ddr_wreq_cnt3;
 
-    assign ddr_wreq_en_1 = (ddr_wreq_cnt1 > ddr_wreq_cnt2) && (ddr_wreq_cnt1 > ddr_wreq_cnt3);
-    assign ddr_wreq_en_2 = (ddr_wreq_cnt1 < ddr_wreq_cnt2) && (ddr_wreq_cnt3 < ddr_wreq_cnt2);
-    assign ddr_wreq_en_3 = (ddr_wreq_cnt1 < ddr_wreq_cnt3) && (ddr_wreq_cnt2 < ddr_wreq_cnt3);
+    assign ddr_wreq_en_1 = !ddr_wreq4 && (ddr_wreq_cnt1 > ddr_wreq_cnt2) && (ddr_wreq_cnt1 > ddr_wreq_cnt3);
+    assign ddr_wreq_en_2 = !ddr_wreq4 && (ddr_wreq_cnt1 < ddr_wreq_cnt2) && (ddr_wreq_cnt3 < ddr_wreq_cnt2);
+    assign ddr_wreq_en_3 = !ddr_wreq4 && (ddr_wreq_cnt1 < ddr_wreq_cnt3) && (ddr_wreq_cnt2 < ddr_wreq_cnt3);
+    assign ddr_wreq_en_4 = ddr_wreq4;
 
     wr_cell #(
         .ADDR_WIDTH      (ADDR_WIDTH),
@@ -190,38 +197,46 @@ module wr_buf #(
         .ddr_wreq_rst(ddr_wreq_rst3)
     );
 
-    // 3条路径的切换
+    // 4条路径的切换
     always @(*) begin
         if (wr_opera_en_1)
             ddr_wdata = ddr_wdata1;
         else if (wr_opera_en_2)
             ddr_wdata = ddr_wdata2;
-        else
+        else if (wr_opera_en_3)
             ddr_wdata = ddr_wdata3;
+        else
+            ddr_wdata = ddr_wdata4;
     end
     always @(*) begin
         if (wr_opera_en_1)
             ddr_waddr = ddr_waddr1;
         else if (wr_opera_en_2)
             ddr_waddr = ddr_waddr2;
+        else if (wr_opera_en_3)
+            ddr_waddr = ddr_waddr3;
         else
-            ddr_waddr = ddr_waddr3; 
+            ddr_waddr = ddr_waddr4; 
     end
     always @(*) begin
         if (wr_opera_en_1)
             ddr_wr_len = ddr_wr_len1;
         else if (wr_opera_en_2)
             ddr_wr_len = ddr_wr_len2;
+        else if (wr_opera_en_3)
+            ddr_wr_len = ddr_wr_len3;
         else
-            ddr_wr_len = ddr_wr_len3; 
+            ddr_wr_len = ddr_wr_len4; 
     end
     always @(*) begin
         if (wr_opera_en_1)
             ddr_wreq = ddr_wreq1;
         else if (wr_opera_en_2)
             ddr_wreq = ddr_wreq2;
-        else
+        else if (wr_opera_en_3)
             ddr_wreq = ddr_wreq3;
+        else
+            ddr_wreq = ddr_wreq4;
     end
     assign frame_wirq =frame_wirq1 | frame_wirq2 | frame_wirq3;
     // assign frame_wcnt = rd_frame_cnt;

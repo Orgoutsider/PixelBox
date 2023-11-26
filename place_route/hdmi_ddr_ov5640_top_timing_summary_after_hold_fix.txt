@@ -5,24 +5,24 @@ Setup Summary(Slow Corner):
                                                                           TNS Failing      TNS Total
  Launch Clock           Capture Clock              WNS(ns)     TNS(ns)      Endpoints      Endpoints
 ----------------------------------------------------------------------------------------------------
- sys_clk                sys_clk                     13.989       0.000              0            468
- ddrphy_clkin           ddrphy_clkin                 2.072       0.000              0          17853
+ sys_clk                sys_clk                     14.731       0.000              0            471
+ ddrphy_clkin           ddrphy_clkin                 2.148       0.000              0          19668
  ioclk0                 ioclk0                       1.692       0.000              0             24
  ioclk1                 ioclk1                       1.692       0.000              0             72
- cmos1_pclk             cmos1_pclk                   8.276       0.000              0             64
- cmos2_pclk             cmos2_pclk                   9.298       0.000              0             64
- cmos1_pclk_16bit       cmos1_pclk_16bit             5.757       0.000              0          13360
- cmos2_pclk_16bit       cmos2_pclk_16bit             4.732       0.000              0          26477
- pix_clk                pix_clk                      6.587       0.000              0           1012
- cfg_clk                cfg_clk                     94.240       0.000              0           1102
- clk_25M                clk_25M                     36.769       0.000              0             31
- pix_clk_in             pix_clk_in                   2.499       0.000              0           1506
+ cmos1_pclk             cmos1_pclk                   7.959       0.000              0             64
+ cmos2_pclk             cmos2_pclk                   9.136       0.000              0             64
+ cmos1_pclk_16bit       cmos1_pclk_16bit             5.863       0.000              0          13751
+ cmos2_pclk_16bit       cmos2_pclk_16bit             5.487       0.000              0          14364
+ pix_clk                pix_clk                      5.516       0.000              0           1582
+ cfg_clk                cfg_clk                     94.678       0.000              0           1102
+ clk_25M                clk_25M                     36.340       0.000              0             31
+ pix_clk_in             pix_clk_in                   2.222       0.000              0           1506
  hdmi_ddr_ov5640_top|rgmii_rxc
                         hdmi_ddr_ov5640_top|rgmii_rxc
-                                                   992.500       0.000              0           5468
- DebugCore_JCLK         DebugCore_JCLK              22.917       0.000              0           6665
- DebugCore_CAPTURE      DebugCore_JCLK              22.258       0.000              0            164
- DebugCore_JCLK         DebugCore_CAPTURE           45.173       0.000              0             16
+                                                   990.878       0.000              0           5467
+ DebugCore_JCLK         DebugCore_JCLK              23.722       0.000              0            236
+ DebugCore_CAPTURE      DebugCore_JCLK              24.855       0.000              0             90
+ DebugCore_JCLK         DebugCore_CAPTURE           44.274       0.000              0             16
 ====================================================================================================
 
 Hold Summary(Slow Corner):
@@ -30,24 +30,24 @@ Hold Summary(Slow Corner):
                                                                           THS Failing      THS Total
  Launch Clock           Capture Clock              WHS(ns)     THS(ns)      Endpoints      Endpoints
 ----------------------------------------------------------------------------------------------------
- sys_clk                sys_clk                      0.263       0.000              0            468
- ddrphy_clkin           ddrphy_clkin                -0.158      -5.072             78          17853
+ sys_clk                sys_clk                      0.254       0.000              0            471
+ ddrphy_clkin           ddrphy_clkin                -0.039      -0.039              1          19668
  ioclk0                 ioclk0                       0.450       0.000              0             24
  ioclk1                 ioclk1                       0.450       0.000              0             72
- cmos1_pclk             cmos1_pclk                   0.111       0.000              0             64
- cmos2_pclk             cmos2_pclk                   0.141       0.000              0             64
- cmos1_pclk_16bit       cmos1_pclk_16bit            -0.271     -16.593            238          13360
- cmos2_pclk_16bit       cmos2_pclk_16bit            -0.288     -26.968            418          26477
- pix_clk                pix_clk                      0.255       0.000              0           1012
- cfg_clk                cfg_clk                      0.223       0.000              0           1102
- clk_25M                clk_25M                      0.339       0.000              0             31
- pix_clk_in             pix_clk_in                   0.042       0.000              0           1506
+ cmos1_pclk             cmos1_pclk                   0.200       0.000              0             64
+ cmos2_pclk             cmos2_pclk                   0.447       0.000              0             64
+ cmos1_pclk_16bit       cmos1_pclk_16bit            -0.189      -1.925             29          13751
+ cmos2_pclk_16bit       cmos2_pclk_16bit            -0.189      -1.716             28          14364
+ pix_clk                pix_clk                      0.339       0.000              0           1582
+ cfg_clk                cfg_clk                      0.313       0.000              0           1102
+ clk_25M                clk_25M                      0.427       0.000              0             31
+ pix_clk_in             pix_clk_in                   0.185       0.000              0           1506
  hdmi_ddr_ov5640_top|rgmii_rxc
                         hdmi_ddr_ov5640_top|rgmii_rxc
-                                                     0.213       0.000              0           5468
- DebugCore_JCLK         DebugCore_JCLK               0.310       0.000              0           6665
- DebugCore_CAPTURE      DebugCore_JCLK              22.241       0.000              0            164
- DebugCore_JCLK         DebugCore_CAPTURE            3.008       0.000              0             16
+                                                     0.312       0.000              0           5467
+ DebugCore_JCLK         DebugCore_JCLK               0.312       0.000              0            236
+ DebugCore_CAPTURE      DebugCore_JCLK              21.084       0.000              0             90
+ DebugCore_JCLK         DebugCore_CAPTURE            4.146       0.000              0             16
 ====================================================================================================
 
 Recovery Summary(Slow Corner):
@@ -55,13 +55,13 @@ Recovery Summary(Slow Corner):
                                                                           TNS Failing      TNS Total
  Launch Clock           Capture Clock              WNS(ns)     TNS(ns)      Endpoints      Endpoints
 ----------------------------------------------------------------------------------------------------
- sys_clk                sys_clk                     14.796       0.000              0             64
- ddrphy_clkin           ddrphy_clkin                 5.567       0.000              0           2309
- cmos1_pclk_16bit       cmos1_pclk_16bit             6.760       0.000              0            286
- cmos2_pclk_16bit       cmos2_pclk_16bit             6.810       0.000              0           6547
- pix_clk                pix_clk                      9.555       0.000              0             24
- cfg_clk                cfg_clk                     97.541       0.000              0              1
- pix_clk_in             pix_clk_in                   3.800       0.000              0             28
+ sys_clk                sys_clk                     15.483       0.000              0             64
+ ddrphy_clkin           ddrphy_clkin                 5.315       0.000              0           2358
+ cmos1_pclk_16bit       cmos1_pclk_16bit             7.934       0.000              0            286
+ cmos2_pclk_16bit       cmos2_pclk_16bit             7.727       0.000              0            426
+ pix_clk                pix_clk                      9.437       0.000              0             56
+ cfg_clk                cfg_clk                     96.924       0.000              0              1
+ pix_clk_in             pix_clk_in                   3.771       0.000              0             28
 ====================================================================================================
 
 Removal Summary(Slow Corner):
@@ -69,13 +69,13 @@ Removal Summary(Slow Corner):
                                                                           THS Failing      THS Total
  Launch Clock           Capture Clock              WHS(ns)     THS(ns)      Endpoints      Endpoints
 ----------------------------------------------------------------------------------------------------
- sys_clk                sys_clk                      0.871       0.000              0             64
- ddrphy_clkin           ddrphy_clkin                 0.440       0.000              0           2309
- cmos1_pclk_16bit       cmos1_pclk_16bit             0.571       0.000              0            286
- cmos2_pclk_16bit       cmos2_pclk_16bit             0.308       0.000              0           6547
- pix_clk                pix_clk                      0.718       0.000              0             24
- cfg_clk                cfg_clk                      1.139       0.000              0              1
- pix_clk_in             pix_clk_in                   0.550       0.000              0             28
+ sys_clk                sys_clk                      0.901       0.000              0             64
+ ddrphy_clkin           ddrphy_clkin                 0.553       0.000              0           2358
+ cmos1_pclk_16bit       cmos1_pclk_16bit             0.970       0.000              0            286
+ cmos2_pclk_16bit       cmos2_pclk_16bit             0.496       0.000              0            426
+ pix_clk                pix_clk                      0.622       0.000              0             56
+ cfg_clk                cfg_clk                      1.576       0.000              0              1
+ pix_clk_in             pix_clk_in                   0.780       0.000              0             28
 ====================================================================================================
 
 Minimum Pulse Width Summary(Slow Corner):
@@ -90,24 +90,24 @@ Setup Summary(Fast Corner):
                                                                           TNS Failing      TNS Total
  Launch Clock           Capture Clock              WNS(ns)     TNS(ns)      Endpoints      Endpoints
 ----------------------------------------------------------------------------------------------------
- sys_clk                sys_clk                     15.768       0.000              0            468
- ddrphy_clkin           ddrphy_clkin                 4.276       0.000              0          17853
+ sys_clk                sys_clk                     16.241       0.000              0            471
+ ddrphy_clkin           ddrphy_clkin                 4.302       0.000              0          19668
  ioclk0                 ioclk0                       1.834       0.000              0             24
  ioclk1                 ioclk1                       1.834       0.000              0             72
- cmos1_pclk             cmos1_pclk                   9.192       0.000              0             64
- cmos2_pclk             cmos2_pclk                   9.987       0.000              0             64
- cmos1_pclk_16bit       cmos1_pclk_16bit             7.542       0.000              0          13360
- cmos2_pclk_16bit       cmos2_pclk_16bit             6.753       0.000              0          26477
- pix_clk                pix_clk                      8.270       0.000              0           1012
- cfg_clk                cfg_clk                     95.869       0.000              0           1102
- clk_25M                clk_25M                     37.644       0.000              0             31
- pix_clk_in             pix_clk_in                   3.516       0.000              0           1506
+ cmos1_pclk             cmos1_pclk                   9.013       0.000              0             64
+ cmos2_pclk             cmos2_pclk                   9.841       0.000              0             64
+ cmos1_pclk_16bit       cmos1_pclk_16bit             7.549       0.000              0          13751
+ cmos2_pclk_16bit       cmos2_pclk_16bit             7.319       0.000              0          14364
+ pix_clk                pix_clk                      7.475       0.000              0           1582
+ cfg_clk                cfg_clk                     96.225       0.000              0           1102
+ clk_25M                clk_25M                     37.386       0.000              0             31
+ pix_clk_in             pix_clk_in                   3.397       0.000              0           1506
  hdmi_ddr_ov5640_top|rgmii_rxc
                         hdmi_ddr_ov5640_top|rgmii_rxc
-                                                   994.646       0.000              0           5468
- DebugCore_JCLK         DebugCore_JCLK              23.523       0.000              0           6665
- DebugCore_CAPTURE      DebugCore_JCLK              22.831       0.000              0            164
- DebugCore_JCLK         DebugCore_CAPTURE           46.802       0.000              0             16
+                                                   993.580       0.000              0           5467
+ DebugCore_JCLK         DebugCore_JCLK              24.091       0.000              0            236
+ DebugCore_CAPTURE      DebugCore_JCLK              24.570       0.000              0             90
+ DebugCore_JCLK         DebugCore_CAPTURE           46.191       0.000              0             16
 ====================================================================================================
 
 Hold Summary(Fast Corner):
@@ -115,24 +115,24 @@ Hold Summary(Fast Corner):
                                                                           THS Failing      THS Total
  Launch Clock           Capture Clock              WHS(ns)     THS(ns)      Endpoints      Endpoints
 ----------------------------------------------------------------------------------------------------
- sys_clk                sys_clk                      0.249       0.000              0            468
- ddrphy_clkin           ddrphy_clkin                -0.176     -10.029            133          17853
+ sys_clk                sys_clk                      0.251       0.000              0            471
+ ddrphy_clkin           ddrphy_clkin                -0.089      -0.100              2          19668
  ioclk0                 ioclk0                       0.383       0.000              0             24
  ioclk1                 ioclk1                       0.383       0.000              0             72
- cmos1_pclk             cmos1_pclk                   0.039       0.000              0             64
- cmos2_pclk             cmos2_pclk                   0.064       0.000              0             64
- cmos1_pclk_16bit       cmos1_pclk_16bit            -0.266     -43.077            699          13360
- cmos2_pclk_16bit       cmos2_pclk_16bit            -0.267     -65.860           1021          26477
- pix_clk                pix_clk                      0.197       0.000              0           1012
- cfg_clk                cfg_clk                      0.171       0.000              0           1102
- clk_25M                clk_25M                      0.264       0.000              0             31
- pix_clk_in             pix_clk_in                  -0.020      -0.033              2           1506
+ cmos1_pclk             cmos1_pclk                   0.111       0.000              0             64
+ cmos2_pclk             cmos2_pclk                   0.259       0.000              0             64
+ cmos1_pclk_16bit       cmos1_pclk_16bit            -0.190      -3.862             61          13751
+ cmos2_pclk_16bit       cmos2_pclk_16bit            -0.190      -3.107             52          14364
+ pix_clk                pix_clk                      0.264       0.000              0           1582
+ cfg_clk                cfg_clk                      0.251       0.000              0           1102
+ clk_25M                clk_25M                      0.334       0.000              0             31
+ pix_clk_in             pix_clk_in                   0.101       0.000              0           1506
  hdmi_ddr_ov5640_top|rgmii_rxc
                         hdmi_ddr_ov5640_top|rgmii_rxc
-                                                     0.140       0.000              0           5468
- DebugCore_JCLK         DebugCore_JCLK               0.249       0.000              0           6665
- DebugCore_CAPTURE      DebugCore_JCLK              23.479       0.000              0            164
- DebugCore_JCLK         DebugCore_CAPTURE            2.053       0.000              0             16
+                                                     0.251       0.000              0           5467
+ DebugCore_JCLK         DebugCore_JCLK               0.251       0.000              0            236
+ DebugCore_CAPTURE      DebugCore_JCLK              22.680       0.000              0             90
+ DebugCore_JCLK         DebugCore_CAPTURE            2.772       0.000              0             16
 ====================================================================================================
 
 Recovery Summary(Fast Corner):
@@ -140,13 +140,13 @@ Recovery Summary(Fast Corner):
                                                                           TNS Failing      TNS Total
  Launch Clock           Capture Clock              WNS(ns)     TNS(ns)      Endpoints      Endpoints
 ----------------------------------------------------------------------------------------------------
- sys_clk                sys_clk                     16.294       0.000              0             64
- ddrphy_clkin           ddrphy_clkin                 6.747       0.000              0           2309
- cmos1_pclk_16bit       cmos1_pclk_16bit             8.243       0.000              0            286
- cmos2_pclk_16bit       cmos2_pclk_16bit             8.205       0.000              0           6547
- pix_clk                pix_clk                     10.466       0.000              0             24
- cfg_clk                cfg_clk                     98.200       0.000              0              1
- pix_clk_in             pix_clk_in                   4.571       0.000              0             28
+ sys_clk                sys_clk                     16.785       0.000              0             64
+ ddrphy_clkin           ddrphy_clkin                 6.546       0.000              0           2358
+ cmos1_pclk_16bit       cmos1_pclk_16bit             9.028       0.000              0            286
+ cmos2_pclk_16bit       cmos2_pclk_16bit             8.844       0.000              0            426
+ pix_clk                pix_clk                     10.417       0.000              0             56
+ cfg_clk                cfg_clk                     97.764       0.000              0              1
+ pix_clk_in             pix_clk_in                   4.572       0.000              0             28
 ====================================================================================================
 
 Removal Summary(Fast Corner):
@@ -154,13 +154,13 @@ Removal Summary(Fast Corner):
                                                                           THS Failing      THS Total
  Launch Clock           Capture Clock              WHS(ns)     THS(ns)      Endpoints      Endpoints
 ----------------------------------------------------------------------------------------------------
- sys_clk                sys_clk                      0.663       0.000              0             64
- ddrphy_clkin           ddrphy_clkin                 0.283       0.000              0           2309
- cmos1_pclk_16bit       cmos1_pclk_16bit             0.348       0.000              0            286
- cmos2_pclk_16bit       cmos2_pclk_16bit             0.206       0.000              0           6547
- pix_clk                pix_clk                      0.538       0.000              0             24
- cfg_clk                cfg_clk                      0.811       0.000              0              1
- pix_clk_in             pix_clk_in                   0.351       0.000              0             28
+ sys_clk                sys_clk                      0.682       0.000              0             64
+ ddrphy_clkin           ddrphy_clkin                 0.335       0.000              0           2358
+ cmos1_pclk_16bit       cmos1_pclk_16bit             0.632       0.000              0            286
+ cmos2_pclk_16bit       cmos2_pclk_16bit             0.316       0.000              0            426
+ pix_clk                pix_clk                      0.459       0.000              0             56
+ cfg_clk                cfg_clk                      1.149       0.000              0              1
+ pix_clk_in             pix_clk_in                   0.436       0.000              0             28
 ====================================================================================================
 
 Minimum Pulse Width Summary(Fast Corner):

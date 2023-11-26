@@ -42,6 +42,8 @@ module rd_ctrl #(
     input                                read_done   ,
     output                               read_cmd_en_p,
     input                                read_line   ,
+    input                                read_rdata_ban2,
+    // input                                read_rdata_ban4,
    
     output reg [CTRL_ADDR_WIDTH-1:0]     axi_araddr    =0,    
     output reg [3:0]                     axi_arid      =0,
@@ -57,7 +59,7 @@ module rd_ctrl #(
     input                                axi_rlast     ,
     input   [3:0]                        axi_rid       ,
     input   [1:0]                        axi_rresp     ,
-    output reg [1:0]                        read_port
+    output reg [1:0]                        read_port/*synthesis PAP_MARK_DEBUG="1"*/
 );
 
     localparam E_IDLE =  3'b001; 
@@ -70,26 +72,49 @@ module rd_ctrl #(
     
     reg [2:0] test_rd_state;
     reg [3:0] rd_delay_cnt;
+    reg [1:0] read_port_nx;
 
     always @(posedge clk or negedge rst_n) begin
         if (!rst_n) begin
             read_port <= 2'd0;
         end
-        // else if ((test_rd_state == E_IDLE) && read_en)
         else if (read_done)
-        begin
-            if (read_port == 2'd0)
-                read_port <= 2'd2;
-            else if (read_port == 2'd2)
-                read_port <= 2'd1;
-            else if (read_port == 2'd1)
-                read_port <= 2'd3;
-            else if (read_port == 2'd3)
-                read_port <= 2'd0;
-        end
+            read_port <= read_port_nx;
+        else
+            read_port <= read_port;
     end
 
-    assign read_cmd_en_p = (read_port > 2'd0) & ~read_done;
+    always @(posedge clk or negedge rst_n) begin
+        if (!rst_n)
+            read_port_nx <= 2'd2;
+        else
+        case (read_port)
+            2'd0: read_port_nx <= 2'd2;
+            2'd2:
+            begin
+                if (read_rdata_ban2)
+                begin
+                    // if (read_rdata_ban4)
+                    //     read_port_nx <= 2'd0;
+                    // else
+                    read_port_nx <= 2'd3; 
+                end
+                else 
+                    read_port_nx <= 2'd1;
+            end
+            2'd1:
+            begin
+                // if (read_rdata_ban4)
+                //     read_port_nx <= 2'd0;
+                // else
+                read_port_nx <= 2'd3; 
+            end
+            2'd3: read_port_nx <= 2'd0;
+            default: read_port_nx <= 2'd0;
+        endcase
+    end
+
+    assign read_cmd_en_p = (read_port > 2'd0) && ~read_done;
 
     always @(posedge clk or negedge rst_n)
     begin

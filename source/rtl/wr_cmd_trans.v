@@ -56,7 +56,9 @@ module wr_cmd_trans #(
     output reg [CTRL_ADDR_WIDTH-1:0] rd_addr      =0,           
     output reg [3:0]                 rd_id        =0,           
     output reg [3:0]                 rd_len       =0,           
-    input                            rd_done_p      
+    input                            rd_done_p,
+    input                            rotate_90,
+    input                            rd_opera_en_2      
 );
 
     reg          wr_done_1d;
@@ -333,7 +335,13 @@ module wr_cmd_trans #(
         else
             rd_cnt <= rd_cnt;
     end 
-    
+
+    reg rotate_90_1d, rotate_90_2d;
+    always @(posedge clk ) begin
+        rotate_90_1d <= rotate_90;
+        rotate_90_2d <= rotate_90_1d;
+    end
+
     always @(posedge clk)
     begin
         if(~rstn)
@@ -357,7 +365,10 @@ module wr_cmd_trans #(
                 else
                     rd_len <= 4'd15;
 
-                rd_addr <= rd_addr + {rd_len,3'd0} + 4'b1000;//12'd1024;
+                if (!rotate_90_2d | !rd_opera_en_2)
+                    rd_addr <= rd_addr + {rd_len,3'd0} + 4'b1000;//12'd1024;
+                else
+                    rd_addr <= rd_addr + 28'd5120;
             end 
             else
             begin

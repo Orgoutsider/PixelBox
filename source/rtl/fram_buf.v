@@ -82,7 +82,7 @@ module fram_buf #(
     input  [3:0]                  axi_rid        ,
     input  [3:0]                  num            ,
     input                         num_vld        ,
-    input                         rotate_ctrl
+    input  [1:0]                  rotate_ctrl
 );
     parameter LEN_WIDTH       = 32;
     parameter LINE_ADDR_WIDTH = 22;//19;//1440 * 1080 = 1 555 200 = 21'h17BB00
@@ -113,22 +113,25 @@ module fram_buf #(
     wire                        ddr_wr_bac;
     wire                        wr_opera_en_1;
     wire                        wr_opera_en_2;
+    wire                        wr_opera_en_3;
     wire                        rd_opera_en_1;
     wire                        rd_opera_en_2;
     wire                        rd_opera_en_3;
     wire                        ddr_wreq_en_1;
     wire                        ddr_wreq_en_2;
     wire                        ddr_wreq_en_3;
+    wire                        ddr_wreq_en_4;
     wire                        ddr_wreq_rst1;
     wire                        ddr_wreq_rst2;
     wire                        ddr_wreq_rst3;
     wire                        ddr_wreq4;
     wire [CTRL_ADDR_WIDTH- 1'b1 : 0] ddr_waddr4;    
     wire [LEN_WIDTH- 1'b1 : 0]  ddr_wr_len4;   
-    wire                        ddr_line;
+    // wire                        read_rdata_ban4;
     wire [CTRL_ADDR_WIDTH-1'b1:0] ddr_raddr4;
     wire [LEN_WIDTH-1'b1:0]     ddr_rd_len4;
-    wire [8*MEM_DQ_WIDTH-1 : 0] ddr_wdata4;    
+    wire [8*MEM_DQ_WIDTH-1 : 0] ddr_wdata4; 
+    wire                        read_rdata_ban2;   
 
     wr_buf #(
         .ADDR_WIDTH       (  CTRL_ADDR_WIDTH  ),//parameter                     ADDR_WIDTH      = 6'd28,
@@ -173,11 +176,17 @@ module fram_buf #(
 
         // .frame_wcnt       (                   ),//output [FRAME_CNT_WIDTH-1 :0] frame_wcnt,
         .frame_wirq       (  frame_wirq       ), //output                        frame_wirq
-        .wr_opera_en_1    (wr_opera_en_1),      //input                         wr_opera_en_2
-        .wr_opera_en_2    (wr_opera_en_2),      //input                         wr_opera_en_2
-        .ddr_wreq_en_1    (ddr_wreq_en_1),    //output
-        .ddr_wreq_en_2    (ddr_wreq_en_2),     //output
-        .ddr_wreq_en_3    (ddr_wreq_en_3)     //output
+        .wr_opera_en_1    (wr_opera_en_1      ),      //input                         wr_opera_en_2
+        .wr_opera_en_2    (wr_opera_en_2      ),      //input                         wr_opera_en_2
+        .wr_opera_en_3    (wr_opera_en_3      ),      //input                         wr_opera_en_2
+        .ddr_wreq_en_1    (ddr_wreq_en_1      ),    //output
+        .ddr_wreq_en_2    (ddr_wreq_en_2      ),     //output
+        .ddr_wreq_en_3    (ddr_wreq_en_3      ),     //output
+        .ddr_wreq_en_4    (ddr_wreq_en_4      ),     //output
+        .ddr_wreq4        (ddr_wreq4          ),     //input
+        .ddr_waddr4       (ddr_waddr4         ),     //input
+        .ddr_wr_len4      (ddr_wr_len4        ),     //input 
+        .ddr_wdata4       (ddr_wdata4         )      //input      
     );
     
     always @(posedge ddr_clk)
@@ -217,17 +226,19 @@ module fram_buf #(
         .ddr_rdone       (  rd_cmd_done       ),//input                         ddr_rdone,
                                               
         .ddr_rdata       (  read_rdata        ),//input [8*DQ_WIDTH- 1'b1 : 0]  ddr_rdata,
-        .ddr_rdata_en1    (  read_en1           ), //input                         ddr_rdata_en,
-        .ddr_rdata_en2    (  read_en2           ), //input                         ddr_rdata_en,
-        .ddr_rdata_en3    (  read_en3           ), //input                         ddr_rdata_en,
-        .rd_opera_en_1    (rd_opera_en_1),//input                         rd_opera_en_2,
-        .rd_opera_en_2    (rd_opera_en_2),//input                         rd_opera_en_2,
-        .rd_opera_en_3    (rd_opera_en_3),//input                         rd_opera_en_2,
-        .num              (num          ),//input [3 : 0]                 num 
-        .num_vld          (num_vld          ),//input 
-        .rotate_180       (rotate_ctrl == 1'b1),
-        .ddr_raddr4       (ddr_raddr4), 
-        .ddr_rd_len4      (ddr_rd_len4)
+        .ddr_rdata_en1   (  read_en1           ), //input                         ddr_rdata_en,
+        .ddr_rdata_en2   (  read_en2           ), //input                         ddr_rdata_en,
+        .ddr_rdata_en3   (  read_en3           ), //input                         ddr_rdata_en,
+        .rd_opera_en_1   (rd_opera_en_1),//input                         rd_opera_en_2,
+        .rd_opera_en_2   (rd_opera_en_2),//input                         rd_opera_en_2,
+        .rd_opera_en_3   (rd_opera_en_3),//input                         rd_opera_en_2,
+        .num             (num          ),//input [3 : 0]                 num 
+        .num_vld         (num_vld          ),//input 
+        .rotate_90       (rotate_ctrl == 2'd1),
+        .rotate_180      (rotate_ctrl == 2'd2),
+        .ddr_raddr4      (ddr_raddr4 ), 
+        .ddr_rd_len4     (ddr_rd_len4),
+        .ddr_rdata_ban   (read_rdata_ban2)
     );
     
     wr_rd_ctrl_top#(
@@ -247,6 +258,7 @@ module fram_buf #(
         .wr_data_re1       (  ddr_wdata_req1    ),//output                       wr_data_re  ,
         .wr_data_re2       (  ddr_wdata_req2    ),//output                       wr_data_re  ,
         .wr_data_re3       (  ddr_wdata_req3    ),//output                       wr_data_re  ,
+        .wr_data_re4       (  ddr_wdata_req4    ),//output                       wr_data_re  ,
                                               
         .rd_cmd_en        (  rd_cmd_en        ),//input                        rd_cmd_en   ,
         .rd_cmd_addr      (  rd_cmd_addr      ),//input  [CTRL_ADDR_WIDTH-1:0] rd_cmd_addr ,
@@ -261,6 +273,8 @@ module fram_buf #(
         .read_en3          (  read_en3          ),//output                       read_en     ,                                          
         .read_en4          (  read_en4          ),//output                       read_en     ,                                          
         .read_line         (  ddr_line          ),//input                                read_line   ,
+        .read_rdata_ban2    (  read_rdata_ban2     ),//input
+        // .read_rdata_ban4    (  read_rdata_ban4    ),//input
         // write channel                        
         .axi_awaddr       (  axi_awaddr       ),//output [CTRL_ADDR_WIDTH-1:0] axi_awaddr     ,  
         .axi_awid         (  axi_awid         ),//output [3:0]                 axi_awid       ,
@@ -297,15 +311,18 @@ module fram_buf #(
         .axi_rresp        (  2'd0             ), //input  [1:0]                 axi_rresp  
         .wr_opera_en_1    (wr_opera_en_1)      ,
         .wr_opera_en_2    (wr_opera_en_2)      ,
+        .wr_opera_en_3    (wr_opera_en_3)      ,
         .rd_opera_en_1    (rd_opera_en_1)      ,
         .rd_opera_en_2    (rd_opera_en_2)      ,
         .rd_opera_en_3    (rd_opera_en_3)      ,
         .wr_cmd_en_1       (ddr_wreq_en_1),
         .wr_cmd_en_2       (ddr_wreq_en_2),
         .wr_cmd_en_3       (ddr_wreq_en_3),
+        .wr_cmd_en_4       (ddr_wreq_en_4),
         .wr_rst_1 (ddr_wreq_rst1),
         .wr_rst_2 (ddr_wreq_rst2),
-        .wr_rst_3 (ddr_wreq_rst3)
+        .wr_rst_3 (ddr_wreq_rst3),
+        .rotate_90 (rotate_ctrl == 2'd1)
     );
 
     rotate_buf#(
@@ -333,7 +350,7 @@ module fram_buf #(
         .ddr_wdone(ddr_wdone),
         .ddr_wdata(ddr_wdata4),
         .ddr_wdata_req(ddr_wdata_req4),
-        .ddr_part_rd(2'd3),
-        .ddr_line(ddr_line)   
+        .ddr_part_rd(2'd3)
+        // .ddr_rdata_ban(read_rdata_ban4)   
     );
 endmodule
