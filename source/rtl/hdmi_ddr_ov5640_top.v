@@ -179,7 +179,7 @@ module hdmi_ddr_ov5640_top#(
     wire                        clk_200m                   ;
     wire                        clk_125m                   ;
     wire  [1:0]                 gamma_ctrl                   ;
-    wire                        saturation_ctrl                   ;
+    wire  [1:0]                 saturation_ctrl                   ;
     wire  [1:0]                 rotate_ctrl                   ;
     wire                        scaler_ctrl                   ;
 /////////////////////////////////////////////////////////////////////////////////////
@@ -570,8 +570,8 @@ module hdmi_ddr_ov5640_top#(
     );
 
     key_ctl#(
-        .CNT_WIDTH(4'd1),
-        .CNT_MAX  (4'd1)
+        .CNT_WIDTH(4'd2),
+        .CNT_MAX  (4'd2)
     ) key_ctl_saturation(
         .clk (sys_clk),// input           clk,//50MHz
         .key (key_saturation),// input           key,    

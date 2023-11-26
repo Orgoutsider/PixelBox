@@ -9,10 +9,10 @@ module cmos_mix#(
     input de_i,
     input vs_i,
     input [1:0] gamma_ctrl,
-    input saturation_ctrl,
-    output [15:0] pdata_o,
-    output de_o,
-    output vs_o
+    input [1:0] saturation_ctrl,
+    output reg [15:0] pdata_o,
+    output reg de_o,
+    output reg vs_o
 );
 localparam H_BEGIN = LEFT ? (H_ACT - H_OFFSET - 1'b1) : H_OFFSET;
 
@@ -33,6 +33,8 @@ reg [1:0] gamma_ctrl_1d;
 reg [1:0] gamma_ctrl_2d;
 reg saturation_ctrl_1d;
 reg saturation_ctrl_2d;
+reg sobel_ctrl_1d;
+reg sobel_ctrl_2d;
 
 wire [7:0]  rx_RGB_DATA_R/*synthesis PAP_MARK_DEBUG="1"*/;/*synthesis PAP_MARK_DEBUG="1"*/
 wire [7:0]  rx_RGB_DATA_G/*synthesis PAP_MARK_DEBUG="1"*/;/*synthesis PAP_MARK_DEBUG="1"*/
@@ -78,8 +80,10 @@ always @(posedge pixel_clk) begin
     saturation_vs_1d <= saturation_vs;
     gamma_ctrl_1d <= gamma_ctrl;
     gamma_ctrl_2d <= gamma_ctrl_1d;
-    saturation_ctrl_1d <= saturation_ctrl;
+    saturation_ctrl_1d <= (saturation_ctrl == 2'd1);
     saturation_ctrl_2d <= saturation_ctrl_1d;
+    sobel_ctrl_1d <= (saturation_ctrl == 2'd2);
+    sobel_ctrl_2d <= sobel_ctrl_1d;
     // enable_1d <= enable;
     // if(~saturation_vs_1d & saturation_vs)
     //     enable <= 1'b1;
@@ -200,7 +204,7 @@ assign median_filter_rst = ~saturation_vs_1d & saturation_vs;
     rgb_togrey u_rgb_togrey(
         .i_clk         (    pixel_clk           )     ,
         .i_rst_n       (    ~median_filter_rst  )     ,
-        .i_rgbdata     (    median_filter_data  )     ,
+        .i_rgbdata     (    {median_filter_data_R,median_filter_data_G,median_filter_data_B}  )     ,
         .i_de          (    median_filter_de    )     ,
         .i_vs          (    median_filter_vs    )     ,
         .o_greydata    (    o_greydata          )     ,
@@ -238,15 +242,12 @@ assign median_filter_rst = ~saturation_vs_1d & saturation_vs;
     //     .o_rgbdata_b                ( o_sobel_data_B        )
     // );
 
-
     // assign  pdata_o = {median_filter_data_R,median_filter_data_G,median_filter_data_B};
-
-    assign  pdata_o = o_sobel_data;
+    // assign  pdata_o = o_sobel_data;
     // assign  pdata_o = o_greydata;
-
     // assign de_o = median_filter_de;
-    assign de_o = sobel_de      ;
-    assign vs_o = sobel_vs      ;
+    // assign de_o = sobel_de      ;
+    // assign vs_o = sobel_vs      ;
 
     always @(*) begin
         case (gamma_ctrl_2d)
@@ -264,10 +265,24 @@ assign median_filter_rst = ~saturation_vs_1d & saturation_vs;
             median_filter_data = saturation_data_raw; 
     end
 
-    // always @(*) begin
-    // if (saturation_ctrl)
-    //     pdata_o = median_filter_data;
-    // else
-    //     pdata_o = saturation_data_raw; 
-    // end
+    always @(*) begin
+    if (sobel_ctrl_2d)
+        pdata_o = o_sobel_data;
+    else 
+        pdata_o = {median_filter_data_R,median_filter_data_G,median_filter_data_B}  ;
+    end
+
+    always @(*) begin
+    if (sobel_ctrl_2d)
+        de_o = sobel_de;
+    else 
+        de_o = median_filter_de;
+    end
+
+    always @(*) begin
+    if (sobel_ctrl_2d)
+        vs_o = sobel_vs;
+    else 
+        vs_o = median_filter_vs;
+    end
 endmodule
