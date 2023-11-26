@@ -29,10 +29,10 @@ wire [15:0] saturation_data_raw;
 wire [15:0] saturation_data_dst;
 wire saturation_de;
 wire saturation_vs;
-    reg [1:0] gamma_ctrl_1d;
-    reg [1:0] gamma_ctrl_2d;
-    reg saturation_ctrl_1d;
-    reg saturation_ctrl_2d;
+reg [1:0] gamma_ctrl_1d;
+reg [1:0] gamma_ctrl_2d;
+reg saturation_ctrl_1d;
+reg saturation_ctrl_2d;
 
 wire [7:0]  rx_RGB_DATA_R/*synthesis PAP_MARK_DEBUG="1"*/;/*synthesis PAP_MARK_DEBUG="1"*/
 wire [7:0]  rx_RGB_DATA_G/*synthesis PAP_MARK_DEBUG="1"*/;/*synthesis PAP_MARK_DEBUG="1"*/
@@ -42,16 +42,37 @@ wire [7:0]  tx_RGB_DATA_R /*synthesis PAP_MARK_DEBUG="1"*/;/*synthesis PAP_MARK_
 wire [7:0]  tx_RGB_DATA_G /*synthesis PAP_MARK_DEBUG="1"*/;/*synthesis PAP_MARK_DEBUG="1"*/
 wire [7:0]  tx_RGB_DATA_B /*synthesis PAP_MARK_DEBUG="1"*/;/*synthesis PAP_MARK_DEBUG="1"*/
 
+// wire [7:0]  o_sobel_RGB_DATA_R /*synthesis PAP_MARK_DEBUG="1"*/;/*synthesis PAP_MARK_DEBUG="1"*/
+// wire [7:0]  o_sobel_RGB_DATA_G /*synthesis PAP_MARK_DEBUG="1"*/;/*synthesis PAP_MARK_DEBUG="1"*/
+// wire [7:0]  o_sobel_RGB_DATA_B /*synthesis PAP_MARK_DEBUG="1"*/;/*synthesis PAP_MARK_DEBUG="1"*/
+
+// wire [7:0]  o_sobel_data_R/*synthesis PAP_MARK_DEBUG="1"*/;/*synthesis PAP_MARK_DEBUG="1"*/
+// wire [7:0]  o_sobel_data_G/*synthesis PAP_MARK_DEBUG="1"*/;/*synthesis PAP_MARK_DEBUG="1"*/
+// wire [7:0]  o_sobel_data_B/*synthesis PAP_MARK_DEBUG="1"*/;/*synthesis PAP_MARK_DEBUG="1"*/
+
+wire [15:0] o_sobel_data/*synthesis PAP_MARK_DEBUG="1"*/;/*synthesis PAP_MARK_DEBUG="1"*/
+wire [15:0] o_greydata/*synthesis PAP_MARK_DEBUG="1"*/;/*synthesis PAP_MARK_DEBUG="1"*/
+wire [ 7:0] o_greydata_8b/*synthesis PAP_MARK_DEBUG="1"*/;/*synthesis PAP_MARK_DEBUG="1"*/
+
 wire [4:0] median_filter_data_R/*synthesis PAP_MARK_DEBUG="1"*/;/*synthesis PAP_MARK_DEBUG="1"*/
 wire [5:0] median_filter_data_G/*synthesis PAP_MARK_DEBUG="1"*/;/*synthesis PAP_MARK_DEBUG="1"*/
 wire [4:0] median_filter_data_B/*synthesis PAP_MARK_DEBUG="1"*/;/*synthesis PAP_MARK_DEBUG="1"*/
 // wire [15:0] median_filter_data/*synthesis PAP_MARK_DEBUG="1"*/;/*synthesis PAP_MARK_DEBUG="1"*/
 wire median_filter_de;
+wire median_filter_vs;
+
+wire sobel_de/*synthesis PAP_MARK_DEBUG="1"*/;/*synthesis PAP_MARK_DEBUG="1"*/
+wire sobel_vs;
+
+wire grey_de;
+wire grey_vs;
+
 wire median_filter_rst;
 // reg enable = 1'b0;
 // reg enable_1d;
 reg saturation_vs_1d;
 reg [15:0] median_filter_data/*synthesis PAP_MARK_DEBUG="1"*/;/*synthesis PAP_MARK_DEBUG="1"*/
+// reg [7:0 ] gray_data;
 
 always @(posedge pixel_clk) begin
     saturation_vs_1d <= saturation_vs;
@@ -133,11 +154,70 @@ assign median_filter_rst = ~saturation_vs_1d & saturation_vs;
         .rx_data_G                  ( rx_RGB_DATA_G     ),
         .rx_data_B                  ( rx_RGB_DATA_B     ),
         .pi_flag                    ( saturation_de     ),
+        .i_vs                       ( saturation_vs     ),
         .tx_data_R                  ( tx_RGB_DATA_R     ),
         .tx_data_G                  ( tx_RGB_DATA_G     ),
         .tx_data_B                  ( tx_RGB_DATA_B     ),
-        .po_flag                    ( median_filter_de  )
+        .po_flag                    ( median_filter_de  ),
+        .o_vs                       ( median_filter_vs  )
+        
+    );
+    // up_sobel  u_up_sobel(
+    //     .sclk                       (   pixel_clk           ),
+    //     .rst_n                      (   ~median_filter_rst  ),
+    //     .rx_data_R                  (   rx_RGB_DATA_R       ),
+    //     .rx_data_G                  (   rx_RGB_DATA_G       ),
+    //     .rx_data_B                  (   rx_RGB_DATA_B       ),
+    //     .pi_flag                    (   saturation_de       ),
+    //     .tx_data_R                  (   o_sobel_RGB_DATA_R  ),
+    //     .tx_data_G                  (   o_sobel_RGB_DATA_G  ),
+    //     .tx_data_B                  (   o_sobel_RGB_DATA_B  ),
+    //     .po_flag                    (   sobel_de            )   
+    // );
+    
+    // up_sobel    u_up_sobel(
+    //     .sclk               (    pixel_clk              )    ,
+    //     .rst_n              (    ~median_filter_rst     )    ,
+    //     .rx_data            (    median_filter_data     )    ,
+    //     .pi_flag            (    saturation_de          )    ,
+    //     .tx_data            (    o_sobel_data           )    ,
+    //     .o_grey_data        (    o_greydata           )    ,
+    //     .po_flag            (    sobel_de               )
+    // );
 
+    // rgb_togrey u_rgb_togrey(
+    //     .i_clk            (    pixel_clk            )   ,
+    //     .i_rst_n          (    ~median_filter_rst   )   ,
+    //     .i_rgbdata        (    median_filter_data   )   ,
+    //     .i_de             (    median_filter_de     )   ,
+    //     .i_vs             (    median_filter_vs     )   ,
+    //     .o_greydata       (    o_greydata           )   ,
+    //     .o_grey8b         (    o_greydata_8b        )   ,
+    //     .o_de             (    grey_de              )   ,                            ,
+    //     .o_vs             (    grey_vs              )   
+    // );
+
+    rgb_togrey u_rgb_togrey(
+        .i_clk         (    pixel_clk           )     ,
+        .i_rst_n       (    ~median_filter_rst  )     ,
+        .i_rgbdata     (    median_filter_data  )     ,
+        .i_de          (    median_filter_de    )     ,
+        .i_vs          (    median_filter_vs    )     ,
+        .o_greydata    (    o_greydata          )     ,
+        .o_grey8b      (    o_greydata_8b       )     ,
+        .o_de          (    grey_de             )     ,
+        .o_vs          (    grey_vs             )     
+    );
+
+    sobel    u_sobel(
+        .sclk               (    pixel_clk              )   ,
+        .rst_n              (    ~median_filter_rst     )   ,
+        .rx_data            (    o_greydata_8b          )   ,
+        .i_de               (    grey_de                )   ,
+        .i_vs               (    grey_vs                )   ,
+        .tx_data            (    o_sobel_data           )   ,
+        .o_de               (    sobel_de               )   ,
+        .o_vs               (    sobel_vs               )
     );
 
     RGB_888TO565    u_rgb825(
@@ -149,10 +229,24 @@ assign median_filter_rst = ~saturation_vs_1d & saturation_vs;
         .o_rgbdata_b                ( median_filter_data_B  )
     );
 
-    assign  pdata_o = {median_filter_data_R,median_filter_data_G,median_filter_data_B};
+    // RGB_888TO565    u_sobel_rgb825(
+    //     .i_rgbdata_r                ( o_sobel_RGB_DATA_R    ),
+    //     .i_rgbdata_g                ( o_sobel_RGB_DATA_G    ),
+    //     .i_rgbdata_b                ( o_sobel_RGB_DATA_B    ),
+    //     .o_rgbdata_r                ( o_sobel_data_R        ),
+    //     .o_rgbdata_g                ( o_sobel_data_G        ),
+    //     .o_rgbdata_b                ( o_sobel_data_B        )
+    // );
 
-    assign de_o = median_filter_de;
-    assign vs_o = saturation_vs;
+
+    // assign  pdata_o = {median_filter_data_R,median_filter_data_G,median_filter_data_B};
+
+    assign  pdata_o = o_sobel_data;
+    // assign  pdata_o = o_greydata;
+
+    // assign de_o = median_filter_de;
+    assign de_o = sobel_de      ;
+    assign vs_o = sobel_vs      ;
 
     always @(*) begin
         case (gamma_ctrl_2d)
