@@ -221,7 +221,7 @@ mat_3x3 mat_3x3_inst(
     .mat_row2               (mat_row2               ),
     .mat_row3               (mat_row3               ),
     .mat_flag               (mat_flag               ),
-    .line_flag               (line_flag               )
+    .line_flag              (line_flag              )
 
 );
 
