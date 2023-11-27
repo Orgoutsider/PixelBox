@@ -1,0 +1,42 @@
+function [8:0] get_offset_y;
+	input [5:0] panning_y_ctrl_2d;
+	case (panning_y_ctrl_2d)
+		0: get_offset_y = 9'd0;
+		1: get_offset_y = 9'd20;
+		2: get_offset_y = 9'd40;
+		3: get_offset_y = 9'd60;
+		4: get_offset_y = 9'd80;
+		5: get_offset_y = 9'd100;
+		6: get_offset_y = 9'd120;
+		7: get_offset_y = 9'd140;
+		8: get_offset_y = 9'd160;
+		9: get_offset_y = 9'd180;
+		10: get_offset_y = 9'd200;
+		11: get_offset_y = 9'd220;
+		12: get_offset_y = 9'd240;
+		13: get_offset_y = 9'd260;
+		14: get_offset_y = 9'd280;
+		15: get_offset_y = 9'd300;
+		16: get_offset_y = 9'd320;
+		17: get_offset_y = 9'd340;
+		18: get_offset_y = 9'd360;
+		19: get_offset_y = 9'd340;
+		20: get_offset_y = 9'd320;
+		21: get_offset_y = 9'd300;
+		22: get_offset_y = 9'd280;
+		23: get_offset_y = 9'd260;
+		24: get_offset_y = 9'd240;
+		25: get_offset_y = 9'd220;
+		26: get_offset_y = 9'd200;
+		27: get_offset_y = 9'd180;
+		28: get_offset_y = 9'd160;
+		29: get_offset_y = 9'd140;
+		30: get_offset_y = 9'd120;
+		31: get_offset_y = 9'd100;
+		32: get_offset_y = 9'd80;
+		33: get_offset_y = 9'd60;
+		34: get_offset_y = 9'd40;
+		35: get_offset_y = 9'd20;
+		36: get_offset_y = 9'd0;
+	endcase
+endfunction
