@@ -1,0 +1,13 @@
+*.log
+*.docx
+*.pdf
+constraint_backup/**
+constraint_check/**
+Design Editor/**
+device_map/**
+place_route/**
+report_timing/**
+compile/**
+synthesize/!hdmi_ddr_ov5640_top_syn.fic
+synthesize/**
+HDMI_DDR3_OV5640_test.pds.lock
