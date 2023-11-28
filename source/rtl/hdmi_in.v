@@ -4,85 +4,270 @@ module hdmi_in # (
 )
 (
     input pixclk_in,
-    input init_over_tx, // Ð´³õÊ¼»¯½áÊø
+    input init_over_tx, // Ð´ï¿½ï¿½Ê¼ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
     input vs_in,
     input hs_in,
     input de_in /*synthesis PAP_MARK_DEBUG="1"*/, /*synthesis PAP_MARK_DEBUG="1"*/
     input [7:0] r_in,
     input [7:0] g_in,
     input [7:0] b_in,
-    input scaler_ctrl, 
+    // input scaler_ctrl, 
+    input [5:0] scaler_ctrl_width, 
+    input [6:0] scaler_ctrl_height, 
+    input color_reverse_ctrl,
+    input [5:0] panning_y_ctrl,
+    input [6:0] panning_x_ctrl,
 
-    output reg vs_out/*synthesis PAP_MARK_DEBUG="1"*/, /*synthesis PAP_MARK_DEBUG="1"*/
-    output reg hs_out/*synthesis PAP_MARK_DEBUG="1"*/, /*synthesis PAP_MARK_DEBUG="1"*/
+    output reg vs_out /*synthesis PAP_MARK_DEBUG="1"*/, /*synthesis PAP_MARK_DEBUG="1"*/
+    output reg hs_out /*synthesis PAP_MARK_DEBUG="1"*/, /*synthesis PAP_MARK_DEBUG="1"*/
     output reg de_out /*synthesis PAP_MARK_DEBUG="1"*/, /*synthesis PAP_MARK_DEBUG="1"*/
-    // output reg de_out,
-    output reg [23:0] data_out /*synthesis PAP_MARK_DEBUG="1"*/
-    // output reg [23:0] data_out
+    output [23:0] data_out /*synthesis PAP_MARK_DEBUG="1"*/
 );
+//--------------------------------------------ï¿½ï¿½ï¿½Å±È¶ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½------------------------------------------------------//
+    parameter INT_WIDTH   = 8;   // ï¿½ï¿½ï¿½ï¿½Î»ï¿½ï¿½
+    parameter FIX_WIDTH   = 12;  // Ð¡ï¿½ï¿½Î»ï¿½ï¿½
 
-    reg [23:0] i_data_scaler;/*synthesis PAP_MARK_DEBUG="1"*/
-    wire [23:0] o_data_scaler; /*synthesis PAP_MARK_DEBUG="1"*/ // ÔÝ´æÏñËØ
-    reg [11:0] h_cnt;/*synthesis PAP_MARK_DEBUG="1"*/
-    reg [11:0] v_cnt;/*synthesis PAP_MARK_DEBUG="1"*/
-    reg [8:0] scaler_v_cnt;/*synthesis PAP_MARK_DEBUG="1"*/
-    reg [8:0] scaler_h_cnt;/*synthesis PAP_MARK_DEBUG="1"*/
-    reg vs_in_1d;/*synthesis PAP_MARK_DEBUG="1"*/
-    reg de_in_1d;/*synthesis PAP_MARK_DEBUG="1"*/
-    reg o_vs_scaler_1d;/*synthesis PAP_MARK_DEBUG="1"*/
-    reg o_de_scaler_1d; /*synthesis PAP_MARK_DEBUG="1"*/
-    reg  i_de_scaler; /*synthesis PAP_MARK_DEBUG="1"*/ // ÊäÈëËõ·ÅÄ£¿éµÄde
-    wire o_de_scaler; /*synthesis PAP_MARK_DEBUG="1"*/ // Ëõ·ÅÄ£¿éÊä³öµÄde
-    wire o_hs_scaler; /*synthesis PAP_MARK_DEBUG="1"*/ // Ëõ·ÅÄ£¿éÊä³öµÄde
-    wire o_vs_scaler; /*synthesis PAP_MARK_DEBUG="1"*/ // Ëõ·ÅÄ£¿éÊä³öµÄde
-    wire rst_scaler; /*synthesis PAP_MARK_DEBUG="1"*/ //
-    reg scaler_ctrl_1d, scaler_ctrl_2d;
+    parameter SRC_IMAGE_WIDTH  = H_ACT; // Ô­Í¼ï¿½ï¿½
+    parameter SRC_IMAGE_HEIGHT = V_ACT; // Ô­Í¼ï¿½ï¿½
+
+    parameter DEST_IMAGE_WIDTH  = 400; // Ä¿ï¿½ï¿½Í¼ï¿½ï¿½
+    parameter DEST_IMAGE_HEIGHT = 500; // Ä¿ï¿½ï¿½Í¼ï¿½ï¿½
+
+    parameter SCALE_INTX = SRC_IMAGE_WIDTH  / DEST_IMAGE_WIDTH;  // ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½xï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+    parameter SCALE_INTY = SRC_IMAGE_HEIGHT / DEST_IMAGE_HEIGHT; // ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½yï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+
+    parameter SCALE_FRACX = ((SRC_IMAGE_WIDTH  - SCALE_INTX * DEST_IMAGE_WIDTH)  << FIX_WIDTH) / DEST_IMAGE_WIDTH; //ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½xÐ¡ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+    parameter SCALE_FRACY = ((SRC_IMAGE_HEIGHT - SCALE_INTY * DEST_IMAGE_HEIGHT) << FIX_WIDTH) / DEST_IMAGE_HEIGHT; //ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½yÐ¡ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+
+    parameter SCALE_FACTORX = (SCALE_INTX  << FIX_WIDTH) + SCALE_FRACX; //SRC_IMAGE_WIDTH / DEST_IMAGE_WIDTH
+    parameter SCALE_FACTORY = (SCALE_INTY  << FIX_WIDTH) + SCALE_FRACY; //SRC_IMAGE_HEIGHT / DEST_IMAGE_HEIGHT
+
+    wire [7:0] r_o;/*synthesis PAP_MARK_DEBUG="1"*/
+    wire [7:0] g_o;/*synthesis PAP_MARK_DEBUG="1"*/
+    wire [7:0] b_o;/*synthesis PAP_MARK_DEBUG="1"*/
+    reg [11:0] h_cnt; /*synthesis PAP_MARK_DEBUG="1"*/
+    reg [11:0] v_cnt;     /*synthesis PAP_MARK_DEBUG="1"*/
+    reg [11:0] black_cnt; /*synthesis PAP_MARK_DEBUG="1"*/
+    reg o_de_scaler_1d;   /*synthesis PAP_MARK_DEBUG="1"*/
+    reg  vs_in_1d;        /*synthesis PAP_MARK_DEBUG="1"*/
+    reg  de_in_1d;        /*synthesis PAP_MARK_DEBUG="1"*/
+    reg  i_de_scaler;     /*synthesis PAP_MARK_DEBUG="1"*/ // ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ä£ï¿½ï¿½ï¿½de
+    wire o_de_scaler_r;   /*synthesis PAP_MARK_DEBUG="1"*/ // ï¿½ï¿½ï¿½ï¿½Ä£ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½de
+    wire o_de_scaler_g;   /*synthesis PAP_MARK_DEBUG="1"*/ // ï¿½ï¿½ï¿½ï¿½Ä£ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½de
+    wire o_de_scaler_b;   /*synthesis PAP_MARK_DEBUG="1"*/ // ï¿½ï¿½ï¿½ï¿½Ä£ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½de
+    wire rst_scaler;      /*synthesis PAP_MARK_DEBUG="1"*/ 
+    reg  scaler_ctrl_1d;  /*synthesis PAP_MARK_DEBUG="1"*/
+    reg  scaler_ctrl_2d;  /*synthesis PAP_MARK_DEBUG="1"*/
+    wire tready_o_r;      /*synthesis PAP_MARK_DEBUG="1"*/
+    wire tready_o_g;      /*synthesis PAP_MARK_DEBUG="1"*/
+    wire tready_o_b;      /*synthesis PAP_MARK_DEBUG="1"*/
+    reg [16:0] scaler_de_cnt;   /*synthesis PAP_MARK_DEBUG="1"*/
+    reg [16:0] de_row_cnt; /*synthesis PAP_MARK_DEBUG="1"*/
+    reg [16:0] de_out_cnt;/*synthesis PAP_MARK_DEBUG="1"*/
+    reg vs_state;/*synthesis PAP_MARK_DEBUG="1"*/
+    reg vs_out_1d;/*synthesis PAP_MARK_DEBUG="1"*/
+    reg [16:0] real_de_row_cnt;/*synthesis PAP_MARK_DEBUG="1"*/
+    reg de_out_1d;/*synthesis PAP_MARK_DEBUG="1"*/
+
+    reg [5:0] scaler_ctrl_width_1d;//0-63
+    reg [5:0] scaler_ctrl_width_2d;//0-63
+    reg [6:0] scaler_ctrl_height_1d;//0-71
+    reg [6:0] scaler_ctrl_height_2d;//0-71
+    reg color_reverse_ctrl_1d;//0-1
+    reg color_reverse_ctrl_2d;//0-1
+    reg [5:0] panning_y_ctrl_1d;//0-36
+    reg [5:0] panning_y_ctrl_2d;//0-36
+    reg [6:0] panning_x_ctrl_1d;//0-64
+    reg [6:0] panning_x_ctrl_2d;//0-64
+
+    reg [11:0] dest_width_i = 'd640; /*synthesis PAP_MARK_DEBUG="1"*/
+    reg [11:0] dest_height_i  = 'd720; /*synthesis PAP_MARK_DEBUG="1"*/
+    reg [INT_WIDTH-1:0] scale_intx;/*synthesis PAP_MARK_DEBUG="1"*/
+    reg [INT_WIDTH-1:0] scale_inty;/*synthesis PAP_MARK_DEBUG="1"*/
+    reg [FIX_WIDTH-1:0] scale_fracx;/*synthesis PAP_MARK_DEBUG="1"*/
+    reg [FIX_WIDTH-1:0] scale_fracy;/*synthesis PAP_MARK_DEBUG="1"*/
+    reg [INT_WIDTH + FIX_WIDTH - 1:0] scale_factorx;/*synthesis PAP_MARK_DEBUG="1"*/
+    reg [INT_WIDTH + FIX_WIDTH - 1:0] scale_factory;/*synthesis PAP_MARK_DEBUG="1"*/
+
+    reg [8:0] offset_y;/*synthesis PAP_MARK_DEBUG="1"*/
+    reg [9:0] offset_x;/*synthesis PAP_MARK_DEBUG="1"*/
+    
+    `include "get_fracx.v"
+    `include "get_fracy.v"
+    `include "get_offset_y.v"
+    `include "get_offset_x.v"
+
+    always @(*) begin
+        scale_fracx = get_fracx(scaler_ctrl_width_2d);
+    end
+    always @(*) begin
+        scale_fracy = get_fracy(scaler_ctrl_height_2d);
+    end
+
+    always @(*) begin
+        offset_y = get_offset_y(panning_y_ctrl_2d);
+    end
+    always @(*) begin
+        offset_x = get_offset_x(panning_x_ctrl_2d);
+    end
+
+    always @(*) begin
+        scale_intx = SRC_IMAGE_WIDTH  / dest_width_i;
+        scale_inty = SRC_IMAGE_HEIGHT  / dest_height_i;
+        scale_factorx = (scale_intx  << FIX_WIDTH) + scale_fracx;
+        scale_factory = (scale_inty  << FIX_WIDTH) + scale_fracy;
+    end
+
+    always @(*) begin
+        if (scaler_ctrl_width_2d <= 31) begin
+            dest_width_i = 640 - scaler_ctrl_width_2d * 20;
+        end
+        else begin
+            dest_width_i = scaler_ctrl_width_2d * 20 - 600;
+        end
+    end
+
+    always @(*) begin
+        if (scaler_ctrl_height_2d <= 35) begin
+            dest_height_i = 720 - scaler_ctrl_height_2d * 20;
+        end
+        else begin
+            dest_height_i = scaler_ctrl_height_2d * 20 - 700;
+        end
+    end
 
     always @(posedge pixclk_in) begin
-        scaler_ctrl_1d <= scaler_ctrl;
-        scaler_ctrl_2d <= scaler_ctrl_1d;
+        scaler_ctrl_width_1d <= scaler_ctrl_width;
+        scaler_ctrl_width_2d <= scaler_ctrl_width_1d;
     end
+
+    always @(posedge pixclk_in) begin
+        scaler_ctrl_height_1d <= scaler_ctrl_height;
+        scaler_ctrl_height_2d <= scaler_ctrl_height_1d;
+    end
+
+    always @(posedge pixclk_in) begin
+        color_reverse_ctrl_1d <= color_reverse_ctrl;
+        color_reverse_ctrl_2d <= color_reverse_ctrl_1d;
+    end
+    always @(posedge pixclk_in) begin
+        panning_y_ctrl_1d <= panning_y_ctrl;
+        panning_y_ctrl_2d <= panning_y_ctrl_1d;
+    end
+    always @(posedge pixclk_in) begin
+        panning_x_ctrl_1d <= panning_x_ctrl;
+        panning_x_ctrl_2d <= panning_x_ctrl_1d;
+    end
+
+
+    // always @(posedge pixclk_in) begin
+    //     de_out_1d <= de_out;        
+    // end
+    
+    // always @(posedge pixclk_in) begin
+    //     if (!init_over_tx) begin
+    //         vs_state <= 0;
+    //     end
+    //     else if (vs_out & ~vs_out_1d) begin 
+    //         vs_state <= ~vs_state;
+    //     
+    // end
+
+    // ï¿½ï¿½ï¿½ï¿½ï¿?720ï¿½ï¿½ï¿½ï¿½ï¿½âµ½ï¿½×¶ï¿½ï¿½Ùºï¿½ï¿½ï¿½
+    // always @(posedge pixclk_in) begin
+    //     if(!init_over_tx) begin
+    //         real_de_row_cnt <= 0;
+    //     end
+    //     else if ((v_cnt > V_ACT - 1'b1) && (de_out & ~de_out_1d)) begin
+    //         real_de_row_cnt <= real_de_row_cnt + 1;
+    //     end
+    //     else if (~vs_in_1d & vs_in) begin
+    //         real_de_row_cnt <= 0;
+    //     end
+    //     else if (vs_state == 0) begin
+    //         real_de_row_cnt <= 0;
+    //     end
+    // end
+    // scaler ï¿½ï¿½ï¿½ï¿½ï¿½deï¿½ï¿½ï¿½ï¿½
+    always @(posedge pixclk_in) begin
+        if (!init_over_tx) begin
+            scaler_de_cnt <= 0;
+        end
+        else if (o_de_scaler_r && de_row_cnt == 1) begin
+            scaler_de_cnt <= scaler_de_cnt + 1;
+        end
+    end
+
+    // hdmiï¿½ï¿½ï¿½ï¿½ï¿½deï¿½ï¿½ï¿½ï¿½
+    always @(posedge pixclk_in) begin
+        if (!init_over_tx) begin
+            de_out_cnt <= 0;
+        end
+        else if (de_out  && de_row_cnt == 1) begin
+            de_out_cnt <= de_out_cnt + 1;
+       end 
+    end
+
+    //ï¿½Ð¼ï¿½ï¿½ï¿½
+    always @(posedge pixclk_in) begin
+        if (!init_over_tx) begin    
+            de_row_cnt <= 0;
+        end
+        if (o_de_scaler_r & ~o_de_scaler_1d) begin
+            de_row_cnt <= de_row_cnt + 1; 
+        end
+    end
+
 
     always  @(posedge pixclk_in) begin
         if(!init_over_tx)begin
             vs_out  <=  1'b0        ;
-            de_out <=  1'b0        ;
-
             hs_out  <=  1'b0        ;
-
             i_de_scaler   <=  1'b0        ;
-            i_data_scaler <=  24'b0        ;
-            // data_out      <=  24'b0        ;
         end
     	else begin
-            vs_out        <=  vs_in || (~scaler_ctrl_2d ? (v_cnt > V_ACT) : 1'b0);
-            de_out <=  scaler_ctrl_2d ? (o_de_scaler || ((h_cnt < H_ACT) && (v_cnt > V_ACT-1'b1) && de_in)) : (de_in && (h_cnt < H_ACT) && (v_cnt < V_ACT));
-            // vs_out        <=  vs_in || (v_cnt > V_ACT);
-            hs_out        <=  hs_in;
-
-            i_de_scaler <=  de_in && (h_cnt < H_ACT + 2) && (v_cnt < V_ACT) ;
-            i_data_scaler          <=  {r_in, g_in, b_in}; 
-            // data_out          <=  {r_in, g_in, b_in}         ; 
+            // vs_out  <=  vs_in ; // Ö¡ï¿½ï¿½Í·ï¿½Í½ï¿½Î²ï¿½ï¿½Ò»ï¿½ï¿½
+            // vs_out  <=  vs_in || (v_cnt >= 900); // Ö¡ï¿½ï¿½Í·ï¿½Í½ï¿½Î²ï¿½ï¿½Ò»ï¿½ï¿½
+            vs_out  <=  vs_in || (v_cnt >= 1080 - offset_y); // Ö¡ï¿½ï¿½Í·ï¿½Í½ï¿½Î²ï¿½ï¿½Ò»ï¿½ï¿½
+            hs_out  <=  hs_in;
+            i_de_scaler    <=  ((tready_o_r && tready_o_g && tready_o_b) && de_in && (h_cnt < H_ACT + 2) && (v_cnt < V_ACT)) ;
         end
     end
+
+
+    
+    reg [23:0] delay_data;/*synthesis PAP_MARK_DEBUG="1"*/
+    wire [15:0] delay_c;/*synthesis PAP_MARK_DEBUG="1"*/
+    delay_laps#(    
+        .MAX_DATA_WIDTH(24),
+        .MAX_DELAY_LAPS(640)
+    ) u_delay_laps(
+        .clk(pixclk_in),
+        .rst_n(init_over_tx),
+        .i_data(delay_data),
+        .delaylap(offset_x),
+        .o_data(data_out),
+        .delay_cnt(delay_c)
+    );
 
     always @(posedge pixclk_in) begin
         if (!init_over_tx) begin
-            data_out <= 0;
+            delay_data <= 0;
         end
         else begin
-            // data_out <= o_data_scaler;
-            if (~scaler_ctrl_2d)
-                data_out <= {r_in, g_in, b_in};
-            else if (o_de_scaler)
-                // data_out <= 24'b111111111111111111111111;
-                data_out <= o_data_scaler;
+            if (o_de_scaler_r) begin
+                if (color_reverse_ctrl_2d)
+                    delay_data <= {~r_o, ~g_o, ~b_o};
+                else begin
+                    delay_data <= {r_o, g_o, b_o};
+                end
+            end
             else 
-                data_out <= 0;
+                delay_data <= 0;
         end
     end
     
-    //ÊäÈëµÄÁÐ¼ÆÊýh
+    //ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ð¼ï¿½ï¿½ï¿½h
     always @(posedge pixclk_in) begin
         if (!de_in)
             h_cnt <= 12'd0;
@@ -90,15 +275,15 @@ module hdmi_in # (
             h_cnt <= h_cnt + 1'b1;
     end
 
-    // ÊäÈëÐÐ¼ÆÊý
+    // ï¿½ï¿½ï¿½ï¿½ï¿½Ð¼ï¿½ï¿½ï¿½
     always @(posedge pixclk_in) begin
         if(!init_over_tx)begin
             v_cnt <= 12'd0;
         end
         else begin
-            if (~vs_in_1d & vs_in) // ¼ì²âvsµÄÉÏÉýÑØ£¬ËµÃ÷ÐÂÒ»Ö¡À´ÁË£¬vs_cntÐÐ¼ÆÊýÇåÁã
+            if (~vs_in_1d & vs_in) // ï¿½ï¿½ï¿½vsï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ø£ï¿½Ëµï¿½ï¿½ï¿½ï¿½Ò»Ö¡ï¿½ï¿½ï¿½Ë£ï¿½vs_cntï¿½Ð¼ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
                 v_cnt <= 12'd0;
-            else if (de_in_1d & ~de_in) // ¼ì²âdeÉÏÉýÑØ£¬ËµÃ÷ÐÂÒ»ÐÐÀ´ÁË£¬vs_cntÐÐ¼ÆÊý+1
+            else if (de_in_1d & ~de_in) // ï¿½ï¿½ï¿½deï¿½ï¿½ï¿½ï¿½ï¿½Ø£ï¿½Ëµï¿½ï¿½ï¿½ï¿½Ò»ï¿½ï¿½ï¿½ï¿½ï¿½Ë£ï¿½vs_cntï¿½Ð¼ï¿½ï¿½ï¿½+1
                 v_cnt <= v_cnt + 1'b1;
         end
     end
@@ -107,76 +292,127 @@ module hdmi_in # (
         vs_in_1d <= vs_in;
         de_in_1d <= de_in;
     end
-    
-    //½ÓÊÜËõ·ÅÄ£¿éµÄdeÐÅºÅ
-    // always @(posedge pixclk_in) begin
-    //     if (!init_over_tx) begin
-    //         de_out <= 1'b0;
-    //     end
-    //     else begin   
-    //         de_out <=  o_de_scaler;
-    //     end
-    // end
 
+    assign rst_scaler = (vs_in & ~vs_in_1d);
+    
+
+    // ï¿½ï¿½Ò»ï¿½Ä£ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Â½ï¿½ï¿½ï¿½
     always @(posedge pixclk_in) begin
-        o_vs_scaler_1d <= o_vs_scaler;
-        o_de_scaler_1d <= o_de_scaler;
+        o_de_scaler_1d <= o_de_scaler_r;
     end
 
-    assign rst_scaler = vs_in & ~vs_in_1d;
 
-    //¶ÔËõ·ÅÄ£¿éÊä³öµÄÍ¼Ïñ½øÐÐÐÐ¼ÆÊý
+    // ï¿½ï¿½É«ï¿½Ø¼ï¿½ï¿½ï¿½
     always @(posedge pixclk_in) begin
+        if(!init_over_tx)
+            black_cnt <= dest_width_i;
+        else if(~o_de_scaler_r & o_de_scaler_1d)//Ò»ï¿½ï¿½ï¿½ï¿½ï¿½Â½ï¿½ï¿½Ø¾Í¿ï¿½Ê¼ï¿½ï¿½ï¿½ï¿½
+            black_cnt <= dest_width_i + 1;
+        else begin
+            if(black_cnt >= H_ACT)
+                black_cnt <= black_cnt;
+            else
+                black_cnt <= black_cnt + 1;
+        end 
+    end
+
+    always @(posedge pixclk_in)  begin   
         if (!init_over_tx) begin
-            scaler_v_cnt <= 0;
+            de_out <= 0;
         end
         else begin
-          
-            if ((o_de_scaler_1d & ~o_de_scaler)) begin // ¼ì²âËõ·ÅÄ£¿éÊä³öµÄdeÐÅºÅµÄÏÂ½µÑØ£¬ËµÃ÷Ò»ÐÐ½áÊø
-                scaler_v_cnt <= scaler_v_cnt + 1;
-            end
-            else if (~o_vs_scaler_1d & o_vs_scaler) begin// ¼ì²âvsµÄÉÏÉýÑØ£¬ËµÃ÷ÐÂÒ»Ö¡À´ÁË£¬vs_cntÐÐ¼ÆÊýÇåÁã
-                scaler_v_cnt <= 12'd0;
-            end
+            // de_out <= o_de_scaler_r || (o_de_scaler_1d & ~o_de_scaler_r) || (black_cnt < H_ACT);
+            de_out <=  (scaler_ctrl_width_2d == 0 || scaler_ctrl_width_2d == 62) ? 
+                       ((o_de_scaler_r)||(((h_cnt < H_ACT) || ((H_ACT + H_ACT + 20 > h_cnt) && (h_cnt > H_ACT + 20))) && (v_cnt > V_ACT - 1'b1) && de_in)) :
+                       ((o_de_scaler_r || (o_de_scaler_1d & ~o_de_scaler_r) || (black_cnt < H_ACT)) ||  (((h_cnt < H_ACT) || ((H_ACT + H_ACT + 20 > h_cnt) && (h_cnt > H_ACT + 20))) && (v_cnt > V_ACT - 1'b1) && de_in));
+            // de_out <=  ((o_de_scaler_r || (o_de_scaler_1d & ~o_de_scaler_r) || (black_cnt < H_ACT)) ||  (((h_cnt < H_ACT) || ((H_ACT + H_ACT + 20 > h_cnt) && (h_cnt > H_ACT + 20))) && (v_cnt > V_ACT - 1'b1) && de_in));
+            // de_out <=  ((o_de_scaler_r || (o_de_scaler_1d & ~o_de_scaler_r) || (black_cnt < H_ACT)) ||  ((h_cnt < H_ACT) && (v_cnt > V_ACT - 1'b1) && de_in));
+        
         end
     end
 
-    // always @(posedge pixclk_in) begin
-    //     if (!init_over_tx) begin
-    //         vs_out  <=  1'b0 ;
-    //     end
-    //     else begin
-    //         vs_out <= o_vs_scaler ;
-    //     end
-    // end
 
-    // always @(posedge pixclk_in) begin
-    //     if(!init_over_tx) begin
-    //         vs_out  <=  1'b0;
-    //     end
-    //     else begin
-    //         // vs_out  <=  o_vs_scaler || (scaler_v_cnt == V_ACT);
-    //         vs_out  <=  o_vs_scaler || (scaler_v_cnt == 361);
-    //     end
-    // end
+scaler_gray_top #(
+        .ADJUST_MODE(1), // ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Øµï¿½ï¿½ï¿½ã·½Ê½ï¿½ï¿½Ö±ï¿½Ó¼ï¿½ï¿½ï¿?0 ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Ä¶ï¿½ï¿½ï¿½1
+        .BRAM_DEEPTH(1280),//src_width_i * 2
+        .DATA_WIDTH(8), // Ã¿ï¿½ï¿½Í¨ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+        .INDEX_WIDTH(11), // ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½È£ï¿½ï¿½ï¿½Í¼ï¿½Î³ï¿½ï¿½ï¿½ï¿½Ä·ï¿½Î§
+        .INT_WIDTH(8),   // 
+        .FIX_WIDTH(12)
+) u_image_scaler_r (
+        .clk_i(pixclk_in), // Ê±ï¿½ï¿½
+        .rst_i(rst_scaler), // ï¿½ï¿½Î»
+        
+        .tvalid_i(i_de_scaler), // ï¿½ï¿½ï¿½ï¿½de
+        .tdata_i(r_in),  //ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+        .tready_o(tready_o_r), // ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+        
+        
+        .src_width_i(H_ACT),// ï¿½ï¿½ï¿½ï¿½Í¼ï¿½ï¿½Ä¿ï¿?
+        .src_height_i(V_ACT),// ï¿½ï¿½ï¿½ï¿½Í¼ï¿½ï¿½Ä¸ï¿?
+        .dest_width_i(dest_width_i),  //  Ä¿ï¿½ï¿½Í¼ï¿½ï¿½Ä¿ï¿?
+        .dest_height_i(dest_height_i),//  Ä¿ï¿½ï¿½Í¼ï¿½ï¿½Ä¸ï¿?                                                                             
 
-    image_scaler #(
-        .PIXEL_DATA_WIDTH(24),      //RGB 888
-        .SRC_IMAGE_RES_WIDTH(640),  // Ô­Í¼¿í
-        .SRC_IMAGE_RES_HEIGHT(720), // Ô­Í¼¸ß
+        .scale_factorx_i(scale_factorx), //srcx_width / destx_width xï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Å±ï¿½
+        .scale_factory_i(scale_factory), //srcy_height / desty_height yï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Å±ï¿½
 
-        .DST_IMAGE_RES_WIDTH(320),  // Ä¿±êÍ¼¿í
-        .DST_IMAGE_RES_HEIGHT(360)  // Ä¿±êÍ¼¸ß
+        .tvalid_o(o_de_scaler_r), // ï¿½ï¿½ï¿½de
+        .tdata_o(r_o)   // ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿?                                                        
+        );
 
-    ) u_image_scaler(
-        .pixclk_in(pixclk_in),
-        .rst_n(~rst_scaler), 
+scaler_gray_top #(
+        .ADJUST_MODE(1), // ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Øµï¿½ï¿½ï¿½ã·½Ê½ï¿½ï¿½Ö±ï¿½Ó¼ï¿½ï¿½ï¿?0 ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Ä¶ï¿½ï¿½ï¿½1
+        .BRAM_DEEPTH(1280),//src_width_i * 2
+        .DATA_WIDTH(8), // Ã¿ï¿½ï¿½Í¨ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+        .INDEX_WIDTH(11), // ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½È£ï¿½ï¿½ï¿½Í¼ï¿½Î³ï¿½ï¿½ï¿½ï¿½Ä·ï¿½Î§
+        .INT_WIDTH(8),   // <= INDEX_WIDTH
+        .FIX_WIDTH(12)
+) u_image_scaler_g (
+        .clk_i(pixclk_in), // Ê±ï¿½ï¿½
+        .rst_i(rst_scaler), // ï¿½ï¿½Î»
+        
+        .tvalid_i(i_de_scaler), // ï¿½ï¿½ï¿½ï¿½de
+        .tdata_i(g_in),  //ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+        .tready_o(tready_o_g), // 
+        
+        
+        .src_width_i(H_ACT),// ï¿½ï¿½ï¿½ï¿½Í¼ï¿½ï¿½Ä¿ï¿?
+        .src_height_i(V_ACT),// ï¿½ï¿½ï¿½ï¿½Í¼ï¿½ï¿½Ä¸ï¿?
+        .dest_width_i(dest_width_i),  //  Ä¿ï¿½ï¿½Í¼ï¿½ï¿½Ä¿ï¿?
+        .dest_height_i(dest_height_i),//  Ä¿ï¿½ï¿½Í¼ï¿½ï¿½Ä¸ï¿?                                                                             
 
-        .de_in(i_de_scaler),  //i_de_scaler ÐÅºÅÓÐÐ§£¬ÐÂµÄÒ»ÐÐ¿ªÊ¼£»deÎÞÐ§£¬Ò»ÐÐ´«Êä½áÊø
-        .de_out(o_de_scaler), // Ëõ·ÅÄ£¿éÊä³öµÄdeÐÅºÅ
-        .i_pixel(i_data_scaler),
-        .o_pixel(o_data_scaler),
-        .vs_out(o_vs_scaler)
-    );
+        .scale_factorx_i(scale_factorx), //srcx_width / destx_width xï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Å±ï¿½
+        .scale_factory_i(scale_factory), //srcy_height / desty_height yï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Å±ï¿½
 
+        .tvalid_o(o_de_scaler_g), // ï¿½ï¿½ï¿½de
+        .tdata_o(g_o)   // ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿?                                                        
+        );
+
+scaler_gray_top #(
+        .ADJUST_MODE(1),   // ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Øµï¿½ï¿½ï¿½ã·½Ê½ï¿½ï¿½Ö±ï¿½Ó¼ï¿½ï¿½ï¿?0 ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Ä¶ï¿½ï¿½ï¿½1
+        .BRAM_DEEPTH(1280),//src_width_i * 2
+        .DATA_WIDTH(8),    // Ã¿ï¿½ï¿½Í¨ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+        .INDEX_WIDTH(11),  // ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½È£ï¿½ï¿½ï¿½Í¼ï¿½Î³ï¿½ï¿½ï¿½ï¿½Ä·ï¿½Î§
+        .INT_WIDTH(8),     // <= INDEX_WIDTH
+        .FIX_WIDTH(12)
+) u_image_scaler_b (
+        .clk_i(pixclk_in), // Ê±ï¿½ï¿½
+        .rst_i(rst_scaler), // ï¿½ï¿½Î»
+        
+        .tvalid_i(i_de_scaler), // ï¿½ï¿½ï¿½ï¿½de
+        .tdata_i(b_in),  //ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+        .tready_o(tready_o_b), // 
+        
+        
+        .src_width_i(H_ACT),// ï¿½ï¿½ï¿½ï¿½Í¼ï¿½ï¿½Ä¿ï¿?
+        .src_height_i(V_ACT),// ï¿½ï¿½ï¿½ï¿½Í¼ï¿½ï¿½Ä¸ï¿?
+        .dest_width_i(dest_width_i),  //  Ä¿ï¿½ï¿½Í¼ï¿½ï¿½Ä¿ï¿?
+        .dest_height_i(dest_height_i),//  Ä¿ï¿½ï¿½Í¼ï¿½ï¿½Ä¸ï¿?                                                                             
+
+        .scale_factorx_i(scale_factorx), //srcx_width / destx_width xï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Å±ï¿½
+        .scale_factory_i(scale_factory), //srcy_height / desty_height yï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Å±ï¿½
+
+        .tvalid_o(o_de_scaler_b), // ï¿½ï¿½ï¿½de
+        .tdata_o(b_o)   // ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿?                                                        
+        );
 endmodule

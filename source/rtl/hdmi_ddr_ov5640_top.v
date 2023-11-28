@@ -95,7 +95,12 @@ module hdmi_ddr_ov5640_top#(
     input                                key_gamma,
     input                                key_saturation,
     input                                key_rotate,
-    input                                key_scaler,
+    // input                                key_scaler,
+    input                                key_scaler_width,
+    input                                key_scaler_height,
+    input                                key_color_reverse,
+    input                                key_panning_y,
+    input                                key_panning_x,
 //Ethernet
     output                               led,
     output                               phy_rstn,
@@ -175,13 +180,18 @@ module hdmi_ddr_ov5640_top#(
     reg  [26:0]                 cnt                        ;
     reg  [15:0]                 cnt_1                      ;
     wire [3:0]                  num                        ;
-    wire                    num_vld                        ;
+    wire                        num_vld                        ;
     wire                        clk_200m                   ;
     wire                        clk_125m                   ;
     wire  [1:0]                 gamma_ctrl                   ;
     wire  [1:0]                 saturation_ctrl                   ;
     wire  [1:0]                 rotate_ctrl                   ;
-    wire                        scaler_ctrl                   ;
+    // wire                     scaler_ctrl                 ;
+    wire   [5:0]                scaler_ctrl_width           ;
+    wire   [6:0]                scaler_ctrl_height          ;
+    wire                        color_reverse_ctrl          ;
+    wire    [5:0]               panning_y_ctrl              ;
+    wire    [6:0]               panning_x_ctrl              ;
 /////////////////////////////////////////////////////////////////////////////////////
 //PLL
     pll u_pll (
@@ -369,7 +379,12 @@ module hdmi_ddr_ov5640_top#(
     . r_in(r_in),                // input [7:0] r_in,
     . g_in(g_in),                // input [7:0] g_in,
     . b_in(b_in),                 // input [7:0] b_in,
-    .scaler_ctrl(scaler_ctrl), 
+    .scaler_ctrl_width(scaler_ctrl_width), 
+    .scaler_ctrl_height(scaler_ctrl_height), 
+    .color_reverse_ctrl(color_reverse_ctrl), 
+    .panning_y_ctrl(panning_y_ctrl), 
+    .panning_x_ctrl(panning_x_ctrl), 
+    // .scaler_ctrl(scaler_ctrl), 
     .vs_out(hdmi_vs),                // output reg vs_out,
     .hs_out(),                // output reg hs_out,
     .de_out(hdmi_de),                // output reg de_out,
@@ -587,13 +602,61 @@ module hdmi_ddr_ov5640_top#(
         .ctrl(rotate_ctrl) //output     [1:0] ctrl
     );
     // scaler_ctrl
+    // key_ctl#(
+    //     .CNT_WIDTH(4'd1),
+    //     .CNT_MAX  (4'd1)
+    // ) key_ctl_scaler(
+    //     .clk (sys_clk),// input           clk,//50MHz
+    //     .key (key_scaler),// input           key,    
+    //     .ctrl(scaler_ctrl) //output     [1:0] ctrl
+    // );
+
+    // ?????
+    // ???100
     key_ctl#(
-        .CNT_WIDTH(4'd1),
-        .CNT_MAX  (4'd1)
-    ) key_ctl_scaler(
+        .CNT_WIDTH('d6),
+        .CNT_MAX  ('d62)
+    ) key_ctl_scaler_width(
         .clk (sys_clk),// input           clk,//50MHz
-        .key (key_scaler),// input           key,    
-        .ctrl(scaler_ctrl) //output     [1:0] ctrl
+        .key (key_scaler_width),// input           key,    
+        .ctrl(scaler_ctrl_width) //output     [1:0] ctrl
+    );
+
+    // ?????
+    // ???100
+    key_ctl#(
+        .CNT_WIDTH('d7),
+        .CNT_MAX  ('d70)
+    ) key_ctl_scaler_height(
+        .clk (sys_clk),// input           clk,//50MHz
+        .key (key_scaler_height),// input           key,    
+        .ctrl(scaler_ctrl_height) //output     [1:0] ctrl
+    );
+
+    key_ctl#(
+        .CNT_WIDTH('d1),
+        .CNT_MAX  ('d1)
+    ) key_ctl_color_reverse(
+        .clk (sys_clk),// input           clk,//50MHz
+        .key (key_color_reverse),// input           key,    
+        .ctrl(color_reverse_ctrl) //output     [1:0] ctrl
+    );
+
+    key_ctl#(
+        .CNT_WIDTH('d6),
+        .CNT_MAX  ('d36)
+    ) key_ctl_panning_y(
+        .clk (sys_clk),// input           clk,//50MHz
+        .key (key_panning_y),// input           key,    
+        .ctrl(panning_y_ctrl) //output     [1:0] ctrl
+    );
+    key_ctl#(
+        .CNT_WIDTH('d7),
+        .CNT_MAX  ('d64)
+    ) key_ctl_panning_x(
+        .clk (sys_clk),// input           clk,//50MHz
+        .key (key_panning_x),// input           key,    
+        .ctrl(panning_x_ctrl) //output     [1:0] ctrl
     );
 
     ethernet_test ethernet_test(

@@ -115,7 +115,6 @@ module rd_ctrl #(
     end
 
     assign read_cmd_en_p = (read_port > 2'd0) && ~read_done;
-
     always @(posedge clk or negedge rst_n)
     begin
         if (!rst_n) begin

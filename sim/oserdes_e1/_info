@@ -1,0 +1,61 @@
+m255
+K4
+z2
+!s11f vlog 2019.2 2019.04, Apr 17 2019
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+dC:/Users/Lenovo/Desktop/fpga/pixel-box-master/sim
+voD1ahzo6Q7I4mAYfR48KsQ==
+Z0 !s110 1700660596
+!i10b 0
+!s100 P<ZoMnJ0jHOWoFm6IlLH_2
+!s11b CkIXWK=acAk_M5L855?6W3
+I6RibBn3]ffDiSQnNn>HT03
+Z1 VDg1SIo80bB@j0V0VzS_@n1
+!i119 1
+!i8a 996772240
+Z2 dD:/PDS_2022.2-SP1-Lite/arch/vendor/pango/verilog/simulation/modelsim10.2c
+Z3 w1700660596
+8./oserdes_e1_source_codes/int_oserdes_e1.vp
+F./oserdes_e1_source_codes/int_oserdes_e1.vp
+Z4 L0 23
+Z5 OL;L;2019.2;69
+r1
+!s85 0
+31
+Z6 !s108 1700660596.000000
+!s107 ./oserdes_e1_source_codes/int_oserdes_e1.vp|./oserdes_e1_source_codes/int_oserdes_e1_7km.vp|
+Z7 !s90 -incr|-f|./filelist_oserdes_e1_gtp.f|-work|oserdes_e1|
+!i113 0
+Z8 o-work oserdes_e1 -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+Z9 tCvgOpt 0
+nd0afb41
+vRbIsCZTrmGoWcbcUweRG2PxStZ74JbKZGfr/GUd22Wc=
+R0
+!i10b 0
+!s100 Qa4fca?D5oU]k4B]CkKPV0
+!s11b G6WEj<Xk=8QEbJK;6Dc9b3
+ILTYS:5EcKWFN894<TV<PX0
+R1
+!i119 1
+!i8a 1673589312
+R2
+R3
+8./oserdes_e1_source_codes/int_oserdes_e1_7km.vp
+F./oserdes_e1_source_codes/int_oserdes_e1_7km.vp
+R4
+R5
+r1
+!s85 0
+31
+R6
+Z10 !s107 ./oserdes_e1_source_codes/int_oserdes_e1.vp|./oserdes_e1_source_codes/int_oserdes_e1_7km.vp|
+R7
+!i113 0
+R8
+R9
+nb4c28ed

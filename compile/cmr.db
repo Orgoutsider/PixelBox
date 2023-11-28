@@ -286,6 +286,34 @@
             <data>Verilog</data>
         </row>
         <row>
+            <data>E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/hdl/scaler_gray_top.v</data>
+            <data>Verilog</data>
+        </row>
+        <row>
+            <data>E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/delay_laps.v</data>
+            <data>Verilog</data>
+        </row>
+        <row>
+            <data>E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/hdl/bilinear_gray.v</data>
+            <data>Verilog</data>
+        </row>
+        <row>
+            <data>E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/hdl/data_stream_ctr.v</data>
+            <data>Verilog</data>
+        </row>
+        <row>
+            <data>E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/hdl/cal_bilinear_weight.v</data>
+            <data>Verilog</data>
+        </row>
+        <row>
+            <data>E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/hdl/cal_bilinear_data.v</data>
+            <data>Verilog</data>
+        </row>
+        <row>
+            <data>E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/hdl/cal_bilinear_srcxy.v</data>
+            <data>Verilog</data>
+        </row>
+        <row>
             <data>E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/pll/pll.idf</data>
             <data>IP</data>
         </row>
@@ -345,6 +373,10 @@
             <data>E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/rd_rotate_buf/rd_rotate_buf.idf</data>
             <data>IP</data>
         </row>
+        <row>
+            <data>E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/ipcore/scaler_ram/scaler_ram.idf</data>
+            <data>IP</data>
+        </row>
     </table>
     <table id="compile_runtime" title="Compile Runtime &amp; Memory" column_number="7">
         <column_headers>
@@ -357,10 +389,10 @@
             <data>RAM(GB)</data>
         </column_headers>
         <row>
-            <data>0h:0m:4s</data>
-            <data>0h:0m:4s</data>
-            <data>0h:0m:20s</data>
-            <data>309</data>
+            <data>0h:0m:8s</data>
+            <data>0h:0m:8s</data>
+            <data>0h:0m:23s</data>
+            <data>330</data>
             <data>WINDOWS 10 x86_64</data>
             <data>12th Gen Intel(R) Core(TM) i7-12700H</data>
             <data>16</data>
@@ -525,16 +557,16 @@
             <data message="4">Verilog-0002: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/hdmi_ddr_ov5640_top.v(line number: 27)] Analyzing module hdmi_ddr_ov5640_top (library work)</data>
         </row>
         <row>
-            <data message="4">[E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/hdmi_ddr_ov5640_top.v(line number: 171)] Convert attribute name from syn_keep to PAP_KEEP</data>
+            <data message="4">[E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/hdmi_ddr_ov5640_top.v(line number: 176)] Convert attribute name from syn_keep to PAP_KEEP</data>
         </row>
         <row>
-            <data message="4">[E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/hdmi_ddr_ov5640_top.v(line number: 172)] Convert attribute name from syn_keep to PAP_KEEP</data>
+            <data message="4">[E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/hdmi_ddr_ov5640_top.v(line number: 177)] Convert attribute name from syn_keep to PAP_KEEP</data>
         </row>
         <row>
-            <data message="5">Verilog-2006: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/hdmi_ddr_ov5640_top.v(line number: 114)] Ansi_parameter force parameter in body to localparam</data>
+            <data message="5">Verilog-2006: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/hdmi_ddr_ov5640_top.v(line number: 119)] Ansi_parameter force parameter in body to localparam</data>
         </row>
         <row>
-            <data message="5">Verilog-2006: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/hdmi_ddr_ov5640_top.v(line number: 115)] Ansi_parameter force parameter in body to localparam</data>
+            <data message="5">Verilog-2006: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/hdmi_ddr_ov5640_top.v(line number: 120)] Ansi_parameter force parameter in body to localparam</data>
         </row>
         <row>
             <data message="4">Verilog-0001: Analyzing file E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/wr_cell.v</data>
@@ -559,6 +591,54 @@
         </row>
         <row>
             <data message="4">Verilog-0002: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/hdmi_in.v(line number: 1)] Analyzing module hdmi_in (library work)</data>
+        </row>
+        <row>
+            <data message="4">Found Verilog include file E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/get_fracx.v</data>
+        </row>
+        <row>
+            <data message="4">Found Verilog include file E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/get_fracy.v</data>
+        </row>
+        <row>
+            <data message="4">Found Verilog include file E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/get_offset_y.v</data>
+        </row>
+        <row>
+            <data message="4">Found Verilog include file E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/get_offset_x.v</data>
+        </row>
+        <row>
+            <data message="5">Verilog-2006: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/hdmi_in.v(line number: 27)] Ansi_parameter force parameter in body to localparam</data>
+        </row>
+        <row>
+            <data message="5">Verilog-2006: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/hdmi_in.v(line number: 28)] Ansi_parameter force parameter in body to localparam</data>
+        </row>
+        <row>
+            <data message="5">Verilog-2006: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/hdmi_in.v(line number: 30)] Ansi_parameter force parameter in body to localparam</data>
+        </row>
+        <row>
+            <data message="5">Verilog-2006: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/hdmi_in.v(line number: 31)] Ansi_parameter force parameter in body to localparam</data>
+        </row>
+        <row>
+            <data message="5">Verilog-2006: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/hdmi_in.v(line number: 33)] Ansi_parameter force parameter in body to localparam</data>
+        </row>
+        <row>
+            <data message="5">Verilog-2006: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/hdmi_in.v(line number: 34)] Ansi_parameter force parameter in body to localparam</data>
+        </row>
+        <row>
+            <data message="5">Verilog-2006: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/hdmi_in.v(line number: 36)] Ansi_parameter force parameter in body to localparam</data>
+        </row>
+        <row>
+            <data message="5">Verilog-2006: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/hdmi_in.v(line number: 37)] Ansi_parameter force parameter in body to localparam</data>
+        </row>
+        <row>
+            <data message="5">Verilog-2006: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/hdmi_in.v(line number: 39)] Ansi_parameter force parameter in body to localparam</data>
+        </row>
+        <row>
+            <data message="5">Verilog-2006: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/hdmi_in.v(line number: 40)] Ansi_parameter force parameter in body to localparam</data>
+        </row>
+        <row>
+            <data message="5">Verilog-2006: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/hdmi_in.v(line number: 42)] Ansi_parameter force parameter in body to localparam</data>
+        </row>
+        <row>
+            <data message="5">Verilog-2006: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/hdmi_in.v(line number: 43)] Ansi_parameter force parameter in body to localparam</data>
         </row>
         <row>
             <data message="4">Verilog-0001: Analyzing file E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/btn_deb_fix.v</data>
@@ -892,6 +972,48 @@
         </row>
         <row>
             <data message="4">Verilog-0002: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/sobel.v(line number: 20)] Analyzing module sobel (library work)</data>
+        </row>
+        <row>
+            <data message="4">Verilog-0001: Analyzing file E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/hdl/scaler_gray_top.v</data>
+        </row>
+        <row>
+            <data message="4">Verilog-0002: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/hdl/scaler_gray_top.v(line number: 1)] Analyzing module scaler_gray_top (library work)</data>
+        </row>
+        <row>
+            <data message="4">Verilog-0001: Analyzing file E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/delay_laps.v</data>
+        </row>
+        <row>
+            <data message="4">Verilog-0002: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/delay_laps.v(line number: 2)] Analyzing module delay_laps (library work)</data>
+        </row>
+        <row>
+            <data message="4">Verilog-0001: Analyzing file E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/hdl/bilinear_gray.v</data>
+        </row>
+        <row>
+            <data message="4">Verilog-0002: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/hdl/bilinear_gray.v(line number: 1)] Analyzing module bilinear_gray (library work)</data>
+        </row>
+        <row>
+            <data message="4">Verilog-0001: Analyzing file E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/hdl/data_stream_ctr.v</data>
+        </row>
+        <row>
+            <data message="4">Verilog-0002: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/hdl/data_stream_ctr.v(line number: 1)] Analyzing module data_stream_ctr (library work)</data>
+        </row>
+        <row>
+            <data message="4">Verilog-0001: Analyzing file E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/hdl/cal_bilinear_weight.v</data>
+        </row>
+        <row>
+            <data message="4">Verilog-0002: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/hdl/cal_bilinear_weight.v(line number: 1)] Analyzing module cal_bilinear_weight (library work)</data>
+        </row>
+        <row>
+            <data message="4">Verilog-0001: Analyzing file E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/hdl/cal_bilinear_data.v</data>
+        </row>
+        <row>
+            <data message="4">Verilog-0002: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/hdl/cal_bilinear_data.v(line number: 1)] Analyzing module cal_bilinear_data (library work)</data>
+        </row>
+        <row>
+            <data message="4">Verilog-0001: Analyzing file E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/hdl/cal_bilinear_srcxy.v</data>
+        </row>
+        <row>
+            <data message="4">Verilog-0002: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/hdl/cal_bilinear_srcxy.v(line number: 3)] Analyzing module cal_bilinear_srcxy (library work)</data>
         </row>
         <row>
             <data message="4">Verilog-0001: Analyzing file E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/pll/pll.v</data>
@@ -1380,10 +1502,10 @@
             <data message="4">Verilog-0002: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/wr_fifo/wr_fifo.v(line number: 16)] Analyzing module wr_fifo (library work)</data>
         </row>
         <row>
-            <data message="4">Verilog-0001: Analyzing file E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/rd_rotate_buf/rd_rotate_buf.v</data>
+            <data message="4">Verilog-0001: Analyzing file E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/ipcore/scaler_ram/scaler_ram.v</data>
         </row>
         <row>
-            <data message="4">Verilog-0002: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/rd_rotate_buf/rd_rotate_buf.v(line number: 16)] Analyzing module rd_rotate_buf (library work)</data>
+            <data message="4">Verilog-0002: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/ipcore/scaler_ram/scaler_ram.v(line number: 16)] Analyzing module scaler_ram (library work)</data>
         </row>
         <row>
             <data message="4">Verilog-0001: Analyzing file E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/rd_fifo/rtl/ipml_sdpram_v1_6_rd_fifo.v</data>
@@ -2982,6 +3104,183 @@
             <data message="5">Verilog-2008: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/rd_rotate_buf/rtl/ipml_sdpram_v1_6_rd_rotate_buf.v(line number: 417)] Ignore 'system task' $finish</data>
         </row>
         <row>
+            <data message="4">Verilog-0001: Analyzing file E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/rd_rotate_buf/rd_rotate_buf.v</data>
+        </row>
+        <row>
+            <data message="4">Verilog-0002: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/rd_rotate_buf/rd_rotate_buf.v(line number: 16)] Analyzing module rd_rotate_buf (library work)</data>
+        </row>
+        <row>
+            <data message="4">Verilog-0001: Analyzing file E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/ipcore/scaler_ram/rtl/ipml_dpram_v1_6_scaler_ram.v</data>
+        </row>
+        <row>
+            <data message="4">Verilog-0002: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/ipcore/scaler_ram/rtl/ipml_dpram_v1_6_scaler_ram.v(line number: 17)] Analyzing module ipml_dpram_v1_6_scaler_ram (library work)</data>
+        </row>
+        <row>
+            <data message="5">Verilog-2008: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/ipcore/scaler_ram/rtl/ipml_dpram_v1_6_scaler_ram.v(line number: 241)] Ignore 'system task' $display</data>
+        </row>
+        <row>
+            <data message="5">Verilog-2008: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/ipcore/scaler_ram/rtl/ipml_dpram_v1_6_scaler_ram.v(line number: 242)] Ignore 'system task' $finish</data>
+        </row>
+        <row>
+            <data message="5">Verilog-2008: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/ipcore/scaler_ram/rtl/ipml_dpram_v1_6_scaler_ram.v(line number: 245)] Ignore 'system task' $display</data>
+        </row>
+        <row>
+            <data message="5">Verilog-2008: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/ipcore/scaler_ram/rtl/ipml_dpram_v1_6_scaler_ram.v(line number: 249)] Ignore 'system task' $display</data>
+        </row>
+        <row>
+            <data message="5">Verilog-2008: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/ipcore/scaler_ram/rtl/ipml_dpram_v1_6_scaler_ram.v(line number: 253)] Ignore 'system task' $display</data>
+        </row>
+        <row>
+            <data message="5">Verilog-2008: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/ipcore/scaler_ram/rtl/ipml_dpram_v1_6_scaler_ram.v(line number: 257)] Ignore 'system task' $display</data>
+        </row>
+        <row>
+            <data message="5">Verilog-2008: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/ipcore/scaler_ram/rtl/ipml_dpram_v1_6_scaler_ram.v(line number: 261)] Ignore 'system task' $display</data>
+        </row>
+        <row>
+            <data message="5">Verilog-2008: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/ipcore/scaler_ram/rtl/ipml_dpram_v1_6_scaler_ram.v(line number: 262)] Ignore 'system task' $finish</data>
+        </row>
+        <row>
+            <data message="5">Verilog-2008: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/ipcore/scaler_ram/rtl/ipml_dpram_v1_6_scaler_ram.v(line number: 265)] Ignore 'system task' $display</data>
+        </row>
+        <row>
+            <data message="5">Verilog-2008: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/ipcore/scaler_ram/rtl/ipml_dpram_v1_6_scaler_ram.v(line number: 266)] Ignore 'system task' $finish</data>
+        </row>
+        <row>
+            <data message="5">Verilog-2008: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/ipcore/scaler_ram/rtl/ipml_dpram_v1_6_scaler_ram.v(line number: 269)] Ignore 'system task' $display</data>
+        </row>
+        <row>
+            <data message="5">Verilog-2008: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/ipcore/scaler_ram/rtl/ipml_dpram_v1_6_scaler_ram.v(line number: 270)] Ignore 'system task' $finish</data>
+        </row>
+        <row>
+            <data message="5">Verilog-2008: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/ipcore/scaler_ram/rtl/ipml_dpram_v1_6_scaler_ram.v(line number: 273)] Ignore 'system task' $display</data>
+        </row>
+        <row>
+            <data message="5">Verilog-2008: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/ipcore/scaler_ram/rtl/ipml_dpram_v1_6_scaler_ram.v(line number: 274)] Ignore 'system task' $finish</data>
+        </row>
+        <row>
+            <data message="5">Verilog-2008: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/ipcore/scaler_ram/rtl/ipml_dpram_v1_6_scaler_ram.v(line number: 277)] Ignore 'system task' $display</data>
+        </row>
+        <row>
+            <data message="5">Verilog-2008: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/ipcore/scaler_ram/rtl/ipml_dpram_v1_6_scaler_ram.v(line number: 278)] Ignore 'system task' $finish</data>
+        </row>
+        <row>
+            <data message="5">Verilog-2008: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/ipcore/scaler_ram/rtl/ipml_dpram_v1_6_scaler_ram.v(line number: 281)] Ignore 'system task' $display</data>
+        </row>
+        <row>
+            <data message="5">Verilog-2008: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/ipcore/scaler_ram/rtl/ipml_dpram_v1_6_scaler_ram.v(line number: 282)] Ignore 'system task' $finish</data>
+        </row>
+        <row>
+            <data message="5">Verilog-2008: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/ipcore/scaler_ram/rtl/ipml_dpram_v1_6_scaler_ram.v(line number: 285)] Ignore 'system task' $display</data>
+        </row>
+        <row>
+            <data message="5">Verilog-2008: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/ipcore/scaler_ram/rtl/ipml_dpram_v1_6_scaler_ram.v(line number: 286)] Ignore 'system task' $finish</data>
+        </row>
+        <row>
+            <data message="5">Verilog-2008: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/ipcore/scaler_ram/rtl/ipml_dpram_v1_6_scaler_ram.v(line number: 289)] Ignore 'system task' $display</data>
+        </row>
+        <row>
+            <data message="5">Verilog-2008: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/ipcore/scaler_ram/rtl/ipml_dpram_v1_6_scaler_ram.v(line number: 290)] Ignore 'system task' $finish</data>
+        </row>
+        <row>
+            <data message="5">Verilog-2008: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/ipcore/scaler_ram/rtl/ipml_dpram_v1_6_scaler_ram.v(line number: 293)] Ignore 'system task' $display</data>
+        </row>
+        <row>
+            <data message="5">Verilog-2008: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/ipcore/scaler_ram/rtl/ipml_dpram_v1_6_scaler_ram.v(line number: 294)] Ignore 'system task' $finish</data>
+        </row>
+        <row>
+            <data message="5">Verilog-2008: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/ipcore/scaler_ram/rtl/ipml_dpram_v1_6_scaler_ram.v(line number: 297)] Ignore 'system task' $display</data>
+        </row>
+        <row>
+            <data message="5">Verilog-2008: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/ipcore/scaler_ram/rtl/ipml_dpram_v1_6_scaler_ram.v(line number: 298)] Ignore 'system task' $finish</data>
+        </row>
+        <row>
+            <data message="5">Verilog-2008: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/ipcore/scaler_ram/rtl/ipml_dpram_v1_6_scaler_ram.v(line number: 301)] Ignore 'system task' $display</data>
+        </row>
+        <row>
+            <data message="5">Verilog-2008: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/ipcore/scaler_ram/rtl/ipml_dpram_v1_6_scaler_ram.v(line number: 302)] Ignore 'system task' $finish</data>
+        </row>
+        <row>
+            <data message="5">Verilog-2008: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/ipcore/scaler_ram/rtl/ipml_dpram_v1_6_scaler_ram.v(line number: 305)] Ignore 'system task' $display</data>
+        </row>
+        <row>
+            <data message="5">Verilog-2008: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/ipcore/scaler_ram/rtl/ipml_dpram_v1_6_scaler_ram.v(line number: 306)] Ignore 'system task' $finish</data>
+        </row>
+        <row>
+            <data message="5">Verilog-2008: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/ipcore/scaler_ram/rtl/ipml_dpram_v1_6_scaler_ram.v(line number: 310)] Ignore 'system task' $display</data>
+        </row>
+        <row>
+            <data message="5">Verilog-2008: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/ipcore/scaler_ram/rtl/ipml_dpram_v1_6_scaler_ram.v(line number: 311)] Ignore 'system task' $finish</data>
+        </row>
+        <row>
+            <data message="5">Verilog-2008: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/ipcore/scaler_ram/rtl/ipml_dpram_v1_6_scaler_ram.v(line number: 314)] Ignore 'system task' $display</data>
+        </row>
+        <row>
+            <data message="5">Verilog-2008: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/ipcore/scaler_ram/rtl/ipml_dpram_v1_6_scaler_ram.v(line number: 315)] Ignore 'system task' $finish</data>
+        </row>
+        <row>
+            <data message="5">Verilog-2008: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/ipcore/scaler_ram/rtl/ipml_dpram_v1_6_scaler_ram.v(line number: 319)] Ignore 'system task' $display</data>
+        </row>
+        <row>
+            <data message="5">Verilog-2008: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/ipcore/scaler_ram/rtl/ipml_dpram_v1_6_scaler_ram.v(line number: 320)] Ignore 'system task' $finish</data>
+        </row>
+        <row>
+            <data message="5">Verilog-2008: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/ipcore/scaler_ram/rtl/ipml_dpram_v1_6_scaler_ram.v(line number: 323)] Ignore 'system task' $display</data>
+        </row>
+        <row>
+            <data message="5">Verilog-2008: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/ipcore/scaler_ram/rtl/ipml_dpram_v1_6_scaler_ram.v(line number: 324)] Ignore 'system task' $finish</data>
+        </row>
+        <row>
+            <data message="5">Verilog-2008: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/ipcore/scaler_ram/rtl/ipml_dpram_v1_6_scaler_ram.v(line number: 327)] Ignore 'system task' $display</data>
+        </row>
+        <row>
+            <data message="5">Verilog-2008: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/ipcore/scaler_ram/rtl/ipml_dpram_v1_6_scaler_ram.v(line number: 331)] Ignore 'system task' $display</data>
+        </row>
+        <row>
+            <data message="5">Verilog-2008: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/ipcore/scaler_ram/rtl/ipml_dpram_v1_6_scaler_ram.v(line number: 332)] Ignore 'system task' $finish</data>
+        </row>
+        <row>
+            <data message="5">Verilog-2008: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/ipcore/scaler_ram/rtl/ipml_dpram_v1_6_scaler_ram.v(line number: 335)] Ignore 'system task' $display</data>
+        </row>
+        <row>
+            <data message="5">Verilog-2008: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/ipcore/scaler_ram/rtl/ipml_dpram_v1_6_scaler_ram.v(line number: 336)] Ignore 'system task' $finish</data>
+        </row>
+        <row>
+            <data message="5">Verilog-2008: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/ipcore/scaler_ram/rtl/ipml_dpram_v1_6_scaler_ram.v(line number: 339)] Ignore 'system task' $display</data>
+        </row>
+        <row>
+            <data message="5">Verilog-2008: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/ipcore/scaler_ram/rtl/ipml_dpram_v1_6_scaler_ram.v(line number: 340)] Ignore 'system task' $finish</data>
+        </row>
+        <row>
+            <data message="5">Verilog-2008: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/ipcore/scaler_ram/rtl/ipml_dpram_v1_6_scaler_ram.v(line number: 343)] Ignore 'system task' $display</data>
+        </row>
+        <row>
+            <data message="5">Verilog-2008: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/ipcore/scaler_ram/rtl/ipml_dpram_v1_6_scaler_ram.v(line number: 344)] Ignore 'system task' $finish</data>
+        </row>
+        <row>
+            <data message="5">Verilog-2008: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/ipcore/scaler_ram/rtl/ipml_dpram_v1_6_scaler_ram.v(line number: 347)] Ignore 'system task' $display</data>
+        </row>
+        <row>
+            <data message="5">Verilog-2008: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/ipcore/scaler_ram/rtl/ipml_dpram_v1_6_scaler_ram.v(line number: 348)] Ignore 'system task' $finish</data>
+        </row>
+        <row>
+            <data message="5">Verilog-2008: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/ipcore/scaler_ram/rtl/ipml_dpram_v1_6_scaler_ram.v(line number: 353)] Ignore 'system task' $display</data>
+        </row>
+        <row>
+            <data message="5">Verilog-2008: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/ipcore/scaler_ram/rtl/ipml_dpram_v1_6_scaler_ram.v(line number: 354)] Ignore 'system task' $finish</data>
+        </row>
+        <row>
+            <data message="5">Verilog-2008: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/ipcore/scaler_ram/rtl/ipml_dpram_v1_6_scaler_ram.v(line number: 357)] Ignore 'system task' $display</data>
+        </row>
+        <row>
+            <data message="5">Verilog-2008: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/ipcore/scaler_ram/rtl/ipml_dpram_v1_6_scaler_ram.v(line number: 358)] Ignore 'system task' $finish</data>
+        </row>
+        <row>
+            <data message="5">Verilog-2008: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/ipcore/scaler_ram/rtl/ipml_dpram_v1_6_scaler_ram.v(line number: 363)] Ignore 'system task' $display</data>
+        </row>
+        <row>
+            <data message="5">Verilog-2008: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/ipcore/scaler_ram/rtl/ipml_dpram_v1_6_scaler_ram.v(line number: 364)] Ignore 'system task' $finish</data>
+        </row>
+        <row>
             <data message="4">Module &quot;hdmi_ddr_ov5640_top&quot; is set as top module.</data>
         </row>
         <row>
@@ -2998,7 +3297,7 @@
     TH_1S = 27'b001111101111000101001000000</data>
         </row>
         <row>
-            <data message="4">Verilog-0004: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/hdmi_ddr_ov5640_top.v(line number: 187)] Elaborating instance u_pll</data>
+            <data message="4">Verilog-0004: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/hdmi_ddr_ov5640_top.v(line number: 197)] Elaborating instance u_pll</data>
         </row>
         <row>
             <data message="4">Verilog-0003: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/pll/pll.v(line number: 18)] Elaborating module pll</data>
@@ -3070,7 +3369,7 @@
             <data message="5">Verilog-2021: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/pll/pll.v(line number: 145)] Net dyn_duty4 in pll(original module pll) does not have a driver, tie it to 0</data>
         </row>
         <row>
-            <data message="4">Verilog-0004: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/hdmi_ddr_ov5640_top.v(line number: 198)] Elaborating instance ms72xx_ctl</data>
+            <data message="4">Verilog-0004: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/hdmi_ddr_ov5640_top.v(line number: 208)] Elaborating instance ms72xx_ctl</data>
         </row>
         <row>
             <data message="4">Verilog-0003: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/ms72xx_ctl.v(line number: 23)] Elaborating module ms72xx_ctl</data>
@@ -3137,7 +3436,7 @@
     DATA_BYTE = 2'b01</data>
         </row>
         <row>
-            <data message="4">Verilog-0004: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/hdmi_ddr_ov5640_top.v(line number: 236)] Elaborating instance video_block_move</data>
+            <data message="4">Verilog-0004: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/hdmi_ddr_ov5640_top.v(line number: 246)] Elaborating instance video_block_move</data>
         </row>
         <row>
             <data message="4">Verilog-0003: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/helai_color_move/video_block_move.v(line number: 1)] Elaborating module video_block_move</data>
@@ -3186,13 +3485,13 @@
     MOVE_BLOCK_COLOR = 24'b111111110111111101111111</data>
         </row>
         <row>
-            <data message="4">Verilog-0004: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/hdmi_ddr_ov5640_top.v(line number: 247)] Elaborating instance power_on_delay_inst</data>
+            <data message="4">Verilog-0004: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/hdmi_ddr_ov5640_top.v(line number: 257)] Elaborating instance power_on_delay_inst</data>
         </row>
         <row>
             <data message="4">Verilog-0003: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/power_on_delay.v(line number: 22)] Elaborating module power_on_delay</data>
         </row>
         <row>
-            <data message="4">Verilog-0004: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/hdmi_ddr_ov5640_top.v(line number: 259)] Elaborating instance coms1_reg_config</data>
+            <data message="4">Verilog-0004: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/hdmi_ddr_ov5640_top.v(line number: 269)] Elaborating instance coms1_reg_config</data>
         </row>
         <row>
             <data message="4">Verilog-0003: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/reg_config.v(line number: 22)] Elaborating module reg_config</data>
@@ -3212,7 +3511,7 @@
             <data message="5">Verilog-2048: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/i2c_com.v(line number: 51)] Zero-extending on all bits z values may cause simulation mismatch.</data>
         </row>
         <row>
-            <data message="4">Verilog-0004: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/hdmi_ddr_ov5640_top.v(line number: 274)] Elaborating instance coms2_reg_config</data>
+            <data message="4">Verilog-0004: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/hdmi_ddr_ov5640_top.v(line number: 284)] Elaborating instance coms2_reg_config</data>
         </row>
         <row>
             <data message="4">Verilog-0003: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/reg_config.v(line number: 22)] Elaborating module reg_config</data>
@@ -3223,7 +3522,7 @@
     DISPAY_V = 32'b00000000000000000000001011010010</data>
         </row>
         <row>
-            <data message="4">Verilog-0004: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/hdmi_ddr_ov5640_top.v(line number: 295)] Elaborating instance cmos1_8_16bit</data>
+            <data message="4">Verilog-0004: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/hdmi_ddr_ov5640_top.v(line number: 305)] Elaborating instance cmos1_8_16bit</data>
         </row>
         <row>
             <data message="4">Verilog-0003: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/cmos_8_16bit.v(line number: 24)] Elaborating module cmos_8_16bit</data>
@@ -3235,7 +3534,7 @@
             <data message="4">Verilog-0004: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/cmos_8_16bit.v(line number: 74)] Elaborating instance u_GTP_IOCLKDIV</data>
         </row>
         <row>
-            <data message="4">Verilog-0004: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/hdmi_ddr_ov5640_top.v(line number: 311)] Elaborating instance cmos1_mix</data>
+            <data message="4">Verilog-0004: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/hdmi_ddr_ov5640_top.v(line number: 321)] Elaborating instance cmos1_mix</data>
         </row>
         <row>
             <data message="4">Verilog-0003: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/cmos_mix.v(line number: 1)] Elaborating module cmos_mix</data>
@@ -28221,13 +28520,13 @@
             <data message="4">Verilog-0003: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/RGB_888TO565.v(line number: 1)] Elaborating module RGB_888TO565</data>
         </row>
         <row>
-            <data message="4">Verilog-0004: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/hdmi_ddr_ov5640_top.v(line number: 333)] Elaborating instance cmos2_8_16bit</data>
+            <data message="4">Verilog-0004: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/hdmi_ddr_ov5640_top.v(line number: 343)] Elaborating instance cmos2_8_16bit</data>
         </row>
         <row>
             <data message="4">Verilog-0003: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/cmos_8_16bit.v(line number: 24)] Elaborating module cmos_8_16bit</data>
         </row>
         <row>
-            <data message="4">Verilog-0004: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/hdmi_ddr_ov5640_top.v(line number: 349)] Elaborating instance cmos2_mix</data>
+            <data message="4">Verilog-0004: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/hdmi_ddr_ov5640_top.v(line number: 359)] Elaborating instance cmos2_mix</data>
         </row>
         <row>
             <data message="4">Verilog-0003: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/cmos_mix.v(line number: 1)] Elaborating module cmos_mix</data>
@@ -28293,7 +28592,7 @@
             <data message="4">Verilog-0003: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/RGB_888TO565.v(line number: 1)] Elaborating module RGB_888TO565</data>
         </row>
         <row>
-            <data message="4">Verilog-0004: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/hdmi_ddr_ov5640_top.v(line number: 363)] Elaborating instance hdmi_in</data>
+            <data message="4">Verilog-0004: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/hdmi_ddr_ov5640_top.v(line number: 373)] Elaborating instance hdmi_in</data>
         </row>
         <row>
             <data message="4">Verilog-0003: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/hdmi_in.v(line number: 1)] Elaborating module hdmi_in</data>
@@ -28301,323 +28600,366 @@
         <row>
             <data message="4">Module instance {hdmi_ddr_ov5640_top/hdmi_in} parameter value:
     H_ACT = 12'b001010000000
-    V_ACT = 12'b001011010000</data>
+    V_ACT = 12'b001011010000
+    INT_WIDTH = 32'b00000000000000000000000000001000
+    FIX_WIDTH = 32'b00000000000000000000000000001100
+    SRC_IMAGE_WIDTH = 12'b001010000000
+    SRC_IMAGE_HEIGHT = 12'b001011010000
+    DEST_IMAGE_WIDTH = 32'b00000000000000000000000110010000
+    DEST_IMAGE_HEIGHT = 32'b00000000000000000000000111110100
+    SCALE_INTX = 32'b00000000000000000000000000000001
+    SCALE_INTY = 32'b00000000000000000000000000000001
+    SCALE_FRACX = 32'b00000000000000000000100110011001
+    SCALE_FRACY = 32'b00000000000000000000011100001010
+    SCALE_FACTORX = 32'b00000000000000000001100110011001
+    SCALE_FACTORY = 32'b00000000000000000001011100001010</data>
         </row>
         <row>
-            <data message="4">Verilog-0004: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/hdmi_in.v(line number: 171)] Elaborating instance u_image_scaler</data>
+            <data message="4">Verilog-0004: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/hdmi_in.v(line number: 244)] Elaborating instance u_delay_laps</data>
         </row>
         <row>
-            <data message="4">Verilog-0003: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/source/source/bilinterpoaltion_test/image_scaler.v(line number: 2)] Elaborating module image_scaler</data>
+            <data message="4">Verilog-0003: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/delay_laps.v(line number: 2)] Elaborating module delay_laps</data>
         </row>
         <row>
-            <data message="4">Module instance {hdmi_ddr_ov5640_top/hdmi_in/u_image_scaler} parameter value:
-    PIXEL_DATA_WIDTH = 32'b00000000000000000000000000011000
-    SRC_IMAGE_RES_WIDTH = 32'b00000000000000000000001010000000
-    SRC_IMAGE_RES_HEIGHT = 32'b00000000000000000000001011010000
-    DST_IMAGE_RES_WIDTH = 32'b00000000000000000000000101000000
-    DST_IMAGE_RES_HEIGHT = 32'b00000000000000000000000101101000
-    FIRST_PIXEL = 32'b00000000000000000000000000000000
-    SECOND_PIXEL = 32'b00000000000000000000000000000001
-    THIRD_PIXEL = 32'b00000000000000000000000000000010
-    FOURTH_PIXEL = 32'b00000000000000000000000000000011
-    FIRST_LINE = 32'b00000000000000000000000000000000
-    SECOND_LINE = 32'b00000000000000000000000000000001
-    THIRD_LINE = 32'b00000000000000000000000000000010
-    FOURTH_LINE = 32'b00000000000000000000000000000011</data>
+            <data message="4">Module instance {hdmi_ddr_ov5640_top/hdmi_in/u_delay_laps} parameter value:
+    MAX_DATA_WIDTH = 32'b00000000000000000000000000011000
+    MAX_DELAY_LAPS = 32'b00000000000000000000001010000000</data>
         </row>
         <row>
-            <data message="4">Verilog-0004: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/source/source/bilinterpoaltion_test/image_scaler.v(line number: 414)] Elaborating instance ram0</data>
+            <data message="4">Verilog-0004: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/hdmi_in.v(line number: 342)] Elaborating instance u_image_scaler_r</data>
         </row>
         <row>
-            <data message="4">Verilog-0003: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/ipcore/image_resize_ram/image_resize_ram.v(line number: 16)] Elaborating module image_resize_ram</data>
+            <data message="4">Verilog-0003: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/hdl/scaler_gray_top.v(line number: 1)] Elaborating module scaler_gray_top</data>
         </row>
         <row>
-            <data message="4">Verilog-0004: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/ipcore/image_resize_ram/image_resize_ram.v(line number: 157)] Elaborating instance U_ipml_sdpram_image_resize_ram</data>
+            <data message="4">Module instance {hdmi_ddr_ov5640_top/hdmi_in/u_image_scaler_r} parameter value:
+    ADJUST_MODE = 32'b00000000000000000000000000000001
+    BRAM_DEEPTH = 32'b00000000000000000000010100000000
+    DATA_WIDTH = 32'b00000000000000000000000000001000
+    INDEX_WIDTH = 32'b00000000000000000000000000001011
+    INT_WIDTH = 32'b00000000000000000000000000001000
+    FIX_WIDTH = 32'b00000000000000000000000000001100</data>
         </row>
         <row>
-            <data message="4">Verilog-0003: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/ipcore/image_resize_ram/rtl/ipml_sdpram_v1_6_image_resize_ram.v(line number: 18)] Elaborating module ipml_sdpram_v1_6_image_resize_ram</data>
+            <data message="4">Verilog-0004: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/hdl/scaler_gray_top.v(line number: 55)] Elaborating instance u0_data_stream_ctr</data>
         </row>
         <row>
-            <data message="4">Module instance {hdmi_ddr_ov5640_top/hdmi_in/u_image_scaler/ram0/U_ipml_sdpram_image_resize_ram} parameter value:
+            <data message="4">Verilog-0003: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/hdl/data_stream_ctr.v(line number: 1)] Elaborating module data_stream_ctr</data>
+        </row>
+        <row>
+            <data message="4">Module instance {hdmi_ddr_ov5640_top/hdmi_in/u_image_scaler_r/u0_data_stream_ctr} parameter value:
+    ADJUST_MODE = 32'b00000000000000000000000000000001
+    BRAM_DEEPTH = 32'b00000000000000000000010100000000
+    DATA_WIDTH = 32'b00000000000000000000000000001000
+    INDEX_WIDTH = 32'b00000000000000000000000000001011
+    INT_WIDTH = 32'b00000000000000000000000000001000
+    FIX_WIDTH = 32'b00000000000000000000000000001100</data>
+        </row>
+        <row>
+            <data message="4">Verilog-0004: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/hdl/data_stream_ctr.v(line number: 376)] Elaborating instance u_scaler_ram00</data>
+        </row>
+        <row>
+            <data message="4">Verilog-0003: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/ipcore/scaler_ram/scaler_ram.v(line number: 16)] Elaborating module scaler_ram</data>
+        </row>
+        <row>
+            <data message="4">Verilog-0004: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/ipcore/scaler_ram/scaler_ram.v(line number: 198)] Elaborating instance U_ipml_dpram_scaler_ram</data>
+        </row>
+        <row>
+            <data message="4">Verilog-0003: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/ipcore/scaler_ram/rtl/ipml_dpram_v1_6_scaler_ram.v(line number: 17)] Elaborating module ipml_dpram_v1_6_scaler_ram</data>
+        </row>
+        <row>
+            <data message="4">Module instance {hdmi_ddr_ov5640_top/hdmi_in/u_image_scaler_r/u0_data_stream_ctr/u_scaler_ram00/U_ipml_dpram_scaler_ram} parameter value:
     c_SIM_DEVICE = LOGOS
-    c_WR_ADDR_WIDTH = 32'b00000000000000000000000000001011
-    c_WR_DATA_WIDTH = 32'b00000000000000000000000000011000
-    c_RD_ADDR_WIDTH = 32'b00000000000000000000000000001011
-    c_RD_DATA_WIDTH = 32'b00000000000000000000000000011000
-    c_OUTPUT_REG = 32'b00000000000000000000000000000000
-    c_RD_OCE_EN = 32'b00000000000000000000000000000000
-    c_WR_ADDR_STROBE_EN = 32'b00000000000000000000000000000000
-    c_RD_ADDR_STROBE_EN = 32'b00000000000000000000000000000000
-    c_WR_CLK_EN = 32'b00000000000000000000000000000000
-    c_RD_CLK_EN = 32'b00000000000000000000000000000000
-    c_RD_CLK_OR_POL_INV = 32'b00000000000000000000000000000000
+    c_A_ADDR_WIDTH = 32'b00000000000000000000000000001011
+    c_A_DATA_WIDTH = 32'b00000000000000000000000000001000
+    c_B_ADDR_WIDTH = 32'b00000000000000000000000000001011
+    c_B_DATA_WIDTH = 32'b00000000000000000000000000001000
+    c_A_OUTPUT_REG = 32'b00000000000000000000000000000000
+    c_A_RD_OCE_EN = 32'b00000000000000000000000000000000
+    c_A_ADDR_STROBE_EN = 32'b00000000000000000000000000000000
+    c_A_CLK_EN = 32'b00000000000000000000000000000000
+    c_B_OUTPUT_REG = 32'b00000000000000000000000000000000
+    c_B_RD_OCE_EN = 32'b00000000000000000000000000000000
+    c_B_ADDR_STROBE_EN = 32'b00000000000000000000000000000000
+    c_B_CLK_EN = 32'b00000000000000000000000000000000
     c_RESET_TYPE = ASYNC_RESET
+    c_A_CLK_OR_POL_INV = 32'b00000000000000000000000000000000
+    c_B_CLK_OR_POL_INV = 32'b00000000000000000000000000000000
     c_POWER_OPT = 32'b00000000000000000000000000000000
     c_INIT_FILE = NONE
     c_INIT_FORMAT = BIN
     c_WR_BYTE_EN = 32'b00000000000000000000000000000000
-    c_BE_WIDTH = 32'b00000000000000000000000000000001</data>
+    c_A_BE_WIDTH = 32'b00000000000000000000000000000001
+    c_B_BE_WIDTH = 32'b00000000000000000000000000000001
+    c_A_WRITE_MODE = NORMAL_WRITE
+    c_B_WRITE_MODE = NORMAL_WRITE</data>
         </row>
         <row>
-            <data message="5">Verilog-2010: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/ipcore/image_resize_ram/rtl/ipml_sdpram_v1_6_image_resize_ram.v(line number: 308)] Ignore initial statements except memory $readmemh/$readmemb initialization statements</data>
+            <data message="5">Verilog-2010: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/ipcore/scaler_ram/rtl/ipml_dpram_v1_6_scaler_ram.v(line number: 238)] Ignore initial statements except memory $readmemh/$readmemb initialization statements</data>
         </row>
         <row>
-            <data message="5">Verilog-2039: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/ipcore/image_resize_ram/rtl/ipml_sdpram_v1_6_image_resize_ram.v(line number: 471)] Repeat multiplier in concatenation evaluates to 0</data>
+            <data message="5">Verilog-2039: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/ipcore/scaler_ram/rtl/ipml_dpram_v1_6_scaler_ram.v(line number: 417)] Repeat multiplier in concatenation evaluates to 0</data>
         </row>
         <row>
-            <data message="5">Verilog-2039: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/ipcore/image_resize_ram/rtl/ipml_sdpram_v1_6_image_resize_ram.v(line number: 473)] Repeat multiplier in concatenation evaluates to 0</data>
+            <data message="5">Verilog-2039: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/ipcore/scaler_ram/rtl/ipml_dpram_v1_6_scaler_ram.v(line number: 419)] Repeat multiplier in concatenation evaluates to 0</data>
         </row>
         <row>
-            <data message="5">Verilog-2038: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/ipcore/image_resize_ram/rtl/ipml_sdpram_v1_6_image_resize_ram.v(line number: 483)] Case condition never applies</data>
+            <data message="5">Verilog-2039: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/ipcore/scaler_ram/rtl/ipml_dpram_v1_6_scaler_ram.v(line number: 421)] Repeat multiplier in concatenation evaluates to 0</data>
         </row>
         <row>
-            <data message="5">Verilog-2038: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/ipcore/image_resize_ram/rtl/ipml_sdpram_v1_6_image_resize_ram.v(line number: 484)] Case condition never applies</data>
+            <data message="5">Verilog-2039: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/ipcore/scaler_ram/rtl/ipml_dpram_v1_6_scaler_ram.v(line number: 423)] Repeat multiplier in concatenation evaluates to 0</data>
         </row>
         <row>
-            <data message="5">Verilog-2038: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/ipcore/image_resize_ram/rtl/ipml_sdpram_v1_6_image_resize_ram.v(line number: 485)] Case condition never applies</data>
+            <data message="5">Verilog-2038: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/ipcore/scaler_ram/rtl/ipml_dpram_v1_6_scaler_ram.v(line number: 436)] Case condition never applies</data>
         </row>
         <row>
-            <data message="5">Verilog-2038: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/ipcore/image_resize_ram/rtl/ipml_sdpram_v1_6_image_resize_ram.v(line number: 483)] Case condition never applies</data>
+            <data message="5">Verilog-2038: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/ipcore/scaler_ram/rtl/ipml_dpram_v1_6_scaler_ram.v(line number: 437)] Case condition never applies</data>
         </row>
         <row>
-            <data message="5">Verilog-2038: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/ipcore/image_resize_ram/rtl/ipml_sdpram_v1_6_image_resize_ram.v(line number: 484)] Case condition never applies</data>
+            <data message="5">Verilog-2038: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/ipcore/scaler_ram/rtl/ipml_dpram_v1_6_scaler_ram.v(line number: 438)] Case condition never applies</data>
         </row>
         <row>
-            <data message="5">Verilog-2038: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/ipcore/image_resize_ram/rtl/ipml_sdpram_v1_6_image_resize_ram.v(line number: 485)] Case condition never applies</data>
+            <data message="5">Verilog-2038: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/ipcore/scaler_ram/rtl/ipml_dpram_v1_6_scaler_ram.v(line number: 487)] Case condition never applies</data>
         </row>
         <row>
-            <data message="5">Verilog-2038: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/ipcore/image_resize_ram/rtl/ipml_sdpram_v1_6_image_resize_ram.v(line number: 483)] Case condition never applies</data>
+            <data message="5">Verilog-2038: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/ipcore/scaler_ram/rtl/ipml_dpram_v1_6_scaler_ram.v(line number: 488)] Case condition never applies</data>
         </row>
         <row>
-            <data message="5">Verilog-2038: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/ipcore/image_resize_ram/rtl/ipml_sdpram_v1_6_image_resize_ram.v(line number: 484)] Case condition never applies</data>
+            <data message="5">Verilog-2038: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/ipcore/scaler_ram/rtl/ipml_dpram_v1_6_scaler_ram.v(line number: 489)] Case condition never applies</data>
         </row>
         <row>
-            <data message="5">Verilog-2038: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/ipcore/image_resize_ram/rtl/ipml_sdpram_v1_6_image_resize_ram.v(line number: 485)] Case condition never applies</data>
+            <data message="4">Verilog-0004: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/ipcore/scaler_ram/rtl/ipml_dpram_v1_6_scaler_ram.v(line number: 693)] Elaborating instance U_GTP_DRM18K</data>
         </row>
         <row>
-            <data message="5">Verilog-2039: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/ipcore/image_resize_ram/rtl/ipml_sdpram_v1_6_image_resize_ram.v(line number: 619)] Repeat multiplier in concatenation evaluates to 0</data>
+            <data message="5">Verilog-2020: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/ipcore/scaler_ram/rtl/ipml_dpram_v1_6_scaler_ram.v(line number: 642)] Net DA_bus[8] in ipml_dpram_v1_6_scaler_ram(original module ipml_dpram_v1_6_scaler_ram) does not have a driver, tie it to 0</data>
         </row>
         <row>
-            <data message="5">Verilog-2038: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/ipcore/image_resize_ram/rtl/ipml_sdpram_v1_6_image_resize_ram.v(line number: 679)] Case condition never applies</data>
+            <data message="5">Verilog-2020: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/ipcore/scaler_ram/rtl/ipml_dpram_v1_6_scaler_ram.v(line number: 642)] Net DA_bus[9] in ipml_dpram_v1_6_scaler_ram(original module ipml_dpram_v1_6_scaler_ram) does not have a driver, tie it to 0</data>
         </row>
         <row>
-            <data message="5">Verilog-2038: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/ipcore/image_resize_ram/rtl/ipml_sdpram_v1_6_image_resize_ram.v(line number: 680)] Case condition never applies</data>
+            <data message="5">Verilog-2020: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/ipcore/scaler_ram/rtl/ipml_dpram_v1_6_scaler_ram.v(line number: 642)] Net DA_bus[10] in ipml_dpram_v1_6_scaler_ram(original module ipml_dpram_v1_6_scaler_ram) does not have a driver, tie it to 0</data>
         </row>
         <row>
-            <data message="5">Verilog-2038: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/ipcore/image_resize_ram/rtl/ipml_sdpram_v1_6_image_resize_ram.v(line number: 681)] Case condition never applies</data>
+            <data message="5">Verilog-2020: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/ipcore/scaler_ram/rtl/ipml_dpram_v1_6_scaler_ram.v(line number: 642)] Net DA_bus[11] in ipml_dpram_v1_6_scaler_ram(original module ipml_dpram_v1_6_scaler_ram) does not have a driver, tie it to 0</data>
         </row>
         <row>
-            <data message="4">Verilog-0004: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/ipcore/image_resize_ram/rtl/ipml_sdpram_v1_6_image_resize_ram.v(line number: 849)] Elaborating instance U_GTP_DRM18K</data>
+            <data message="5">Verilog-2020: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/ipcore/scaler_ram/rtl/ipml_dpram_v1_6_scaler_ram.v(line number: 642)] Net DA_bus[12] in ipml_dpram_v1_6_scaler_ram(original module ipml_dpram_v1_6_scaler_ram) does not have a driver, tie it to 0</data>
         </row>
         <row>
-            <data message="4">Verilog-0004: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/ipcore/image_resize_ram/rtl/ipml_sdpram_v1_6_image_resize_ram.v(line number: 849)] Elaborating instance U_GTP_DRM18K</data>
+            <data message="5">Verilog-2020: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/ipcore/scaler_ram/rtl/ipml_dpram_v1_6_scaler_ram.v(line number: 642)] Net DA_bus[13] in ipml_dpram_v1_6_scaler_ram(original module ipml_dpram_v1_6_scaler_ram) does not have a driver, tie it to 0</data>
         </row>
         <row>
-            <data message="4">Verilog-0004: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/ipcore/image_resize_ram/rtl/ipml_sdpram_v1_6_image_resize_ram.v(line number: 849)] Elaborating instance U_GTP_DRM18K</data>
+            <data message="5">Verilog-2020: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/ipcore/scaler_ram/rtl/ipml_dpram_v1_6_scaler_ram.v(line number: 642)] Net DA_bus[14] in ipml_dpram_v1_6_scaler_ram(original module ipml_dpram_v1_6_scaler_ram) does not have a driver, tie it to 0</data>
         </row>
         <row>
-            <data message="5">Verilog-2020: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/ipcore/image_resize_ram/rtl/ipml_sdpram_v1_6_image_resize_ram.v(line number: 770)] Net DA_bus[8] in ipml_sdpram_v1_6_image_resize_ram(original module ipml_sdpram_v1_6_image_resize_ram) does not have a driver, tie it to 0</data>
+            <data message="5">Verilog-2020: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/ipcore/scaler_ram/rtl/ipml_dpram_v1_6_scaler_ram.v(line number: 642)] Net DA_bus[15] in ipml_dpram_v1_6_scaler_ram(original module ipml_dpram_v1_6_scaler_ram) does not have a driver, tie it to 0</data>
         </row>
         <row>
-            <data message="5">Verilog-2020: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/ipcore/image_resize_ram/rtl/ipml_sdpram_v1_6_image_resize_ram.v(line number: 770)] Net DA_bus[9] in ipml_sdpram_v1_6_image_resize_ram(original module ipml_sdpram_v1_6_image_resize_ram) does not have a driver, tie it to 0</data>
+            <data message="5">Verilog-2020: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/ipcore/scaler_ram/rtl/ipml_dpram_v1_6_scaler_ram.v(line number: 642)] Net DA_bus[16] in ipml_dpram_v1_6_scaler_ram(original module ipml_dpram_v1_6_scaler_ram) does not have a driver, tie it to 0</data>
         </row>
         <row>
-            <data message="5">Verilog-2020: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/ipcore/image_resize_ram/rtl/ipml_sdpram_v1_6_image_resize_ram.v(line number: 770)] Net DA_bus[10] in ipml_sdpram_v1_6_image_resize_ram(original module ipml_sdpram_v1_6_image_resize_ram) does not have a driver, tie it to 0</data>
+            <data message="5">Verilog-2020: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/ipcore/scaler_ram/rtl/ipml_dpram_v1_6_scaler_ram.v(line number: 642)] Net DA_bus[17] in ipml_dpram_v1_6_scaler_ram(original module ipml_dpram_v1_6_scaler_ram) does not have a driver, tie it to 0</data>
         </row>
         <row>
-            <data message="5">Verilog-2020: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/ipcore/image_resize_ram/rtl/ipml_sdpram_v1_6_image_resize_ram.v(line number: 770)] Net DA_bus[11] in ipml_sdpram_v1_6_image_resize_ram(original module ipml_sdpram_v1_6_image_resize_ram) does not have a driver, tie it to 0</data>
+            <data message="5">Verilog-2020: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/ipcore/scaler_ram/rtl/ipml_dpram_v1_6_scaler_ram.v(line number: 643)] Net DB_bus[8] in ipml_dpram_v1_6_scaler_ram(original module ipml_dpram_v1_6_scaler_ram) does not have a driver, tie it to 0</data>
         </row>
         <row>
-            <data message="5">Verilog-2020: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/ipcore/image_resize_ram/rtl/ipml_sdpram_v1_6_image_resize_ram.v(line number: 770)] Net DA_bus[12] in ipml_sdpram_v1_6_image_resize_ram(original module ipml_sdpram_v1_6_image_resize_ram) does not have a driver, tie it to 0</data>
+            <data message="5">Verilog-2020: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/ipcore/scaler_ram/rtl/ipml_dpram_v1_6_scaler_ram.v(line number: 643)] Net DB_bus[9] in ipml_dpram_v1_6_scaler_ram(original module ipml_dpram_v1_6_scaler_ram) does not have a driver, tie it to 0</data>
         </row>
         <row>
-            <data message="5">Verilog-2020: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/ipcore/image_resize_ram/rtl/ipml_sdpram_v1_6_image_resize_ram.v(line number: 770)] Net DA_bus[13] in ipml_sdpram_v1_6_image_resize_ram(original module ipml_sdpram_v1_6_image_resize_ram) does not have a driver, tie it to 0</data>
+            <data message="5">Verilog-2020: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/ipcore/scaler_ram/rtl/ipml_dpram_v1_6_scaler_ram.v(line number: 643)] Net DB_bus[10] in ipml_dpram_v1_6_scaler_ram(original module ipml_dpram_v1_6_scaler_ram) does not have a driver, tie it to 0</data>
         </row>
         <row>
-            <data message="5">Verilog-2020: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/ipcore/image_resize_ram/rtl/ipml_sdpram_v1_6_image_resize_ram.v(line number: 770)] Net DA_bus[14] in ipml_sdpram_v1_6_image_resize_ram(original module ipml_sdpram_v1_6_image_resize_ram) does not have a driver, tie it to 0</data>
+            <data message="5">Verilog-2020: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/ipcore/scaler_ram/rtl/ipml_dpram_v1_6_scaler_ram.v(line number: 643)] Net DB_bus[11] in ipml_dpram_v1_6_scaler_ram(original module ipml_dpram_v1_6_scaler_ram) does not have a driver, tie it to 0</data>
         </row>
         <row>
-            <data message="5">Verilog-2020: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/ipcore/image_resize_ram/rtl/ipml_sdpram_v1_6_image_resize_ram.v(line number: 770)] Net DA_bus[15] in ipml_sdpram_v1_6_image_resize_ram(original module ipml_sdpram_v1_6_image_resize_ram) does not have a driver, tie it to 0</data>
+            <data message="5">Verilog-2020: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/ipcore/scaler_ram/rtl/ipml_dpram_v1_6_scaler_ram.v(line number: 643)] Net DB_bus[12] in ipml_dpram_v1_6_scaler_ram(original module ipml_dpram_v1_6_scaler_ram) does not have a driver, tie it to 0</data>
         </row>
         <row>
-            <data message="5">Verilog-2020: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/ipcore/image_resize_ram/rtl/ipml_sdpram_v1_6_image_resize_ram.v(line number: 770)] Net DA_bus[16] in ipml_sdpram_v1_6_image_resize_ram(original module ipml_sdpram_v1_6_image_resize_ram) does not have a driver, tie it to 0</data>
+            <data message="5">Verilog-2020: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/ipcore/scaler_ram/rtl/ipml_dpram_v1_6_scaler_ram.v(line number: 643)] Net DB_bus[13] in ipml_dpram_v1_6_scaler_ram(original module ipml_dpram_v1_6_scaler_ram) does not have a driver, tie it to 0</data>
         </row>
         <row>
-            <data message="5">Verilog-2020: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/ipcore/image_resize_ram/rtl/ipml_sdpram_v1_6_image_resize_ram.v(line number: 770)] Net DA_bus[17] in ipml_sdpram_v1_6_image_resize_ram(original module ipml_sdpram_v1_6_image_resize_ram) does not have a driver, tie it to 0</data>
+            <data message="5">Verilog-2020: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/ipcore/scaler_ram/rtl/ipml_dpram_v1_6_scaler_ram.v(line number: 643)] Net DB_bus[14] in ipml_dpram_v1_6_scaler_ram(original module ipml_dpram_v1_6_scaler_ram) does not have a driver, tie it to 0</data>
         </row>
         <row>
-            <data message="5">Verilog-2020: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/ipcore/image_resize_ram/rtl/ipml_sdpram_v1_6_image_resize_ram.v(line number: 770)] Net DA_bus[26] in ipml_sdpram_v1_6_image_resize_ram(original module ipml_sdpram_v1_6_image_resize_ram) does not have a driver, tie it to 0</data>
+            <data message="5">Verilog-2020: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/ipcore/scaler_ram/rtl/ipml_dpram_v1_6_scaler_ram.v(line number: 643)] Net DB_bus[15] in ipml_dpram_v1_6_scaler_ram(original module ipml_dpram_v1_6_scaler_ram) does not have a driver, tie it to 0</data>
         </row>
         <row>
-            <data message="5">Verilog-2020: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/ipcore/image_resize_ram/rtl/ipml_sdpram_v1_6_image_resize_ram.v(line number: 770)] Net DA_bus[27] in ipml_sdpram_v1_6_image_resize_ram(original module ipml_sdpram_v1_6_image_resize_ram) does not have a driver, tie it to 0</data>
+            <data message="5">Verilog-2020: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/ipcore/scaler_ram/rtl/ipml_dpram_v1_6_scaler_ram.v(line number: 643)] Net DB_bus[16] in ipml_dpram_v1_6_scaler_ram(original module ipml_dpram_v1_6_scaler_ram) does not have a driver, tie it to 0</data>
         </row>
         <row>
-            <data message="5">Verilog-2020: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/ipcore/image_resize_ram/rtl/ipml_sdpram_v1_6_image_resize_ram.v(line number: 770)] Net DA_bus[28] in ipml_sdpram_v1_6_image_resize_ram(original module ipml_sdpram_v1_6_image_resize_ram) does not have a driver, tie it to 0</data>
+            <data message="5">Verilog-2020: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/ipcore/scaler_ram/rtl/ipml_dpram_v1_6_scaler_ram.v(line number: 643)] Net DB_bus[17] in ipml_dpram_v1_6_scaler_ram(original module ipml_dpram_v1_6_scaler_ram) does not have a driver, tie it to 0</data>
         </row>
         <row>
-            <data message="5">Verilog-2020: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/ipcore/image_resize_ram/rtl/ipml_sdpram_v1_6_image_resize_ram.v(line number: 770)] Net DA_bus[29] in ipml_sdpram_v1_6_image_resize_ram(original module ipml_sdpram_v1_6_image_resize_ram) does not have a driver, tie it to 0</data>
+            <data message="5">Verilog-2019: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/hdl/data_stream_ctr.v(line number: 376)] Width mismatch between port a_rst and signal bound to it for instantiated module scaler_ram</data>
         </row>
         <row>
-            <data message="5">Verilog-2020: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/ipcore/image_resize_ram/rtl/ipml_sdpram_v1_6_image_resize_ram.v(line number: 770)] Net DA_bus[30] in ipml_sdpram_v1_6_image_resize_ram(original module ipml_sdpram_v1_6_image_resize_ram) does not have a driver, tie it to 0</data>
+            <data message="5">Verilog-2019: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/hdl/data_stream_ctr.v(line number: 376)] Width mismatch between port b_rst and signal bound to it for instantiated module scaler_ram</data>
         </row>
         <row>
-            <data message="5">Verilog-2020: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/ipcore/image_resize_ram/rtl/ipml_sdpram_v1_6_image_resize_ram.v(line number: 770)] Net DA_bus[31] in ipml_sdpram_v1_6_image_resize_ram(original module ipml_sdpram_v1_6_image_resize_ram) does not have a driver, tie it to 0</data>
+            <data message="4">Verilog-0004: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/hdl/data_stream_ctr.v(line number: 390)] Elaborating instance u_scaler_ram01</data>
         </row>
         <row>
-            <data message="5">Verilog-2020: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/ipcore/image_resize_ram/rtl/ipml_sdpram_v1_6_image_resize_ram.v(line number: 770)] Net DA_bus[32] in ipml_sdpram_v1_6_image_resize_ram(original module ipml_sdpram_v1_6_image_resize_ram) does not have a driver, tie it to 0</data>
+            <data message="4">Verilog-0003: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/ipcore/scaler_ram/scaler_ram.v(line number: 16)] Elaborating module scaler_ram</data>
         </row>
         <row>
-            <data message="5">Verilog-2020: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/ipcore/image_resize_ram/rtl/ipml_sdpram_v1_6_image_resize_ram.v(line number: 770)] Net DA_bus[33] in ipml_sdpram_v1_6_image_resize_ram(original module ipml_sdpram_v1_6_image_resize_ram) does not have a driver, tie it to 0</data>
+            <data message="5">Verilog-2019: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/hdl/data_stream_ctr.v(line number: 390)] Width mismatch between port a_rst and signal bound to it for instantiated module scaler_ram</data>
         </row>
         <row>
-            <data message="5">Verilog-2020: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/ipcore/image_resize_ram/rtl/ipml_sdpram_v1_6_image_resize_ram.v(line number: 770)] Net DA_bus[34] in ipml_sdpram_v1_6_image_resize_ram(original module ipml_sdpram_v1_6_image_resize_ram) does not have a driver, tie it to 0</data>
+            <data message="5">Verilog-2019: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/hdl/data_stream_ctr.v(line number: 390)] Width mismatch between port b_rst and signal bound to it for instantiated module scaler_ram</data>
         </row>
         <row>
-            <data message="5">Verilog-2020: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/ipcore/image_resize_ram/rtl/ipml_sdpram_v1_6_image_resize_ram.v(line number: 770)] Net DA_bus[35] in ipml_sdpram_v1_6_image_resize_ram(original module ipml_sdpram_v1_6_image_resize_ram) does not have a driver, tie it to 0</data>
+            <data message="4">Verilog-0004: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/hdl/data_stream_ctr.v(line number: 405)] Elaborating instance u_scaler_ram10</data>
         </row>
         <row>
-            <data message="5">Verilog-2020: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/ipcore/image_resize_ram/rtl/ipml_sdpram_v1_6_image_resize_ram.v(line number: 770)] Net DA_bus[44] in ipml_sdpram_v1_6_image_resize_ram(original module ipml_sdpram_v1_6_image_resize_ram) does not have a driver, tie it to 0</data>
+            <data message="4">Verilog-0003: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/ipcore/scaler_ram/scaler_ram.v(line number: 16)] Elaborating module scaler_ram</data>
         </row>
         <row>
-            <data message="5">Verilog-2020: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/ipcore/image_resize_ram/rtl/ipml_sdpram_v1_6_image_resize_ram.v(line number: 770)] Net DA_bus[45] in ipml_sdpram_v1_6_image_resize_ram(original module ipml_sdpram_v1_6_image_resize_ram) does not have a driver, tie it to 0</data>
+            <data message="5">Verilog-2019: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/hdl/data_stream_ctr.v(line number: 405)] Width mismatch between port a_rst and signal bound to it for instantiated module scaler_ram</data>
         </row>
         <row>
-            <data message="5">Verilog-2020: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/ipcore/image_resize_ram/rtl/ipml_sdpram_v1_6_image_resize_ram.v(line number: 770)] Net DA_bus[46] in ipml_sdpram_v1_6_image_resize_ram(original module ipml_sdpram_v1_6_image_resize_ram) does not have a driver, tie it to 0</data>
+            <data message="5">Verilog-2019: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/hdl/data_stream_ctr.v(line number: 405)] Width mismatch between port b_rst and signal bound to it for instantiated module scaler_ram</data>
         </row>
         <row>
-            <data message="5">Verilog-2020: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/ipcore/image_resize_ram/rtl/ipml_sdpram_v1_6_image_resize_ram.v(line number: 770)] Net DA_bus[47] in ipml_sdpram_v1_6_image_resize_ram(original module ipml_sdpram_v1_6_image_resize_ram) does not have a driver, tie it to 0</data>
+            <data message="4">Verilog-0004: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/hdl/data_stream_ctr.v(line number: 420)] Elaborating instance u_scaler_ram11</data>
         </row>
         <row>
-            <data message="5">Verilog-2020: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/ipcore/image_resize_ram/rtl/ipml_sdpram_v1_6_image_resize_ram.v(line number: 770)] Net DA_bus[48] in ipml_sdpram_v1_6_image_resize_ram(original module ipml_sdpram_v1_6_image_resize_ram) does not have a driver, tie it to 0</data>
+            <data message="4">Verilog-0003: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/ipcore/scaler_ram/scaler_ram.v(line number: 16)] Elaborating module scaler_ram</data>
         </row>
         <row>
-            <data message="5">Verilog-2020: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/ipcore/image_resize_ram/rtl/ipml_sdpram_v1_6_image_resize_ram.v(line number: 770)] Net DA_bus[49] in ipml_sdpram_v1_6_image_resize_ram(original module ipml_sdpram_v1_6_image_resize_ram) does not have a driver, tie it to 0</data>
+            <data message="5">Verilog-2019: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/hdl/data_stream_ctr.v(line number: 420)] Width mismatch between port a_rst and signal bound to it for instantiated module scaler_ram</data>
         </row>
         <row>
-            <data message="5">Verilog-2020: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/ipcore/image_resize_ram/rtl/ipml_sdpram_v1_6_image_resize_ram.v(line number: 770)] Net DA_bus[50] in ipml_sdpram_v1_6_image_resize_ram(original module ipml_sdpram_v1_6_image_resize_ram) does not have a driver, tie it to 0</data>
+            <data message="5">Verilog-2019: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/hdl/data_stream_ctr.v(line number: 420)] Width mismatch between port b_rst and signal bound to it for instantiated module scaler_ram</data>
         </row>
         <row>
-            <data message="5">Verilog-2020: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/ipcore/image_resize_ram/rtl/ipml_sdpram_v1_6_image_resize_ram.v(line number: 770)] Net DA_bus[51] in ipml_sdpram_v1_6_image_resize_ram(original module ipml_sdpram_v1_6_image_resize_ram) does not have a driver, tie it to 0</data>
+            <data message="5">Verilog-2023: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/hdl/data_stream_ctr.v(line number: 376)] Give initial value 0 for the no drive pin b_wr_data in module instance hdmi_ddr_ov5640_top/hdmi_in/u_image_scaler_r/u0_data_stream_ctr.u_scaler_ram00</data>
         </row>
         <row>
-            <data message="5">Verilog-2020: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/ipcore/image_resize_ram/rtl/ipml_sdpram_v1_6_image_resize_ram.v(line number: 770)] Net DA_bus[52] in ipml_sdpram_v1_6_image_resize_ram(original module ipml_sdpram_v1_6_image_resize_ram) does not have a driver, tie it to 0</data>
+            <data message="5">Verilog-2023: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/hdl/data_stream_ctr.v(line number: 390)] Give initial value 0 for the no drive pin b_wr_data in module instance hdmi_ddr_ov5640_top/hdmi_in/u_image_scaler_r/u0_data_stream_ctr.u_scaler_ram01</data>
         </row>
         <row>
-            <data message="5">Verilog-2020: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/ipcore/image_resize_ram/rtl/ipml_sdpram_v1_6_image_resize_ram.v(line number: 770)] Net DA_bus[53] in ipml_sdpram_v1_6_image_resize_ram(original module ipml_sdpram_v1_6_image_resize_ram) does not have a driver, tie it to 0</data>
+            <data message="5">Verilog-2023: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/hdl/data_stream_ctr.v(line number: 405)] Give initial value 0 for the no drive pin b_wr_data in module instance hdmi_ddr_ov5640_top/hdmi_in/u_image_scaler_r/u0_data_stream_ctr.u_scaler_ram10</data>
         </row>
         <row>
-            <data message="5">Verilog-2020: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/ipcore/image_resize_ram/rtl/ipml_sdpram_v1_6_image_resize_ram.v(line number: 771)] Net DB_bus[8] in ipml_sdpram_v1_6_image_resize_ram(original module ipml_sdpram_v1_6_image_resize_ram) does not have a driver, tie it to 0</data>
+            <data message="5">Verilog-2023: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/hdl/data_stream_ctr.v(line number: 420)] Give initial value 0 for the no drive pin b_wr_data in module instance hdmi_ddr_ov5640_top/hdmi_in/u_image_scaler_r/u0_data_stream_ctr.u_scaler_ram11</data>
         </row>
         <row>
-            <data message="5">Verilog-2020: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/ipcore/image_resize_ram/rtl/ipml_sdpram_v1_6_image_resize_ram.v(line number: 771)] Net DB_bus[9] in ipml_sdpram_v1_6_image_resize_ram(original module ipml_sdpram_v1_6_image_resize_ram) does not have a driver, tie it to 0</data>
+            <data message="4">Verilog-0004: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/hdl/scaler_gray_top.v(line number: 95)] Elaborating instance u1_bilinear_gray</data>
         </row>
         <row>
-            <data message="5">Verilog-2020: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/ipcore/image_resize_ram/rtl/ipml_sdpram_v1_6_image_resize_ram.v(line number: 771)] Net DB_bus[10] in ipml_sdpram_v1_6_image_resize_ram(original module ipml_sdpram_v1_6_image_resize_ram) does not have a driver, tie it to 0</data>
+            <data message="4">Verilog-0003: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/hdl/bilinear_gray.v(line number: 1)] Elaborating module bilinear_gray</data>
         </row>
         <row>
-            <data message="5">Verilog-2020: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/ipcore/image_resize_ram/rtl/ipml_sdpram_v1_6_image_resize_ram.v(line number: 771)] Net DB_bus[11] in ipml_sdpram_v1_6_image_resize_ram(original module ipml_sdpram_v1_6_image_resize_ram) does not have a driver, tie it to 0</data>
+            <data message="4">Module instance {hdmi_ddr_ov5640_top/hdmi_in/u_image_scaler_r/u1_bilinear_gray} parameter value:
+    ADJUST_MODE = 32'b00000000000000000000000000000001
+    DATA_WIDTH = 32'b00000000000000000000000000001000
+    INDEX_WIDTH = 32'b00000000000000000000000000001011
+    INT_WIDTH = 32'b00000000000000000000000000001000
+    FIX_WIDTH = 32'b00000000000000000000000000001100</data>
         </row>
         <row>
-            <data message="5">Verilog-2020: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/ipcore/image_resize_ram/rtl/ipml_sdpram_v1_6_image_resize_ram.v(line number: 771)] Net DB_bus[12] in ipml_sdpram_v1_6_image_resize_ram(original module ipml_sdpram_v1_6_image_resize_ram) does not have a driver, tie it to 0</data>
+            <data message="4">Verilog-0004: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/hdl/bilinear_gray.v(line number: 48)] Elaborating instance u0_cal_bilinear_srcxy</data>
         </row>
         <row>
-            <data message="5">Verilog-2020: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/ipcore/image_resize_ram/rtl/ipml_sdpram_v1_6_image_resize_ram.v(line number: 771)] Net DB_bus[13] in ipml_sdpram_v1_6_image_resize_ram(original module ipml_sdpram_v1_6_image_resize_ram) does not have a driver, tie it to 0</data>
+            <data message="4">Verilog-0003: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/hdl/cal_bilinear_srcxy.v(line number: 3)] Elaborating module cal_bilinear_srcxy</data>
         </row>
         <row>
-            <data message="5">Verilog-2020: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/ipcore/image_resize_ram/rtl/ipml_sdpram_v1_6_image_resize_ram.v(line number: 771)] Net DB_bus[14] in ipml_sdpram_v1_6_image_resize_ram(original module ipml_sdpram_v1_6_image_resize_ram) does not have a driver, tie it to 0</data>
+            <data message="4">Module instance {hdmi_ddr_ov5640_top/hdmi_in/u_image_scaler_r/u1_bilinear_gray/u0_cal_bilinear_srcxy} parameter value:
+    ADJUST_MODE = 32'b00000000000000000000000000000001
+    INDEX_WIDTH = 32'b00000000000000000000000000001011
+    INT_WIDTH = 32'b00000000000000000000000000001000
+    FIX_WIDTH = 32'b00000000000000000000000000001100</data>
         </row>
         <row>
-            <data message="5">Verilog-2020: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/ipcore/image_resize_ram/rtl/ipml_sdpram_v1_6_image_resize_ram.v(line number: 771)] Net DB_bus[15] in ipml_sdpram_v1_6_image_resize_ram(original module ipml_sdpram_v1_6_image_resize_ram) does not have a driver, tie it to 0</data>
+            <data message="4">Verilog-0004: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/hdl/bilinear_gray.v(line number: 64)] Elaborating instance u1_cal_bilinear_weight</data>
         </row>
         <row>
-            <data message="5">Verilog-2020: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/ipcore/image_resize_ram/rtl/ipml_sdpram_v1_6_image_resize_ram.v(line number: 771)] Net DB_bus[16] in ipml_sdpram_v1_6_image_resize_ram(original module ipml_sdpram_v1_6_image_resize_ram) does not have a driver, tie it to 0</data>
+            <data message="4">Verilog-0003: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/hdl/cal_bilinear_weight.v(line number: 1)] Elaborating module cal_bilinear_weight</data>
         </row>
         <row>
-            <data message="5">Verilog-2020: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/ipcore/image_resize_ram/rtl/ipml_sdpram_v1_6_image_resize_ram.v(line number: 771)] Net DB_bus[17] in ipml_sdpram_v1_6_image_resize_ram(original module ipml_sdpram_v1_6_image_resize_ram) does not have a driver, tie it to 0</data>
+            <data message="4">Module instance {hdmi_ddr_ov5640_top/hdmi_in/u_image_scaler_r/u1_bilinear_gray/u1_cal_bilinear_weight} parameter value:
+    FIX_WIDTH = 32'b00000000000000000000000000001100</data>
         </row>
         <row>
-            <data message="5">Verilog-2020: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/ipcore/image_resize_ram/rtl/ipml_sdpram_v1_6_image_resize_ram.v(line number: 771)] Net DB_bus[26] in ipml_sdpram_v1_6_image_resize_ram(original module ipml_sdpram_v1_6_image_resize_ram) does not have a driver, tie it to 0</data>
+            <data message="4">Verilog-0004: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/hdl/bilinear_gray.v(line number: 79)] Elaborating instance u2_cal_bilinear_data</data>
         </row>
         <row>
-            <data message="5">Verilog-2020: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/ipcore/image_resize_ram/rtl/ipml_sdpram_v1_6_image_resize_ram.v(line number: 771)] Net DB_bus[27] in ipml_sdpram_v1_6_image_resize_ram(original module ipml_sdpram_v1_6_image_resize_ram) does not have a driver, tie it to 0</data>
+            <data message="4">Verilog-0003: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/hdl/cal_bilinear_data.v(line number: 1)] Elaborating module cal_bilinear_data</data>
         </row>
         <row>
-            <data message="5">Verilog-2020: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/ipcore/image_resize_ram/rtl/ipml_sdpram_v1_6_image_resize_ram.v(line number: 771)] Net DB_bus[28] in ipml_sdpram_v1_6_image_resize_ram(original module ipml_sdpram_v1_6_image_resize_ram) does not have a driver, tie it to 0</data>
+            <data message="4">Module instance {hdmi_ddr_ov5640_top/hdmi_in/u_image_scaler_r/u1_bilinear_gray/u2_cal_bilinear_data} parameter value:
+    DATA_WIDTH = 32'b00000000000000000000000000001000
+    FIX_WIDTH = 32'b00000000000000000000000000001100</data>
         </row>
         <row>
-            <data message="5">Verilog-2020: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/ipcore/image_resize_ram/rtl/ipml_sdpram_v1_6_image_resize_ram.v(line number: 771)] Net DB_bus[29] in ipml_sdpram_v1_6_image_resize_ram(original module ipml_sdpram_v1_6_image_resize_ram) does not have a driver, tie it to 0</data>
+            <data message="5">Verilog-2019: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/hdmi_in.v(line number: 335)] Width mismatch between port src_width_i and signal bound to it for instantiated module scaler_gray_top</data>
         </row>
         <row>
-            <data message="5">Verilog-2020: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/ipcore/image_resize_ram/rtl/ipml_sdpram_v1_6_image_resize_ram.v(line number: 771)] Net DB_bus[30] in ipml_sdpram_v1_6_image_resize_ram(original module ipml_sdpram_v1_6_image_resize_ram) does not have a driver, tie it to 0</data>
+            <data message="5">Verilog-2019: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/hdmi_in.v(line number: 335)] Width mismatch between port src_height_i and signal bound to it for instantiated module scaler_gray_top</data>
         </row>
         <row>
-            <data message="5">Verilog-2020: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/ipcore/image_resize_ram/rtl/ipml_sdpram_v1_6_image_resize_ram.v(line number: 771)] Net DB_bus[31] in ipml_sdpram_v1_6_image_resize_ram(original module ipml_sdpram_v1_6_image_resize_ram) does not have a driver, tie it to 0</data>
+            <data message="5">Verilog-2019: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/hdmi_in.v(line number: 335)] Width mismatch between port dest_width_i and signal bound to it for instantiated module scaler_gray_top</data>
         </row>
         <row>
-            <data message="5">Verilog-2020: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/ipcore/image_resize_ram/rtl/ipml_sdpram_v1_6_image_resize_ram.v(line number: 771)] Net DB_bus[32] in ipml_sdpram_v1_6_image_resize_ram(original module ipml_sdpram_v1_6_image_resize_ram) does not have a driver, tie it to 0</data>
+            <data message="5">Verilog-2019: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/hdmi_in.v(line number: 335)] Width mismatch between port dest_height_i and signal bound to it for instantiated module scaler_gray_top</data>
         </row>
         <row>
-            <data message="5">Verilog-2020: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/ipcore/image_resize_ram/rtl/ipml_sdpram_v1_6_image_resize_ram.v(line number: 771)] Net DB_bus[33] in ipml_sdpram_v1_6_image_resize_ram(original module ipml_sdpram_v1_6_image_resize_ram) does not have a driver, tie it to 0</data>
+            <data message="4">Verilog-0004: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/hdmi_in.v(line number: 370)] Elaborating instance u_image_scaler_g</data>
         </row>
         <row>
-            <data message="5">Verilog-2020: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/ipcore/image_resize_ram/rtl/ipml_sdpram_v1_6_image_resize_ram.v(line number: 771)] Net DB_bus[34] in ipml_sdpram_v1_6_image_resize_ram(original module ipml_sdpram_v1_6_image_resize_ram) does not have a driver, tie it to 0</data>
+            <data message="4">Verilog-0003: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/hdl/scaler_gray_top.v(line number: 1)] Elaborating module scaler_gray_top</data>
         </row>
         <row>
-            <data message="5">Verilog-2020: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/ipcore/image_resize_ram/rtl/ipml_sdpram_v1_6_image_resize_ram.v(line number: 771)] Net DB_bus[35] in ipml_sdpram_v1_6_image_resize_ram(original module ipml_sdpram_v1_6_image_resize_ram) does not have a driver, tie it to 0</data>
+            <data message="4">Module instance {hdmi_ddr_ov5640_top/hdmi_in/u_image_scaler_g} parameter value:
+    ADJUST_MODE = 32'b00000000000000000000000000000001
+    BRAM_DEEPTH = 32'b00000000000000000000010100000000
+    DATA_WIDTH = 32'b00000000000000000000000000001000
+    INDEX_WIDTH = 32'b00000000000000000000000000001011
+    INT_WIDTH = 32'b00000000000000000000000000001000
+    FIX_WIDTH = 32'b00000000000000000000000000001100</data>
         </row>
         <row>
-            <data message="5">Verilog-2020: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/ipcore/image_resize_ram/rtl/ipml_sdpram_v1_6_image_resize_ram.v(line number: 771)] Net DB_bus[44] in ipml_sdpram_v1_6_image_resize_ram(original module ipml_sdpram_v1_6_image_resize_ram) does not have a driver, tie it to 0</data>
+            <data message="5">Verilog-2019: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/hdmi_in.v(line number: 363)] Width mismatch between port src_width_i and signal bound to it for instantiated module scaler_gray_top</data>
         </row>
         <row>
-            <data message="5">Verilog-2020: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/ipcore/image_resize_ram/rtl/ipml_sdpram_v1_6_image_resize_ram.v(line number: 771)] Net DB_bus[45] in ipml_sdpram_v1_6_image_resize_ram(original module ipml_sdpram_v1_6_image_resize_ram) does not have a driver, tie it to 0</data>
+            <data message="5">Verilog-2019: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/hdmi_in.v(line number: 363)] Width mismatch between port src_height_i and signal bound to it for instantiated module scaler_gray_top</data>
         </row>
         <row>
-            <data message="5">Verilog-2020: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/ipcore/image_resize_ram/rtl/ipml_sdpram_v1_6_image_resize_ram.v(line number: 771)] Net DB_bus[46] in ipml_sdpram_v1_6_image_resize_ram(original module ipml_sdpram_v1_6_image_resize_ram) does not have a driver, tie it to 0</data>
+            <data message="5">Verilog-2019: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/hdmi_in.v(line number: 363)] Width mismatch between port dest_width_i and signal bound to it for instantiated module scaler_gray_top</data>
         </row>
         <row>
-            <data message="5">Verilog-2020: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/ipcore/image_resize_ram/rtl/ipml_sdpram_v1_6_image_resize_ram.v(line number: 771)] Net DB_bus[47] in ipml_sdpram_v1_6_image_resize_ram(original module ipml_sdpram_v1_6_image_resize_ram) does not have a driver, tie it to 0</data>
+            <data message="5">Verilog-2019: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/hdmi_in.v(line number: 363)] Width mismatch between port dest_height_i and signal bound to it for instantiated module scaler_gray_top</data>
         </row>
         <row>
-            <data message="5">Verilog-2020: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/ipcore/image_resize_ram/rtl/ipml_sdpram_v1_6_image_resize_ram.v(line number: 771)] Net DB_bus[48] in ipml_sdpram_v1_6_image_resize_ram(original module ipml_sdpram_v1_6_image_resize_ram) does not have a driver, tie it to 0</data>
+            <data message="4">Verilog-0004: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/hdmi_in.v(line number: 398)] Elaborating instance u_image_scaler_b</data>
         </row>
         <row>
-            <data message="5">Verilog-2020: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/ipcore/image_resize_ram/rtl/ipml_sdpram_v1_6_image_resize_ram.v(line number: 771)] Net DB_bus[49] in ipml_sdpram_v1_6_image_resize_ram(original module ipml_sdpram_v1_6_image_resize_ram) does not have a driver, tie it to 0</data>
+            <data message="4">Verilog-0003: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/hdl/scaler_gray_top.v(line number: 1)] Elaborating module scaler_gray_top</data>
         </row>
         <row>
-            <data message="5">Verilog-2020: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/ipcore/image_resize_ram/rtl/ipml_sdpram_v1_6_image_resize_ram.v(line number: 771)] Net DB_bus[50] in ipml_sdpram_v1_6_image_resize_ram(original module ipml_sdpram_v1_6_image_resize_ram) does not have a driver, tie it to 0</data>
+            <data message="4">Module instance {hdmi_ddr_ov5640_top/hdmi_in/u_image_scaler_b} parameter value:
+    ADJUST_MODE = 32'b00000000000000000000000000000001
+    BRAM_DEEPTH = 32'b00000000000000000000010100000000
+    DATA_WIDTH = 32'b00000000000000000000000000001000
+    INDEX_WIDTH = 32'b00000000000000000000000000001011
+    INT_WIDTH = 32'b00000000000000000000000000001000
+    FIX_WIDTH = 32'b00000000000000000000000000001100</data>
         </row>
         <row>
-            <data message="5">Verilog-2020: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/ipcore/image_resize_ram/rtl/ipml_sdpram_v1_6_image_resize_ram.v(line number: 771)] Net DB_bus[51] in ipml_sdpram_v1_6_image_resize_ram(original module ipml_sdpram_v1_6_image_resize_ram) does not have a driver, tie it to 0</data>
+            <data message="5">Verilog-2019: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/hdmi_in.v(line number: 391)] Width mismatch between port src_width_i and signal bound to it for instantiated module scaler_gray_top</data>
         </row>
         <row>
-            <data message="5">Verilog-2020: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/ipcore/image_resize_ram/rtl/ipml_sdpram_v1_6_image_resize_ram.v(line number: 771)] Net DB_bus[52] in ipml_sdpram_v1_6_image_resize_ram(original module ipml_sdpram_v1_6_image_resize_ram) does not have a driver, tie it to 0</data>
+            <data message="5">Verilog-2019: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/hdmi_in.v(line number: 391)] Width mismatch between port src_height_i and signal bound to it for instantiated module scaler_gray_top</data>
         </row>
         <row>
-            <data message="5">Verilog-2020: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/ipcore/image_resize_ram/rtl/ipml_sdpram_v1_6_image_resize_ram.v(line number: 771)] Net DB_bus[53] in ipml_sdpram_v1_6_image_resize_ram(original module ipml_sdpram_v1_6_image_resize_ram) does not have a driver, tie it to 0</data>
+            <data message="5">Verilog-2019: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/hdmi_in.v(line number: 391)] Width mismatch between port dest_width_i and signal bound to it for instantiated module scaler_gray_top</data>
         </row>
         <row>
-            <data message="5">Verilog-2019: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/source/source/bilinterpoaltion_test/image_scaler.v(line number: 414)] Width mismatch between port wr_addr and signal bound to it for instantiated module image_resize_ram</data>
+            <data message="5">Verilog-2019: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/hdmi_in.v(line number: 391)] Width mismatch between port dest_height_i and signal bound to it for instantiated module scaler_gray_top</data>
         </row>
         <row>
-            <data message="5">Verilog-2019: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/source/source/bilinterpoaltion_test/image_scaler.v(line number: 414)] Width mismatch between port rd_addr and signal bound to it for instantiated module image_resize_ram</data>
-        </row>
-        <row>
-            <data message="4">Verilog-0004: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/source/source/bilinterpoaltion_test/image_scaler.v(line number: 427)] Elaborating instance ram1</data>
-        </row>
-        <row>
-            <data message="4">Verilog-0003: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/ipcore/image_resize_ram/image_resize_ram.v(line number: 16)] Elaborating module image_resize_ram</data>
-        </row>
-        <row>
-            <data message="5">Verilog-2019: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/source/source/bilinterpoaltion_test/image_scaler.v(line number: 427)] Width mismatch between port wr_addr and signal bound to it for instantiated module image_resize_ram</data>
-        </row>
-        <row>
-            <data message="5">Verilog-2019: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/source/source/bilinterpoaltion_test/image_scaler.v(line number: 427)] Width mismatch between port rd_addr and signal bound to it for instantiated module image_resize_ram</data>
-        </row>
-        <row>
-            <data message="5">Verilog-2021: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/source/source/bilinterpoaltion_test/image_scaler.v(line number: 65)] Net de_out_1d in image_scaler(original module image_scaler) does not have a driver, tie it to 0</data>
-        </row>
-        <row>
-            <data message="4">Verilog-0004: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/hdmi_ddr_ov5640_top.v(line number: 399)] Elaborating instance fram_buf</data>
+            <data message="4">Verilog-0004: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/hdmi_ddr_ov5640_top.v(line number: 414)] Elaborating instance fram_buf</data>
         </row>
         <row>
             <data message="4">Verilog-0003: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/fram_buf.v(line number: 22)] Elaborating module fram_buf</data>
@@ -31949,7 +32291,7 @@
             <data message="5">Verilog-2036: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/fram_buf.v(line number: 247)] Net ddr_line connected to input port of module instance hdmi_ddr_ov5640_top/fram_buf.wr_rd_ctrl_top has no driver, tie it to 0</data>
         </row>
         <row>
-            <data message="4">Verilog-0004: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/hdmi_ddr_ov5640_top.v(line number: 463)] Elaborating instance sync_vg</data>
+            <data message="4">Verilog-0004: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/hdmi_ddr_ov5640_top.v(line number: 478)] Elaborating instance sync_vg</data>
         </row>
         <row>
             <data message="4">Verilog-0003: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/sync_vg.v(line number: 35)] Elaborating module sync_vg</data>
@@ -31971,7 +32313,7 @@
     HV_OFFSET = 12'b000000000000</data>
         </row>
         <row>
-            <data message="4">Verilog-0004: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/hdmi_ddr_ov5640_top.v(line number: 473)] Elaborating instance u_DDR3_50H</data>
+            <data message="4">Verilog-0004: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/hdmi_ddr_ov5640_top.v(line number: 488)] Elaborating instance u_DDR3_50H</data>
         </row>
         <row>
             <data message="4">Verilog-0003: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/DDR3_50H/DDR3_50H.v(line number: 7)] Elaborating module DDR3_50H</data>
@@ -36550,7 +36892,7 @@
             <data message="5">Verilog-2024: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/DDR3_50H/DDR3_50H.v(line number: 7)] Give an initial value for the no drive output pin apb_int in graph of sdm module DDR3_50H</data>
         </row>
         <row>
-            <data message="4">Verilog-0004: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/hdmi_ddr_ov5640_top.v(line number: 566)] Elaborating instance key_ctl_gamma</data>
+            <data message="4">Verilog-0004: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/hdmi_ddr_ov5640_top.v(line number: 581)] Elaborating instance key_ctl_gamma</data>
         </row>
         <row>
             <data message="4">Verilog-0003: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/key_ctl.v(line number: 23)] Elaborating module key_ctl</data>
@@ -36572,7 +36914,7 @@
     BTN_DELAY = 20'b01111111111111111111</data>
         </row>
         <row>
-            <data message="4">Verilog-0004: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/hdmi_ddr_ov5640_top.v(line number: 575)] Elaborating instance key_ctl_saturation</data>
+            <data message="4">Verilog-0004: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/hdmi_ddr_ov5640_top.v(line number: 590)] Elaborating instance key_ctl_saturation</data>
         </row>
         <row>
             <data message="4">Verilog-0003: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/key_ctl.v(line number: 23)] Elaborating module key_ctl</data>
@@ -36583,7 +36925,7 @@
     CNT_MAX = 4'b0010</data>
         </row>
         <row>
-            <data message="4">Verilog-0004: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/hdmi_ddr_ov5640_top.v(line number: 584)] Elaborating instance key_ctl_rotate</data>
+            <data message="4">Verilog-0004: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/hdmi_ddr_ov5640_top.v(line number: 599)] Elaborating instance key_ctl_rotate</data>
         </row>
         <row>
             <data message="4">Verilog-0003: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/key_ctl.v(line number: 23)] Elaborating module key_ctl</data>
@@ -36594,15 +36936,15 @@
     CNT_MAX = 4'b0010</data>
         </row>
         <row>
-            <data message="4">Verilog-0004: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/hdmi_ddr_ov5640_top.v(line number: 593)] Elaborating instance key_ctl_scaler</data>
+            <data message="4">Verilog-0004: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/hdmi_ddr_ov5640_top.v(line number: 619)] Elaborating instance key_ctl_scaler_width</data>
         </row>
         <row>
             <data message="4">Verilog-0003: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/key_ctl.v(line number: 23)] Elaborating module key_ctl</data>
         </row>
         <row>
-            <data message="4">Module instance {hdmi_ddr_ov5640_top/key_ctl_scaler} parameter value:
-    CNT_WIDTH = 4'b0001
-    CNT_MAX = 4'b0001</data>
+            <data message="4">Module instance {hdmi_ddr_ov5640_top/key_ctl_scaler_width} parameter value:
+    CNT_WIDTH = 32'b00000000000000000000000000000110
+    CNT_MAX = 32'b00000000000000000000000000111110</data>
         </row>
         <row>
             <data message="4">Verilog-0004: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/key_ctl.v(line number: 39)] Elaborating instance u_btn_deb</data>
@@ -36611,12 +36953,100 @@
             <data message="4">Verilog-0003: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/btn_deb_fix.v(line number: 23)] Elaborating module btn_deb_fix</data>
         </row>
         <row>
-            <data message="4">Module instance {hdmi_ddr_ov5640_top/key_ctl_scaler/u_btn_deb} parameter value:
+            <data message="4">Module instance {hdmi_ddr_ov5640_top/key_ctl_scaler_width/u_btn_deb} parameter value:
     BTN_WIDTH = 4'b0001
     BTN_DELAY = 20'b01111111111111111111</data>
         </row>
         <row>
-            <data message="4">Verilog-0004: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/hdmi_ddr_ov5640_top.v(line number: 599)] Elaborating instance ethernet_test</data>
+            <data message="4">Verilog-0004: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/hdmi_ddr_ov5640_top.v(line number: 630)] Elaborating instance key_ctl_scaler_height</data>
+        </row>
+        <row>
+            <data message="4">Verilog-0003: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/key_ctl.v(line number: 23)] Elaborating module key_ctl</data>
+        </row>
+        <row>
+            <data message="4">Module instance {hdmi_ddr_ov5640_top/key_ctl_scaler_height} parameter value:
+    CNT_WIDTH = 32'b00000000000000000000000000000111
+    CNT_MAX = 32'b00000000000000000000000001000110</data>
+        </row>
+        <row>
+            <data message="4">Verilog-0004: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/key_ctl.v(line number: 39)] Elaborating instance u_btn_deb</data>
+        </row>
+        <row>
+            <data message="4">Verilog-0003: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/btn_deb_fix.v(line number: 23)] Elaborating module btn_deb_fix</data>
+        </row>
+        <row>
+            <data message="4">Module instance {hdmi_ddr_ov5640_top/key_ctl_scaler_height/u_btn_deb} parameter value:
+    BTN_WIDTH = 4'b0001
+    BTN_DELAY = 20'b01111111111111111111</data>
+        </row>
+        <row>
+            <data message="4">Verilog-0004: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/hdmi_ddr_ov5640_top.v(line number: 639)] Elaborating instance key_ctl_color_reverse</data>
+        </row>
+        <row>
+            <data message="4">Verilog-0003: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/key_ctl.v(line number: 23)] Elaborating module key_ctl</data>
+        </row>
+        <row>
+            <data message="4">Module instance {hdmi_ddr_ov5640_top/key_ctl_color_reverse} parameter value:
+    CNT_WIDTH = 32'b00000000000000000000000000000001
+    CNT_MAX = 32'b00000000000000000000000000000001</data>
+        </row>
+        <row>
+            <data message="4">Verilog-0004: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/key_ctl.v(line number: 39)] Elaborating instance u_btn_deb</data>
+        </row>
+        <row>
+            <data message="4">Verilog-0003: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/btn_deb_fix.v(line number: 23)] Elaborating module btn_deb_fix</data>
+        </row>
+        <row>
+            <data message="4">Module instance {hdmi_ddr_ov5640_top/key_ctl_color_reverse/u_btn_deb} parameter value:
+    BTN_WIDTH = 4'b0001
+    BTN_DELAY = 20'b01111111111111111111</data>
+        </row>
+        <row>
+            <data message="4">Verilog-0004: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/hdmi_ddr_ov5640_top.v(line number: 648)] Elaborating instance key_ctl_panning_y</data>
+        </row>
+        <row>
+            <data message="4">Verilog-0003: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/key_ctl.v(line number: 23)] Elaborating module key_ctl</data>
+        </row>
+        <row>
+            <data message="4">Module instance {hdmi_ddr_ov5640_top/key_ctl_panning_y} parameter value:
+    CNT_WIDTH = 32'b00000000000000000000000000000110
+    CNT_MAX = 32'b00000000000000000000000000100100</data>
+        </row>
+        <row>
+            <data message="4">Verilog-0004: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/key_ctl.v(line number: 39)] Elaborating instance u_btn_deb</data>
+        </row>
+        <row>
+            <data message="4">Verilog-0003: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/btn_deb_fix.v(line number: 23)] Elaborating module btn_deb_fix</data>
+        </row>
+        <row>
+            <data message="4">Module instance {hdmi_ddr_ov5640_top/key_ctl_panning_y/u_btn_deb} parameter value:
+    BTN_WIDTH = 4'b0001
+    BTN_DELAY = 20'b01111111111111111111</data>
+        </row>
+        <row>
+            <data message="4">Verilog-0004: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/hdmi_ddr_ov5640_top.v(line number: 656)] Elaborating instance key_ctl_panning_x</data>
+        </row>
+        <row>
+            <data message="4">Verilog-0003: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/key_ctl.v(line number: 23)] Elaborating module key_ctl</data>
+        </row>
+        <row>
+            <data message="4">Module instance {hdmi_ddr_ov5640_top/key_ctl_panning_x} parameter value:
+    CNT_WIDTH = 32'b00000000000000000000000000000111
+    CNT_MAX = 32'b00000000000000000000000001000000</data>
+        </row>
+        <row>
+            <data message="4">Verilog-0004: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/key_ctl.v(line number: 39)] Elaborating instance u_btn_deb</data>
+        </row>
+        <row>
+            <data message="4">Verilog-0003: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/btn_deb_fix.v(line number: 23)] Elaborating module btn_deb_fix</data>
+        </row>
+        <row>
+            <data message="4">Module instance {hdmi_ddr_ov5640_top/key_ctl_panning_x/u_btn_deb} parameter value:
+    BTN_WIDTH = 4'b0001
+    BTN_DELAY = 20'b01111111111111111111</data>
+        </row>
+        <row>
+            <data message="4">Verilog-0004: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/hdmi_ddr_ov5640_top.v(line number: 662)] Elaborating instance ethernet_test</data>
         </row>
         <row>
             <data message="4">Verilog-0003: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/ethernet/rtl/ethernet_test.v(line number: 23)] Elaborating module ethernet_test</data>
@@ -37602,16 +38032,13 @@
             <data message="5">Loop was found during constant probe.</data>
         </row>
         <row>
-            <data message="4">FSM first_interpolated_line_fsm[1:0] inferred.</data>
-        </row>
-        <row>
-            <data message="4">FSM pixel_saved_cnt_fsm[2:0] inferred.</data>
-        </row>
-        <row>
             <data message="5">Loop was found during constant probe.</data>
         </row>
         <row>
             <data message="4">FSM state_fsm[8:0] inferred.</data>
+        </row>
+        <row>
+            <data message="4">FSM scaler_st_fsm[2:0] inferred.</data>
         </row>
         <row>
             <data message="4">FSM wr_port_fsm[1:0] inferred.</data>
@@ -37911,34 +38338,328 @@
             <data message="5">Loop was found during constant probe.</data>
         </row>
         <row>
-            <data message="6">DRC-2021: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/hdmi_in.v(line number: 29)] The net scaler_h_cnt[8] is un-driven, tie it to 0.</data>
+            <data message="5">Loop was found during constant probe.</data>
         </row>
         <row>
-            <data message="6">DRC-2021: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/hdmi_in.v(line number: 29)] The net scaler_h_cnt[7] is un-driven, tie it to 0.</data>
+            <data message="5">Loop was found during constant probe.</data>
         </row>
         <row>
-            <data message="6">DRC-2021: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/hdmi_in.v(line number: 29)] The net scaler_h_cnt[6] is un-driven, tie it to 0.</data>
+            <data message="5">Loop was found during constant probe.</data>
         </row>
         <row>
-            <data message="6">DRC-2021: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/hdmi_in.v(line number: 29)] The net scaler_h_cnt[5] is un-driven, tie it to 0.</data>
+            <data message="5">Loop was found during constant probe.</data>
         </row>
         <row>
-            <data message="6">DRC-2021: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/hdmi_in.v(line number: 29)] The net scaler_h_cnt[4] is un-driven, tie it to 0.</data>
+            <data message="5">Loop was found during constant probe.</data>
         </row>
         <row>
-            <data message="6">DRC-2021: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/hdmi_in.v(line number: 29)] The net scaler_h_cnt[3] is un-driven, tie it to 0.</data>
+            <data message="5">Loop was found during constant probe.</data>
         </row>
         <row>
-            <data message="6">DRC-2021: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/hdmi_in.v(line number: 29)] The net scaler_h_cnt[2] is un-driven, tie it to 0.</data>
+            <data message="5">Loop was found during constant probe.</data>
         </row>
         <row>
-            <data message="6">DRC-2021: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/hdmi_in.v(line number: 29)] The net scaler_h_cnt[1] is un-driven, tie it to 0.</data>
+            <data message="5">Loop was found during constant probe.</data>
         </row>
         <row>
-            <data message="6">DRC-2021: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/hdmi_in.v(line number: 29)] The net scaler_h_cnt[0] is un-driven, tie it to 0.</data>
+            <data message="5">Loop was found during constant probe.</data>
         </row>
         <row>
-            <data message="6">DRC-2021: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/hdmi_in.v(line number: 36)] The net o_hs_scaler is un-driven, tie it to 0.</data>
+            <data message="5">Loop was found during constant probe.</data>
+        </row>
+        <row>
+            <data message="5">Loop was found during constant probe.</data>
+        </row>
+        <row>
+            <data message="5">Loop was found during constant probe.</data>
+        </row>
+        <row>
+            <data message="5">Loop was found during constant probe.</data>
+        </row>
+        <row>
+            <data message="5">Loop was found during constant probe.</data>
+        </row>
+        <row>
+            <data message="5">Loop was found during constant probe.</data>
+        </row>
+        <row>
+            <data message="5">Loop was found during constant probe.</data>
+        </row>
+        <row>
+            <data message="5">Loop was found during constant probe.</data>
+        </row>
+        <row>
+            <data message="5">Loop was found during constant probe.</data>
+        </row>
+        <row>
+            <data message="5">Loop was found during constant probe.</data>
+        </row>
+        <row>
+            <data message="5">Loop was found during constant probe.</data>
+        </row>
+        <row>
+            <data message="6">DRC-2021: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/hdl/cal_bilinear_srcxy.v(line number: 32)] The net genblk1.srcx_location [22] is un-driven, tie it to 0.</data>
+        </row>
+        <row>
+            <data message="6">DRC-2021: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/hdl/cal_bilinear_srcxy.v(line number: 32)] The net genblk1.srcx_location [21] is un-driven, tie it to 0.</data>
+        </row>
+        <row>
+            <data message="6">DRC-2021: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/hdl/cal_bilinear_srcxy.v(line number: 32)] The net genblk1.srcx_location [20] is un-driven, tie it to 0.</data>
+        </row>
+        <row>
+            <data message="6">DRC-2021: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/hdl/cal_bilinear_srcxy.v(line number: 32)] The net genblk1.srcx_location [19] is un-driven, tie it to 0.</data>
+        </row>
+        <row>
+            <data message="6">DRC-2021: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/hdl/cal_bilinear_srcxy.v(line number: 32)] The net genblk1.srcx_location [18] is un-driven, tie it to 0.</data>
+        </row>
+        <row>
+            <data message="6">DRC-2021: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/hdl/cal_bilinear_srcxy.v(line number: 32)] The net genblk1.srcx_location [17] is un-driven, tie it to 0.</data>
+        </row>
+        <row>
+            <data message="6">DRC-2021: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/hdl/cal_bilinear_srcxy.v(line number: 32)] The net genblk1.srcx_location [16] is un-driven, tie it to 0.</data>
+        </row>
+        <row>
+            <data message="6">DRC-2021: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/hdl/cal_bilinear_srcxy.v(line number: 32)] The net genblk1.srcx_location [15] is un-driven, tie it to 0.</data>
+        </row>
+        <row>
+            <data message="6">DRC-2021: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/hdl/cal_bilinear_srcxy.v(line number: 32)] The net genblk1.srcx_location [14] is un-driven, tie it to 0.</data>
+        </row>
+        <row>
+            <data message="6">DRC-2021: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/hdl/cal_bilinear_srcxy.v(line number: 32)] The net genblk1.srcx_location [13] is un-driven, tie it to 0.</data>
+        </row>
+        <row>
+            <data message="6">DRC-2021: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/hdl/cal_bilinear_srcxy.v(line number: 32)] The net genblk1.srcx_location [12] is un-driven, tie it to 0.</data>
+        </row>
+        <row>
+            <data message="6">DRC-2021: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/hdl/cal_bilinear_srcxy.v(line number: 32)] The net genblk1.srcx_location [11] is un-driven, tie it to 0.</data>
+        </row>
+        <row>
+            <data message="6">DRC-2021: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/hdl/cal_bilinear_srcxy.v(line number: 32)] The net genblk1.srcx_location [10] is un-driven, tie it to 0.</data>
+        </row>
+        <row>
+            <data message="6">DRC-2021: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/hdl/cal_bilinear_srcxy.v(line number: 32)] The net genblk1.srcx_location [9] is un-driven, tie it to 0.</data>
+        </row>
+        <row>
+            <data message="6">DRC-2021: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/hdl/cal_bilinear_srcxy.v(line number: 32)] The net genblk1.srcx_location [8] is un-driven, tie it to 0.</data>
+        </row>
+        <row>
+            <data message="6">DRC-2021: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/hdl/cal_bilinear_srcxy.v(line number: 32)] The net genblk1.srcx_location [7] is un-driven, tie it to 0.</data>
+        </row>
+        <row>
+            <data message="6">DRC-2021: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/hdl/cal_bilinear_srcxy.v(line number: 32)] The net genblk1.srcx_location [6] is un-driven, tie it to 0.</data>
+        </row>
+        <row>
+            <data message="6">DRC-2021: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/hdl/cal_bilinear_srcxy.v(line number: 32)] The net genblk1.srcx_location [5] is un-driven, tie it to 0.</data>
+        </row>
+        <row>
+            <data message="6">DRC-2021: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/hdl/cal_bilinear_srcxy.v(line number: 32)] The net genblk1.srcx_location [4] is un-driven, tie it to 0.</data>
+        </row>
+        <row>
+            <data message="6">DRC-2021: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/hdl/cal_bilinear_srcxy.v(line number: 32)] The net genblk1.srcx_location [3] is un-driven, tie it to 0.</data>
+        </row>
+        <row>
+            <data message="6">DRC-2021: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/hdl/cal_bilinear_srcxy.v(line number: 32)] The net genblk1.srcx_location [2] is un-driven, tie it to 0.</data>
+        </row>
+        <row>
+            <data message="6">DRC-2021: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/hdl/cal_bilinear_srcxy.v(line number: 32)] The net genblk1.srcx_location [1] is un-driven, tie it to 0.</data>
+        </row>
+        <row>
+            <data message="6">DRC-2021: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/hdl/cal_bilinear_srcxy.v(line number: 32)] The net genblk1.srcx_location [0] is un-driven, tie it to 0.</data>
+        </row>
+        <row>
+            <data message="6">DRC-2021: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/hdl/cal_bilinear_srcxy.v(line number: 33)] The net genblk1.srcy_location [22] is un-driven, tie it to 0.</data>
+        </row>
+        <row>
+            <data message="6">DRC-2021: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/hdl/cal_bilinear_srcxy.v(line number: 33)] The net genblk1.srcy_location [21] is un-driven, tie it to 0.</data>
+        </row>
+        <row>
+            <data message="6">DRC-2021: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/hdl/cal_bilinear_srcxy.v(line number: 33)] The net genblk1.srcy_location [20] is un-driven, tie it to 0.</data>
+        </row>
+        <row>
+            <data message="6">DRC-2021: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/hdl/cal_bilinear_srcxy.v(line number: 33)] The net genblk1.srcy_location [19] is un-driven, tie it to 0.</data>
+        </row>
+        <row>
+            <data message="6">DRC-2021: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/hdl/cal_bilinear_srcxy.v(line number: 33)] The net genblk1.srcy_location [18] is un-driven, tie it to 0.</data>
+        </row>
+        <row>
+            <data message="6">DRC-2021: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/hdl/cal_bilinear_srcxy.v(line number: 33)] The net genblk1.srcy_location [17] is un-driven, tie it to 0.</data>
+        </row>
+        <row>
+            <data message="6">DRC-2021: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/hdl/cal_bilinear_srcxy.v(line number: 33)] The net genblk1.srcy_location [16] is un-driven, tie it to 0.</data>
+        </row>
+        <row>
+            <data message="6">DRC-2021: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/hdl/cal_bilinear_srcxy.v(line number: 33)] The net genblk1.srcy_location [15] is un-driven, tie it to 0.</data>
+        </row>
+        <row>
+            <data message="6">DRC-2021: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/hdl/cal_bilinear_srcxy.v(line number: 33)] The net genblk1.srcy_location [14] is un-driven, tie it to 0.</data>
+        </row>
+        <row>
+            <data message="6">DRC-2021: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/hdl/cal_bilinear_srcxy.v(line number: 33)] The net genblk1.srcy_location [13] is un-driven, tie it to 0.</data>
+        </row>
+        <row>
+            <data message="6">DRC-2021: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/hdl/cal_bilinear_srcxy.v(line number: 33)] The net genblk1.srcy_location [12] is un-driven, tie it to 0.</data>
+        </row>
+        <row>
+            <data message="6">DRC-2021: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/hdl/cal_bilinear_srcxy.v(line number: 33)] The net genblk1.srcy_location [11] is un-driven, tie it to 0.</data>
+        </row>
+        <row>
+            <data message="6">DRC-2021: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/hdl/cal_bilinear_srcxy.v(line number: 33)] The net genblk1.srcy_location [10] is un-driven, tie it to 0.</data>
+        </row>
+        <row>
+            <data message="6">DRC-2021: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/hdl/cal_bilinear_srcxy.v(line number: 33)] The net genblk1.srcy_location [9] is un-driven, tie it to 0.</data>
+        </row>
+        <row>
+            <data message="6">DRC-2021: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/hdl/cal_bilinear_srcxy.v(line number: 33)] The net genblk1.srcy_location [8] is un-driven, tie it to 0.</data>
+        </row>
+        <row>
+            <data message="6">DRC-2021: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/hdl/cal_bilinear_srcxy.v(line number: 33)] The net genblk1.srcy_location [7] is un-driven, tie it to 0.</data>
+        </row>
+        <row>
+            <data message="6">DRC-2021: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/hdl/cal_bilinear_srcxy.v(line number: 33)] The net genblk1.srcy_location [6] is un-driven, tie it to 0.</data>
+        </row>
+        <row>
+            <data message="6">DRC-2021: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/hdl/cal_bilinear_srcxy.v(line number: 33)] The net genblk1.srcy_location [5] is un-driven, tie it to 0.</data>
+        </row>
+        <row>
+            <data message="6">DRC-2021: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/hdl/cal_bilinear_srcxy.v(line number: 33)] The net genblk1.srcy_location [4] is un-driven, tie it to 0.</data>
+        </row>
+        <row>
+            <data message="6">DRC-2021: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/hdl/cal_bilinear_srcxy.v(line number: 33)] The net genblk1.srcy_location [3] is un-driven, tie it to 0.</data>
+        </row>
+        <row>
+            <data message="6">DRC-2021: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/hdl/cal_bilinear_srcxy.v(line number: 33)] The net genblk1.srcy_location [2] is un-driven, tie it to 0.</data>
+        </row>
+        <row>
+            <data message="6">DRC-2021: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/hdl/cal_bilinear_srcxy.v(line number: 33)] The net genblk1.srcy_location [1] is un-driven, tie it to 0.</data>
+        </row>
+        <row>
+            <data message="6">DRC-2021: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/hdl/cal_bilinear_srcxy.v(line number: 33)] The net genblk1.srcy_location [0] is un-driven, tie it to 0.</data>
+        </row>
+        <row>
+            <data message="5">Loop was found during constant probe.</data>
+        </row>
+        <row>
+            <data message="5">Loop was found during constant probe.</data>
+        </row>
+        <row>
+            <data message="5">Loop was found during constant probe.</data>
+        </row>
+        <row>
+            <data message="5">Loop was found during constant probe.</data>
+        </row>
+        <row>
+            <data message="5">Loop was found during constant probe.</data>
+        </row>
+        <row>
+            <data message="5">Loop was found during constant probe.</data>
+        </row>
+        <row>
+            <data message="5">Loop was found during constant probe.</data>
+        </row>
+        <row>
+            <data message="5">Loop was found during constant probe.</data>
+        </row>
+        <row>
+            <data message="5">Loop was found during constant probe.</data>
+        </row>
+        <row>
+            <data message="5">Loop was found during constant probe.</data>
+        </row>
+        <row>
+            <data message="5">Loop was found during constant probe.</data>
+        </row>
+        <row>
+            <data message="5">Loop was found during constant probe.</data>
+        </row>
+        <row>
+            <data message="5">Loop was found during constant probe.</data>
+        </row>
+        <row>
+            <data message="5">Loop was found during constant probe.</data>
+        </row>
+        <row>
+            <data message="5">Loop was found during constant probe.</data>
+        </row>
+        <row>
+            <data message="5">Loop was found during constant probe.</data>
+        </row>
+        <row>
+            <data message="5">Loop was found during constant probe.</data>
+        </row>
+        <row>
+            <data message="5">Loop was found during constant probe.</data>
+        </row>
+        <row>
+            <data message="5">Loop was found during constant probe.</data>
+        </row>
+        <row>
+            <data message="5">Loop was found during constant probe.</data>
+        </row>
+        <row>
+            <data message="6">DRC-2021: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/hdmi_in.v(line number: 59)] The net scaler_ctrl_1d is un-driven, tie it to 0.</data>
+        </row>
+        <row>
+            <data message="6">DRC-2021: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/hdmi_in.v(line number: 60)] The net scaler_ctrl_2d is un-driven, tie it to 0.</data>
+        </row>
+        <row>
+            <data message="6">DRC-2021: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/hdmi_in.v(line number: 67)] The net vs_state is un-driven, tie it to 0.</data>
+        </row>
+        <row>
+            <data message="6">DRC-2021: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/hdmi_in.v(line number: 68)] The net vs_out_1d is un-driven, tie it to 0.</data>
+        </row>
+        <row>
+            <data message="6">DRC-2021: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/hdmi_in.v(line number: 69)] The net real_de_row_cnt[16] is un-driven, tie it to 0.</data>
+        </row>
+        <row>
+            <data message="6">DRC-2021: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/hdmi_in.v(line number: 69)] The net real_de_row_cnt[15] is un-driven, tie it to 0.</data>
+        </row>
+        <row>
+            <data message="6">DRC-2021: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/hdmi_in.v(line number: 69)] The net real_de_row_cnt[14] is un-driven, tie it to 0.</data>
+        </row>
+        <row>
+            <data message="6">DRC-2021: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/hdmi_in.v(line number: 69)] The net real_de_row_cnt[13] is un-driven, tie it to 0.</data>
+        </row>
+        <row>
+            <data message="6">DRC-2021: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/hdmi_in.v(line number: 69)] The net real_de_row_cnt[12] is un-driven, tie it to 0.</data>
+        </row>
+        <row>
+            <data message="6">DRC-2021: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/hdmi_in.v(line number: 69)] The net real_de_row_cnt[11] is un-driven, tie it to 0.</data>
+        </row>
+        <row>
+            <data message="6">DRC-2021: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/hdmi_in.v(line number: 69)] The net real_de_row_cnt[10] is un-driven, tie it to 0.</data>
+        </row>
+        <row>
+            <data message="6">DRC-2021: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/hdmi_in.v(line number: 69)] The net real_de_row_cnt[9] is un-driven, tie it to 0.</data>
+        </row>
+        <row>
+            <data message="6">DRC-2021: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/hdmi_in.v(line number: 69)] The net real_de_row_cnt[8] is un-driven, tie it to 0.</data>
+        </row>
+        <row>
+            <data message="6">DRC-2021: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/hdmi_in.v(line number: 69)] The net real_de_row_cnt[7] is un-driven, tie it to 0.</data>
+        </row>
+        <row>
+            <data message="6">DRC-2021: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/hdmi_in.v(line number: 69)] The net real_de_row_cnt[6] is un-driven, tie it to 0.</data>
+        </row>
+        <row>
+            <data message="6">DRC-2021: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/hdmi_in.v(line number: 69)] The net real_de_row_cnt[5] is un-driven, tie it to 0.</data>
+        </row>
+        <row>
+            <data message="6">DRC-2021: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/hdmi_in.v(line number: 69)] The net real_de_row_cnt[4] is un-driven, tie it to 0.</data>
+        </row>
+        <row>
+            <data message="6">DRC-2021: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/hdmi_in.v(line number: 69)] The net real_de_row_cnt[3] is un-driven, tie it to 0.</data>
+        </row>
+        <row>
+            <data message="6">DRC-2021: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/hdmi_in.v(line number: 69)] The net real_de_row_cnt[2] is un-driven, tie it to 0.</data>
+        </row>
+        <row>
+            <data message="6">DRC-2021: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/hdmi_in.v(line number: 69)] The net real_de_row_cnt[1] is un-driven, tie it to 0.</data>
+        </row>
+        <row>
+            <data message="6">DRC-2021: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/hdmi_in.v(line number: 69)] The net real_de_row_cnt[0] is un-driven, tie it to 0.</data>
+        </row>
+        <row>
+            <data message="6">DRC-2021: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/hdmi_in.v(line number: 70)] The net de_out_1d is un-driven, tie it to 0.</data>
         </row>
         <row>
             <data message="5">Loop was found during constant probe.</data>

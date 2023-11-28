@@ -1,4 +1,4 @@
-##### Written on 2023/11/27 07:29:08 ###############################
+##### Written on 2023/11/28 16:06:17 ###############################
 
 
 ##### INFO ##################################################
@@ -14,7 +14,7 @@ Constraint File(s) :
 
 ##### SUMMARY ######################################################
 
-Found 0 error(s), 33 critical warning(s), 0 warning(s), out of 1229 constraint(s)
+Found 0 error(s), 35 critical warning(s), 0 warning(s), out of 1249 constraint(s)
 
 
 Inapplicable constraints(except overwritten constraints):
@@ -118,6 +118,12 @@ define_attribute {p:rgmii_tx_ctl} {PAP_IO_LOC} {B18}
 
 define_attribute {p:key_gamma} {PAP_IO_LOC} {K18}
 	C: ConstraintEditor-2002: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/hdmi_ddr_ov5640_top.fdc(line number: 1221)] | Port key_gamma has been placed at location K18, whose type is share pin.
+
+define_attribute {p:key_color_reverse} {PAP_IO_LOC} {J19}
+	C: ConstraintEditor-2002: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/hdmi_ddr_ov5640_top.fdc(line number: 1246)] | Port key_color_reverse has been placed at location J19, whose type is share pin.
+
+define_attribute {p:key_panning_y} {PAP_IO_LOC} {H20}
+	C: ConstraintEditor-2002: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/hdmi_ddr_ov5640_top.fdc(line number: 1251)] | Port key_panning_y has been placed at location H20, whose type is share pin.
 
 
 Constraints with issues:
