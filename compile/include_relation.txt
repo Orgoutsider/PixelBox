@@ -25,7 +25,9 @@
 
 
 
-E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/hdmi_in.v|E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/get_fracx.v|E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/get_fracy.v|E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/get_offset_x.v|E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/get_offset_y.v|
+E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/hdmi_in.v|E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/get_fracx.v|E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/get_fracy.v|E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/get_intx.v|E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/get_inty.v|E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/get_offset_x.v|E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/get_offset_y.v|
+
+
 
 
 

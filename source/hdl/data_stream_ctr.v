@@ -3,7 +3,7 @@ module data_stream_ctr
                             parameter BRAM_DEEPTH = 1280,
                             parameter DATA_WIDTH  = 8,
                             parameter INDEX_WIDTH = 11,
-                            parameter INT_WIDTH   = 8,   // 定点数整数位宽
+                            parameter INT_WIDTH   = 8,   // 定点数整数位�?
                             parameter FIX_WIDTH   = 12)
                           (
                            input                            clk_i, 
@@ -36,8 +36,8 @@ module data_stream_ctr
                            output[DATA_WIDTH-1:0]           tdata11_o /*synthesis PAP_MARK_DEBUG="1"*///                                                             
                            );
 
-//----------------------------自适应参数的位宽计算函数-------------------------------------//   
-//计算一个十进制数对应二进制的位宽                  
+//----------------------------�?适应参数的位宽�?�算函数-------------------------------------//   
+//计算一�?十进制数对应二进制的位�??                  
 function integer clogb2 (input integer bit_depth);              
   begin                                                           
     for(clogb2=0; bit_depth>0; clogb2=clogb2+1)                   
@@ -45,47 +45,47 @@ function integer clogb2 (input integer bit_depth);
   end                                                           
 endfunction                       
                       
-localparam BRAM_ADDR_WIDTH  = clogb2(BRAM_DEEPTH - 1);         // BRAN地址位宽
+localparam BRAM_ADDR_WIDTH  = clogb2(BRAM_DEEPTH - 1);         // BRAN地址位�??
 localparam BRAM_DATA_WIDTH  = DATA_WIDTH;                      // 每个数据的位宽度
-localparam BRAM_MEMORY_SIZE = BRAM_DEEPTH * BRAM_DATA_WIDTH;   // 所需要的BRAM的面积                        
+localparam BRAM_MEMORY_SIZE = BRAM_DEEPTH * BRAM_DATA_WIDTH;   // 所需要的BRAM的面�?                        
 
 wire scaler_done;
-reg[15:0] r_row_pixel_cnt; /*synthesis PAP_MARK_DEBUG="1"*/ // 读像素计数
-reg[15:0] r_row_cnt;       /*synthesis PAP_MARK_DEBUG="1"*/      // 读行计数
-reg[2:0] scaler_st;        /*synthesis PAP_MARK_DEBUG="1"*/        // 缩放状态
+reg[15:0] r_row_pixel_cnt; /*synthesis PAP_MARK_DEBUG="1"*/ // 读像素�?�数
+reg[15:0] r_row_cnt;       /*synthesis PAP_MARK_DEBUG="1"*/      // 读�?��?�数
+reg[2:0] scaler_st;        /*synthesis PAP_MARK_DEBUG="1"*/        // 缩放状�?
 reg[1:0] delay_cnt;        /*synthesis PAP_MARK_DEBUG="1"*/       // 延迟的节拍数
 
-assign scaler_done = &scaler_st; // 一帧缩放完成                   
+assign scaler_done = &scaler_st; // 一帧缩放完�?                   
 
 
 //------------------------------------输入数据计数----------------------------------------//
-// 列计数
+// 列�?�数
 reg[15:0] w_row_pixel_cnt; /*synthesis PAP_MARK_DEBUG="1"*/
 always@(posedge clk_i) begin
   if(rst_i) begin
     w_row_pixel_cnt <= 16'd0;
   end else  begin
-    if((w_row_pixel_cnt == src_width_i -1) & tvalid_i) begin // 存完一行像素
+    if((w_row_pixel_cnt == src_width_i -1) & tvalid_i) begin // 存完一行像�?
       w_row_pixel_cnt <= 16'd0;
     end 
-    else if(tvalid_i) begin // 像素有效则计数+1
+    else if(tvalid_i) begin // 像素有效则�?�数+1
       w_row_pixel_cnt <= w_row_pixel_cnt + 16'd1; 
     end
   end
 end
 
 
-wire w_image_tlast;/*synthesis PAP_MARK_DEBUG="1"*///是否存到每行图像的末尾 image row end;
-assign w_image_tlast = (w_row_pixel_cnt == src_width_i -1) & tvalid_i;//是否存到每行图像的末尾
+wire w_image_tlast;/*synthesis PAP_MARK_DEBUG="1"*///�?否存到每行图像的�?�? image row end;
+assign w_image_tlast = (w_row_pixel_cnt == src_width_i -1) & tvalid_i;//�?否存到每行图像的�?�?
 
 
-// 输入行计数
+// 输入行�?�数
 reg[15:0] w_row_cnt;/*synthesis PAP_MARK_DEBUG="1"*/ 
 always@(posedge clk_i)begin
   if(rst_i)begin
     w_row_cnt <= 16'd0;
   end else begin
-    if(scaler_done)begin  // 等待一帧缩放结束才能清零
+    if(scaler_done)begin  // 等待一帧缩放结束才能清�?
       w_row_cnt <= 16'd0;
     end 
     else if(w_image_tlast) begin
@@ -109,104 +109,104 @@ always@(posedge clk_i)begin
       w_addr <= 16'd0;
     end 
     else if(tvalid_i) begin
-      w_addr <= w_addr + 16'd1; // 地址自增，存入下一个像素
+      w_addr <= w_addr + 16'd1; // 地址�?增，存入下一�?像素
     end
   end
 end
 
 
-// 写入ram的数据
+// 写入ram的数�?
 wire[DATA_WIDTH-1:0] w_data;/*synthesis PAP_MARK_DEBUG="1"*/
 assign w_data = tdata_i;
 
-// 写数据使能
+// 写数�?使能
 wire w_en; /*synthesis PAP_MARK_DEBUG="1"*/
 assign w_en = tvalid_i;
 
 
-//-----------------------------------------读------------------------------------------------//
-// 控制什么时候读 
+//-----------------------------------------�?------------------------------------------------//
+// 控制什么时候�?? 
 
-// reg[2:0] scaler_st; // 缩放状态
+// reg[2:0] scaler_st; // 缩放状�?
 // reg[1:0] delay_cnt; // 延迟的节拍数
 always@(posedge clk_i)begin
   if(rst_i)begin
-    scaler_st <= 'd0;
-    delay_cnt <= 'd0;
+    scaler_st <= 3'd0;
+    delay_cnt <= 3'd0;
   end else begin
     case(scaler_st)
 
-    //控制读的时机，当存到我们要计算的行才读，或者在放大时，行都已经存完，对应的原图坐标一直在最后一行
-    0:begin
+    //控制读的时机，当存到我们要�?�算的�?�才读，或者在放大时，行都已经存完，�?�应的原图坐标一直在最后一�?
+    3'd0:begin
       delay_cnt <= 0;
-      if(w_row_cnt > srcy_int_i + 1 || (srcy_int_i == src_height_i - 1))begin 
-        scaler_st <= 'd1; // 可以开始读存好的额两行进行插值
+      if(w_row_cnt > srcy_int_i + 1'b1 || (srcy_int_i == src_height_i - 1'b1))begin 
+        scaler_st <= 3'd1; // �?以开始�?�存好的额两行进行插�?
       end 
       else begin
-        scaler_st <= 'd0; // 继续存数据
+        scaler_st <= 3'd0; // 继续存数�?
       end    
     end
       
-    //每行读的次数等于目标图宽度时，说明新一行算完了
-    // 此时处于读的状态
-    1:begin
-      if(r_row_pixel_cnt == dest_width_i - 1)begin 
-        scaler_st <= 'd2;
+    //每�?��?�的次数等于�?标图宽度时，说明新一行算完了
+    // 此时处于读的状�?
+    3'd1:begin
+      if(r_row_pixel_cnt == dest_width_i - 1'b1)begin 
+        scaler_st <= 3'd2;
       end 
       else begin
-        scaler_st <= 'd1;
+        scaler_st <= 3'd1;
       end    
     end
 
-    2:begin
-      if(r_row_cnt == 0)begin //原图的所有行都读过了 read last row done 
-        scaler_st <= 'd4;
+    3'd2:begin
+      if(r_row_cnt == 16'd0)begin //原图的所有�?�都读过�? read last row done 
+        scaler_st <= 3'd4;
       end
-      else begin // 还没算完一帧
-        scaler_st <= 'd3;
+      else begin // 还没算完一�?
+        scaler_st <= 3'd3;
       end    
     end
     
-    // 还没读完一帧，打拍之后继续读
-    3:begin
+    // 还没读完一帧，打拍之后继续�?
+    3'd3:begin
       delay_cnt <= delay_cnt + 1;
-      if(delay_cnt == 2)begin  // 每读一个数据要打拍，因为要跟系数输出时机对齐
-        scaler_st <= 'd0;
+      if(delay_cnt == 2)begin  // 每�?�一�?数据要打拍，因为要跟系数输出时机对齐
+        scaler_st <= 3'd0;
       end 
       else begin
-        scaler_st <= 'd3;
+        scaler_st <= 3'd3;
       end        
     end    
     
-    // 输入的数据都读完了，但是有可能插值还没结束，比如放大
-    4:begin
+    // 输入的数�?都�?�完了，但是有可能插值还没结束，比�?�放�?
+    3'd4:begin
       if(scale_factory_i[INT_WIDTH + FIX_WIDTH - 1 : FIX_WIDTH])begin //scaler down 
-      // 根据缩放因子整数部分，判断是放大还是缩小，>1是放大，<1是缩小
-      // 放大：存储会比计算提前结束
-      // 缩小：存储与计算结束时机差不多
-        scaler_st <= 'd5; // 放大
+      // 根据缩放因子整数部分，判�?�?放大还是缩小�?>1�?放大�?<1�?缩小
+      // 放大：存储会比�?�算提前结束
+      // 缩小：存储与计算结束时机�?不�??
+        scaler_st <= 3'd5; // 放大
       end 
       else begin 
-        scaler_st <= 'd6; // 缩小
+        scaler_st <= 3'd6; // 缩小
       end
     end 
       
     5:begin
-      if(w_row_cnt == src_height_i)begin  // 一帧所有数据都存过了
-        scaler_st <= 'd6;
+      if(w_row_cnt == src_height_i)begin  // 一帧所有数�?都存过了
+        scaler_st <= 3'd6;
       end 
       else begin
-        scaler_st <= 'd5;
+        scaler_st <= 3'd5;
       end         
     end   
 
-    // 相当于打拍输出
+    // 相当于打拍输�?
     6:begin
-      scaler_st <= 'd7;        
+      scaler_st <= 3'd7;        
     end
     
     7:begin
-      scaler_st <= 'd0;        
+      scaler_st <= 3'd0;        
     end    
                                
     endcase
@@ -216,16 +216,16 @@ end
 
 
 wire scaler_valid;/*synthesis PAP_MARK_DEBUG="1"*/
-assign scaler_valid = (scaler_st == 1) ? 1 : 0; 
+assign scaler_valid = (scaler_st == 3'd1) ? 1'b1 : 1'b0; 
  
-// 读出每行的像素 列计数
+// 读出每�?�的像素 列�?�数
 
 always@(posedge clk_i)begin
   if(rst_i)begin
     r_row_pixel_cnt <= 16'd0;
   end else begin
-    if((r_row_pixel_cnt == dest_width_i -1) & scaler_valid)begin
-      r_row_pixel_cnt <= 16'd0; // 读的次数等于目标图的一行，说明一行已经算完
+    if((r_row_pixel_cnt == dest_width_i -1'b1) & scaler_valid)begin
+      r_row_pixel_cnt <= 16'd0; // 读的次数等于�?标图的一行，说明一行已经算�?
     end 
     else if(scaler_valid) begin
       r_row_pixel_cnt <= r_row_pixel_cnt + 16'd1;
@@ -234,19 +234,20 @@ always@(posedge clk_i)begin
 end
 
 
-// 算到每行最后一个像素时拉高
-wire r_image_tlast;/*synthesis PAP_MARK_DEBUG="1"*/// 读到最后最后一行 image row end;
-assign r_image_tlast = (r_row_pixel_cnt == dest_width_i -1) & scaler_valid;
+// 算到每�?�最后一�?像素时拉�?
+wire r_image_tlast;/*synthesis PAP_MARK_DEBUG="1"*/// 读到最后最后一�? image row end;
+assign r_image_tlast = (r_row_pixel_cnt == dest_width_i -1'b1) & scaler_valid;
 
-// 读行计数
+// 读�?��?�数
 always@(posedge clk_i)begin
   if(rst_i)begin
     r_row_cnt <= 16'd0;
   end else begin
-    if((r_row_cnt == dest_height_i -1) & r_image_tlast)begin  //如果算到最后一行，同时算完最后一行的最后一个像素，一帧算完了
-      r_row_cnt <= 16'd0;
-    end else if(r_image_tlast) begin
-      r_row_cnt <= r_row_cnt + 16'd1;
+    if(r_image_tlast)begin  //如果算到最后一行，同时算完最后一行的最后一�?像素，一帧算完了
+        if (r_row_cnt == dest_height_i -1'b1)
+            r_row_cnt <= 16'd0;
+        else
+            r_row_cnt <= r_row_cnt + 16'd1;
     end else begin
       r_row_cnt <= r_row_cnt;
     end
@@ -259,13 +260,13 @@ reg[10:0] r_addrb00 = 11'hfff;/*synthesis PAP_MARK_DEBUG="1"*/
 reg[10:0] r_addrb01 = 11'hfff;/*synthesis PAP_MARK_DEBUG="1"*/
 reg[10:0] r_addrb10 = 11'hfff;/*synthesis PAP_MARK_DEBUG="1"*/
 reg[10:0] r_addrb11 = 11'hfff;/*synthesis PAP_MARK_DEBUG="1"*/
-// 原图的奇数行存在ram的前半部分，偶数行存在ram的后半部分
-// 如果读偶数行，相邻两行就刚好存在ram的前后两部分
-// 如果读奇数行，ram中存的行顺序是反的，因为下一行已经把原来的上一行覆盖掉了
+// 原图的�?�数行存在ram的前半部分，偶数行存在ram的后半部�?
+// 如果读偶数�?�，相邻两�?�就刚好存在ram的前后两部分
+// 如果读�?�数行，ram�?存的行顺序是反的，因为下一行已经把原来的上一行�?�盖掉了
 always@(posedge clk_i)begin
-  if(srcy_int_i[0])begin // 如果算的是奇数行，相邻后一行存在ram的前半部分
+  if(srcy_int_i[0])begin // 如果算的�?奇数行，相邻后一行存在ram的前半部�?
     if(srcx_int_i == src_width_i - 1) begin // last pixel in line
-           // 如果读取的是奇数行，并且还是该行的最后一个像素，后一行存在ram的前半部分
+           // 如果读取的是奇数行，并且还是该�?�的最后一�?像素，后一行存在ram的前半部�?
       r_addrb00 <= src_width_i + srcx_int_i - 1;
       r_addrb01 <= src_width_i + srcx_int_i;
       r_addrb10 <= srcx_int_i - 1;
@@ -278,7 +279,7 @@ always@(posedge clk_i)begin
       r_addrb11 <= srcx_int_i + 1;    
     end
   end 
-  else begin // 如果读取的是偶数行，后一行存在ram的后半部分
+  else begin // 如果读取的是偶数行，后一行存在ram的后半部�?
     if(srcx_int_i == src_width_i - 1)begin  
       r_addrb00 <= srcx_int_i -1;
       r_addrb01 <= srcx_int_i;
@@ -295,17 +296,17 @@ always@(posedge clk_i)begin
 end
 
 
-//------------------------ 产生要计算的目标图像像素坐标-----------------------------------//
+//------------------------ 产生要�?�算的目标图像像素坐�?-----------------------------------//
 reg[INDEX_WIDTH-1:0] destx = 0;/*synthesis PAP_MARK_DEBUG="1"*///current x location
 reg[INDEX_WIDTH-1:0] desty = 0;/*synthesis PAP_MARK_DEBUG="1"*///current y location
 
 
 always@(*)begin
-  destx <= r_row_pixel_cnt;
-  desty <= r_row_cnt;  
+  destx = r_row_pixel_cnt;
+  desty = r_row_cnt;  
 end
 
-//产生要计算的目标图像像素坐标之后输出到，cal_bilinear_srcxy中计算该目标像素对应在的原图中的坐标
+//产生要�?�算的目标图像像素坐标之后输出到，cal_bilinear_srcxy�?计算该目标像素�?�应在的原图�?的坐�?
 assign destx_o = destx;
 assign desty_o = desty;
 
@@ -315,21 +316,21 @@ always@(posedge clk_i)begin
   scaler_valid_d <= {scaler_valid_d[6:0],scaler_valid}; // 不断左移
 end
 
-// scaler_st一变成1，scaler_valid马上为1，
+// scaler_st一变成1，scaler_valid�?上为1�?
 //但是如果此时把data_valid
-// 因为当r_en为1后，要延迟一周期才从ram中读取数据
+// 因为当r_en�?1后，要延迟一周期才从ram�?读取数据
 wire r_enb;/*synthesis PAP_MARK_DEBUG="1"*/
 generate
   if(ADJUST_MODE == 0)begin//-------------normal mode: delay 1+2 clk-------------------------
                              
-  assign tvalid_o = scaler_valid_d[3]; //打四拍
+  assign tvalid_o = scaler_valid_d[3]; //打四�?
   assign r_enb    = scaler_valid_d[1];
   
   end 
 
   else begin//---------------adjust mode: delay 3+2 clk-------------------------
   
-  assign tvalid_o = scaler_valid_d[5]; //打六拍
+  assign tvalid_o = scaler_valid_d[5]; //打六�?
   assign r_enb    = scaler_valid_d[3];
   
   end
@@ -345,7 +346,7 @@ reg[DATA_WIDTH -1:0] r_doutb01_d;/*synthesis PAP_MARK_DEBUG="1"*/
 reg[DATA_WIDTH -1:0] r_doutb10_d;/*synthesis PAP_MARK_DEBUG="1"*/
 reg[DATA_WIDTH -1:0] r_doutb11_d;/*synthesis PAP_MARK_DEBUG="1"*/
 
-// 打一拍
+// 打一�?
 always@(posedge clk_i)begin//sync to weight
   r_doutb00_d <= r_doutb00;
   r_doutb01_d <= r_doutb01;
@@ -358,21 +359,21 @@ assign tdata01_o = r_doutb01_d;
 assign tdata10_o = r_doutb10_d;
 assign tdata11_o = r_doutb11_d;
 
-// 是否存储完一帧
+// �?否存储完一�?
 wire wr_end;/*synthesis PAP_MARK_DEBUG="1"*/
 assign wr_end = (w_row_cnt == src_height_i);
 
-// 是否接受外部像素
+// �?否接受�?�部像素
 wire tready;/*synthesis PAP_MARK_DEBUG="1"*/
-assign tready = (w_row_cnt < srcy_int_i + 2) ? 1: 0; // 假如当前存的行还不够，允许进新数据; 假如当前存的行足够算了，不允许进新数据0，防止覆盖
-assign tready_o = tready  && (!wr_end); // 如果已经存完一帧中的所有行，在插值结束之前，不允许再进新数据，因为图像放大，图像的存储会比计算结束的更早
+assign tready = (w_row_cnt < srcy_int_i + 2) ? 1: 0; // 假�?�当前存的�?�还不�?�，允�?�进新数�?; 假�?�当前存的�?�足够算了，不允许进新数�?0，防止�?�盖
+assign tready_o = tready  && (!wr_end); // 如果已经存完一帧中的所有�?�，在插值结束之前，不允许再进新数据，因为图像放大，图像的存储会比�?�算结束的更�?
 
 
 
 
 
 // 四个RAM入相同的数据
-// 同时读取四个相邻点
+// 同时读取四个相邻�?
 scaler_ram u_scaler_ram00 (
   .a_addr(w_addr),          // input [10:0]
   .a_wr_data(w_data),    // input [7:0]

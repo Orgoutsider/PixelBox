@@ -1,7 +1,10 @@
 module cmos_mix#(
     parameter H_ACT = 12'd320,
     parameter H_OFFSET = 12'd80,
-    parameter LEFT = 1'b1
+    parameter H_SRC = 12'd640,
+    parameter LEFT = 1'b1,
+    parameter V_ACT = 12'd722,
+    parameter V_OFFSET = 12'd0
 )
 (
     input pixel_clk,
@@ -14,9 +17,10 @@ module cmos_mix#(
     output reg de_o,
     output reg vs_o
 );
-localparam H_BEGIN = LEFT ? (H_ACT - H_OFFSET - 1'b1) : H_OFFSET;
+localparam H_BEGIN = LEFT ? (H_SRC - H_ACT - H_OFFSET - 1'b1) : H_OFFSET;
 
 reg [11:0] x_cnt;
+reg [11:0] y_cnt;
 wire RGB_de;
 wire RGB_vs;
 wire [15:0] gamma_data_raw;
@@ -35,6 +39,9 @@ reg saturation_ctrl_1d;
 reg saturation_ctrl_2d;
 reg sobel_ctrl_1d;
 reg sobel_ctrl_2d;
+reg out_de;
+reg out_vs;
+reg [15:0] out_data;
 
 wire [7:0]  rx_RGB_DATA_R/*synthesis PAP_MARK_DEBUG="1"*/;/*synthesis PAP_MARK_DEBUG="1"*/
 wire [7:0]  rx_RGB_DATA_G/*synthesis PAP_MARK_DEBUG="1"*/;/*synthesis PAP_MARK_DEBUG="1"*/
@@ -115,8 +122,6 @@ assign median_filter_rst = ~saturation_vs_1d & saturation_vs;
         .o_rgbdata_b        ( rx_RGB_DATA_B )
     );
 
-
-
     always @(posedge pixel_clk) begin
         if (de_i)
             x_cnt <= x_cnt + 1'b1;
@@ -124,7 +129,23 @@ assign median_filter_rst = ~saturation_vs_1d & saturation_vs;
             x_cnt <= 12'd0; 
     end
 
-    assign RGB_de = (x_cnt >= H_BEGIN) && (x_cnt < H_BEGIN + H_ACT) && de_i;
+    reg de_i_1d;
+    reg vs_i_1d;
+    always @(posedge pixel_clk) begin
+        de_i_1d <= de_i;
+        vs_i_1d <= vs_i;
+    end
+
+    always @(posedge pixel_clk) begin
+        if(~vs_i_1d & vs_i)
+            y_cnt <= 12'd0;
+        else if(de_i_1d & ~de_i)
+            y_cnt <= y_cnt + 1'b1;
+        else
+            y_cnt <= y_cnt;
+    end
+
+    assign RGB_de = (x_cnt >= H_BEGIN) && (x_cnt < H_BEGIN + H_ACT) && de_i && (y_cnt >= V_OFFSET);
     assign RGB_vs = vs_i;
 
     gamma u_gamma(
@@ -267,22 +288,64 @@ assign median_filter_rst = ~saturation_vs_1d & saturation_vs;
 
     always @(*) begin
     if (sobel_ctrl_2d)
-        pdata_o = o_sobel_data;
+        out_data = o_sobel_data;
     else 
-        pdata_o = {median_filter_data_R,median_filter_data_G,median_filter_data_B}  ;
+        out_data = {median_filter_data_R,median_filter_data_G,median_filter_data_B}  ;
     end
 
     always @(*) begin
     if (sobel_ctrl_2d)
-        de_o = sobel_de;
+        out_de = sobel_de;
     else 
-        de_o = median_filter_de;
+        out_de = median_filter_de;
     end
 
     always @(*) begin
     if (sobel_ctrl_2d)
-        vs_o = sobel_vs;
+        out_vs = sobel_vs;
     else 
-        vs_o = median_filter_vs;
+        out_vs = median_filter_vs;
+    end
+    
+    reg black_de;
+    reg [11:0] black_cnt;
+    reg [5:0] black_line;
+    reg out_vs_1d;
+    reg out_de_1d;
+
+    always @(posedge pixel_clk) begin
+        out_vs_1d <= out_vs;
+        out_de_1d <= out_de;
+    end
+
+    always @(posedge pixel_clk) begin
+        if(~out_vs_1d & out_vs)
+            black_de <= 1'b0;
+        else if(black_cnt == H_ACT - 1'b1)
+            black_de <= 1'b0;
+        else if((y_cnt >= V_ACT) && out_de_1d && !out_de && (V_OFFSET != 12'd0))
+            black_de <= 1'b1;
+        else if((black_line <= V_OFFSET) && (black_line > 0))
+            black_de <= 1'b1;
+    end
+
+    always @(posedge pixel_clk) begin
+        if(black_de)
+            black_cnt <= black_cnt + 1'b1;
+        else
+            black_cnt <= 12'd0; 
+    end
+
+    always @(posedge pixel_clk) begin
+        if(~out_vs_1d & out_vs)
+            black_line <= 6'd0;
+        else if(black_cnt == H_ACT - 1'b1)
+            black_line <= black_line + 1'b1;
+    end
+
+    always @(posedge pixel_clk) begin
+        pdata_o <= black_de ? 16'd0 : out_data;
+        de_o <= black_de | out_de;
+        vs_o <= out_vs;
     end
 endmodule

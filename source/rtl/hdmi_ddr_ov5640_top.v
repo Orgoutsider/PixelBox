@@ -264,7 +264,7 @@ module hdmi_ddr_ov5640_top#(
     );
 //CMOS1 Camera 
     reg_config #(
-    .DISPAY_H(640),
+    .DISPAY_H(680),
     .DISPAY_V(722)
     )	coms1_reg_config  (
     	.clk_25M                 (clk_25M            ),//input
@@ -279,7 +279,7 @@ module hdmi_ddr_ov5640_top#(
 
 //CMOS2 Camera 
     reg_config	#(
-    .DISPAY_H(640),
+    .DISPAY_H(680),
     .DISPAY_V(722)
     ) coms2_reg_config(
     	.clk_25M                 (clk_25M            ),//input
@@ -316,8 +316,11 @@ module hdmi_ddr_ov5640_top#(
     );
     cmos_mix #(
         .H_ACT  (12'd320),
-        .H_OFFSET (12'd319),
-        .LEFT  (1'b1)
+        .H_OFFSET (12'd344),
+        .H_SRC (12'd680),
+        .LEFT  (1'b1),
+        .V_ACT(12'd720),
+        .V_OFFSET (12'd0)
     ) cmos1_mix(
         .pixel_clk (cmos1_pclk_16bit)  ,    // input                 pixel_clk    ,
         .de_i	   (de_1)    ,	// input				   de_i	        ,
@@ -354,8 +357,11 @@ module hdmi_ddr_ov5640_top#(
     );
     cmos_mix #(
         .H_ACT  (12'd320),
-        .H_OFFSET (12'd319),
-        .LEFT  (1'b0)
+        .H_OFFSET (12'd344),
+        .H_SRC (12'd680),
+        .LEFT  (1'b0),
+        .V_ACT(12'd720),
+        .V_OFFSET (12'd15)
     ) cmos2_mix(
         .pixel_clk (cmos2_pclk_16bit)  ,    // input                 pixel_clk    ,
         .de_i	   (de_2)    ,	// input				   de_i	        ,

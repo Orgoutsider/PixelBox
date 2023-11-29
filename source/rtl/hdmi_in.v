@@ -96,43 +96,48 @@ module hdmi_in # (
     `include "get_fracy.v"
     `include "get_offset_y.v"
     `include "get_offset_x.v"
+    `include "get_intx.v"
+    `include "get_inty.v"
 
-    always @(*) begin
-        scale_fracx = get_fracx(scaler_ctrl_width_2d);
+    always @(posedge pixclk_in) begin
+        scale_fracx <= get_fracx(scaler_ctrl_width_2d);
     end
-    always @(*) begin
-        scale_fracy = get_fracy(scaler_ctrl_height_2d);
-    end
-
-    always @(*) begin
-        offset_y = get_offset_y(panning_y_ctrl_2d);
-    end
-    always @(*) begin
-        offset_x = get_offset_x(panning_x_ctrl_2d);
+    always @(posedge pixclk_in) begin
+        scale_fracy <= get_fracy(scaler_ctrl_height_2d);
     end
 
+    always @(posedge pixclk_in) begin
+        offset_y <= get_offset_y(panning_y_ctrl_2d);
+    end
+    always @(posedge pixclk_in) begin
+        offset_x <= get_offset_x(panning_x_ctrl_2d);
+    end
+
     always @(*) begin
-        scale_intx = SRC_IMAGE_WIDTH  / dest_width_i;
-        scale_inty = SRC_IMAGE_HEIGHT  / dest_height_i;
         scale_factorx = (scale_intx  << FIX_WIDTH) + scale_fracx;
         scale_factory = (scale_inty  << FIX_WIDTH) + scale_fracy;
     end
 
-    always @(*) begin
-        if (scaler_ctrl_width_2d <= 31) begin
-            dest_width_i = 640 - scaler_ctrl_width_2d * 20;
+    always @(posedge pixclk_in) begin
+        scale_intx <= get_intx(scaler_ctrl_width_2d);
+        scale_inty <= get_inty(scaler_ctrl_height_2d);
+    end
+
+    always @(posedge pixclk_in) begin
+        if (scaler_ctrl_width_2d <= 6'd31) begin
+            dest_width_i <= 12'd640 - scaler_ctrl_width_2d * 6'd20;
         end
         else begin
-            dest_width_i = scaler_ctrl_width_2d * 20 - 600;
+            dest_width_i <= scaler_ctrl_width_2d * 6'd20 - 12'd600;
         end
     end
 
-    always @(*) begin
-        if (scaler_ctrl_height_2d <= 35) begin
-            dest_height_i = 720 - scaler_ctrl_height_2d * 20;
+    always @(posedge pixclk_in) begin
+        if (scaler_ctrl_height_2d <= 7'd35) begin
+            dest_height_i <= 12'd720 - scaler_ctrl_height_2d * 6'd20;
         end
         else begin
-            dest_height_i = scaler_ctrl_height_2d * 20 - 700;
+            dest_height_i <= scaler_ctrl_height_2d * 6'd20 - 12'd700;
         end
     end
 
