@@ -12,16 +12,17 @@ module delay_laps#(
 	);
 
 	reg [23:0] data [640:0];
-	
+    always @(*) begin
+        data[0] = i_data;
+    end
 	integer i;
 	always @(posedge clk) begin
-		if (!rst_n) begin // mem初始化为0
-			for (i = 0; i < 641; i = i + 1) begin
+		if (!rst_n) begin // mem初�?�化�?0
+			for (i = 1; i < 641; i = i + 1) begin
 				data[i] <= 0;
 			end
 		end 
 		else begin
-            data[0] <= i_data;
 			for (i = 0; i < 640; i = i + 1) begin
 				data[i + 1] <= data[i];
 			end

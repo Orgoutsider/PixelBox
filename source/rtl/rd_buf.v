@@ -60,7 +60,11 @@ module rd_buf #(
     input                         rotate_90, 
     input  [ADDR_WIDTH- 1'b1 : 0]  ddr_raddr4,
     input  [LEN_WIDTH- 1'b1 : 0]   ddr_rd_len4,
-    output                         ddr_rdata_ban
+    output                         ddr_rdata_ban,
+    input                          frame_wcnt1,
+    input                          frame_wcnt2,
+    input                          frame_wcnt3,
+    input                          frame_wcnt4
 );
 
     localparam RAM_WIDTH      = 16'd32;
@@ -263,7 +267,8 @@ module rd_buf #(
         .ddr_rdata_en(ddr_rdata_en1),         // input                         ddr_rdata_en,
         .ddr_part(2'd0)        , // input                         ddr_part 
         .rd_cnt(rd_cnt1)   ,// output [1:0] rd_cnt  
-        .rotate_180(1'b0)  
+        .rotate_180(1'b0),
+        .frame_wcnt(frame_wcnt1)  
     );
 
     rd_cell #(  
@@ -297,7 +302,8 @@ module rd_buf #(
         .ddr_rdata_en(ddr_rdata_en2),         // input                         ddr_rdata_en,
         .ddr_part(2'd1)        , // input                         ddr_part 
         .rd_cnt(rd_cnt2)    , // output [1:0] rd_cnt    
-        .rotate_180(rotate_180)
+        .rotate_180(rotate_180),
+        .frame_wcnt(wr_rotate_90_2d ? frame_wcnt4: frame_wcnt2)  
     );
 
     rd_cell #(  
@@ -331,7 +337,8 @@ module rd_buf #(
         .ddr_rdata_en(ddr_rdata_en3),         // input                         ddr_rdata_en,
         .ddr_part(2'd2)        , // input                         ddr_part 
         .rd_cnt(rd_cnt3)      , // output [1:0] rd_cnt    
-        .rotate_180(1'b0)
+        .rotate_180(1'b0)   ,
+        .frame_wcnt(frame_wcnt3)  
     );
 
     rotate_cell #(

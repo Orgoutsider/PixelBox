@@ -131,7 +131,11 @@ module fram_buf #(
     wire [CTRL_ADDR_WIDTH-1'b1:0] ddr_raddr4;
     wire [LEN_WIDTH-1'b1:0]     ddr_rd_len4;
     wire [8*MEM_DQ_WIDTH-1 : 0] ddr_wdata4; 
-    wire                        read_rdata_ban2;   
+    wire                        read_rdata_ban2;  
+    wire                        frame_wcnt1; 
+    wire                        frame_wcnt2; 
+    wire                        frame_wcnt3; 
+    wire                        frame_wcnt4; 
 
     wr_buf #(
         .ADDR_WIDTH       (  CTRL_ADDR_WIDTH  ),//parameter                     ADDR_WIDTH      = 6'd28,
@@ -176,6 +180,9 @@ module fram_buf #(
 
         // .frame_wcnt       (                   ),//output [FRAME_CNT_WIDTH-1 :0] frame_wcnt,
         .frame_wirq       (  frame_wirq       ), //output                        frame_wirq
+        .frame_wcnt1      (  frame_wcnt1       ), //output
+        .frame_wcnt2      (  frame_wcnt2       ), //output
+        .frame_wcnt3      (  frame_wcnt3       ), //output
         .wr_opera_en_1    (wr_opera_en_1      ),      //input                         wr_opera_en_2
         .wr_opera_en_2    (wr_opera_en_2      ),      //input                         wr_opera_en_2
         .wr_opera_en_3    (wr_opera_en_3      ),      //input                         wr_opera_en_2
@@ -238,7 +245,11 @@ module fram_buf #(
         .rotate_180      (rotate_ctrl == 2'd2),
         .ddr_raddr4      (ddr_raddr4 ), 
         .ddr_rd_len4     (ddr_rd_len4),
-        .ddr_rdata_ban   (read_rdata_ban2)
+        .ddr_rdata_ban   (read_rdata_ban2),
+        .frame_wcnt1     (frame_wcnt1 ),
+        .frame_wcnt2     (frame_wcnt2 ),
+        .frame_wcnt3     (frame_wcnt3 ),
+        .frame_wcnt4     (frame_wcnt4 )
     );
     
     wr_rd_ctrl_top#(
@@ -350,7 +361,9 @@ module fram_buf #(
         .ddr_wdone(ddr_wdone),
         .ddr_wdata(ddr_wdata4),
         .ddr_wdata_req(ddr_wdata_req4),
-        .ddr_part_rd(2'd3)
+        .ddr_part_rd(2'd3),
+        .frame_wcnt(frame_wcnt2),
+        .frame_wcnt_out(frame_wcnt4)
         // .ddr_rdata_ban(read_rdata_ban4)   
     );
 endmodule

@@ -49,6 +49,7 @@ module hdmi_in # (
     reg [11:0] v_cnt;     /*synthesis PAP_MARK_DEBUG="1"*/
     reg [11:0] black_cnt; /*synthesis PAP_MARK_DEBUG="1"*/
     reg o_de_scaler_1d;   /*synthesis PAP_MARK_DEBUG="1"*/
+    reg o_de_scaler_2d;
     reg  vs_in_1d;        /*synthesis PAP_MARK_DEBUG="1"*/
     reg  de_in_1d;        /*synthesis PAP_MARK_DEBUG="1"*/
     reg  i_de_scaler;     /*synthesis PAP_MARK_DEBUG="1"*/ // ��������ģ���de
@@ -198,7 +199,7 @@ module hdmi_in # (
         if (!init_over_tx) begin
             scaler_de_cnt <= 0;
         end
-        else if (o_de_scaler_r && de_row_cnt == 1) begin
+        else if (o_de_scaler_1d && de_row_cnt == 1) begin
             scaler_de_cnt <= scaler_de_cnt + 1;
         end
     end
@@ -218,7 +219,7 @@ module hdmi_in # (
         if (!init_over_tx) begin    
             de_row_cnt <= 0;
         end
-        if (o_de_scaler_r & ~o_de_scaler_1d) begin
+        if (o_de_scaler_1d & ~o_de_scaler_2d) begin
             de_row_cnt <= de_row_cnt + 1; 
         end
     end
@@ -304,6 +305,7 @@ module hdmi_in # (
     // ��һ�ģ������½���
     always @(posedge pixclk_in) begin
         o_de_scaler_1d <= o_de_scaler_r;
+        o_de_scaler_2d <= o_de_scaler_1d;
     end
 
 
@@ -311,7 +313,7 @@ module hdmi_in # (
     always @(posedge pixclk_in) begin
         if(!init_over_tx)
             black_cnt <= dest_width_i;
-        else if(~o_de_scaler_r & o_de_scaler_1d)//һ�����½��ؾͿ�ʼ����
+        else if(~o_de_scaler_1d & o_de_scaler_2d)//һ�����½��ؾͿ�ʼ����
             black_cnt <= dest_width_i + 1;
         else begin
             if(black_cnt >= H_ACT)
@@ -328,8 +330,8 @@ module hdmi_in # (
         else begin
             // de_out <= o_de_scaler_r || (o_de_scaler_1d & ~o_de_scaler_r) || (black_cnt < H_ACT);
             de_out <=  (scaler_ctrl_width_2d == 0 || scaler_ctrl_width_2d == 62) ? 
-                       ((o_de_scaler_r)||(((h_cnt < H_ACT) || ((H_ACT + H_ACT + 20 > h_cnt) && (h_cnt > H_ACT + 20))) && (v_cnt > V_ACT - 1'b1) && de_in)) :
-                       ((o_de_scaler_r || (o_de_scaler_1d & ~o_de_scaler_r) || (black_cnt < H_ACT)) ||  (((h_cnt < H_ACT) || ((H_ACT + H_ACT + 20 > h_cnt) && (h_cnt > H_ACT + 20))) && (v_cnt > V_ACT - 1'b1) && de_in));
+                       ((o_de_scaler_1d)||(((h_cnt < H_ACT) || ((H_ACT + H_ACT + 20 > h_cnt) && (h_cnt > H_ACT + 20))) && (v_cnt > V_ACT - 1'b1) && de_in)) :
+                       ((o_de_scaler_1d || (o_de_scaler_2d & ~o_de_scaler_1d) || (black_cnt < H_ACT)) ||  (((h_cnt < H_ACT) || ((H_ACT + H_ACT + 20 > h_cnt) && (h_cnt > H_ACT + 20))) && (v_cnt > V_ACT - 1'b1) && de_in));
             // de_out <=  ((o_de_scaler_r || (o_de_scaler_1d & ~o_de_scaler_r) || (black_cnt < H_ACT)) ||  (((h_cnt < H_ACT) || ((H_ACT + H_ACT + 20 > h_cnt) && (h_cnt > H_ACT + 20))) && (v_cnt > V_ACT - 1'b1) && de_in));
             // de_out <=  ((o_de_scaler_r || (o_de_scaler_1d & ~o_de_scaler_r) || (black_cnt < H_ACT)) ||  ((h_cnt < H_ACT) && (v_cnt > V_ACT - 1'b1) && de_in));
         

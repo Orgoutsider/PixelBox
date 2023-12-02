@@ -23,7 +23,9 @@ module rotate_buf#(
     input                         ddr_wdone,
     output [8*DQ_WIDTH- 1'b1 : 0] ddr_wdata,
     input                         ddr_wdata_req,
-    input  [1:0]                  ddr_part_rd
+    input  [1:0]                  ddr_part_rd,
+    input                         frame_wcnt,
+    output                        frame_wcnt_out
     // output reg                    ddr_rdata_ban 
 );
 
@@ -47,6 +49,7 @@ module rotate_buf#(
     reg [7:0] wr_addr;
     reg [7:0] rd_addr=8'd0;
     wire rst;
+    // reg frame_invld;
     // wire [DDR_DATA_WIDTH-1'b1:0] rd_data;
     // wire [15:0] wr_data;
     assign rst = doing_w & ddr_rdata_en & ~ddr_rdata_en_1d;
@@ -62,6 +65,15 @@ module rotate_buf#(
             cnt <= cnt + 4'd1;
         end
     end
+
+    // always @(posedge ddr_clk) begin
+    //     if(~ddr_rstn)
+    //         frame_invld <= 1'b0;
+    //     else if(rst)
+    //         frame_invld <= 1'b1;
+    //     else if(ddr_wdone & doing_w & rd_img) 
+    //         frame_invld <= 1'b0;
+    // end
 
     //  使得wr_cnt在适当的时候累加 
     always @(posedge ddr_clk) begin
@@ -113,7 +125,7 @@ module rotate_buf#(
     always @(posedge ddr_clk)
     begin 
         if(ddr_rdone && doing && (x_cnt + 13'd256 > H_NUM - 13'd1) && (y_cnt >= H_NUM - 13'd1) && (cnt == 4'd15))
-            wr_frame_cnt <= wr_frame_cnt + 1'b1;
+            wr_frame_cnt <= {{FRAME_CNT_WIDTH - 1'b1{1'b0}},~frame_wcnt};
         else
             wr_frame_cnt <= wr_frame_cnt;
     end 
@@ -264,6 +276,7 @@ module rotate_buf#(
         else
             rd_frame_cnt <= rd_frame_cnt;
     end 
+    assign frame_wcnt_out = rd_frame_cnt[0];
 
     reg [LINE_ADDR_WIDTH - 1'b1 :0] rd_cnt;
     reg ddr_wdata_req_1d;

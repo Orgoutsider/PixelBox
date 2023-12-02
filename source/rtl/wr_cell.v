@@ -25,8 +25,9 @@ module wr_cell #(
     input                         ddr_wdone,
     output [8*DQ_WIDTH- 1'b1 : 0] ddr_wdata,
     input                         ddr_wdata_req,
+    output                        frame_wcnt,
     output                        frame_wirq,
-    input  [1:0]                   ddr_part,
+    input  [1:0]                  ddr_part,
     output reg  [5:0]             ddr_wreq_cnt,
     output                        ddr_wreq_rst 
     //ddr·ÖÇø
@@ -42,8 +43,10 @@ module wr_cell #(
     reg       wr_en_1d;
     wire      wr_rst;
     reg       wr_enable=0;
-    
+    wire      outrange;
+    reg       outrange_1d, outrange_2d;
     reg       ddr_rstn_1d,ddr_rstn_2d;
+    reg       frame_invld;
 
     //===========================================================================
     
@@ -53,20 +56,34 @@ module wr_cell #(
         wr_en_1d <= wr_en;
         ddr_rstn_1d <= ddr_rstn;
         ddr_rstn_2d <= ddr_rstn_1d;
+        outrange_1d <= outrange;
+        outrange_2d <= outrange_1d;
         
         if(~wr_fsync_1d & wr_fsync && ddr_rstn_2d) 
             wr_enable <= 1'b1;
-        else if (ddr_wreq_cnt >= CNT_MAX)
+        else if (outrange_2d)
             wr_enable <= 1'b0;
         else 
             wr_enable <= wr_enable;
     end
+
         
     assign wr_rst = (~wr_fsync_1d & wr_fsync) | (~ddr_rstn_2d);
+    assign outrange = (ddr_wreq_cnt >= CNT_MAX);
     
     //===========================================================================
     reg      rd_fsync_1d,rd_fsync_2d,rd_fsync_3d;
     wire     rd_rst;
+
+    always @(posedge ddr_clk) begin
+        if(rd_rst)
+            frame_invld <= 1'b0;
+        else if(outrange)
+            frame_invld <= 1'b1;
+        else
+            frame_invld <= frame_invld;
+    end
+
     always @(posedge ddr_clk)
     begin
         rd_fsync_1d <= wr_fsync;
@@ -281,7 +298,7 @@ module wr_cell #(
     begin 
         if(~ddr_rstn)
             rd_frame_cnt <= 'd0;
-        else if(~rd_fsync_3d && rd_fsync_2d)
+        else if(~rd_fsync_3d && rd_fsync_2d && !frame_invld)
             rd_frame_cnt <= rd_frame_cnt + 1'b1;
         else
             rd_frame_cnt <= rd_frame_cnt;
@@ -323,5 +340,6 @@ module wr_cell #(
     assign ddr_waddr = {rd_frame_cnt[0],ddr_part,rd_cnt} + ADDR_OFFSET;
     assign ddr_wr_len = RD_LINE_NUM;
     assign frame_wirq = wirq_en && rd_fsync_3d;
+    assign frame_wcnt = rd_frame_cnt[0];
 
 endmodule

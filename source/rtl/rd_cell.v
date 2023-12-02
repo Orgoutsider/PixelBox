@@ -32,7 +32,8 @@ module rd_cell #(
     input                         ddr_rdata_en,
     input [1:0]                        ddr_part,
     output reg [1:0]              rd_cnt,
-    input                         rotate_180   
+    input                         rotate_180,
+    input                         frame_wcnt   
    );
 
     localparam SIM            = 1'b0;
@@ -98,13 +99,19 @@ module rd_cell #(
     
     //==========================================================================
     reg [FRAME_CNT_WIDTH - 1'b1 :0] wr_frame_cnt=0;
-    always @(posedge ddr_clk)
-    begin 
+    // always @(posedge ddr_clk)
+    // begin 
+    //     if(wr_rst)
+    //         wr_frame_cnt <= wr_frame_cnt + 1'b1;
+    //     else
+    //         wr_frame_cnt <= wr_frame_cnt;
+    // end 
+    always @(posedge ddr_clk) begin
         if(wr_rst)
-            wr_frame_cnt <= wr_frame_cnt + 1'b1;
+            wr_frame_cnt <= {{FRAME_CNT_WIDTH - 1'b1{1'b0}},~frame_wcnt};
         else
-            wr_frame_cnt <= wr_frame_cnt;
-    end 
+            wr_frame_cnt <= wr_frame_cnt; 
+    end
 
     reg ddr_rdata_en_1d;
     reg [LINE_ADDR_WIDTH - 1'b1 :0] wr_cnt;

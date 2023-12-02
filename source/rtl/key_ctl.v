@@ -35,7 +35,7 @@ module key_ctl#(
     // °´¼üÏû¶¶
     btn_deb_fix#(                    
         .BTN_WIDTH   (  4'd1        ), //parameter                  BTN_WIDTH = 4'd8
-        .BTN_DELAY   (20'h7_ffff    )
+        .BTN_DELAY   (20'hf_ffff    )
     ) u_btn_deb                           
     (                            
         .clk         (  clk         ),//input                      clk,

@@ -60,7 +60,9 @@ module wr_buf #(
     output                        ddr_wreq_rst2,
     output                        ddr_wreq_rst3,
     
-    // output [FRAME_CNT_WIDTH-1 :0] frame_wcnt,
+    output                        frame_wcnt1,
+    output                        frame_wcnt2,
+    output                        frame_wcnt3,
     output                        frame_wirq,
     input                         wr_opera_en_1,
     input                         wr_opera_en_2,
@@ -128,6 +130,7 @@ module wr_buf #(
         .ddr_wdata(ddr_wdata1),// output [8*DQ_WIDTH- 1'b1 : 0] ddr_wdata,
         .ddr_wdata_req(ddr_wdata_req1),// input                         ddr_wdata_req,
         .frame_wirq(frame_wirq1),
+        .frame_wcnt(frame_wcnt1),
         .ddr_part(2'd0), // input                         ddr_part 
         .ddr_wreq_cnt(ddr_wreq_cnt1), // output
         .ddr_wreq_rst(ddr_wreq_rst1)
@@ -160,6 +163,7 @@ module wr_buf #(
         .ddr_wdata(ddr_wdata2),// output [8*DQ_WIDTH- 1'b1 : 0] ddr_wdata,
         .ddr_wdata_req(ddr_wdata_req2),// input                         ddr_wdata_req,
         .frame_wirq(frame_wirq2),
+        .frame_wcnt(frame_wcnt2),
         .ddr_part(2'd1), // input                         ddr_part 
         .ddr_wreq_cnt(ddr_wreq_cnt2), // output
         .ddr_wreq_rst(ddr_wreq_rst2)
@@ -192,6 +196,7 @@ module wr_buf #(
         .ddr_wdata(ddr_wdata3),// output [8*DQ_WIDTH- 1'b1 : 0] ddr_wdata,
         .ddr_wdata_req(ddr_wdata_req3),// input                         ddr_wdata_req,
         .frame_wirq(frame_wirq3),
+        .frame_wcnt(frame_wcnt3),
         .ddr_part(2'd2), // input                         ddr_part 
         .ddr_wreq_cnt(ddr_wreq_cnt3), // output
         .ddr_wreq_rst(ddr_wreq_rst3)
