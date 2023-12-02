@@ -389,10 +389,10 @@
             <data>RAM(GB)</data>
         </column_headers>
         <row>
-            <data>0h:0m:9s</data>
-            <data>0h:0m:9s</data>
-            <data>0h:0m:24s</data>
-            <data>330</data>
+            <data>0h:0m:4s</data>
+            <data>0h:0m:4s</data>
+            <data>0h:0m:25s</data>
+            <data>329</data>
             <data>WINDOWS 10 x86_64</data>
             <data>12th Gen Intel(R) Core(TM) i7-12700H</data>
             <data>16</data>
@@ -28627,7 +28627,7 @@
     SCALE_FACTORY = 32'b00000000000000000001011100001010</data>
         </row>
         <row>
-            <data message="4">Verilog-0004: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/hdmi_in.v(line number: 250)] Elaborating instance u_delay_laps</data>
+            <data message="4">Verilog-0004: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/hdmi_in.v(line number: 255)] Elaborating instance u_delay_laps</data>
         </row>
         <row>
             <data message="4">Verilog-0003: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/delay_laps.v(line number: 2)] Elaborating module delay_laps</data>
@@ -28638,7 +28638,7 @@
     MAX_DELAY_LAPS = 32'b00000000000000000000001010000000</data>
         </row>
         <row>
-            <data message="4">Verilog-0004: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/hdmi_in.v(line number: 349)] Elaborating instance u_image_scaler_r</data>
+            <data message="4">Verilog-0004: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/hdmi_in.v(line number: 354)] Elaborating instance u_image_scaler_r</data>
         </row>
         <row>
             <data message="4">Verilog-0003: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/hdl/scaler_gray_top.v(line number: 1)] Elaborating module scaler_gray_top</data>
@@ -28905,19 +28905,19 @@
     FIX_WIDTH = 32'b00000000000000000000000000001100</data>
         </row>
         <row>
-            <data message="5">Verilog-2019: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/hdmi_in.v(line number: 342)] Width mismatch between port src_width_i and signal bound to it for instantiated module scaler_gray_top</data>
+            <data message="5">Verilog-2019: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/hdmi_in.v(line number: 347)] Width mismatch between port src_width_i and signal bound to it for instantiated module scaler_gray_top</data>
         </row>
         <row>
-            <data message="5">Verilog-2019: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/hdmi_in.v(line number: 342)] Width mismatch between port src_height_i and signal bound to it for instantiated module scaler_gray_top</data>
+            <data message="5">Verilog-2019: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/hdmi_in.v(line number: 347)] Width mismatch between port src_height_i and signal bound to it for instantiated module scaler_gray_top</data>
         </row>
         <row>
-            <data message="5">Verilog-2019: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/hdmi_in.v(line number: 342)] Width mismatch between port dest_width_i and signal bound to it for instantiated module scaler_gray_top</data>
+            <data message="5">Verilog-2019: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/hdmi_in.v(line number: 347)] Width mismatch between port dest_width_i and signal bound to it for instantiated module scaler_gray_top</data>
         </row>
         <row>
-            <data message="5">Verilog-2019: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/hdmi_in.v(line number: 342)] Width mismatch between port dest_height_i and signal bound to it for instantiated module scaler_gray_top</data>
+            <data message="5">Verilog-2019: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/hdmi_in.v(line number: 347)] Width mismatch between port dest_height_i and signal bound to it for instantiated module scaler_gray_top</data>
         </row>
         <row>
-            <data message="4">Verilog-0004: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/hdmi_in.v(line number: 377)] Elaborating instance u_image_scaler_g</data>
+            <data message="4">Verilog-0004: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/hdmi_in.v(line number: 382)] Elaborating instance u_image_scaler_g</data>
         </row>
         <row>
             <data message="4">Verilog-0003: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/hdl/scaler_gray_top.v(line number: 1)] Elaborating module scaler_gray_top</data>
@@ -28932,19 +28932,19 @@
     FIX_WIDTH = 32'b00000000000000000000000000001100</data>
         </row>
         <row>
-            <data message="5">Verilog-2019: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/hdmi_in.v(line number: 370)] Width mismatch between port src_width_i and signal bound to it for instantiated module scaler_gray_top</data>
+            <data message="5">Verilog-2019: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/hdmi_in.v(line number: 375)] Width mismatch between port src_width_i and signal bound to it for instantiated module scaler_gray_top</data>
         </row>
         <row>
-            <data message="5">Verilog-2019: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/hdmi_in.v(line number: 370)] Width mismatch between port src_height_i and signal bound to it for instantiated module scaler_gray_top</data>
+            <data message="5">Verilog-2019: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/hdmi_in.v(line number: 375)] Width mismatch between port src_height_i and signal bound to it for instantiated module scaler_gray_top</data>
         </row>
         <row>
-            <data message="5">Verilog-2019: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/hdmi_in.v(line number: 370)] Width mismatch between port dest_width_i and signal bound to it for instantiated module scaler_gray_top</data>
+            <data message="5">Verilog-2019: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/hdmi_in.v(line number: 375)] Width mismatch between port dest_width_i and signal bound to it for instantiated module scaler_gray_top</data>
         </row>
         <row>
-            <data message="5">Verilog-2019: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/hdmi_in.v(line number: 370)] Width mismatch between port dest_height_i and signal bound to it for instantiated module scaler_gray_top</data>
+            <data message="5">Verilog-2019: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/hdmi_in.v(line number: 375)] Width mismatch between port dest_height_i and signal bound to it for instantiated module scaler_gray_top</data>
         </row>
         <row>
-            <data message="4">Verilog-0004: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/hdmi_in.v(line number: 405)] Elaborating instance u_image_scaler_b</data>
+            <data message="4">Verilog-0004: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/hdmi_in.v(line number: 410)] Elaborating instance u_image_scaler_b</data>
         </row>
         <row>
             <data message="4">Verilog-0003: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/hdl/scaler_gray_top.v(line number: 1)] Elaborating module scaler_gray_top</data>
@@ -28959,16 +28959,16 @@
     FIX_WIDTH = 32'b00000000000000000000000000001100</data>
         </row>
         <row>
-            <data message="5">Verilog-2019: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/hdmi_in.v(line number: 398)] Width mismatch between port src_width_i and signal bound to it for instantiated module scaler_gray_top</data>
+            <data message="5">Verilog-2019: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/hdmi_in.v(line number: 403)] Width mismatch between port src_width_i and signal bound to it for instantiated module scaler_gray_top</data>
         </row>
         <row>
-            <data message="5">Verilog-2019: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/hdmi_in.v(line number: 398)] Width mismatch between port src_height_i and signal bound to it for instantiated module scaler_gray_top</data>
+            <data message="5">Verilog-2019: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/hdmi_in.v(line number: 403)] Width mismatch between port src_height_i and signal bound to it for instantiated module scaler_gray_top</data>
         </row>
         <row>
-            <data message="5">Verilog-2019: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/hdmi_in.v(line number: 398)] Width mismatch between port dest_width_i and signal bound to it for instantiated module scaler_gray_top</data>
+            <data message="5">Verilog-2019: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/hdmi_in.v(line number: 403)] Width mismatch between port dest_width_i and signal bound to it for instantiated module scaler_gray_top</data>
         </row>
         <row>
-            <data message="5">Verilog-2019: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/hdmi_in.v(line number: 398)] Width mismatch between port dest_height_i and signal bound to it for instantiated module scaler_gray_top</data>
+            <data message="5">Verilog-2019: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/hdmi_in.v(line number: 403)] Width mismatch between port dest_height_i and signal bound to it for instantiated module scaler_gray_top</data>
         </row>
         <row>
             <data message="4">Verilog-0004: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/hdmi_ddr_ov5640_top.v(line number: 420)] Elaborating instance fram_buf</data>
@@ -38297,6 +38297,9 @@
         </row>
         <row>
             <data message="6">DRC-2021: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/rgb_togrey.v(line number: 26)] The net gray_8b[0] is un-driven, tie it to 0.</data>
+        </row>
+        <row>
+            <data message="5">Loop was found during constant probe.</data>
         </row>
         <row>
             <data message="5">Loop was found during constant probe.</data>

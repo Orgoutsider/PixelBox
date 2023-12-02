@@ -72,6 +72,7 @@ module hdmi_in # (
 
     reg [5:0] scaler_ctrl_width_1d;//0-63
     reg [5:0] scaler_ctrl_width_2d;//0-63
+    reg [6:0] scaler_ctrl_height_0d;//0-71
     reg [6:0] scaler_ctrl_height_1d;//0-71
     reg [6:0] scaler_ctrl_height_2d;//0-71
     reg color_reverse_ctrl_1d;//0-1
@@ -148,8 +149,12 @@ module hdmi_in # (
     end
 
     always @(posedge pixclk_in) begin
-        scaler_ctrl_height_1d <= scaler_ctrl_height;
-        scaler_ctrl_height_2d <= scaler_ctrl_height_1d;
+        scaler_ctrl_height_0d <= scaler_ctrl_height;
+        scaler_ctrl_height_1d <= scaler_ctrl_height_0d;
+        if((scaler_ctrl_height_1d == 7'd25) || (scaler_ctrl_height_1d == 7'd45))
+            scaler_ctrl_height_2d <= scaler_ctrl_height_1d + 1'b1;
+        else
+            scaler_ctrl_height_2d <= scaler_ctrl_height_1d;
     end
 
     always @(posedge pixclk_in) begin
