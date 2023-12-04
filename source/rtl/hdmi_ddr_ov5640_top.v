@@ -367,8 +367,8 @@ module hdmi_ddr_ov5640_top#(
         .de_i	   (de_2)    ,	// input				   de_i	        ,
         .pdata_i	(pdata_2)    ,	// input	[15:0]	       pdata_i	    ,
         .vs_i      (vs_2)  ,    // input                  vs_i         ,
-        .gamma_ctrl (gamma_ctrl),
-        .saturation_ctrl (saturation_ctrl),
+        .gamma_ctrl (2'd0),
+        .saturation_ctrl (2'd0),
 
         .de_o      (cmos2_href_16bit)  , 	// output	reg			   de_o         ,
         .pdata_o   (cmos2_d_16bit)  ,	// output  reg [15:0]	   pdata_o      ,
@@ -592,7 +592,7 @@ module hdmi_ddr_ov5640_top#(
 
     key_ctl#(
         .CNT_WIDTH(4'd2),
-        .CNT_MAX  (4'd2)
+        .CNT_MAX  (4'd3)
     ) key_ctl_saturation(
         .clk (sys_clk),// input           clk,//50MHz
         .key (key_saturation),// input           key,    

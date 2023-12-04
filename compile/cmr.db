@@ -389,9 +389,9 @@
             <data>RAM(GB)</data>
         </column_headers>
         <row>
-            <data>0h:0m:4s</data>
-            <data>0h:0m:4s</data>
-            <data>0h:0m:25s</data>
+            <data>0h:0m:10s</data>
+            <data>0h:0m:10s</data>
+            <data>0h:0m:23s</data>
             <data>329</data>
             <data>WINDOWS 10 x86_64</data>
             <data>12th Gen Intel(R) Core(TM) i7-12700H</data>
@@ -3555,13 +3555,13 @@
     V_OFFSET = 12'b000000000000</data>
         </row>
         <row>
-            <data message="4">Verilog-0004: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/cmos_mix.v(line number: 116)] Elaborating instance u_rgb528</data>
+            <data message="4">Verilog-0004: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/cmos_mix.v(line number: 120)] Elaborating instance u_rgb528</data>
         </row>
         <row>
             <data message="4">Verilog-0003: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/RGB_565TO888.v(line number: 1)] Elaborating module RGB_565TO888</data>
         </row>
         <row>
-            <data message="4">Verilog-0004: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/cmos_mix.v(line number: 151)] Elaborating instance u_gamma</data>
+            <data message="4">Verilog-0004: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/cmos_mix.v(line number: 155)] Elaborating instance u_gamma</data>
         </row>
         <row>
             <data message="4">Verilog-0003: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/gamma.v(line number: 1)] Elaborating module gamma</data>
@@ -3788,13 +3788,13 @@
             <data message="4">Verilog-0003: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/rom_square/rom_square.v(line number: 16)] Elaborating module rom_square</data>
         </row>
         <row>
-            <data message="4">Verilog-0004: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/cmos_mix.v(line number: 163)] Elaborating instance u_saturation</data>
+            <data message="4">Verilog-0004: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/cmos_mix.v(line number: 167)] Elaborating instance u_saturation</data>
         </row>
         <row>
             <data message="4">Verilog-0003: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/saturation.v(line number: 1)] Elaborating module saturation</data>
         </row>
         <row>
-            <data message="4">Verilog-0004: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/cmos_mix.v(line number: 174)] Elaborating instance u_up_median_filter</data>
+            <data message="4">Verilog-0004: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/cmos_mix.v(line number: 178)] Elaborating instance u_up_median_filter</data>
         </row>
         <row>
             <data message="4">Verilog-0003: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/up_midean_filter.v(line number: 1)] Elaborating module up_median_filter</data>
@@ -28488,7 +28488,7 @@
     VALUE = 32'b00000000000000000000000001010000</data>
         </row>
         <row>
-            <data message="4">Verilog-0004: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/cmos_mix.v(line number: 225)] Elaborating instance u_rgb_togrey</data>
+            <data message="4">Verilog-0004: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/cmos_mix.v(line number: 229)] Elaborating instance u_rgb_togrey</data>
         </row>
         <row>
             <data message="4">Verilog-0003: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/rgb_togrey.v(line number: 1)] Elaborating module rgb_togrey</data>
@@ -28500,7 +28500,7 @@
     para_0114_8b = 8'b00011101</data>
         </row>
         <row>
-            <data message="4">Verilog-0004: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/cmos_mix.v(line number: 237)] Elaborating instance u_sobel</data>
+            <data message="4">Verilog-0004: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/cmos_mix.v(line number: 241)] Elaborating instance u_sobel</data>
         </row>
         <row>
             <data message="4">Verilog-0003: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/sobel.v(line number: 20)] Elaborating module sobel</data>
@@ -28523,7 +28523,7 @@
     ROW_NUM = 32'b00000000000000000000001011010000</data>
         </row>
         <row>
-            <data message="4">Verilog-0004: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/cmos_mix.v(line number: 248)] Elaborating instance u_rgb825</data>
+            <data message="4">Verilog-0004: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/cmos_mix.v(line number: 252)] Elaborating instance u_rgb825</data>
         </row>
         <row>
             <data message="4">Verilog-0003: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/RGB_888TO565.v(line number: 1)] Elaborating module RGB_888TO565</data>
@@ -28550,31 +28550,31 @@
     V_OFFSET = 12'b000000001111</data>
         </row>
         <row>
-            <data message="4">Verilog-0004: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/cmos_mix.v(line number: 116)] Elaborating instance u_rgb528</data>
+            <data message="4">Verilog-0004: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/cmos_mix.v(line number: 120)] Elaborating instance u_rgb528</data>
         </row>
         <row>
             <data message="4">Verilog-0003: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/RGB_565TO888.v(line number: 1)] Elaborating module RGB_565TO888</data>
         </row>
         <row>
-            <data message="4">Verilog-0004: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/cmos_mix.v(line number: 151)] Elaborating instance u_gamma</data>
+            <data message="4">Verilog-0004: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/cmos_mix.v(line number: 155)] Elaborating instance u_gamma</data>
         </row>
         <row>
             <data message="4">Verilog-0003: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/gamma.v(line number: 1)] Elaborating module gamma</data>
         </row>
         <row>
-            <data message="4">Verilog-0004: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/cmos_mix.v(line number: 163)] Elaborating instance u_saturation</data>
+            <data message="4">Verilog-0004: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/cmos_mix.v(line number: 167)] Elaborating instance u_saturation</data>
         </row>
         <row>
             <data message="4">Verilog-0003: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/saturation.v(line number: 1)] Elaborating module saturation</data>
         </row>
         <row>
-            <data message="4">Verilog-0004: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/cmos_mix.v(line number: 174)] Elaborating instance u_up_median_filter</data>
+            <data message="4">Verilog-0004: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/cmos_mix.v(line number: 178)] Elaborating instance u_up_median_filter</data>
         </row>
         <row>
             <data message="4">Verilog-0003: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/up_midean_filter.v(line number: 1)] Elaborating module up_median_filter</data>
         </row>
         <row>
-            <data message="4">Verilog-0004: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/cmos_mix.v(line number: 225)] Elaborating instance u_rgb_togrey</data>
+            <data message="4">Verilog-0004: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/cmos_mix.v(line number: 229)] Elaborating instance u_rgb_togrey</data>
         </row>
         <row>
             <data message="4">Verilog-0003: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/rgb_togrey.v(line number: 1)] Elaborating module rgb_togrey</data>
@@ -28586,7 +28586,7 @@
     para_0114_8b = 8'b00011101</data>
         </row>
         <row>
-            <data message="4">Verilog-0004: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/cmos_mix.v(line number: 237)] Elaborating instance u_sobel</data>
+            <data message="4">Verilog-0004: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/cmos_mix.v(line number: 241)] Elaborating instance u_sobel</data>
         </row>
         <row>
             <data message="4">Verilog-0003: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/sobel.v(line number: 20)] Elaborating module sobel</data>
@@ -28598,7 +28598,7 @@
     VALUE = 32'b00000000000000000000000001010000</data>
         </row>
         <row>
-            <data message="4">Verilog-0004: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/cmos_mix.v(line number: 248)] Elaborating instance u_rgb825</data>
+            <data message="4">Verilog-0004: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/cmos_mix.v(line number: 252)] Elaborating instance u_rgb825</data>
         </row>
         <row>
             <data message="4">Verilog-0003: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/RGB_888TO565.v(line number: 1)] Elaborating module RGB_888TO565</data>
@@ -36934,7 +36934,18 @@
         <row>
             <data message="4">Module instance {hdmi_ddr_ov5640_top/key_ctl_saturation} parameter value:
     CNT_WIDTH = 4'b0010
-    CNT_MAX = 4'b0010</data>
+    CNT_MAX = 4'b0011</data>
+        </row>
+        <row>
+            <data message="4">Verilog-0004: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/key_ctl.v(line number: 39)] Elaborating instance u_btn_deb</data>
+        </row>
+        <row>
+            <data message="4">Verilog-0003: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/btn_deb_fix.v(line number: 23)] Elaborating module btn_deb_fix</data>
+        </row>
+        <row>
+            <data message="4">Module instance {hdmi_ddr_ov5640_top/key_ctl_saturation/u_btn_deb} parameter value:
+    BTN_WIDTH = 4'b0001
+    BTN_DELAY = 20'b11111111111111111111</data>
         </row>
         <row>
             <data message="4">Verilog-0004: [E:/Verilog/pango_prj/HDMI_DDR3_OV5640_test/source/rtl/hdmi_ddr_ov5640_top.v(line number: 605)] Elaborating instance key_ctl_rotate</data>

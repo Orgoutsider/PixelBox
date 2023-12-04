@@ -37,6 +37,8 @@ reg [1:0] gamma_ctrl_1d;
 reg [1:0] gamma_ctrl_2d;
 reg saturation_ctrl_1d;
 reg saturation_ctrl_2d;
+reg grey_ctrl_1d;
+reg grey_ctrl_2d;
 reg sobel_ctrl_1d;
 reg sobel_ctrl_2d;
 reg out_de;
@@ -89,8 +91,10 @@ always @(posedge pixel_clk) begin
     gamma_ctrl_2d <= gamma_ctrl_1d;
     saturation_ctrl_1d <= (saturation_ctrl == 2'd1);
     saturation_ctrl_2d <= saturation_ctrl_1d;
-    sobel_ctrl_1d <= (saturation_ctrl == 2'd2);
+    sobel_ctrl_1d <= (saturation_ctrl == 2'd3);
     sobel_ctrl_2d <= sobel_ctrl_1d;
+    grey_ctrl_1d <= (saturation_ctrl == 2'd2);
+    grey_ctrl_2d <= grey_ctrl_1d;
     // enable_1d <= enable;
     // if(~saturation_vs_1d & saturation_vs)
     //     enable <= 1'b1;
@@ -289,21 +293,27 @@ assign median_filter_rst = ~saturation_vs_1d & saturation_vs;
     always @(*) begin
     if (sobel_ctrl_2d)
         out_data = o_sobel_data;
-    else 
+    else if(grey_ctrl_2d)   
+        out_data = o_greydata;
+    else
         out_data = {median_filter_data_R,median_filter_data_G,median_filter_data_B}  ;
     end
 
     always @(*) begin
     if (sobel_ctrl_2d)
         out_de = sobel_de;
-    else 
+    else if(grey_ctrl_2d)
+        out_de = grey_de;
+    else
         out_de = median_filter_de;
     end
 
     always @(*) begin
     if (sobel_ctrl_2d)
         out_vs = sobel_vs;
-    else 
+    else if(grey_ctrl_2d)
+        out_vs = grey_vs;
+    else
         out_vs = median_filter_vs;
     end
     
